@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+npm run deploy pushes to live hosted version
+npm start edits a local build
+regular commits edit the source code on GH but the hosted live version does not pull from it
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
