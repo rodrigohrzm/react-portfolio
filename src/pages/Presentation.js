@@ -1,7 +1,19 @@
-import react from 'react'
 import './Presentation.css';
+import React, { useState, useEffect, useRef } from "react";
 
 function Presentation() {
+
+	const handleClick = (anchor) => () => {
+		const id = `${anchor}-section`;
+		const element = document.getElementById(id);
+		if (element) {
+		  element.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		  });
+		}
+	  };
+
 return (
 <>
 	<head>
@@ -11,20 +23,19 @@ return (
 	</head>
 	<body class="is-preload">
 
-
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
 					<h1 id="logo"><a href="#">Willis Corto</a></h1>
 					<p>I got reprogrammed by a rogue AI<br />
 					and now I'm totally cray</p>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-						<li><a href="#three">A Few Accomplishments</a></li>
-						<li><a href="#four">Contact</a></li>
+						<li><a href="/#about" onClick={handleClick("about")} class="active">About</a></li>
+						<li><a href="/#skills" onClick={handleClick("skills")}>Things I Can Do</a></li>
+						<li><a href="/#portfolio" onClick={handleClick("portfolio")}>A Few Accomplishments</a></li>
+						<li><a href="/#contact"onClick={handleClick("contact")}>Contact</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -42,9 +53,9 @@ return (
 			<div id="wrapper">
 					<div id="main">
 
-							<section id="one">
+							<section id="about-section">
 								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
+									<img src={require('../assets/images/banner.jpg')} alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
@@ -56,7 +67,7 @@ return (
 								</div>
 							</section>
 
-							<section id="two">
+							<section id="skills-section">
 								<div class="container">
 									<h3>Things I Can Do</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
@@ -71,29 +82,22 @@ return (
 								</div>
 							</section>
 
-							<section id="three">
+							<section id="portfolio-section">
 								<div class="container">
 									<h3>A Few Accomplishments</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<a href="#" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
 											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
+												<a href="#"><h4>Possibly broke spacetime</h4></a>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<a href="#" class="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
 											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
+												<a href="#"><h4>Terraformed a small moon</h4></a>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
@@ -101,7 +105,7 @@ return (
 								</div>
 							</section>
 
-							<section id="four">
+							<section id="contact-section">
 								<div class="container">
 									<h3>Contact Me</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
@@ -463,7 +467,7 @@ return (
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Copyright: HRZM &copy; {(new Date().getFullYear())} All rights reserved.</li><li><a href="http://html5up.net">Design template by HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
