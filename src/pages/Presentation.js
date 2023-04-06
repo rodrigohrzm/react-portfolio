@@ -1,48 +1,82 @@
 import './Presentation.css';
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink, Route, Routes } from "react-router-dom";
+
+{/*
+PENDING TASKS:
+	- BUSCAR TESTIMONIALS
+	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
+	- BANNER VIDEO
+	- FORM LOGIC
+	- GREEN RECOLOR
+	- ICONS
+*/}
+
 
 function Presentation() {
+ const handleClick = (anchor) => () => {
+ 	const id = `${anchor}-section`;
+ 	const element = document.getElementById(id);
+ 	if (element) {
+ 	  element.scrollIntoView({
+ 		behavior: "smooth",
+ 		block: "start",
+ 	  });
+ 	}
+   };
 
-	const handleClick = (anchor) => () => {
-		const id = `${anchor}-section`;
-		const element = document.getElementById(id);
-		if (element) {
-		  element.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		  });
-		}
-	  };
+   const [activeLink, setActiveLink] = useState('');
+   useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPosition = window.pageYOffset;
+
+      for (let i = 0; i < sections.length; i++) {
+        const currentSection = sections[i];
+        const currentSectionTop = currentSection.offsetTop;
+        const currentSectionId = currentSection.id;
+
+        if (scrollPosition >= currentSectionTop - 400) {
+          setActiveLink(currentSectionId);
+        }
+      }
+    }; window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
 return (
 <>
 	<head>
-		<title>Rodrigo's portfolio</title> {/*BUSCAR TESTIMONIALS*/}
+		<title>Rodrigo's portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	<body class="is-preload">
 
-			<section id="header">{/*TODA ESTA EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW*/}
+			<section id="header">{/**/}
 				<header>
 					<span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
-					<h1 id="logo">Hello! <br />I'm Rodrigo</h1>
-					<p>I live under a palm tree in Spain, I love cars, and I'm drawn to anything that involves crafting.</p>
+					<h1 id="logo">Hello! I'm Rodrigo</h1>
+					<p>I live under a palm tree, love cars, and crafting is what I do best.</p>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="/#about" onClick={handleClick("about")} class="active">About me</a></li>
-						<li><a href="/#skills" onClick={handleClick("skills")}>My skills</a></li>
-						<li><a href="/#portfolio" onClick={handleClick("portfolio")}>A quick demo</a></li>
-						<li><a href="/#contact"onClick={handleClick("contact")}>Contact me</a></li>
+						<li><a href="#about" onClick={handleClick("about")} className={activeLink === 'about-section' ? 'active' : ''}>About me</a></li>
+						<li><a href="#portfolio" onClick={handleClick("portfolio")} className={activeLink === 'portfolio-section' ? 'active' : ''}>A quick demo</a></li>
+						<li><a href="#skills" onClick={handleClick("skills")} className={activeLink === 'skills-section' ? 'active' : ''}>My skills</a></li>
+						<li><a href="#contact"onClick={handleClick("contact")} className={activeLink === 'contact-section' ? 'active' : ''}>Contact me</a></li>
 					</ul>
 				</nav>
 				<footer>
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://linkedin.com/in/rodrigohrzm" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span>LinkedIn</a></li>
+						<li><a href="https://github.com/rodrigohrzm" target="_blank" class="icon brands fa-github"><span class="label">Github</span>GitHub</a></li>
+						<li><a href="https://twitter.com/rodrigohrzm" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span>Twitter</a></li>
+						<li><a href="https://www.instagram.com/rodrigohrzm" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span>Instagram</a></li>
 					</ul>
 				</footer>
 			</section>
@@ -50,10 +84,9 @@ return (
 
 			<div id="wrapper">
 					<div id="main">
-
 							<section id="about-section">
 								<div class="image main" data-position="center">
-									<img src={require('../assets/images/banner.jpg')} alt="" /> {/*ESTO QUE SEA VIDEO*/}
+									<img src={require('../assets/images/banner.jpg')} alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
@@ -64,28 +97,12 @@ return (
 									<p>My goal is to become a well-rounded professional so I can use my skills to the benefit of both users and forward-thinking companies. And also because I really enjoy doing what I do.</p>
 								</div>
 							</section>
-
-							<section id="skills-section">
-								<div class="container">
-									<h3>My skills</h3> {/*EL COLOR DE FONDO QUE NO SEA BLANCO*/}
-									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">React, JS, HTML & CSS</li>
-										<li class="icon solid fa-users">UI/UX Design</li>
-										<li class="icon solid fa-cubes">Image & Video Editing</li>
-										<li class="icon solid fa-book">Direct-To-Consumer Campaigns</li>
-										<li class="icon solid fa-coffee">Customer Data Management</li>
-										<li class="icon solid fa-bolt">Process Automation</li>
-									</ul>
-								</div>
-							</section>
-
 							<section id="portfolio-section">
 								<div class="container">
 									<h3>A quick demo</h3>
 									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can become very addicting...</p>
 									<div class="features">
-										<article> {/*LA LETRA DE LAS DESCRIPCIONES MAS PEQUEÑA EN PC VIEW, O BLOCKQUOTES, Y AGRANDAR LAS IMAGENES A 1:1*/}
+										<article>
 											<a href="/service" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
 											<div class="inner">
 												<a href="/service"><h4>Car repair and rental service</h4></a>
@@ -102,17 +119,30 @@ return (
 									</div>
 								</div>
 							</section>
-
+							<section id="skills-section" style={{backgroundColor: "#fafafa"}}>
+								<div class="container">
+									<h3>My skills</h3>
+									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
+									<ul class="feature-icons">
+										<li class="icon solid fa-code">React, JS, HTML & CSS</li>
+										<li class="icon solid fa-users">UI/UX Design</li>
+										<li class="icon solid fa-cubes">Image & Video Editing</li>
+										<li class="icon solid fa-book">Direct-To-Consumer Campaigns</li>
+										<li class="icon solid fa-coffee">Customer Data Management</li>
+										<li class="icon solid fa-bolt">Process Automation</li>
+									</ul>
+								</div>
+							</section>
 							<section id="contact-section">
 								<div class="container">
 									<h3>Contact me</h3>
 									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="email" /></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="subject" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="your message" rows="6"></textarea></div>
 											<div class="col-12">
 												<ul class="actions">
 													<li><input type="submit" class="primary" value="Send Message" /></li>
@@ -122,7 +152,6 @@ return (
 									</form>
 								</div>
 							</section>
-
 							<>{/* <section id="five">
 								<div class="container">
 									<h3>Elements</h3>
@@ -470,16 +499,6 @@ return (
 					</section>
 
 			</div>
-
-
-			{/* <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script> */}
-
 	</body>
 </>
   );

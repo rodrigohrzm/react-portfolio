@@ -2672,6 +2672,7 @@ input, select, textarea {
 			display: inline-block;
 			vertical-align: middle;
 			width: 50%;
+			font-size: 0.85em;
 		}
 
 			.features article .inner > :last-child {
@@ -3165,6 +3166,7 @@ input, select, textarea {
 			.features article .inner {
 				display: block;
 				width: 100%;
+				font-size: 1em;
 			}
 
 		/* Header */
