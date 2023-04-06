@@ -17,33 +17,32 @@ function Presentation() {
 return (
 <>
 	<head>
-		<title>Rodrigo's portfolio</title>
+		<title>Rodrigo's portfolio</title> {/*BUSCAR TESTIMONIALS*/}
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	<body class="is-preload">
 
-			<section id="header">{/*TODA ESTA EN UN COMPONENTE NUEVO QUE ENTRA Y SALE*/}
+			<section id="header">{/*TODA ESTA EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW*/}
 				<header>
 					<span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
 					<h1 id="logo">Hello! <br />I'm Rodrigo</h1>
-					<p>And this is a sample of my work</p>
+					<p>I live under a palm tree in Spain, I love cars, and I'm drawn to anything that involves crafting.</p>
 				</header>
 				<nav id="nav">
 					<ul>
 						<li><a href="/#about" onClick={handleClick("about")} class="active">About me</a></li>
 						<li><a href="/#skills" onClick={handleClick("skills")}>My skills</a></li>
 						<li><a href="/#portfolio" onClick={handleClick("portfolio")}>A quick demo</a></li>
-						<li><a href="/#full-cv"onClick={handleClick("cv")}>See full CV</a></li>
+						<li><a href="/#contact"onClick={handleClick("contact")}>Contact me</a></li>
 					</ul>
 				</nav>
 				<footer>
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -54,28 +53,29 @@ return (
 
 							<section id="about-section">
 								<div class="image main" data-position="center">
-									<img src={require('../assets/images/banner.jpg')} alt="" />
+									<img src={require('../assets/images/banner.jpg')} alt="" /> {/*ESTO QUE SEA VIDEO*/}
 								</div>
 								<div class="container">
 									<header class="major">
 										<h2>Welcome to my portfolio</h2>
 										<p>Front End development, design and marketing.</p>
 									</header>
-									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+									<p>This page is a sample of my work, a showcase of my experience and skills. I've worked as a marketing professional for most of my career, and have decided to double down on my strengths and formalize the jump to front end software development.</p>
+									<p>My goal is to become a well-rounded professional so I can use my skills to the benefit of both users and forward-thinking companies. And also because I really enjoy doing what I do.</p>
 								</div>
 							</section>
 
 							<section id="skills-section">
 								<div class="container">
-									<h3>My skills</h3>
-									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and audio/video creation tools, as well as marketing tech for analytics and running email/social campaigns.</p>
+									<h3>My skills</h3> {/*EL COLOR DE FONDO QUE NO SEA BLANCO*/}
+									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write all the code</li>
-										<li class="icon solid fa-cubes">Stack small boxes</li>
-										<li class="icon solid fa-book">Read books and stuff</li>
-										<li class="icon solid fa-coffee">Drink much coffee</li>
-										<li class="icon solid fa-bolt">Lightning bolt</li>
-										<li class="icon solid fa-users">Shadow clone technique</li>
+										<li class="icon solid fa-code">React, JS, HTML & CSS</li>
+										<li class="icon solid fa-users">UI/UX Design</li>
+										<li class="icon solid fa-cubes">Image & Video Editing</li>
+										<li class="icon solid fa-book">Direct-To-Consumer Campaigns</li>
+										<li class="icon solid fa-coffee">Customer Data Management</li>
+										<li class="icon solid fa-bolt">Process Automation</li>
 									</ul>
 								</div>
 							</section>
@@ -83,30 +83,30 @@ return (
 							<section id="portfolio-section">
 								<div class="container">
 									<h3>A quick demo</h3>
-									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.</p>
+									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can become very addicting...</p>
 									<div class="features">
-										<article>
-											<a href="#" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
+										<article> {/*LA LETRA DE LAS DESCRIPCIONES MAS PEQUEÑA EN PC VIEW, O BLOCKQUOTES, Y AGRANDAR LAS IMAGENES A 1:1*/}
+											<a href="/service" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
 											<div class="inner">
-												<a href="#"><h4>Car repair service</h4></a>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<a href="/service"><h4>Car repair and rental service</h4></a>
+												<p>A business website with both customer and owner view.<br/>You can book an appointment for repairs and rent a replacement vehicle from inventory.<br/>If you log in, you see a dashboard with business information like upcoming bookings and the rental schedule.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
+											<a href="/puzzle" class="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
 											<div class="inner">
-												<a href="#"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
-												<p>A remake of DUDE's 0h-h1/Unruly game in React. Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<a href="/puzzle"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
+												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
 											</div>
 										</article>
 									</div>
 								</div>
 							</section>
 
-							<section id="cv-section">
+							<section id="contact-section">
 								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<h3>Contact me</h3>
+									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
@@ -116,7 +116,6 @@ return (
 											<div class="col-12">
 												<ul class="actions">
 													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
 												</ul>
 											</div>
 										</div>
