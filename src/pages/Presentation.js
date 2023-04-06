@@ -23,19 +23,18 @@ return (
 	</head>
 	<body class="is-preload">
 
-			<section id="header">
+			<section id="header">{/*TODA ESTA EN UN COMPONENTE NUEVO QUE ENTRA Y SALE*/}
 				<header>
 					<span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
-					<h1 id="logo"><a href="#">Willis Corto</a></h1>
-					<p>I got reprogrammed by a rogue AI<br />
-					and now I'm totally cray</p>
+					<h1 id="logo">Hello! <br />I'm Rodrigo</h1>
+					<p>And this is a sample of my work</p>
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="/#about" onClick={handleClick("about")} class="active">About</a></li>
-						<li><a href="/#skills" onClick={handleClick("skills")}>Things I Can Do</a></li>
-						<li><a href="/#portfolio" onClick={handleClick("portfolio")}>A Few Accomplishments</a></li>
-						<li><a href="/#contact"onClick={handleClick("contact")}>Contact</a></li>
+						<li><a href="/#about" onClick={handleClick("about")} class="active">About me</a></li>
+						<li><a href="/#skills" onClick={handleClick("skills")}>My skills</a></li>
+						<li><a href="/#portfolio" onClick={handleClick("portfolio")}>A quick demo</a></li>
+						<li><a href="/#full-cv"onClick={handleClick("cv")}>See full CV</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -59,9 +58,8 @@ return (
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Read Only</h2>
-										<p>Just an incredibly simple responsive site<br />
-										template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
+										<h2>Welcome to my portfolio</h2>
+										<p>Front End development, design and marketing.</p>
 									</header>
 									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
 								</div>
@@ -69,8 +67,8 @@ return (
 
 							<section id="skills-section">
 								<div class="container">
-									<h3>Things I Can Do</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
+									<h3>My skills</h3>
+									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and audio/video creation tools, as well as marketing tech for analytics and running email/social campaigns.</p>
 									<ul class="feature-icons">
 										<li class="icon solid fa-code">Write all the code</li>
 										<li class="icon solid fa-cubes">Stack small boxes</li>
@@ -84,28 +82,28 @@ return (
 
 							<section id="portfolio-section">
 								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<h3>A quick demo</h3>
+									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.</p>
 									<div class="features">
 										<article>
 											<a href="#" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
 											<div class="inner">
-												<a href="#"><h4>Possibly broke spacetime</h4></a>
+												<a href="#"><h4>Car repair service</h4></a>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
 										<article>
 											<a href="#" class="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
 											<div class="inner">
-												<a href="#"><h4>Terraformed a small moon</h4></a>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+												<a href="#"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
+												<p>A remake of DUDE's 0h-h1/Unruly game in React. Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
 									</div>
 								</div>
 							</section>
 
-							<section id="contact-section">
+							<section id="cv-section">
 								<div class="container">
 									<h3>Contact Me</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
