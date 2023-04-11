@@ -1,13 +1,14 @@
 import './Presentation.css';
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin, faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 {/*
 PENDING TASKS:
 	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
 	- FORM LOGIC
-	- ICONS
-	- MOBILE VIEW FIXES
 */}
 
 
@@ -71,10 +72,10 @@ return (
 				</nav>
 				<footer>
 					<ul class="icons">
-						<li><a href="https://linkedin.com/in/rodrigohrzm" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span>LinkedIn</a></li>
-						<li><a href="https://github.com/rodrigohrzm" target="_blank" class="icon brands fa-github"><span class="label">Github</span>GitHub</a></li>
-						<li><a href="https://twitter.com/rodrigohrzm" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span>Twitter</a></li>
-						<li><a href="https://www.instagram.com/rodrigohrzm" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span>Instagram</a></li>
+						<li><a href="https://linkedin.com/in/rodrigohrzm" target="_blank" className="icon brands fa-linkedin"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+						<li><a href="https://github.com/rodrigohrzm" target="_blank" className="icon brands fa-github"><FontAwesomeIcon icon={faGithub} /></a></li>
+						<li><a href="https://twitter.com/rodrigohrzm" target="_blank" className="icon brands fa-twitter"><FontAwesomeIcon icon={faTwitter} /></a></li>
+						<li><a href="https://www.instagram.com/rodrigohrzm" target="_blank" className="icon brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -124,12 +125,12 @@ return (
 									<h3>My skills</h3>
 									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. In addition to that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">React, JS, HTML & CSS</li>
-										<li class="icon solid fa-users">UI/UX Design</li>
-										<li class="icon solid fa-cubes">Image & Video Editing</li>
-										<li class="icon solid fa-book">Direct-To-Consumer Campaigns</li>
-										<li class="icon solid fa-coffee">Customer Data Management</li>
-										<li class="icon solid fa-bolt">Process Automation</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faCode} spin /></span>React, JS, HTML & CSS</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faDiagramProject} spin /></span>UI/UX Design</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faPhotoFilm} spin /></span>Image & Video Editing</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faUsersViewfinder} spin /></span>Direct-To-Consumer Campaigns</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faDatabase} spin /></span>Customer Data Management</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faRobot} spin /></span>Process Automation</li>
 									</ul>
 								</div>
 							</section>

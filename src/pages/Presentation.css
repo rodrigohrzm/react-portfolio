@@ -2381,32 +2381,21 @@ input, select, textarea {
 			vertical-align: top;
 			width: 48%;
 		}
-
-			ul.feature-icons li:before {
+			.skills {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				display: inline-block;
-				font-style: normal;
-				font-variant: normal;
-				text-rendering: auto;
-				line-height: 1;
-				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
-				font-weight: 400;
-			}
-
-			ul.feature-icons li:before {
 				background: #339966;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
 				height: 2.5em;
+				width: 2.5em;
+				top: 0;
 				left: 0;
 				line-height: 2.5em;
 				position: absolute;
 				text-align: center;
-				top: 0;
-				width: 2.5em;
+
 			}
 
 /* Icons */
@@ -2415,6 +2404,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		font-size: 1.75em;
 	}
 
 		ul.icons li {
@@ -3222,7 +3212,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
-				padding: 2em 0 0 0;
+				padding: 2em 0 1em 0;
 			}
 
 		/* Footer */
