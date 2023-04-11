@@ -8,8 +8,8 @@ PENDING TASKS:
 	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
 	- BANNER VIDEO
 	- FORM LOGIC
-	- GREEN RECOLOR
 	- ICONS
+	- MOBILE VIEW FIXES
 */}
 
 
@@ -119,10 +119,10 @@ return (
 									</div>
 								</div>
 							</section>
-							<section id="skills-section" style={{backgroundColor: "#fafafa"}}>
+							<section id="skills-section" style={{backgroundColor: "#f6f7f9"}}>
 								<div class="container">
 									<h3>My skills</h3>
-									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. Besides that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
+									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. In addition to that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
 									<ul class="feature-icons">
 										<li class="icon solid fa-code">React, JS, HTML & CSS</li>
 										<li class="icon solid fa-users">UI/UX Design</li>
@@ -493,7 +493,7 @@ return (
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>Copyright: HRZM &copy; {(new Date().getFullYear())} All rights reserved.</li><li><a href="http://html5up.net">Design template by HTML5 UP</a></li>
+								<li>Copyright: HRZM &copy; {(new Date().getFullYear())} All rights reserved.</li>{/*<li><a href="http://html5up.net">Design template by HTML5 UP</a></li>*/}
 							</ul>
 						</div>
 					</section>
