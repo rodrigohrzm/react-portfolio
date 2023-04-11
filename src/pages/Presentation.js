@@ -4,9 +4,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 
 {/*
 PENDING TASKS:
-	- BUSCAR TESTIMONIALS
 	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
-	- BANNER VIDEO
 	- FORM LOGIC
 	- ICONS
 	- MOBILE VIEW FIXES
@@ -85,8 +83,10 @@ return (
 			<div id="wrapper">
 					<div id="main">
 							<section id="about-section">
-								<div class="image main" data-position="center">
-									<img src={require('../assets/images/banner.jpg')} alt="" />
+								<div class="videobanner" data-position="center">
+									<video loop mute autoPlay>
+										<source src={require('../assets/images/banner.webm')} type="video/webm" />
+									</video>
 								</div>
 								<div class="container">
 									<header class="major">
