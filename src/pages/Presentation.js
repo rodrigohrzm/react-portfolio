@@ -1,52 +1,21 @@
 import './Presentation.css';
-import React, { useState, useEffect, useRef } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot, faBars } from '@fortawesome/free-solid-svg-icons'
+import { Sidebar } from '../components/Sidebar.js'
 
-{/*
+<>{/*
 PENDING TASKS:
 	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
+		placeholder space is kept in Presentation CSS
+		https://www.youtube.com/watch?v=Kz0ikCzkBVQ
+		https://github.com/genegods/openSidebar/tree/main/openSidebar/src/components
 	- FORM LOGIC
-*/}
+		https://www.npmjs.com/package/emailjs
+*/}</>
 
 
 function Presentation() {
- const handleClick = (anchor) => () => {
- 	const id = `${anchor}-section`;
- 	const element = document.getElementById(id);
- 	if (element) {
- 	  element.scrollIntoView({
- 		behavior: "smooth",
- 		block: "start",
- 	  });
- 	}
-   };
-
-   const [activeLink, setActiveLink] = useState('');
-   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollPosition = window.pageYOffset;
-
-      for (let i = 0; i < sections.length; i++) {
-        const currentSection = sections[i];
-        const currentSectionTop = currentSection.offsetTop;
-        const currentSectionId = currentSection.id;
-
-        if (scrollPosition >= currentSectionTop - 400) {
-          setActiveLink(currentSectionId);
-        }
-      }
-    }; window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-
 return (
 <>
 	<head>
@@ -55,32 +24,7 @@ return (
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	<body class="is-preload">
-
-			<section id="header">{/**/}
-				<header>
-					<span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
-					<h1 id="logo">Hello! I'm Rodrigo</h1>
-					<p>I live under a palm tree, love cars, and crafting is what I do best.</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#about" onClick={handleClick("about")} className={activeLink === 'about-section' ? 'active' : ''}>About me</a></li>
-						<li><a href="#portfolio" onClick={handleClick("portfolio")} className={activeLink === 'portfolio-section' ? 'active' : ''}>A quick demo</a></li>
-						<li><a href="#skills" onClick={handleClick("skills")} className={activeLink === 'skills-section' ? 'active' : ''}>My skills</a></li>
-						<li><a href="#contact"onClick={handleClick("contact")} className={activeLink === 'contact-section' ? 'active' : ''}>Contact me</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://linkedin.com/in/rodrigohrzm" target="_blank" className="icon brands fa-linkedin"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-						<li><a href="https://github.com/rodrigohrzm" target="_blank" className="icon brands fa-github"><FontAwesomeIcon icon={faGithub} /></a></li>
-						<li><a href="https://twitter.com/rodrigohrzm" target="_blank" className="icon brands fa-twitter"><FontAwesomeIcon icon={faTwitter} /></a></li>
-						<li><a href="https://www.instagram.com/rodrigohrzm" target="_blank" className="icon brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /></a></li>
-					</ul>
-				</footer>
-			</section>
-
-
+			<Sidebar/>
 			<div id="wrapper">
 					<div id="main">
 							<section id="about-section">
@@ -98,6 +42,7 @@ return (
 									<p>My goal is to become a well-rounded professional so I can use my skills to the benefit of both users and forward-thinking companies. And also because I really enjoy doing what I do.</p>
 								</div>
 							</section>
+
 							<section id="portfolio-section">
 								<div class="container">
 									<h3>A quick demo</h3>
@@ -120,6 +65,7 @@ return (
 									</div>
 								</div>
 							</section>
+
 							<section id="skills-section" style={{backgroundColor: "#f6f7f9"}}>
 								<div class="container">
 									<h3>My skills</h3>
@@ -134,6 +80,7 @@ return (
 									</ul>
 								</div>
 							</section>
+
 							<section id="contact-section">
 								<div class="container">
 									<h3>Contact me</h3>
@@ -487,9 +434,7 @@ return (
 
 								</div>
 							</section> */}</>
-
 					</div>
-
 
 					<section id="footer">
 						<div class="container">
@@ -498,7 +443,10 @@ return (
 							</ul>
 						</div>
 					</section>
-
+					<div id="titleBar">
+						<span class="title"><a href="#">Rodrigo Herranz</a></span>
+						<a href="#" class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
+					</div>
 			</div>
 	</body>
 </>

@@ -3050,10 +3050,16 @@ input, select, textarea {
 					height: 4em;
 					position: absolute;
 					top: 0;
-					width: 6em;
+					width: 4em;
 					border: 0;
 					outline: 0;
 					right: 0;
+				}
+
+				.brgr {
+					position: absolute;
+					top: 13px;
+					right: 15px;
 				}
 
 					#titleBar .toggle:before {
@@ -3072,7 +3078,7 @@ input, select, textarea {
 					#titleBar .toggle:before {
 						background: #339966;
 						color: #ffffff;
-						content: '\f0c9';
+						content: '';
 						display: block;
 						font-size: 18px;
 						height: 44px;
@@ -3080,7 +3086,7 @@ input, select, textarea {
 						position: absolute;
 						text-align: center;
 						top: 0;
-						width: 64px;
+						width: 44px;
 						right: 0;
 					}
 
@@ -3237,7 +3243,7 @@ input, select, textarea {
 
 			#titleBar .toggle {
 				height: 4em;
-				width: 6em;
+				width: 4em;
 			}
 
 				#titleBar .toggle:before {
