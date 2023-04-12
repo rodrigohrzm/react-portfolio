@@ -1,5 +1,6 @@
 import './Presentation.css';
 import { NavLink, Route, Routes } from "react-router-dom";
+import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Sidebar } from '../components/Sidebar.js'
@@ -7,15 +8,17 @@ import { Sidebar } from '../components/Sidebar.js'
 <>{/*
 PENDING TASKS:
 	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
-		placeholder space is kept in Presentation CSS
-		https://www.youtube.com/watch?v=Kz0ikCzkBVQ
-		https://github.com/genegods/openSidebar/tree/main/openSidebar/src/components
+		al darle a la seccion de la sidebar volver a poner el classname como ""
+		https://www.youtube.com/watch?v=IQWrdGZvv6Y
 	- FORM LOGIC
 		https://www.npmjs.com/package/emailjs
 */}</>
 
 
 function Presentation() {
+
+const [ShowSidebar, setShowSidebar] = useState (false);
+const handleToggle = () => {setShowSidebar(!ShowSidebar);};
 return (
 <>
 	<head>
@@ -23,7 +26,7 @@ return (
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
-	<body class="is-preload">
+	<body class={ShowSidebar === false ? "" : "header-visible"}>
 			<Sidebar/>
 			<div id="wrapper">
 					<div id="main">
@@ -445,7 +448,7 @@ return (
 					</section>
 					<div id="titleBar">
 						<span class="title"><a href="#">Rodrigo Herranz</a></span>
-						<a href="#" class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
+						<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
 					</div>
 			</div>
 	</body>
