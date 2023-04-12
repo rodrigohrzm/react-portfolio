@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
-function Sidebar() {
+function Sidebar({handleToggle}) {
     const handleClick = (anchor) => () => {
         const id = `${anchor}-section`;
         const element = document.getElementById(id);
@@ -13,6 +13,7 @@ function Sidebar() {
             block: "start",
           });
         }
+        handleToggle();
       };
 
       const [activeLink, setActiveLink] = useState('');

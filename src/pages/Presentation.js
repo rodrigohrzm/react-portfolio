@@ -7,9 +7,9 @@ import { Sidebar } from '../components/Sidebar.js'
 
 <>{/*
 PENDING TASKS:
-	- SIDEBAR EN UN COMPONENTE NUEVO QUE ENTRA Y SALE EN MOBILE VIEW
-		al darle a la seccion de la sidebar volver a poner el classname como ""
-		https://www.youtube.com/watch?v=IQWrdGZvv6Y
+	- Titlebar jumps to top of page instead of top of view
+		quitando los dos translateX vuelve a bajar al sitio pero mal horizontalmente
+		el video no se reproduce en android y no carga en iphone
 	- FORM LOGIC
 		https://www.npmjs.com/package/emailjs
 */}</>
@@ -27,7 +27,7 @@ return (
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 	<body class={ShowSidebar === false ? "" : "header-visible"}>
-			<Sidebar/>
+			<Sidebar handleToggle={handleToggle} />
 			<div id="wrapper">
 					<div id="main">
 							<section id="about-section">
@@ -74,12 +74,12 @@ return (
 									<h3>My skills</h3>
 									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. In addition to that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
 									<ul class="feature-icons">
-										<li><span className="skills"><FontAwesomeIcon icon={faCode} spin /></span>React, JS, HTML & CSS</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faDiagramProject} spin /></span>UI/UX Design</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faPhotoFilm} spin /></span>Image & Video Editing</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faUsersViewfinder} spin /></span>Direct-To-Consumer Campaigns</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faDatabase} spin /></span>Customer Data Management</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faRobot} spin /></span>Process Automation</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faCode} /></span>React, JS, HTML & CSS</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faDiagramProject} /></span>UI/UX Design</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faPhotoFilm} /></span>Image & Video Editing</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faUsersViewfinder} /></span>Direct-To-Consumer Campaigns</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faDatabase} /></span>Customer Data Management</li>
+										<li><span className="skills"><FontAwesomeIcon icon={faRobot} /></span>Process Automation</li>
 									</ul>
 								</div>
 							</section>
