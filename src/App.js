@@ -3,7 +3,7 @@ import { Presentation } from './pages/Presentation'
 
 function App() {
   return (
-    <><Presentation/></>
+    <Presentation/>
   );
 }
 

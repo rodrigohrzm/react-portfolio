@@ -22,26 +22,26 @@ return (
 <>
 	<head>
 		<title>Rodrigo's portfolio</title>
-		<meta charset="utf-8" />
+		<meta charSet="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
 
-	<body class={ShowSidebar === false ? "" : "header-visible"}>
+	<body className={ShowSidebar === false ? "" : "header-visible"}>
 		<div id="titleBar">
-			<span class="title"><a href="#">Rodrigo Herranz</a></span>
-			<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
+			<span className="title"><a href="#">Rodrigo Herranz</a></span>
+			<a onClick={() => {handleToggle();}} className="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
 		</div>
 			<Sidebar handleToggle={handleToggle} />
 			<div id="wrapper">
-					<div id="main">
+					<main id="main">
 							<section id="about-section">
-								<div class="videobanner" data-position="center">
-									<video loop muted autoPlay >
+								<div className="videobanner" data-position="center">
+									<video loop muted autoPlay playsInline>
 										<source src={require('../assets/images/banner.mp4')} type="video/mp4" />
 									</video>
 								</div>
-								<div class="container">
-									<header class="major">
+								<div className="container">
+									<header className="major">
 										<h2>Welcome to my portfolio</h2>
 										<p>Front End development, design and marketing.</p>
 									</header>
@@ -51,20 +51,20 @@ return (
 							</section>
 
 							<section id="portfolio-section">
-								<div class="container">
+								<div className="container">
 									<h3>A quick demo</h3>
 									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can become very addicting...</p>
-									<div class="features">
+									<div className="features">
 										<article>
-											<a href="/service" class="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
-											<div class="inner">
+											<a href="/service" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
+											<div className="inner">
 												<a href="/service"><h4>Car repair and rental service</h4></a>
 												<p>A business website with both customer and owner view.<br/>You can book an appointment for repairs and rent a replacement vehicle from inventory.<br/>If you log in, you see a dashboard with business information like upcoming bookings and the rental schedule.</p>
 											</div>
 										</article>
 										<article>
-											<a href="/puzzle" class="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
-											<div class="inner">
+											<a href="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
+											<div className="inner">
 												<a href="/puzzle"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
 												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
 											</div>
@@ -74,10 +74,10 @@ return (
 							</section>
 
 							<section id="skills-section" style={{backgroundColor: "#f6f7f9"}}>
-								<div class="container">
+								<div className="container">
 									<h3>My skills</h3>
 									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. In addition to that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
-									<ul class="feature-icons">
+									<ul className="feature-icons">
 										<li><span className="skills"><FontAwesomeIcon icon={faCode} /></span>React, JS, HTML & CSS</li>
 										<li><span className="skills"><FontAwesomeIcon icon={faDiagramProject} /></span>UI/UX Design</li>
 										<li><span className="skills"><FontAwesomeIcon icon={faPhotoFilm} /></span>Image & Video Editing</li>
@@ -89,18 +89,18 @@ return (
 							</section>
 
 							<section id="contact-section">
-								<div class="container">
+								<div className="container">
 									<h3>Contact me</h3>
 									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
 									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="your message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
+										<div className="row gtr-uniform">
+											<div className="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="name" /></div>
+											<div className="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="email" /></div>
+											<div className="col-12"><input type="text" name="subject" id="subject" placeholder="subject" /></div>
+											<div className="col-12"><textarea name="message" id="message" placeholder="your message" rows="6"></textarea></div>
+											<div className="col-12">
+												<ul className="actions">
+													<li><input type="submit" className="primary" value="Send Message" /></li>
 												</ul>
 											</div>
 										</div>
@@ -108,7 +108,7 @@ return (
 								</div>
 							</section>
 							<>{/* <section id="five">
-								<div class="container">
+								<div className="container">
 									<h3>Elements</h3>
 
 									<section>
@@ -157,8 +157,8 @@ return (
 
 									<section>
 										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
+										<div className="row">
+											<div className="col-6 col-12-xsmall">
 												<h5>Unordered</h5>
 												<ul>
 													<li>Dolor pulvinar etiam magna etiam.</li>
@@ -166,13 +166,13 @@ return (
 													<li>Felis enim feugiat dolore viverra.</li>
 												</ul>
 												<h5>Alternate</h5>
-												<ul class="alt">
+												<ul className="alt">
 													<li>Dolor pulvinar etiam magna etiam.</li>
 													<li>Sagittis adipiscing lorem eleifend.</li>
 													<li>Felis enim feugiat dolore viverra.</li>
 												</ul>
 											</div>
-											<div class="col-6 col-12-xsmall">
+											<div className="col-6 col-12-xsmall">
 												<h5>Ordered</h5>
 												<ol>
 													<li>Dolor pulvinar etiam magna etiam.</li>
@@ -183,54 +183,54 @@ return (
 													<li>Felis enim feugiat dolore viverra.</li>
 												</ol>
 												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+												<ul className="icons">
+													<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+													<li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+													<li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+													<li><a href="#" className="icon brands fa-github"><span className="label">Github</span></a></li>
+													<li><a href="#" className="icon brands fa-dribbble"><span className="label">Dribbble</span></a></li>
+													<li><a href="#" className="icon brands fa-tumblr"><span className="label">Tumblr</span></a></li>
 												</ul>
 											</div>
 										</div>
 										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
+										<ul className="actions">
+											<li><a href="#" className="button primary">Default</a></li>
+											<li><a href="#" className="button">Default</a></li>
+											<li><a href="#" className="button alt">Default</a></li>
 										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
+										<ul className="actions small">
+											<li><a href="#" className="button primary small">Small</a></li>
+											<li><a href="#" className="button small">Small</a></li>
+											<li><a href="#" className="button alt small">Small</a></li>
 										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
+										<div className="row">
+											<div className="col-3 col-6-medium col-12-xsmall">
+												<ul className="actions stacked">
+													<li><a href="#" className="button primary">Default</a></li>
+													<li><a href="#" className="button">Default</a></li>
+													<li><a href="#" className="button alt">Default</a></li>
 												</ul>
 											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
+											<div className="col-3 col-6 col-12-xsmall">
+												<ul className="actions stacked">
+													<li><a href="#" className="button primary small">Small</a></li>
+													<li><a href="#" className="button small">Small</a></li>
+													<li><a href="#" className="button alt small">Small</a></li>
 												</ul>
 											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
+											<div className="col-3 col-6-medium col-12-xsmall">
+												<ul className="actions stacked">
+													<li><a href="#" className="button primary fit">Default</a></li>
+													<li><a href="#" className="button fit">Default</a></li>
+													<li><a href="#" className="button alt fit">Default</a></li>
 												</ul>
 											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
+											<div className="col-3 col-6-medium col-12-xsmall">
+												<ul className="actions stacked">
+													<li><a href="#" className="button primary small fit">Small</a></li>
+													<li><a href="#" className="button small fit">Small</a></li>
+													<li><a href="#" className="button alt small fit">Small</a></li>
 												</ul>
 											</div>
 										</div>
@@ -239,7 +239,7 @@ return (
 									<section>
 										<h4>Table</h4>
 										<h5>Default</h5>
-										<div class="table-wrapper">
+										<div className="table-wrapper">
 											<table>
 												<thead>
 													<tr>
@@ -285,8 +285,8 @@ return (
 										</div>
 
 										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
+										<div className="table-wrapper">
+											<table className="alt">
 												<thead>
 													<tr>
 														<th>Name</th>
@@ -333,49 +333,49 @@ return (
 
 									<section>
 										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
+										<ul className="actions">
+											<li><a href="#" className="button primary">Primary</a></li>
+											<li><a href="#" className="button">Default</a></li>
+											<li><a href="#" className="button alt">Alternate</a></li>
 										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
+										<ul className="actions">
+											<li><a href="#" className="button primary large">Large</a></li>
+											<li><a href="#" className="button">Default</a></li>
+											<li><a href="#" className="button alt small">Small</a></li>
 										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
+										<ul className="actions fit">
+											<li><a href="#" className="button primary fit">Fit</a></li>
+											<li><a href="#" className="button fit">Fit</a></li>
+											<li><a href="#" className="button alt fit">Fit</a></li>
 										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
+										<ul className="actions fit small">
+											<li><a href="#" className="button primary fit small">Fit + Small</a></li>
+											<li><a href="#" className="button fit small">Fit + Small</a></li>
+											<li><a href="#" className="button alt fit small">Fit + Small</a></li>
 										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
+										<ul className="actions">
+											<li><a href="#" className="button primary icon solid fa-download">Icon</a></li>
+											<li><a href="#" className="button icon solid fa-download">Icon</a></li>
+											<li><a href="#" className="button alt icon solid fa-check">Icon</a></li>
 										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
+										<ul className="actions">
+											<li><span className="button primary disabled">Primary</span></li>
+											<li><span className="button disabled">Default</span></li>
+											<li><span className="button alt disabled">Alternate</span></li>
 										</ul>
 									</section>
 
 									<section>
 										<h4>Form</h4>
 										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
+											<div className="row gtr-uniform">
+												<div className="col-6 col-12-xsmall">
 													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
 												</div>
-												<div class="col-6 col-12-xsmall">
+												<div className="col-6 col-12-xsmall">
 													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
 												</div>
-												<div class="col-12">
+												<div className="col-12">
 													<select name="demo-category" id="demo-category">
 														<option value="">- Category -</option>
 														<option value="1">Manufacturing</option>
@@ -384,33 +384,33 @@ return (
 														<option value="1">Human Resources</option>
 													</select>
 												</div>
-												<div class="col-4 col-12-medium">
+												<div className="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-low" name="demo-priority" checked />
 													<label for="demo-priority-low">Low Priority</label>
 												</div>
-												<div class="col-4 col-12-medium">
+												<div className="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-normal" name="demo-priority" />
 													<label for="demo-priority-normal">Normal Priority</label>
 												</div>
-												<div class="col-4 col-12-medium">
+												<div className="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-high" name="demo-priority" />
 													<label for="demo-priority-high">High Priority</label>
 												</div>
-												<div class="col-6 col-12-medium">
+												<div className="col-6 col-12-medium">
 													<input type="checkbox" id="demo-copy" name="demo-copy" />
 													<label for="demo-copy">Email me a copy of this message</label>
 												</div>
-												<div class="col-6 col-12-medium">
+												<div className="col-6 col-12-medium">
 													<input type="checkbox" id="demo-human" name="demo-human" checked />
 													<label for="demo-human">I am a human and not a robot</label>
 												</div>
-												<div class="col-12">
+												<div className="col-12">
 													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
 												</div>
-												<div class="col-12">
-													<ul class="actions">
+												<div className="col-12">
+													<ul className="actions">
 														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
+														<li><input type="reset" value="Reset" className="alt" /></li>
 													</ul>
 												</div>
 											</div>
@@ -420,32 +420,32 @@ return (
 									<section>
 										<h4>Image</h4>
 										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+										<span className="image fit"><img src="images/banner.jpg" alt="" /></span>
+										<div className="box alt">
+											<div className="row gtr-50 gtr-uniform">
+												<div className="col-4"><span className="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div className="col-4"><span className="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 											</div>
 										</div>
 										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										<p><span className="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										<p><span className="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 									</section>
 
 								</div>
 							</section> */}</>
-					</div>
+					</main>
 
 					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
+						<div className="container">
+							<ul className="copyright">
 								<li>Copyright: HRZM &copy; {(new Date().getFullYear())} All rights reserved.</li>{/*<li><a href="http://html5up.net">Design template by HTML5 UP</a></li>*/}
 							</ul>
 						</div>

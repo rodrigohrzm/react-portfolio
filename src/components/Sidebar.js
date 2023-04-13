@@ -43,7 +43,7 @@ return (
 <>
     <section id="header">
         <header>
-            <span class="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
+            <span className="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
             <h1 id="logo">Hello! I'm Rodrigo</h1>
             <p>I live under a palm tree, love cars, and crafting is what I do best.</p>
         </header>
@@ -56,7 +56,7 @@ return (
             </ul>
         </nav>
         <footer>
-            <ul class="icons">
+            <ul className="icons">
                 <li><a href="https://linkedin.com/in/rodrigohrzm" target="_blank" className="icon brands fa-linkedin"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                 <li><a href="https://github.com/rodrigohrzm" target="_blank" className="icon brands fa-github"><FontAwesomeIcon icon={faGithub} /></a></li>
                 <li><a href="https://twitter.com/rodrigohrzm" target="_blank" className="icon brands fa-twitter"><FontAwesomeIcon icon={faTwitter} /></a></li>
