@@ -7,10 +7,10 @@ import { Sidebar } from '../components/Sidebar.js'
 
 <>{/*
 PENDING TASKS:
-	- El video no se reproduce en android y no carga en iphone
-	- Fallos en la consola
 	- FORM LOGIC
+		alert popup de confirmacion y clear form
 		https://www.npmjs.com/package/emailjs
+		https://www.youtube.com/watch?v=bMq2riFCF90
 */}</>
 
 
@@ -18,6 +18,18 @@ function Presentation() {
 
 const [ShowSidebar, setShowSidebar] = useState (false);
 const handleToggle = () => {setShowSidebar(!ShowSidebar);};
+
+const [ name , setName ] = useState ("");
+const [ email , setEmail ] = useState ("");
+const [ subject , setSubject ] = useState ("");
+const [ message , setMessage ] = useState ("");
+
+const handleSubmit = (e) => {
+	e.preventDefault();
+	let formData = [name, email, subject, message];
+	return null
+	}
+
 return (
 <>
 	<head>
@@ -92,12 +104,12 @@ return (
 								<div className="container">
 									<h3>Contact me</h3>
 									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
-									<form method="post" action="#">
+									<form onSubmit={handleSubmit}>
 										<div className="row gtr-uniform">
-											<div className="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="name" /></div>
-											<div className="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="email" /></div>
-											<div className="col-12"><input type="text" name="subject" id="subject" placeholder="subject" /></div>
-											<div className="col-12"><textarea name="message" id="message" placeholder="your message" rows="6"></textarea></div>
+											<div className="col-6 col-12-xsmall"><input required type="text" name="name" id="name" placeholder="name" minlength="3" value={name} onChange={(e => setName(e.target.value))}/></div>
+											<div className="col-6 col-12-xsmall"><input required type="email" name="email" id="email" placeholder="email" value={email} onChange={(e => setEmail(e.target.value))}/></div>
+											<div className="col-12"><input type="text" name="subject" id="subject" placeholder="subject" value={subject} onChange={(e => setSubject(e.target.value))}/></div>
+											<div className="col-12"><textarea name="message" id="message" placeholder="your message" rows="6" value={message} onChange={(e => setMessage(e.target.value))}></textarea></div>
 											<div className="col-12">
 												<ul className="actions">
 													<li><input type="submit" className="primary" value="Send Message" /></li>
