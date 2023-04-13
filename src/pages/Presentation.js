@@ -7,9 +7,7 @@ import { Sidebar } from '../components/Sidebar.js'
 
 <>{/*
 PENDING TASKS:
-	- Titlebar jumps to top of page instead of top of view
-		quitando los dos translateX vuelve a bajar al sitio pero mal horizontalmente
-		el video no se reproduce en android y no carga en iphone
+	- El video no se reproduce en android y no carga en iphone
 	- FORM LOGIC
 		https://www.npmjs.com/package/emailjs
 */}</>
@@ -26,7 +24,12 @@ return (
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	</head>
+
 	<body class={ShowSidebar === false ? "" : "header-visible"}>
+	<div id="titleBar">
+		<span class="title"><a href="#">Rodrigo Herranz</a></span>
+		<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
+	</div>
 			<Sidebar handleToggle={handleToggle} />
 			<div id="wrapper">
 					<div id="main">
@@ -446,10 +449,7 @@ return (
 							</ul>
 						</div>
 					</section>
-					<div id="titleBar">
-						<span class="title"><a href="#">Rodrigo Herranz</a></span>
-						<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
-					</div>
+
 			</div>
 	</body>
 </>

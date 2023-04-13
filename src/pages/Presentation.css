@@ -3091,10 +3091,10 @@ input, select, textarea {
 					}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
-				-moz-transform: translateX(-11.5em);
-				-webkit-transform: translateX(-11.5em);
-				-ms-transform: translateX(-11.5em);
-				transform: translateX(-11.5em);
+				-moz-transform: translateX(-23em);
+				-webkit-transform: translateX(-23em);
+				-ms-transform: translateX(-23em);
+				transform: translateX(-23em);
 			}
 
 			body.header-visible #header {
@@ -3252,10 +3252,10 @@ input, select, textarea {
 				}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
-				-moz-transform: translateX(-8.5em);
-				-webkit-transform: translateX(-8.5em);
-				-ms-transform: translateX(-8.5em);
-				transform: translateX(-8.5em);
+				-moz-transform: translateX(-17em);
+				-webkit-transform: translateX(-17em);
+				-ms-transform: translateX(-17em);
+				transform: translateX(-17em);
 			}
 
 	}
