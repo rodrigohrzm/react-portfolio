@@ -36,7 +36,7 @@ return (
 							<section id="about-section">
 								<div class="videobanner" data-position="center">
 									<video loop mute autoPlay>
-										<source src={require('../assets/images/banner.webm')} type="video/webm" />
+										<source src={require('../assets/images/banner.mp4')} type="video/MP4" />
 									</video>
 								</div>
 								<div class="container">
