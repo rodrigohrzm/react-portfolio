@@ -21,18 +21,15 @@ function Sidebar({handleToggle}) {
        const handleScroll = () => {
          const sections = document.querySelectorAll('section');
          const scrollPosition = window.pageYOffset;
-
          for (let i = 0; i < sections.length; i++) {
            const currentSection = sections[i];
            const currentSectionTop = currentSection.offsetTop;
            const currentSectionId = currentSection.id;
-
            if (scrollPosition >= currentSectionTop - 400) {
              setActiveLink(currentSectionId);
            }
          }
        }; window.addEventListener('scroll', handleScroll);
-
        return () => {
          window.removeEventListener('scroll', handleScroll);
        };
@@ -40,8 +37,7 @@ function Sidebar({handleToggle}) {
 
 
 return (
-<>
-    <section id="header">
+    <aside id="header">
         <header>
             <span className="image avatar"><img src={require('../assets/images/avatar.jpg')} alt="" /></span>
             <h1 id="logo">Hello! I'm Rodrigo</h1>
@@ -63,9 +59,7 @@ return (
                 <li><a href="https://www.instagram.com/rodrigohrzm" target="_blank" className="icon brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /></a></li>
             </ul>
         </footer>
-    </section>
-</>
-
+    </aside>
 );
 
 } export { Sidebar };

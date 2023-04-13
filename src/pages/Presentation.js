@@ -1,16 +1,10 @@
 import './Presentation.css';
 import { NavLink, Route, Routes } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Sidebar } from '../components/Sidebar.js'
-
-<>{/*
-PENDING TASKS:
-	- FORM LOGIC
-		https://www.npmjs.com/package/emailjs
-		https://www.youtube.com/watch?v=bMq2riFCF90
-*/}</>
+import emailjs from '@emailjs/browser';
 
 
 function Presentation() {
@@ -24,28 +18,27 @@ const [ email , setEmail ] = useState ("");
 const [ subject , setSubject ] = useState ("");
 const [ message , setMessage ] = useState ("");
 
+const form = useRef();
 const handleSubmit = (e) => {
 	e.preventDefault();
 	let formData = [name, email, subject, message];
-	
+	emailjs.sendForm('service_tihk3c6', 'template_ax1fnkl', form.current, 'CXTj3yKjPUKyka9vT')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 	setShowForm(false);
 	return null
 	}
 
 return (
-<>
-	<head>
-		<title>Rodrigo's portfolio</title>
-		<meta charSet="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	</head>
-
-	<body className={ShowSidebar === false ? "" : "header-visible"}>
-		<div id="titleBar">
+	<div className={ShowSidebar === false ? "" : "header-visible"}>
+		<aside id="titleBar">
 			<span className="title"><a href="#">Rodrigo Herranz</a></span>
 			<a onClick={() => {handleToggle();}} className="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
-		</div>
-			<Sidebar handleToggle={handleToggle} />
+		</aside>
+		<Sidebar handleToggle={handleToggle} />
 			<div id="wrapper">
 					<main id="main">
 							<section id="about-section">
@@ -67,20 +60,20 @@ return (
 							<section id="portfolio-section">
 								<div className="container">
 									<h3>A quick demo</h3>
-									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can become very addicting...</p>
+									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can be very addicting...</p>
 									<div className="features">
-										<article>
-											<a href="/service" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
-											<div className="inner">
-												<a href="/service"><h4>Car repair and rental service</h4></a>
-												<p>A business website with both customer and owner view.<br/>You can book an appointment for repairs and rent a replacement vehicle from inventory.<br/>If you log in, you see a dashboard with business information like upcoming bookings and the rental schedule.</p>
-											</div>
-										</article>
 										<article>
 											<a href="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
 											<div className="inner">
 												<a href="/puzzle"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
 												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
+											</div>
+										</article>
+										<article>
+											<a href="/service" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></a>
+											<div className="inner">
+												<a href="/service"><h4>Car repair and rental service</h4></a>
+												<p>A business website with both customer and owner view.<br/>You can book an appointment for repairs and rent a replacement vehicle from inventory.<br/>If you log in, you see a dashboard with business information like upcoming bookings and the rental schedule.</p>
 											</div>
 										</article>
 									</div>
@@ -109,7 +102,7 @@ return (
 									<div className={ShowForm === true ? "hiddenAlert" : "showAlert"}>
   										Message sent! I'll get back to you shortly.
 									</div>
-									<form onSubmit={handleSubmit} className={ShowForm === true ? "" : "hiddenForm"}>
+									<form ref={form} onSubmit={handleSubmit} className={ShowForm === true ? "" : "hiddenForm"}>
 										<div className="row gtr-uniform">
 											<div className="col-6 col-12-xsmall"><input required type="text" name="name" id="name" placeholder="name" minLength="3" value={name} onChange={(e => setName(e.target.value))}/></div>
 											<div className="col-6 col-12-xsmall"><input required type="email" name="email" id="email" placeholder="email" value={email} onChange={(e => setEmail(e.target.value))}/></div>
@@ -469,8 +462,7 @@ return (
 					</section>
 
 			</div>
-	</body>
-</>
+	</div>
   );
 }
 

@@ -3104,14 +3104,14 @@ input, select, textarea {
 						right: 0;
 					}
 
-			body.header-visible #wrapper, body.header-visible #titleBar {
+			.header-visible #wrapper, .header-visible #titleBar {
 				-moz-transform: translateX(-23em);
 				-webkit-transform: translateX(-23em);
 				-ms-transform: translateX(-23em);
 				transform: translateX(-23em);
 			}
 
-			body.header-visible #header {
+			.header-visible #header {
 				-moz-transform: translateX(0);
 				-webkit-transform: translateX(0);
 				-ms-transform: translateX(0);
@@ -3260,7 +3260,7 @@ input, select, textarea {
 					width: 44px;
 				}
 
-			body.header-visible #wrapper, body.header-visible #titleBar {
+			.header-visible #wrapper, .header-visible #titleBar {
 				-moz-transform: translateX(-17em);
 				-webkit-transform: translateX(-17em);
 				-ms-transform: translateX(-17em);
