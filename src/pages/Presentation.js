@@ -8,6 +8,7 @@ import { Sidebar } from '../components/Sidebar.js'
 <>{/*
 PENDING TASKS:
 	- El video no se reproduce en android y no carga en iphone
+	- Fallos en la consola
 	- FORM LOGIC
 		https://www.npmjs.com/package/emailjs
 */}</>
@@ -26,17 +27,17 @@ return (
 	</head>
 
 	<body class={ShowSidebar === false ? "" : "header-visible"}>
-	<div id="titleBar">
-		<span class="title"><a href="#">Rodrigo Herranz</a></span>
-		<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
-	</div>
+		<div id="titleBar">
+			<span class="title"><a href="#">Rodrigo Herranz</a></span>
+			<a onClick={() => {handleToggle();}} class="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
+		</div>
 			<Sidebar handleToggle={handleToggle} />
 			<div id="wrapper">
 					<div id="main">
 							<section id="about-section">
 								<div class="videobanner" data-position="center">
-									<video loop mute autoPlay>
-										<source src={require('../assets/images/banner.mp4')} type="video/MP4" />
+									<video loop muted autoPlay >
+										<source src={require('../assets/images/banner.mp4')} type="video/mp4" />
 									</video>
 								</div>
 								<div class="container">
