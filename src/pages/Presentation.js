@@ -8,7 +8,6 @@ import { Sidebar } from '../components/Sidebar.js'
 <>{/*
 PENDING TASKS:
 	- FORM LOGIC
-		alert popup de confirmacion y clear form
 		https://www.npmjs.com/package/emailjs
 		https://www.youtube.com/watch?v=bMq2riFCF90
 */}</>
@@ -16,6 +15,7 @@ PENDING TASKS:
 
 function Presentation() {
 
+const [ShowForm, setShowForm] = useState (true);
 const [ShowSidebar, setShowSidebar] = useState (false);
 const handleToggle = () => {setShowSidebar(!ShowSidebar);};
 
@@ -27,6 +27,8 @@ const [ message , setMessage ] = useState ("");
 const handleSubmit = (e) => {
 	e.preventDefault();
 	let formData = [name, email, subject, message];
+	
+	setShowForm(false);
 	return null
 	}
 
@@ -104,9 +106,12 @@ return (
 								<div className="container">
 									<h3>Contact me</h3>
 									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
-									<form onSubmit={handleSubmit}>
+									<div className={ShowForm === true ? "hiddenAlert" : "showAlert"}>
+  										Message sent! I'll get back to you shortly.
+									</div>
+									<form onSubmit={handleSubmit} className={ShowForm === true ? "" : "hiddenForm"}>
 										<div className="row gtr-uniform">
-											<div className="col-6 col-12-xsmall"><input required type="text" name="name" id="name" placeholder="name" minlength="3" value={name} onChange={(e => setName(e.target.value))}/></div>
+											<div className="col-6 col-12-xsmall"><input required type="text" name="name" id="name" placeholder="name" minLength="3" value={name} onChange={(e => setName(e.target.value))}/></div>
 											<div className="col-6 col-12-xsmall"><input required type="email" name="email" id="email" placeholder="email" value={email} onChange={(e => setEmail(e.target.value))}/></div>
 											<div className="col-12"><input type="text" name="subject" id="subject" placeholder="subject" value={subject} onChange={(e => setSubject(e.target.value))}/></div>
 											<div className="col-12"><textarea name="message" id="message" placeholder="your message" rows="6" value={message} onChange={(e => setMessage(e.target.value))}></textarea></div>

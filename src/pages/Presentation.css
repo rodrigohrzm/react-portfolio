@@ -1791,6 +1791,20 @@ input, select, textarea {
 
 /* Form */
 
+	.hiddenAlert {
+		display: none;
+  	}
+
+	.showAlert {
+		padding: 20px;
+		background-color: #c5ffe2;
+		color: green;
+  	}
+
+  	.hiddenForm {
+		display: none;
+  	}
+
 	form {
 		margin: 0 0 2.25em 0;
 	}
@@ -3105,13 +3119,8 @@ input, select, textarea {
 			}
 
 			.videobanner {
-				justify-content: center;
+				justify-content:center;
 			}
-			.videobanner video {
-				width: 1024px;
-				object-position: center;
-			}
-
 	}
 
 /* Small */
