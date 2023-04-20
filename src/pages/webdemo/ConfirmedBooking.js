@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 
 function ConfirmedBooking() {
     return (
-      <div class="confirmationpage">
+      <div className="confirmationpage">
         <h2>Your reservation has been confirmed</h2>
         <h3>Thank you for choosing the Little Lemon Restaurant</h3>
-        <button><Link to={"/"}>See the Menu</Link></button>
+        <button><Link to={"/webdemo1"} replace>See the Menu</Link></button>
       </div>
     );
   }

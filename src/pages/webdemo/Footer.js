@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 
 function Footer() {
     return (
-      <footer>
-        <img src={require("./assets/restaurantchefB.jpg")}/>
-        <div class="footerLinks">
+      <footer className="serviceFooter">
+        <img src={require("../../assets/images/restaurantchefB.jpg")}/>
+        <div className="footerLinks">
           <text>NAVIGATION</text>
           <ul>
           <li><Link to={"/"}>Home</Link></li>
@@ -15,7 +15,7 @@ function Footer() {
           <li><Link to={"/"}>Login</Link></li>
           </ul>
         </div>
-        <div class="footerLinks">
+        <div className="footerLinks">
           <text>CONTACT INFO</text>
           <ul>
           <li><Link to={"/"}>Address</Link></li>
@@ -23,7 +23,7 @@ function Footer() {
           <li><Link to={"/"}>Email</Link></li>
         </ul>
         </div>
-        <div class="footerLinks">
+        <div className="footerLinks">
           <text>SOCIAL MEDIA</text>
           <ul>
           <li><Link to={"/"}>Facebook</Link></li>

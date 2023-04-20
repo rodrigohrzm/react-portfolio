@@ -1,9 +1,10 @@
 import {ReactComponent as Logo} from '../../assets/images/Logo.svg';
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 function Nav() {
     return (
-      <div class="navBar">
+      <>
+      <div className="navBar">
       <Logo />
       <nav>
         <ul>
@@ -16,6 +17,8 @@ function Nav() {
         </ul>
       </nav>
       </div>
+      <Outlet />
+      </>
     )};
-// https://create-react-app.dev/docs/adding-images-fonts-and-files/
+
   export default Nav;

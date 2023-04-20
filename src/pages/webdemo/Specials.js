@@ -28,12 +28,12 @@ const dishes = [
 
 function Specials() {
     return (
-      <section class="specialDishes">
-      <div class="topArea">
+      <section className="specialDishes">
+      <div className="topArea">
         <h2>This week's Specials!</h2>
         <button><Link to={"/"}>Online Menu</Link></button>
       </div>
-      <div class="cardsGrid">
+      <div className="cardsGrid">
         {dishes.map((dish) => (<Card
           title={dish.title}
           price={dish.price}

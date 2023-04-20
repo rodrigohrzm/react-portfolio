@@ -1,7 +1,6 @@
-import Nav from './Nav';
 import Title from './Title';
 import { useReducer } from 'react';
-import { fetchAPI } from "./FetchAPI";
+import { fetchAPI } from "../../services/FetchAPI";
 import BookingForm from './BookingForm';
 
 function BookingPage() {
@@ -18,11 +17,10 @@ function BookingPage() {
 
     return (
       <>
-        <Nav />
         <Title />
         <BookingForm availabletimes={freehours} settimes={checkInput} />
       </>
     );
   }
-  
+
   export default BookingPage;

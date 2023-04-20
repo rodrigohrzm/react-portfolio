@@ -2,12 +2,12 @@ import React from "react"
 
 const Card = ({ name, score, review, imageSrc }) => {
     return(
-        <div class="reviewBlock">
-            <div class="reviewer">
+        <div className="reviewBlock">
+            <div className="reviewer">
                 <img src={imageSrc} />
                 <h3>{name}</h3>
             </div>
-            <div class="reviewText">
+            <div className="reviewText">
                 <text>{score}</text>
                 <p>{review}</p>
             </div>

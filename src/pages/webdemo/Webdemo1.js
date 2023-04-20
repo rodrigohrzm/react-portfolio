@@ -1,14 +1,13 @@
-import './Service.css';
-import Nav from './Nav';
+import './Webdemo.css';
 import CallToAction from './CallToAction';
 import Specials from './Specials';
 import CustomersSay from './CustomersSay';
 import Chicago from './Chicago';
+import Footer from './Footer';
 
-function Service() {
+function Webdemo1() {
     return (
       <>
-        <Nav />
         <CallToAction />
         <Specials />
         <CustomersSay />
@@ -17,6 +16,4 @@ function Service() {
     );
   }
 
-
-
-  export { Service };
+  export { Webdemo1 };

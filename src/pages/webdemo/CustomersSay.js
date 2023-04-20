@@ -33,9 +33,9 @@ const reviews = [
 
 function CustomersSay() {
   return (
-    <section class="reviewArea">
+    <section className="reviewArea">
       <h2>Testimonials</h2>
-    <div class="reviewGrid">
+    <div className="reviewGrid">
       {reviews.map((review) => (<Review
         name={review.name}
         score={review.score}
