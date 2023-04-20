@@ -1,5 +1,5 @@
 import './Presentation.css';
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useState, useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot, faBars } from '@fortawesome/free-solid-svg-icons'
@@ -63,9 +63,9 @@ return (
 									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can be very addicting...</p>
 									<div className="features">
 										<article>
-											<a href="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></a>
+											<Link to="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></Link>
 											<div className="inner">
-												<a href="/puzzle"><h4>Puzzle game</h4></a>{/*https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html*/}
+												<Link to="/puzzle"><h4>Puzzle game</h4></Link>
 												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
 											</div>
 										</article>
