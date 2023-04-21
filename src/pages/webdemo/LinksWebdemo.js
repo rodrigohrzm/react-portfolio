@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import { Webdemo1 } from './Webdemo1';
+import { WebNav } from './WebNav'
 import { Webdemo } from './Webdemo';
 import BookingPage from './BookingPage';
 import ConfirmedBooking from './ConfirmedBooking';
@@ -24,7 +25,7 @@ const LinksWebdemo = () => (
 
 
   <Routes>
-    <Route path="/webdemo/*"> {/*element={<WebNav/>}*/}
+    <Route path="/webdemo/*" element={<WebNav/>}>
         <Route index element={<Webdemo />} />
     </Route>
   </Routes>
