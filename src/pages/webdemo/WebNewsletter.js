@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+// PONER TEMPLATE NUEVA EN EL FORM
+
 function WebNewsletter() {
     const [ShowForm, setShowForm] = useState (true);
     const [ name , setName ] = useState ("");

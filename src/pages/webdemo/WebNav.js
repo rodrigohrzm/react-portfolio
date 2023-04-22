@@ -5,7 +5,7 @@ function WebNav() {
       <>
       <image className="weblogo" src="" />
       <nav>
-        <ul>
+        <ul style={{display: "flex", display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
           <li><NavLink to={"help"}>Emergencies</NavLink></li>
           <li><NavLink to={"booking"}>Appointments</NavLink></li>
           <li><NavLink to={"renting"}>Renta-a-car</NavLink></li>

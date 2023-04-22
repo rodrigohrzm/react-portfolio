@@ -1,11 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import Nav from './Nav';
 import { Webdemo1 } from './Webdemo1';
-import { WebNav } from './WebNav'
-import { Webdemo } from './Webdemo';
 import BookingPage from './BookingPage';
 import ConfirmedBooking from './ConfirmedBooking';
+
+import { WebNav } from './WebNav'
+import { WebFooter } from './WebFooter'
+import { Webdemo } from './Webdemo';
+import { WebBooking } from './WebBooking';
 
 import Footer from './Footer';
 
@@ -27,11 +31,12 @@ const LinksWebdemo = () => (
   <Routes>
     <Route path="/webdemo/*" element={<WebNav/>}>
         <Route index element={<Webdemo />} />
+        <Route path="booking" element={<WebBooking />} />
     </Route>
   </Routes>
 
   <Routes>
-    <Route path="/webdemo/*" /> {/*element={<WebFooter/>}*/}
+    <Route path="/webdemo/*" element={<WebFooter/>} />
   </Routes>
   </>
 );

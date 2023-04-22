@@ -11,7 +11,7 @@ const fetchAPI = function(userInput) {
     let result = [];
     let random = seededRandom(userInput);
 
-    for(let i = 17; i <= 23; i++) {
+    for(let i = 9; i <= 19; i++) {
         if(random() < 0.5) {
             result.push(i + ':00');
         }

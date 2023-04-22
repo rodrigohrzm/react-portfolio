@@ -1,7 +1,7 @@
 function WebRepairs() {
     return (
       <>
-        <ul> CARD COMPONENTS ALL OF THEM
+        <ul> IMG + DESCRIPTION
             <li>Electrics inspection</li>
             <li>Clutch</li>
             <li>Dents</li>
