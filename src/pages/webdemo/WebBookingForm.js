@@ -1,25 +1,39 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useReducer } from 'react';
+import { fetchAPI } from "../../services/FetchAPI";
 import emailjs from '@emailjs/browser';
+import RepairSupport from '../../data/RepairSupport.json';
 
-// QUE LA LISTA DE MARCAS AFECTE LA LISTA DE MODELOS Y QUE TODA LA INFO VENGA DESDE UNA BASE DE DATOS EN LA CARPETA SERVICES
-
-function WebBookingForm({availabletimes, settimes}) {
-   const [ShowForm, setShowForm] = useState (true);
+function WebBookingForm() {
+   const [ ShowForm, setShowForm ] = useState (true);
    const [ date , setDate ] = useState ("");
    const [ time , setTime ] = useState ("");
-   const [ brand , setBrand ] = useState ("");
+   const [ selectedBrand, setSelectedBrand ] = useState ("");
+   const [ selectedModel, setSelectedModel ] = useState ("");
    const [ repair , setRepair ] = useState ({mechanical: false, electrical: false, bodywork: false, interior: false});
    const [ description , setDescription ] = useState ("");
    const [ fullname , setFullname ] = useState ("");
    const [ email , setEmail ] = useState ("");
    const [ phone , setPhone ] = useState ("");
 
+   const [ availabletimes , dispatch ] = useReducer(updateTimes, ["select a date first"]);
+
+   function updateTimes(availabletimes, userInput) {
+     return fetchAPI(userInput)
+   }
+
+   function checkInput(date) {
+     dispatch(date);
+   }
+
    function auxchild(event) {
       const dateSend = new Date(event.target.value);
       const dateShow = event.target.value;
       setDate(dateShow);
-      settimes(dateSend);
+      checkInput(dateSend);
    }
+
+   const brandOptions = Object.keys(RepairSupport);
+   const modelOptions = selectedBrand ? RepairSupport[selectedBrand] : [];
 
    function handleCheckboxChange(event) {
     const { name, checked } = event.target;
@@ -41,10 +55,8 @@ function WebBookingForm({availabletimes, settimes}) {
 
     return (
       <>
-      <div className={ShowForm === true ? "hiddenAlert" : "showAlert"}>
-      Thank you for choosing us, we'll be ready when you arrive.
-      </div>
-      <form className={ShowForm === true ? "bookingForm" : "hiddenForm"} onSubmit={handleSubmit}>
+      {ShowForm ? (
+      <form ref={form} onSubmit={handleSubmit}>
          <fieldset>
             <label className="labelText" htmlFor="res-date">Choose date</label>
                <input required type="date" id="res-date" value={date} onChange={auxchild}/>
@@ -55,14 +67,18 @@ function WebBookingForm({availabletimes, settimes}) {
                </select>
 
             <label className="labelText" htmlFor="occasion">Car brand</label>
-               <select id="brand" placeholder="select" value={brand} onChange={(e => setBrand(e.target.value))}>
-                  <option key="none" value="none" defaultValue >None</option>
-                  <option key="birthday" value="birthday" >Birthday</option>
-                  <option key="company" value="company" >Company event</option>
-                  <option key="other" value="other" >Other</option>
+               <select required id="brand" placeholder="select" value={selectedBrand} onChange={(e => {setSelectedBrand(e.target.value);setSelectedModel('');})}>
+                  <option defaultValue disabled hidden value="">choose your brand</option>
+                  {brandOptions.map((brand) => (<option key={brand} value={brand}>{brand}</option>))}
                </select>
 
-            <label className="labelText" >Type of repair</label>
+            <label className="labelText" htmlFor="occasion">Car model</label>
+               <select required id="brand" placeholder="select" value={selectedModel} onChange={(e => {setSelectedModel(e.target.value);})}>
+                  <option defaultValue disabled hidden value="">choose your model</option>
+                  {modelOptions.map((model) => (<option key={model} value={model}>{model}</option>))}
+               </select>
+
+            <label className="labelText" >Types of repair</label>
                <div required>
                 <input type="checkbox" id="mechanical" name="mechanical" value="mechanical" onChange={handleCheckboxChange}/>
                   <label htmlFor="mechanical">Mechanical</label>
@@ -88,6 +104,7 @@ function WebBookingForm({availabletimes, settimes}) {
          </fieldset>
         <button type="submit">Submit reservation</button>
         </form>
+        ) : (<div className="showAlert">Thank you for choosing us, we'll be ready when you arrive.</div>)}
         </>
     )};
 

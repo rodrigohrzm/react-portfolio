@@ -1,0 +1,133 @@
+{  "rentals": [
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2020,
+      "mileage": 15000,
+      "booked_status": false,
+      "horsepower": 139,
+      "automatic": true,
+      "MPG": {
+        "city": 30,
+        "highway": 38
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2018,
+      "mileage": 20000,
+      "booked_status": true,
+      "horsepower": 158,
+      "automatic": false,
+      "MPG": {
+        "city": 32,
+        "highway": 42
+      }
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2022,
+      "mileage": 500,
+      "booked_status": false,
+      "horsepower": 310,
+      "automatic": false,
+      "MPG": {
+        "city": 21,
+        "highway": 30
+      }
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "year": 2019,
+      "mileage": 30000,
+      "booked_status": false,
+      "horsepower": 275,
+      "automatic": true,
+      "MPG": {
+        "city": 16,
+        "highway": 24
+      }
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2021,
+      "mileage": 1000,
+      "booked_status": true,
+      "horsepower": 188,
+      "automatic": true,
+      "MPG": {
+        "city": 28,
+        "highway": 39
+      }
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2017,
+      "mileage": 40000,
+      "booked_status": false,
+      "horsepower": 320,
+      "automatic": true,
+      "MPG": {
+        "city": 21,
+        "highway": 32
+      }
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "year": 2020,
+      "mileage": 12000,
+      "booked_status": true,
+      "horsepower": 255,
+      "automatic": true,
+      "MPG": {
+        "city": 23,
+        "highway": 35
+      }
+    },
+    {
+      "make": "Audi",
+      "model": "A4",
+      "year": 2019,
+      "mileage": 25000,
+      "booked_status": false,
+      "horsepower": 248,
+      "automatic": true,
+      "MPG": {
+        "city": 24,
+        "highway": 31
+      }
+    },
+    {
+        "make": "Ford",
+        "model": "F-150",
+        "year": 2021,
+        "mileage": 10000,
+        "booked_status": true,
+        "horsepower": 325,
+        "automatic": true,
+        "MPG": {
+          "city": 20,
+          "highway": 24
+        }
+      },
+    {
+        "make": "Tesla",
+        "model": "Model 3",
+        "year": 2022,
+        "mileage": 100,
+        "booked_status": true,
+        "horsepower": 346,
+        "automatic": true,
+        "MPG": {
+          "city": 148,
+          "highway": 144
+        }
+      }
+    ]
+  }
