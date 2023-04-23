@@ -10,7 +10,9 @@
       "MPG": {
         "city": 30,
         "highway": 38
-      }
+      },
+      "class": "Compact",
+      "price": 33
     },
     {
       "make": "Honda",
@@ -23,7 +25,9 @@
       "MPG": {
         "city": 32,
         "highway": 42
-      }
+      },
+      "class": "Sedan",
+      "price": 40
     },
     {
       "make": "Ford",
@@ -36,24 +40,28 @@
       "MPG": {
         "city": 21,
         "highway": 30
-      }
+      },
+      "class": "Coupe",
+      "price": 102
     },
     {
-      "make": "Chevrolet",
-      "model": "Camaro",
+      "make": "Cupra",
+      "model": "Formentor",
       "year": 2019,
       "mileage": 30000,
-      "booked_status": false,
+      "booked_status": true,
       "horsepower": 275,
       "automatic": true,
       "MPG": {
         "city": 16,
         "highway": 24
-      }
+      },
+      "class": "SUV",
+      "price": 53
     },
     {
-      "make": "Nissan",
-      "model": "Altima",
+      "make": "Hyundai",
+      "model": "Tucson",
       "year": 2021,
       "mileage": 1000,
       "booked_status": true,
@@ -62,7 +70,9 @@
       "MPG": {
         "city": 28,
         "highway": 39
-      }
+      },
+      "class": "SUV",
+      "price": 64
     },
     {
       "make": "BMW",
@@ -75,11 +85,13 @@
       "MPG": {
         "city": 21,
         "highway": 32
-      }
+      },
+      "class": "Sedan",
+      "price": 59
     },
     {
       "make": "Mercedes-Benz",
-      "model": "C-Class",
+      "model": "B-Class",
       "year": 2020,
       "mileage": 12000,
       "booked_status": true,
@@ -88,11 +100,13 @@
       "MPG": {
         "city": 23,
         "highway": 35
-      }
+      },
+      "class": "Compact",
+      "price": 52
     },
     {
       "make": "Audi",
-      "model": "A4",
+      "model": "Q2",
       "year": 2019,
       "mileage": 25000,
       "booked_status": false,
@@ -101,7 +115,9 @@
       "MPG": {
         "city": 24,
         "highway": 31
-      }
+      },
+      "class": "SUV",
+      "price": 65
     },
     {
         "make": "Ford",
@@ -114,7 +130,9 @@
         "MPG": {
           "city": 20,
           "highway": 24
-        }
+        },
+        "class": "Pick-Up",
+        "price": 88
       },
     {
         "make": "Tesla",
@@ -127,7 +145,9 @@
         "MPG": {
           "city": 148,
           "highway": 144
-        }
+        },
+        "class": "Sedan",
+        "price": 59
       }
     ]
   }

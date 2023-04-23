@@ -10,6 +10,7 @@ import { WebNav } from './WebNav'
 import { WebFooter } from './WebFooter'
 import { Webdemo } from './Webdemo';
 import { WebBooking } from './WebBooking';
+import { WebRentalPage } from './WebRentalPage';
 
 import Footer from './Footer';
 
@@ -32,6 +33,7 @@ const LinksWebdemo = () => (
     <Route path="/webdemo/*" element={<WebNav/>}>
         <Route index element={<Webdemo />} />
         <Route path="booking" element={<WebBooking />} />
+        <Route path="renting" element={<WebRentalPage />} />
     </Route>
   </Routes>
 
