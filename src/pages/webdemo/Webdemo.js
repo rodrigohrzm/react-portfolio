@@ -1,4 +1,3 @@
-// import './Webdemo1.css';
 import React from 'react';
 import { WebCallToAction } from './WebCallToAction'
 import { WebBrands } from './WebBrands'

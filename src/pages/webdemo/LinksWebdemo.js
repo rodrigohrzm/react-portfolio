@@ -11,6 +11,7 @@ import { WebFooter } from './WebFooter'
 import { Webdemo } from './Webdemo';
 import { WebBooking } from './WebBooking';
 import { WebRentalPage } from './WebRentalPage';
+import { WebUserpanel } from './WebUserpanel';
 
 import Footer from './Footer';
 
@@ -34,6 +35,7 @@ const LinksWebdemo = () => (
         <Route index element={<Webdemo />} />
         <Route path="booking" element={<WebBooking />} />
         <Route path="renting" element={<WebRentalPage />} />
+        <Route path="userpanel" element={<WebUserpanel />} />
     </Route>
   </Routes>
 
