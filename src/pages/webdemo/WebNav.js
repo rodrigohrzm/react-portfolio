@@ -157,8 +157,7 @@ export function WebNav() {
     <Box pb={120}>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
-          {/* <MantineLogo size={30} /> */}
-
+          <h1>MantineLogo</h1>
           <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
             <NavLink to={"help"} className={classes.link}>
               Emergencies
