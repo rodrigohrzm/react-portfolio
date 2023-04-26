@@ -33,6 +33,7 @@ const handleSubmit = (e) => {
 	}
 
 return (
+	<div className="PresentationPage">
 	<div className={ShowSidebar === false ? "" : "header-visible"}>
 		<aside id="titleBar">
 			<span className="title"><a href="#">Rodrigo Herranz</a></span>
@@ -462,7 +463,8 @@ return (
 					</section>
 
 			</div>
-	</div>
+		</div>
+		</div>
   );
 }
 

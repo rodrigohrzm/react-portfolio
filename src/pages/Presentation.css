@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
-html, body, div, span, applet, object,
+
+
+.PresentationPage html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, br, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
@@ -18,47 +20,47 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
+.PresentationPage article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-body {
+.PresentationPage body {
 	line-height: 1;
 }
 
-ol, ul {
+.PresentationPage ol, ul {
 	list-style: none;
 }
 
-blockquote, q {
+.PresentationPage blockquote, q {
 	quotes: none;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
+	.PresentationPage blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
 	}
 
-table {
+.PresentationPage table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-body {
+.PresentationPage body {
 	-webkit-text-size-adjust: none;
 }
 
-mark {
+.PresentationPage mark {
 	background-color: transparent;
 	color: inherit;
 }
 
-input::-moz-focus-inner {
+.PresentationPage input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
-input, select, textarea {
+.PresentationPage input, select, textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -67,19 +69,19 @@ input, select, textarea {
 
 /* Basic */
 
-	html {
+	.PresentationPage html {
 		box-sizing: border-box;
 	}
 
-	*, *:before, *:after {
+	.PresentationPage *, *:before, *:after {
 		box-sizing: inherit;
 	}
 
-	body {
+	.PresentationPage body {
 		background: #fff;
 	}
 
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		.PresentationPage body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -90,7 +92,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-	body, input, select, textarea {
+	.PresentationPage body, input, select, textarea {
 		color: #888  !important;
 		font-family: "Lato", sans-serif !important;
 		font-size: 16pt !important;
@@ -98,7 +100,7 @@ input, select, textarea {
 		line-height: 1.75em !important;
 	}
 
-	a {
+	.PresentationPage a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -108,92 +110,92 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
+		.PresentationPage a:hover {
 			border-bottom-color: transparent;
 			color: #339966 !important;
 		}
 
-	strong, b {
+	.PresentationPage strong, b {
 		color: #404040;
 		font-weight: 700;
 	}
 
-	em, i {
+	.PresentationPage em, i {
 		font-style: italic;
 	}
 
-	p {
+	.PresentationPage p {
 		margin: 0 0 2.25em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	.PresentationPage h1, h2, h3, h4, h5, h6 {
 		color: #404040;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		.PresentationPage h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			border: 0;
 			color: inherit;
 			text-decoration: none;
 		}
 
-	h2 {
+	.PresentationPage h2 {
 		font-size: 2em;
 		line-height: 1.5em;
 	}
 
-	h3 {
+	.PresentationPage h3 {
 		font-size: 1.75em;
 		line-height: 1.5em;
 	}
 
-	h4 {
+	.PresentationPage h4 {
 		font-size: 1.25em;
 		line-height: 1.5em;
 	}
 
-	h5 {
+	.PresentationPage h5 {
 		font-size: 0.9em;
 		line-height: 1.5em;
 	}
 
-	h6 {
+	.PresentationPage h6 {
 		font-size: 0.7em;
 		line-height: 1.5em;
 	}
 
-	sub {
+	.PresentationPage sub {
 		font-size: 0.8em;
 		position: relative;
 		top: 0.5em;
 	}
 
-	sup {
+	.PresentationPage sup {
 		font-size: 0.8em;
 		position: relative;
 		top: -0.5em;
 	}
 
-	hr {
+	.PresentationPage hr {
 		border: 0;
 		border-bottom: solid 2px #f4f4f4;
 		margin: 2.25em 0;
 	}
 
-		hr.major {
+		.PresentationPage hr.major {
 			margin: 3.375em 0;
 		}
 
-	blockquote {
+	.PresentationPage blockquote {
 		border-left: solid 8px #e4e4e4;
 		font-style: italic;
 		margin: 0 0 2.25em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
-	code {
+	.PresentationPage code {
 		background: #555;
 		border-radius: 5px;
 		color: #fff;
@@ -203,13 +205,13 @@ input, select, textarea {
 		padding: 0.25em 0.65em;
 	}
 
-	pre {
+	.PresentationPage pre {
 		font-family: "Source Code Pro", monospace;
 		font-size: 0.9em;
 		margin: 0 0 2.25em 0;
 	}
 
-		pre code {
+		.PresentationPage pre code {
 			-webkit-overflow-scrolling: touch;
 			display: block;
 			line-height: 1.5em;
@@ -1747,42 +1749,42 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section.special, article.special {
+	.PresentationPage section.special, article.special {
 		text-align: center;
 	}
 
-	header p {
+	.PresentationPage header p {
 		color: #aaa;
 		position: relative;
 		margin: 0 0 1.6875em 0;
 	}
 
-	header h2 + p {
+	.PresentationPage header h2 + p {
 		font-size: 1.25em;
 		margin-top: -0.5em;
 		line-height: 1.5em;
 	}
 
-	header h3 + p {
+	.PresentationPage header h3 + p {
 		font-size: 1.1em;
 		margin-top: -0.35em;
 		line-height: 1.5em;
 	}
 
-	header h4 + p,
-	header h5 + p,
-	header h6 + p {
+	.PresentationPage header h4 + p,
+	.PresentationPage header h5 + p,
+	.PresentationPage header h6 + p {
 		font-size: 0.9em;
 		margin-top: -0.25em;
 		line-height: 1.5em;
 	}
 
-	header.major h2 {
+	.PresentationPage header.major h2 {
 		color: #339966;
 		font-size: 3.5em;
 	}
 
-		header.major h2 + p {
+		.PresentationPage header.major h2 + p {
 			color: #404040;
 			font-size: 1.75em;
 			font-weight: 700;
@@ -1805,11 +1807,11 @@ input, select, textarea {
 		display: none;
   	}
 
-	form {
+	.PresentationPage form {
 		margin: 0 0 2.25em 0;
 	}
 
-	label {
+	.PresentationPage label {
 		color: #404040;
 		display: block;
 		font-size: 0.9em;
@@ -1817,12 +1819,12 @@ input, select, textarea {
 		margin: 0 0 1.125em 0;
 	}
 
-	input::-moz-focus-inner {
+	.PresentationPage input::-moz-focus-inner {
 		border: 0;
 		padding: 0;
 	}
 
-	input[type="text"],
+	.PresentationPage input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -1842,7 +1844,7 @@ input, select, textarea {
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
+		.PresentationPage input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -1850,7 +1852,7 @@ input, select, textarea {
 			box-shadow: none;
 		}
 
-		input[type="text"]:focus,
+		.PresentationPage input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -1858,7 +1860,7 @@ input, select, textarea {
 			border-color: #339966;
 		}
 
-	select {
+	.PresentationPage select {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23e4e4e4' /%3E%3C/svg%3E");
 		background-size: 1.25em;
 		background-repeat: no-repeat;
@@ -1868,31 +1870,31 @@ input, select, textarea {
 		text-overflow: ellipsis;
 	}
 
-		select option {
+		.PresentationPage select option {
 			color: #404040;
 			background: #fff;
 		}
 
-		select:focus::-ms-value {
+		.PresentationPage select:focus::-ms-value {
 			background-color: transparent;
 		}
 
-		select::-ms-expand {
+		.PresentationPage select::-ms-expand {
 			display: none;
 		}
 
-	input[type="text"],
+	.PresentationPage input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select {
 		height: 2.75em;
 	}
 
-	textarea {
+	.PresentationPage textarea {
 		padding: 0.75em 1em;
 	}
 
-	input[type="checkbox"],
+	.PresentationPage input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -1906,7 +1908,7 @@ input, select, textarea {
 		z-index: -1;
 	}
 
-		input[type="checkbox"] + label,
+		.PresentationPage input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #888;
@@ -1919,7 +1921,7 @@ input, select, textarea {
 			position: relative;
 		}
 
-			input[type="checkbox"] + label:before,
+			.PresentationPage input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
@@ -1933,7 +1935,7 @@ input, select, textarea {
 				font-weight: 900;
 			}
 
-			input[type="checkbox"] + label:before,
+			.PresentationPage input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				background: #f6f7f9;
 				border-radius: 5px;
@@ -1950,7 +1952,7 @@ input, select, textarea {
 				width: 2.0625em;
 			}
 
-		input[type="checkbox"]:checked + label:before,
+		.PresentationPage input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #989898;
 			border-color: #989898;
@@ -1958,16 +1960,16 @@ input, select, textarea {
 			content: '\f00c';
 		}
 
-		input[type="checkbox"]:focus + label:before,
+		.PresentationPage input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
 			border-color: #339966;
 		}
 
-	input[type="checkbox"] + label:before {
+	.PresentationPage input[type="checkbox"] + label:before {
 		border-radius: 5px;
 	}
 
-	input[type="radio"] + label:before {
+	.PresentationPage input[type="radio"] + label:before {
 		border-radius: 100%;
 	}
 
@@ -2218,48 +2220,48 @@ input, select, textarea {
 
 /* List */
 
-	ol {
+	.PresentationPage ol {
 		list-style: decimal;
 		margin: 0 0 2.25em 0;
 		padding-left: 1.25em;
 	}
 
-		ol li {
+		.PresentationPage ol li {
 			padding-left: 0.25em;
 		}
 
-	ul {
+	.PresentationPage ul {
 		list-style: disc;
 		margin: 0 0 2.25em 0;
 		padding-left: 1em;
 	}
 
-		ul li {
+		.PresentationPage ul li {
 			padding-left: 0.5em;
 		}
 
-		ul.alt {
+		.PresentationPage ul.alt {
 			list-style: none;
 			padding-left: 0;
 		}
 
-			ul.alt li {
+			.PresentationPage ul.alt li {
 				border-top: solid 2px #f4f4f4;
 				padding: 0.5em 0;
 			}
 
-				ul.alt li:first-child {
+				.PresentationPage ul.alt li:first-child {
 					border-top: 0;
 					padding-top: 0;
 				}
 
-	dl {
+	.PresentationPage dl {
 		margin: 0 0 2.25em 0;
 	}
 
 /* Actions */
 
-	ul.actions {
+	.PresentationPage ul.actions {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2270,12 +2272,12 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
-		ul.actions li {
+		.PresentationPage ul.actions li {
 			padding: 0 0 0 1.125em;
 			vertical-align: middle;
 		}
 
-		ul.actions.special {
+		.PresentationPage ul.actions.special {
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
@@ -2284,11 +2286,11 @@ input, select, textarea {
 			margin-left: 0;
 		}
 
-			ul.actions.special li:first-child {
+			.PresentationPage ul.actions.special li:first-child {
 				padding-left: 0;
 			}
 
-		ul.actions.stacked {
+		.PresentationPage ul.actions.stacked {
 			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
 			-ms-flex-direction: column;
@@ -2296,19 +2298,19 @@ input, select, textarea {
 			margin-left: 0;
 		}
 
-			ul.actions.stacked li {
+			.PresentationPage ul.actions.stacked li {
 				padding: 1.125em 0 0 0;
 			}
 
-				ul.actions.stacked li:first-child {
+				.PresentationPage ul.actions.stacked li:first-child {
 					padding-top: 0;
 				}
 
-		ul.actions.fit {
+		.PresentationPage ul.actions.fit {
 			width: calc(100% + 1.125em);
 		}
 
-			ul.actions.fit li {
+			.PresentationPage ul.actions.fit li {
 				-moz-flex-grow: 1;
 				-webkit-flex-grow: 1;
 				-ms-flex-grow: 1;
@@ -2320,17 +2322,17 @@ input, select, textarea {
 				width: 100%;
 			}
 
-				ul.actions.fit li > * {
+				.PresentationPage ul.actions.fit li > * {
 					width: 100%;
 				}
 
-			ul.actions.fit.stacked {
+			.PresentationPage ul.actions.fit.stacked {
 				width: 100%;
 			}
 
 		@media screen and (max-width: 480px) {
 
-			ul.actions:not(.fixed) {
+			.PresentationPage ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
@@ -2339,7 +2341,7 @@ input, select, textarea {
 				width: 100% !important;
 			}
 
-				ul.actions:not(.fixed) li {
+				.PresentationPage ul.actions:not(.fixed) li {
 					-moz-flex-grow: 1;
 					-webkit-flex-grow: 1;
 					-ms-flex-grow: 1;
@@ -2353,15 +2355,15 @@ input, select, textarea {
 					width: 100%;
 				}
 
-					ul.actions:not(.fixed) li > * {
+					.PresentationPage ul.actions:not(.fixed) li > * {
 						width: 100%;
 					}
 
-					ul.actions:not(.fixed) li:first-child {
+					.PresentationPage ul.actions:not(.fixed) li:first-child {
 						padding-top: 0;
 					}
 
-					ul.actions:not(.fixed) li input[type="submit"],
+					.PresentationPage ul.actions:not(.fixed) li input[type="submit"],
 					ul.actions:not(.fixed) li input[type="reset"],
 					ul.actions:not(.fixed) li input[type="button"],
 					ul.actions:not(.fixed) li button,
@@ -2369,7 +2371,7 @@ input, select, textarea {
 						width: 100%;
 					}
 
-						ul.actions:not(.fixed) li input[type="submit"].icon:before,
+						.PresentationPage ul.actions:not(.fixed) li input[type="submit"].icon:before,
 						ul.actions:not(.fixed) li input[type="reset"].icon:before,
 						ul.actions:not(.fixed) li input[type="button"].icon:before,
 						ul.actions:not(.fixed) li button.icon:before,
@@ -2381,12 +2383,12 @@ input, select, textarea {
 
 /* Feature Icons */
 
-	ul.feature-icons {
+	.PresentationPage ul.feature-icons {
 		list-style: none;
 		padding-left: 0;
 	}
 
-		ul.feature-icons li {
+		.PresentationPage ul.feature-icons li {
 			text-decoration: none;
 			display: inline-block;
 			margin: 0 0 1.6875em 0;
@@ -2414,23 +2416,23 @@ input, select, textarea {
 
 /* Icons */
 
-	ul.icons {
+	.PresentationPage ul.icons {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
 		font-size: 1.75em;
 	}
 
-		ul.icons li {
+		.PresentationPage ul.icons li {
 			display: inline-block;
 			padding: 0 1em 0 0;
 		}
 
-			ul.icons li:last-child {
+			.PresentationPage ul.icons li:last-child {
 				padding-right: 0 !important;
 			}
 
-			ul.icons li .icon:before {
+			.PresentationPage ul.icons li .icon:before {
 				font-size: 1.25em;
 			}
 
@@ -2441,26 +2443,26 @@ input, select, textarea {
 		overflow-x: auto;
 	}
 
-	table {
+	.PresentationPage table {
 		margin: 0 0 2.25em 0;
 		width: 100%;
 	}
 
-		table tbody tr {
+		.PresentationPage table tbody tr {
 			border: solid 2px #f4f4f4;
 			border-left: 0;
 			border-right: 0;
 		}
 
-			table tbody tr:nth-child(2n + 1) {
+			.PresentationPage table tbody tr:nth-child(2n + 1) {
 				background-color: #f6f7f9;
 			}
 
-		table td {
+		.PresentationPage table td {
 			padding: 0.75em 0.75em;
 		}
 
-		table th {
+		.PresentationPage table th {
 			color: #404040;
 			font-size: 0.9em;
 			font-weight: 700;
@@ -2468,43 +2470,43 @@ input, select, textarea {
 			text-align: left;
 		}
 
-		table thead {
+		.PresentationPage table thead {
 			border-bottom: solid 4px #e4e4e4;
 		}
 
-		table tfoot {
+		.PresentationPage table tfoot {
 			border-top: solid 4px #e4e4e4;
 		}
 
-		table.alt {
+		.PresentationPage table.alt {
 			border-collapse: separate;
 		}
 
-			table.alt tbody tr td {
+			.PresentationPage table.alt tbody tr td {
 				border: solid 2px #e4e4e4;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
 
-				table.alt tbody tr td:first-child {
+				.PresentationPage table.alt tbody tr td:first-child {
 					border-left-width: 2px;
 				}
 
-			table.alt tbody tr:first-child td {
+			.PresentationPage table.alt tbody tr:first-child td {
 				border-top-width: 2px;
 			}
 
-			table.alt thead {
+			.PresentationPage table.alt thead {
 				border-bottom: 0;
 			}
 
-			table.alt tfoot {
+			.PresentationPage table.alt tfoot {
 				border-top: 0;
 			}
 
 /* Button */
 
-	input[type="submit"],
+	.PresentationPage input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	.button {
@@ -2531,7 +2533,7 @@ input, select, textarea {
 		white-space: nowrap;
 	}
 
-		input[type="submit"]:hover,
+		.PresentationPage input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
@@ -2539,49 +2541,49 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
-		input[type="submit"]:active,
+		.PresentationPage input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
 			background-color: #8b8b8b;
 		}
 
-		input[type="submit"].icon,
+		.PresentationPage input[type="submit"].icon,
 		input[type="reset"].icon,
 		input[type="button"].icon,
 		.button.icon {
 			padding-left: 1.35em;
 		}
 
-			input[type="submit"].icon:before,
+			.PresentationPage input[type="submit"].icon:before,
 			input[type="reset"].icon:before,
 			input[type="button"].icon:before,
 			.button.icon:before {
 				margin-right: 0.5em;
 			}
 
-		input[type="submit"].fit,
+		.PresentationPage input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
 		.button.fit {
 			width: 100%;
 		}
 
-		input[type="submit"].small,
+		.PresentationPage input[type="submit"].small,
 		input[type="reset"].small,
 		input[type="button"].small,
 		.button.small {
 			font-size: 0.8em;
 		}
 
-		input[type="submit"].large,
+		.PresentationPage input[type="submit"].large,
 		input[type="reset"].large,
 		input[type="button"].large,
 		.button.large {
 			font-size: 1.35em;
 		}
 
-		input[type="submit"].alt,
+		.PresentationPage input[type="submit"].alt,
 		input[type="reset"].alt,
 		input[type="button"].alt,
 		.button.alt {
@@ -2590,7 +2592,7 @@ input, select, textarea {
 			color: #404040 !important;
 		}
 
-			input[type="submit"].alt:hover,
+			.PresentationPage input[type="submit"].alt:hover,
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
@@ -2598,21 +2600,21 @@ input, select, textarea {
 				color: #404040 !important;
 			}
 
-			input[type="submit"].alt:active,
+			.PresentationPage input[type="submit"].alt:active,
 			input[type="reset"].alt:active,
 			input[type="button"].alt:active,
 			.button.alt:active {
 				background-color: #eaeaea;
 			}
 
-			input[type="submit"].alt.icon:before,
+			.PresentationPage input[type="submit"].alt.icon:before,
 			input[type="reset"].alt.icon:before,
 			input[type="button"].alt.icon:before,
 			.button.alt.icon:before {
 				color: #aaa;
 			}
 
-		input[type="submit"].primary,
+		.PresentationPage input[type="submit"].primary,
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
@@ -2620,21 +2622,21 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
-			input[type="submit"].primary:hover,
+			.PresentationPage input[type="submit"].primary:hover,
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
 				background-color: #42a674;
 			}
 
-			input[type="submit"].primary:active,
+			.PresentationPage input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
 				background-color: #39c29d;
 			}
 
-		input[type="submit"].disabled, input[type="submit"]:disabled,
+		.PresentationPage input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
 		input[type="button"].disabled,
@@ -2884,7 +2886,7 @@ input, select, textarea {
 
 		/* Basic */
 
-			body, input, select, textarea {
+			.PresentationPage body, input, select, textarea {
 				font-size: 13pt;
 			}
 
@@ -2922,7 +2924,7 @@ input, select, textarea {
 
 		/* Basic */
 
-			body, input, select, textarea {
+			.PresentationPage body, input, select, textarea {
 				font-size: 11pt;
 			}
 
@@ -2950,11 +2952,11 @@ input, select, textarea {
 
 		/* Basic */
 
-			html, body {
+			.PresentationPage html, body {
 				overflow-x: hidden;
 			}
 
-			body, input, select, textarea {
+			.PresentationPage body, input, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -3129,23 +3131,23 @@ input, select, textarea {
 
 		/* Basic */
 
-			body, input, select, textarea {
+			.PresentationPage body, input, select, textarea {
 				font-size: 12pt;
 			}
 
-			h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+			.PresentationPage h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
 				display: none;
 			}
 
-			h2 {
+			.PresentationPage h2 {
 				font-size: 1.75em;
 			}
 
-			h3 {
+			.PresentationPage h3 {
 				font-size: 1.5em;
 			}
 
-			h4 {
+			.PresentationPage h4 {
 				font-size: 1em;
 			}
 
@@ -3165,15 +3167,15 @@ input, select, textarea {
 
 		/* Section/Article */
 
-			header br {
+			.PresentationPage header br {
 				display: none;
 			}
 
-			header.major h2 {
+			.PresentationPage header.major h2 {
 				font-size: 2.5em;
 			}
 
-				header.major h2 + p {
+				.PresentationPage header.major h2 + p {
 					font-size: 1.5em;
 				}
 
@@ -3275,56 +3277,56 @@ input, select, textarea {
 
 		/* Basic */
 
-			html, body {
+			.PresentationPage html, body {
 				min-width: 320px;
 			}
 
-			body, input, select, textarea {
+			.PresentationPage body, input, select, textarea {
 				font-size: 12pt;
 			}
 
 		/* List */
 
-			ul.actions {
+			.PresentationPage ul.actions {
 				margin: 0 0 2.25em 0;
 			}
 
-				ul.actions li {
+				.PresentationPage ul.actions li {
 					display: block;
 					padding: 1.125em 0 0 0;
 					text-align: center;
 					width: 100%;
 				}
 
-					ul.actions li:first-child {
+					.PresentationPage ul.actions li:first-child {
 						padding-top: 0;
 					}
 
-					ul.actions li > * {
+					.PresentationPage ul.actions li > * {
 						width: 100%;
 						margin: 0 !important;
 					}
 
-						ul.actions li > *.icon:before {
+						.PresentationPage ul.actions li > *.icon:before {
 							margin-left: -2em;
 						}
 
-				ul.actions.small li {
+				.PresentationPage ul.actions.small li {
 					padding: 0.5625em 0 0 0;
 				}
 
-					ul.actions.small li:first-child {
+					.PresentationPage ul.actions.small li:first-child {
 						padding-top: 0;
 					}
 
-			ul.feature-icons li {
+			.PresentationPage ul.feature-icons li {
 				display: block;
 				width: 100%;
 			}
 
 		/* Button */
 
-			input[type="submit"],
+			.PresentationPage input[type="submit"],
 			input[type="reset"],
 			input[type="button"],
 			.button {
