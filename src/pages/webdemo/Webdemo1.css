@@ -1,0 +1,524 @@
+/* Top Styles  */
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 20px 0px;
+  justify-content: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navBar li {
+  list-style-type:none;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px 1.9vw;
+}
+
+.navBar a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333333;
+}
+
+.navBar a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  color:#f4ce14;
+}
+
+.callToAction {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #495e57;
+  justify-content:space-evenly;
+  color:white;
+  margin-bottom: 1px;
+}
+
+.callToAction img {
+  display: inline-block;
+  border-radius: 16px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  padding: 0 5px;
+  margin-top: -7%;
+  transform: translateY(+25%);
+}
+
+.callToAction > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+}
+
+.callToAction h2 {
+  font-size: 2.5em;
+  color:#b19b28;
+  margin-top: -5px;
+}
+
+.callToAction h3 {
+  font-size: 1.6em;
+  margin: -30px 0 0 0;
+}
+
+.callToAction p {
+  font-size: 1em;
+  max-width: 400px;
+}
+
+.callToAction button {
+  background-color:#f4ce14;
+  text-decoration: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 10px 30px 10px 30px;
+}
+
+.callToAction a {
+  text-decoration: none;
+  color:black;
+}
+
+.titleBar {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #495e57;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1px;
+  padding: 15px 0;
+  color: #f4ce14;
+  font-size: 24px;
+}
+
+.titleBar img {
+  border-radius: 16px;
+  width: 400px;
+  height: 100px;
+  object-fit: cover;
+  padding: 0 5px;
+}
+
+/* Mid styles */
+
+.specialDishes {
+  background-color: white;
+  margin-top: 5vh;
+}
+
+.topArea {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1vw;
+  color:#333333;
+  font-size: 32px;
+}
+
+.topArea button {
+  background-color:#f4ce14;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 15px 40px 15px 40px;
+}
+
+.topArea a {
+  text-decoration: none;
+  color:black;
+}
+
+.cardsGrid {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardContainer {
+  background-color: #edefee;
+  max-width: 250px;
+  margin: 40px 0px 40px 0px;
+  padding: 25px;
+  position: relative;
+}
+
+.cardContainer img {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+  transform: translateY(-20px);
+  margin: -25px -25px 0px -25px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: -10% 0 0 0;
+}
+
+.cardContainer h3 {
+  font-size: 16px;
+}
+
+.cardContainer text {
+  color: #ee9972;
+  font-weight: 600;
+}
+
+.cardContainer p {
+  color: #495e57;
+  font-size: 14px;
+  padding-bottom: 60px;
+}
+
+.cardContainer button {
+  float: left;
+  background-color: #edefee;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
+}
+
+.cardContainer a {
+  text-decoration: none;
+  color:#333333;
+  font-size: 13px;
+}
+
+.cardIco {
+  height: 14px;
+  width: 14px;
+  transform: translateY(2px);
+  margin-left: 5px;
+}
+
+.reviewArea {
+  background-color: #edefee;
+  padding: 70px 0px 100px 0px;
+}
+
+.reviewArea h2 {
+  color: #333333;
+  font-size: 48px;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto auto 40px auto;
+  padding-left: 20px;
+}
+
+.reviewGrid {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviewBlock {
+  background-color: #f4ce14;
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+}
+
+.reviewer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewer img {
+  height: 80px;
+  width: 80px;
+  object-fit:cover;
+  border-radius: 16px;
+}
+
+.reviewer h3 {
+  font-size: 16px;
+  text-align: right;
+  color: #333333;
+}
+
+.reviewText {
+  margin: 20px 0px;
+}
+
+.reviewText text {
+  font-weight: 600;
+}
+
+.reviewText p {
+  color:#495e57;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chicagoDesc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:space-evenly;
+  padding: 15px 0;
+}
+
+.chicagoDesc > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+}
+
+.chicagoDesc h2 {
+  font-size: 2.4em;
+  color:#333333;
+}
+
+.chicagoDesc h3 {
+  font-size: 1.5em;
+  margin: -25px 0 0 0;
+  color: #f4ce14;
+}
+
+.chicagoDesc p {
+  font-size: 1em;
+  max-width: 400px;
+}
+
+.chicagoDesc img {
+  border-radius: 16px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  padding: 0 5px;
+}
+
+.spacer {
+  margin-right: 7vw;
+  margin-left: 7vw;
+}
+
+.bookingForm {
+  display: grid;
+  max-width: 700px;
+  margin: 8vh auto;
+  gap: 20px;
+}
+
+.bookingForm input {
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  font-size: 15px;
+  height:36px;
+}
+
+.bookingForm select {
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  height:36px;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 501px) {
+.bookingForm fieldset {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(7, 36px);
+  grid-template-areas:
+  "row1col1 row1col2"
+  "row2col1 row2col2"
+  "row3col1 row3col2"
+  "row4col1 row4col2"
+  "row5col1 row5col2"
+  "row6col1 row6col2"
+  "row7col1 row7col2";
+  row-gap: 20px;
+  text-decoration: none;
+  justify-content: space-between;
+  align-content:center;
+  background-color:#edefee;
+  border-radius: 16px;
+  border:none;
+  font-size: 16px;
+  margin: 0 20px;
+  padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bookingForm fieldset {
+    display: grid;
+    grid-template-areas:
+      "row1col1"
+      "row2col1"
+      "row3col1"
+      "row4col1"
+      "row5col1"
+      "row6col1"
+      "row7col1";
+      row-gap: 20px;
+      text-decoration: none;
+      align-content:center;
+      background-color:#edefee;
+      border-radius: 16px;
+      border:none;
+      font-size: 16px;
+      margin: 0 20px;
+      padding: 40px;
+  }
+}
+
+.labelText {
+  margin: auto 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.locationText {
+  display: inline;
+  font-size: 15px;
+  color:#495e57;
+  margin: auto 0;
+}
+
+.locationText input {
+  margin: 0 5px 0 35px;
+  height: auto;
+}
+
+.bookingForm button {
+  width: 30vh;
+  margin: 20px auto 0 auto;
+  background-color:#f4ce14;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 15px 40px 15px 40px;
+}
+
+.confirmationpage {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.confirmationpage h2 {
+  font-size: 2.5em;
+  margin: 0 5vw;
+}
+
+.confirmationpage h3 {
+  font-size: 1.6em;
+  color:#333333;
+  margin: 3vh 5vw;
+}
+
+.confirmationpage button {
+  background-color:#f4ce14;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 15px 40px 15px 40px;
+  margin: 40px 0 10px 0;
+}
+
+.confirmationpage a {
+  text-decoration: none;
+  color:black;
+}
+
+/* Footer Styles*/
+
+.serviceFooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #495e57;
+  justify-content: center;
+  padding: 65px 50px 50px 0px;
+  margin-left: -5vw;
+  margin-top: 1px;
+}
+
+.serviceFooter li {
+  margin-top: 12px;
+  list-style-type:none;
+}
+
+.serviceFooter a {
+  text-decoration: none;
+  color:#edefee;
+}
+
+.serviceFooter img {
+  width: 160px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-right: 2vw;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.footerLinks {
+  margin-left: 5vw;
+}
+
+.serviceFooter text {
+  font-weight: bold;
+  color: #f4ce14;
+}
