@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
-
-
-.PresentationPage html, body, div, span, applet, object,
+html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, br, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
@@ -20,47 +18,47 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-.PresentationPage article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-.PresentationPage body {
+body {
 	line-height: 1;
 }
 
-.PresentationPage ol, ul {
+ol, ul {
 	list-style: none;
 }
 
-.PresentationPage blockquote, q {
+blockquote, q {
 	quotes: none;
 }
 
-	.PresentationPage blockquote:before, blockquote:after, q:before, q:after {
+	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
 	}
 
-.PresentationPage table {
+table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-.PresentationPage body {
+body {
 	-webkit-text-size-adjust: none;
 }
 
-.PresentationPage mark {
+mark {
 	background-color: transparent;
 	color: inherit;
 }
 
-.PresentationPage input::-moz-focus-inner {
+input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
-.PresentationPage input, select, textarea {
+input, select, textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -73,7 +71,7 @@ footer, header, hgroup, menu, nav, section {
 		box-sizing: border-box;
 	}
 
-	.PresentationPage *, *:before, *:after {
+	.PresentationPage *, .PresentationPage *:before, .PresentationPage *:after {
 		box-sizing: inherit;
 	}
 
@@ -81,7 +79,7 @@ footer, header, hgroup, menu, nav, section {
 		background: #fff;
 	}
 
-		.PresentationPage body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		.PresentationPage body.is-preload *, .PresentationPage body.is-preload .PresentationPage *:before, .PresentationPage body.is-preload .PresentationPage *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
@@ -92,13 +90,15 @@ footer, header, hgroup, menu, nav, section {
 			transition: none !important;
 		}
 
-	.PresentationPage body, input, select, textarea {
+/*RESET PONT #1 */
+	body, input, select, textarea {
 		color: #888  !important;
 		font-family: "Lato", sans-serif !important;
 		font-size: 16pt !important;
 		font-weight: 400 !important;
 		line-height: 1.75em !important;
 	}
+/*END OF RESET POINT #1*/
 
 	.PresentationPage a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -115,12 +115,12 @@ footer, header, hgroup, menu, nav, section {
 			color: #339966 !important;
 		}
 
-	.PresentationPage strong, b {
+	.PresentationPage strong, .PresentationPage b {
 		color: #404040;
 		font-weight: 700;
 	}
 
-	.PresentationPage em, i {
+	.PresentationPage em, .PresentationPage i {
 		font-style: italic;
 	}
 
@@ -128,14 +128,14 @@ footer, header, hgroup, menu, nav, section {
 		margin: 0 0 2.25em 0;
 	}
 
-	.PresentationPage h1, h2, h3, h4, h5, h6 {
+	.PresentationPage h1, .PresentationPage h2, .PresentationPage h3, .PresentationPage h4, .PresentationPage h5, .PresentationPage h6 {
 		color: #404040;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
 	}
 
-		.PresentationPage h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		.PresentationPage h1 a, .PresentationPage h2 a, .PresentationPage h3 a, .PresentationPage h4 a, .PresentationPage h5 a, .PresentationPage h6 a {
 			border: 0;
 			color: inherit;
 			text-decoration: none;
@@ -1749,7 +1749,7 @@ footer, header, hgroup, menu, nav, section {
 
 /* Section/Article */
 
-	.PresentationPage section.special, article.special {
+	.PresentationPage section.special, .PresentationPage article.special {
 		text-align: center;
 	}
 
@@ -1825,10 +1825,10 @@ footer, header, hgroup, menu, nav, section {
 	}
 
 	.PresentationPage input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select,
-	textarea {
+	.PresentationPage input[type="password"],
+	.PresentationPage input[type="email"],
+	.PresentationPage select,
+	.PresentationPage textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -1845,18 +1845,18 @@ footer, header, hgroup, menu, nav, section {
 	}
 
 		.PresentationPage input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		select:invalid,
-		textarea:invalid {
+		.PresentationPage input[type="password"]:invalid,
+		.PresentationPage input[type="email"]:invalid,
+		.PresentationPage select:invalid,
+		.PresentationPage textarea:invalid {
 			box-shadow: none;
 		}
 
 		.PresentationPage input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		select:focus,
-		textarea:focus {
+		.PresentationPage input[type="password"]:focus,
+		.PresentationPage input[type="email"]:focus,
+		.PresentationPage select:focus,
+		.PresentationPage textarea:focus {
 			border-color: #339966;
 		}
 
@@ -1884,9 +1884,9 @@ footer, header, hgroup, menu, nav, section {
 		}
 
 	.PresentationPage input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select {
+	.PresentationPage input[type="password"],
+	.PresentationPage input[type="email"],
+	.PresentationPage select {
 		height: 2.75em;
 	}
 
@@ -1895,7 +1895,7 @@ footer, header, hgroup, menu, nav, section {
 	}
 
 	.PresentationPage input[type="checkbox"],
-	input[type="radio"] {
+	.PresentationPage input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -1909,7 +1909,7 @@ footer, header, hgroup, menu, nav, section {
 	}
 
 		.PresentationPage input[type="checkbox"] + label,
-		input[type="radio"] + label {
+		.PresentationPage input[type="radio"] + label {
 			text-decoration: none;
 			color: #888;
 			cursor: pointer;
@@ -1922,7 +1922,7 @@ footer, header, hgroup, menu, nav, section {
 		}
 
 			.PresentationPage input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			.PresentationPage input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				display: inline-block;
@@ -1936,7 +1936,7 @@ footer, header, hgroup, menu, nav, section {
 			}
 
 			.PresentationPage input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			.PresentationPage input[type="radio"] + label:before {
 				background: #f6f7f9;
 				border-radius: 5px;
 				border: solid 2px #e4e4e4;
@@ -1953,7 +1953,7 @@ footer, header, hgroup, menu, nav, section {
 			}
 
 		.PresentationPage input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
+		.PresentationPage input[type="radio"]:checked + label:before {
 			background: #989898;
 			border-color: #989898;
 			color: #ffffff;
@@ -1961,7 +1961,7 @@ footer, header, hgroup, menu, nav, section {
 		}
 
 		.PresentationPage input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
+		.PresentationPage input[type="radio"]:focus + label:before {
 			border-color: #339966;
 		}
 
@@ -2022,7 +2022,7 @@ footer, header, hgroup, menu, nav, section {
 
 	.icon {
 		text-decoration: none;
-		border-bottom: none;
+		border-bottom: none !important;
 		position: relative;
 	}
 
@@ -2364,18 +2364,18 @@ footer, header, hgroup, menu, nav, section {
 					}
 
 					.PresentationPage ul.actions:not(.fixed) li input[type="submit"],
-					ul.actions:not(.fixed) li input[type="reset"],
-					ul.actions:not(.fixed) li input[type="button"],
-					ul.actions:not(.fixed) li button,
-					ul.actions:not(.fixed) li .button {
+					.PresentationPage ul.actions:not(.fixed) li input[type="reset"],
+					.PresentationPage ul.actions:not(.fixed) li input[type="button"],
+					.PresentationPage ul.actions:not(.fixed) li button,
+					.PresentationPage ul.actions:not(.fixed) li .button {
 						width: 100%;
 					}
 
 						.PresentationPage ul.actions:not(.fixed) li input[type="submit"].icon:before,
-						ul.actions:not(.fixed) li input[type="reset"].icon:before,
-						ul.actions:not(.fixed) li input[type="button"].icon:before,
-						ul.actions:not(.fixed) li button.icon:before,
-						ul.actions:not(.fixed) li .button.icon:before {
+						.PresentationPage ul.actions:not(.fixed) li input[type="reset"].icon:before,
+						.PresentationPage ul.actions:not(.fixed) li input[type="button"].icon:before,
+						.PresentationPage ul.actions:not(.fixed) li button.icon:before,
+						.PresentationPage ul.actions:not(.fixed) li .button.icon:before {
 							margin-left: -0.5rem;
 						}
 
@@ -2507,8 +2507,8 @@ footer, header, hgroup, menu, nav, section {
 /* Button */
 
 	.PresentationPage input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
+	.PresentationPage input[type="reset"],
+	.PresentationPage input[type="button"],
 	.button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2534,58 +2534,58 @@ footer, header, hgroup, menu, nav, section {
 	}
 
 		.PresentationPage input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
+		.PresentationPage input[type="reset"]:hover,
+		.PresentationPage input[type="button"]:hover,
 		.button:hover {
 			background-color: #a5a5a5;
 			color: #ffffff !important;
 		}
 
 		.PresentationPage input[type="submit"]:active,
-		input[type="reset"]:active,
-		input[type="button"]:active,
+		.PresentationPage input[type="reset"]:active,
+		.PresentationPage input[type="button"]:active,
 		.button:active {
 			background-color: #8b8b8b;
 		}
 
 		.PresentationPage input[type="submit"].icon,
-		input[type="reset"].icon,
-		input[type="button"].icon,
+		.PresentationPage input[type="reset"].icon,
+		.PresentationPage input[type="button"].icon,
 		.button.icon {
 			padding-left: 1.35em;
 		}
 
 			.PresentationPage input[type="submit"].icon:before,
-			input[type="reset"].icon:before,
-			input[type="button"].icon:before,
+			.PresentationPage input[type="reset"].icon:before,
+			.PresentationPage input[type="button"].icon:before,
 			.button.icon:before {
 				margin-right: 0.5em;
 			}
 
 		.PresentationPage input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
+		.PresentationPage input[type="reset"].fit,
+		.PresentationPage input[type="button"].fit,
 		.button.fit {
 			width: 100%;
 		}
 
 		.PresentationPage input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
+		.PresentationPage input[type="reset"].small,
+		.PresentationPage input[type="button"].small,
 		.button.small {
 			font-size: 0.8em;
 		}
 
 		.PresentationPage input[type="submit"].large,
-		input[type="reset"].large,
-		input[type="button"].large,
+		.PresentationPage input[type="reset"].large,
+		.PresentationPage input[type="button"].large,
 		.button.large {
 			font-size: 1.35em;
 		}
 
 		.PresentationPage input[type="submit"].alt,
-		input[type="reset"].alt,
-		input[type="button"].alt,
+		.PresentationPage input[type="reset"].alt,
+		.PresentationPage input[type="button"].alt,
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #e4e4e4;
@@ -2593,54 +2593,54 @@ footer, header, hgroup, menu, nav, section {
 		}
 
 			.PresentationPage input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			input[type="button"].alt:hover,
+			.PresentationPage input[type="reset"].alt:hover,
+			.PresentationPage input[type="button"].alt:hover,
 			.button.alt:hover {
 				background-color: #f4f4f4;
 				color: #404040 !important;
 			}
 
 			.PresentationPage input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			input[type="button"].alt:active,
+			.PresentationPage input[type="reset"].alt:active,
+			.PresentationPage input[type="button"].alt:active,
 			.button.alt:active {
 				background-color: #eaeaea;
 			}
 
 			.PresentationPage input[type="submit"].alt.icon:before,
-			input[type="reset"].alt.icon:before,
-			input[type="button"].alt.icon:before,
+			.PresentationPage input[type="reset"].alt.icon:before,
+			.PresentationPage input[type="button"].alt.icon:before,
 			.button.alt.icon:before {
 				color: #aaa;
 			}
 
 		.PresentationPage input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
+		.PresentationPage input[type="reset"].primary,
+		.PresentationPage input[type="button"].primary,
 		.button.primary {
 			background-color: #339966;
 			color: #ffffff !important;
 		}
 
 			.PresentationPage input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
+			.PresentationPage input[type="reset"].primary:hover,
+			.PresentationPage input[type="button"].primary:hover,
 			.button.primary:hover {
 				background-color: #42a674;
 			}
 
 			.PresentationPage input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
+			.PresentationPage input[type="reset"].primary:active,
+			.PresentationPage input[type="button"].primary:active,
 			.button.primary:active {
 				background-color: #39c29d;
 			}
 
 		.PresentationPage input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
-		input[type="button"].disabled,
-		input[type="button"]:disabled,
+		.PresentationPage input[type="reset"].disabled,
+		.PresentationPage input[type="reset"]:disabled,
+		.PresentationPage input[type="button"].disabled,
+		.PresentationPage input[type="button"]:disabled,
 		.button.disabled,
 		.button:disabled {
 			background-color: #888 !important;
@@ -2886,7 +2886,7 @@ footer, header, hgroup, menu, nav, section {
 
 		/* Basic */
 
-			.PresentationPage body, input, select, textarea {
+			.PresentationPage body, .PresentationPage input, .PresentationPage select, .PresentationPage textarea {
 				font-size: 13pt;
 			}
 
@@ -2924,7 +2924,7 @@ footer, header, hgroup, menu, nav, section {
 
 		/* Basic */
 
-			.PresentationPage body, input, select, textarea {
+			.PresentationPage body, .PresentationPage input, .PresentationPage select, .PresentationPage textarea {
 				font-size: 11pt;
 			}
 
@@ -2952,11 +2952,11 @@ footer, header, hgroup, menu, nav, section {
 
 		/* Basic */
 
-			.PresentationPage html, body {
+			.PresentationPage html, .PresentationPage body {
 				overflow-x: hidden;
 			}
 
-			.PresentationPage body, input, select, textarea {
+			.PresentationPage body, .PresentationPage input, .PresentationPage select, .PresentationPage textarea {
 				font-size: 12pt;
 			}
 
@@ -3131,11 +3131,11 @@ footer, header, hgroup, menu, nav, section {
 
 		/* Basic */
 
-			.PresentationPage body, input, select, textarea {
+			.PresentationPage body, .PresentationPage input, .PresentationPage select, .PresentationPage textarea {
 				font-size: 12pt;
 			}
 
-			.PresentationPage h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+			.PresentationPage h1 br, .PresentationPage h2 br, .PresentationPage h3 br, .PresentationPage h4 br, .PresentationPage h5 br, .PresentationPage h6 br {
 				display: none;
 			}
 
@@ -3277,11 +3277,11 @@ footer, header, hgroup, menu, nav, section {
 
 		/* Basic */
 
-			.PresentationPage html, body {
+			.PresentationPage html, .PresentationPage body {
 				min-width: 320px;
 			}
 
-			.PresentationPage body, input, select, textarea {
+			.PresentationPage body, .PresentationPage input, .PresentationPage select, .PresentationPage textarea {
 				font-size: 12pt;
 			}
 
