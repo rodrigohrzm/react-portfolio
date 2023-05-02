@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, useLocation} from 'react-router-dom';
 import {useLayoutEffect} from 'react';
-import { MantineProvider } from '@mantine/core';
+import { ChakraProvider } from '@chakra-ui/react'
 
 const ScrollToTop = ({children}) => {
   const location = useLocation();
@@ -20,15 +20,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <ScrollToTop>
-     <MantineProvider>
+    <ChakraProvider>
       <App />
-     </MantineProvider>
+    </ChakraProvider>
     </ScrollToTop>
     </BrowserRouter>
   </React.StrictMode>
 );
 
-// <MantineProvider withGlobalStyles withNormalizeCSS>
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

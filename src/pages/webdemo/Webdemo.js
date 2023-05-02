@@ -9,7 +9,8 @@ import { WebNewsletter } from './WebNewsletter'
 
 // https://das-nano.com/
 // AutoCare Hybrid Experts
-// Host the presentation somewhere else and leave the webdemo and puzzle on github pages.
+// npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+// https://www.chakrauiforbeginners.com/
 
 function Webdemo() {
     return (
