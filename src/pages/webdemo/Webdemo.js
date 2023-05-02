@@ -9,7 +9,6 @@ import { WebNewsletter } from './WebNewsletter'
 
 // https://das-nano.com/
 // AutoCare Hybrid Experts
-// npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 // https://www.chakrauiforbeginners.com/
 
 function Webdemo() {
