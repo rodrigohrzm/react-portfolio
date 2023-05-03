@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import { submitAPI } from "../../services/FetchAPI";
 
-import { Box } from '@chakra-ui/react'
+import { Box, UnorderedList, ListItem, Button } from '@chakra-ui/react'
 
 function WebNav() {
   const [showLogin, setShowLogin] = useState(false);
@@ -22,17 +22,19 @@ function WebNav() {
 
     return (
       <>
-      <Box h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white'>
-      <image className="weblogo" src={require("../../assets/images/logo02.png")} width={50} />
       <nav>
-        <ul style={{display: "flex", display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
-          <li><NavLink to={"help"}>Emergencies</NavLink></li>
-          <li><NavLink to={"booking"}>Appointments</NavLink></li>
-          <li><NavLink to={"renting"}>Renta-a-car</NavLink></li>
-          <li><NavLink to={"about-us"}>About</NavLink></li>
-          <li><NavLink to={"contact"}>About</NavLink></li>
-          <li><NavLink onClick={handleLoginClick}>Login</NavLink></li>
-        </ul>
+      <Box h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white'>
+      <image className="weblogo" src={require("../../assets/images/avatar.jpg")} />
+      <Box marginTop="1em" float="right" justifyContent="center">
+        <UnorderedList listStyleType="none" display="flex" flexWrap="wrap" marginRight="auto" marginLeft="auto" position="relative" justifyContent="center" fontSize="xl">
+          <ListItem><NavLink to={"help"}>Emergencies</NavLink></ListItem>
+          <ListItem><NavLink to={"booking"}>Appointments</NavLink></ListItem>
+          <ListItem><NavLink to={"renting"}>Renta-a-car</NavLink></ListItem>
+          <ListItem><NavLink to={"about-us"}>About</NavLink></ListItem>
+          <ListItem><NavLink to={"contact"}>About</NavLink></ListItem>
+          <ListItem><Button><NavLink onClick={handleLoginClick}>Login</NavLink></Button></ListItem>
+        </UnorderedList>
+        </Box>
         {showLogin && (
         <div className="login-container">
           <form onSubmit={handleLoginSubmit}>
@@ -44,8 +46,8 @@ function WebNav() {
           </form>
         </div>
       )}
-      </nav>
       </Box>
+      </nav>
       <Outlet />
       </>
     )};

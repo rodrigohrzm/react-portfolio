@@ -9,6 +9,7 @@ import { WebNewsletter } from './WebNewsletter'
 // https://das-nano.com/
 // AutoCare Hybrid Experts
 // https://www.chakrauiforbeginners.com/
+// https://chakra-ui.com/docs/styled-system/responsive-styles
 
 function Webdemo() {
     return (
