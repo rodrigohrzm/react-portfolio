@@ -1,5 +1,4 @@
 import React from 'react';
-import './Webdemo.css';
 import { WebCallToAction } from './WebCallToAction'
 import { WebBrands } from './WebBrands'
 import { WebShowcase } from './WebShowcase'
