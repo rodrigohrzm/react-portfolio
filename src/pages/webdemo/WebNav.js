@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import { submitAPI } from "../../services/FetchAPI";
 
-import { Box, UnorderedList, ListItem, Button } from '@chakra-ui/react'
+import { Flex, Spacer, HStack, Button, Image } from '@chakra-ui/react'
 
 function WebNav() {
   const [showLogin, setShowLogin] = useState(false);
@@ -23,19 +23,23 @@ function WebNav() {
     return (
       <>
       <nav>
-      <Box h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white'>
-      <image className="weblogo" src={require("../../assets/images/avatar.jpg")} />
-      <Box marginTop="1em" float="right" justifyContent="center">
-        <UnorderedList listStyleType="none" display="flex" flexWrap="wrap" marginRight="auto" marginLeft="auto" position="relative" justifyContent="center" fontSize="xl">
-          <ListItem><NavLink to={"help"}>Emergencies</NavLink></ListItem>
-          <ListItem><NavLink to={"booking"}>Appointments</NavLink></ListItem>
-          <ListItem><NavLink to={"renting"}>Renta-a-car</NavLink></ListItem>
-          <ListItem><NavLink to={"about-us"}>About</NavLink></ListItem>
-          <ListItem><NavLink to={"contact"}>About</NavLink></ListItem>
-          <ListItem><Button><NavLink onClick={handleLoginClick}>Login</NavLink></Button></ListItem>
-        </UnorderedList>
-        </Box>
-        {showLogin && (
+      <Flex align="center" h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white' fontWeight="600">
+        <Flex justify="center" w="25%">
+          <NavLink to={""}>
+            <Image fit="contain" h="60px" w="225px" src={require("../../assets/images/logo02.png")} />
+          </NavLink>
+        </Flex>
+        <Spacer />
+        <HStack justify="right" w="50%" spacing='1.5em' >
+          <NavLink to={"help"}>EMERGENCY</NavLink>
+          <NavLink to={"booking"}>BOOKING</NavLink>
+          <NavLink to={"renting"}>RENTALS</NavLink>
+          <NavLink to={"about-us"}>ABOUT</NavLink>
+          <NavLink to={"contact"}>CONTACT</NavLink>
+        </HStack>
+        <Spacer />
+        <Button variant='outline' colorScheme='twitter' size='lg' marginRight="1.5em" ><NavLink onClick={handleLoginClick}>LOGIN</NavLink></Button>
+          {showLogin && (
         <div className="login-container">
           <form onSubmit={handleLoginSubmit}>
             <label htmlFor="username">Username:</label>
@@ -46,7 +50,7 @@ function WebNav() {
           </form>
         </div>
       )}
-      </Box>
+      </Flex>
       </nav>
       <Outlet />
       </>
