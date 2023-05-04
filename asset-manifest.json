@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.f020f96c.css",
-    "main.js": "/react-portfolio/static/js/main.3cb8535b.js",
+    "main.css": "/react-portfolio/static/css/main.4f04aea8.css",
+    "main.js": "/react-portfolio/static/js/main.1cfd8b5e.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/Mario and Adrian A.jpg": "/react-portfolio/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
     "static/media/restaurantchefB.jpg": "/react-portfolio/static/media/restaurantchefB.4b4c2d26b514db32e8fc.jpg",
@@ -18,16 +18,17 @@
     "static/media/Logo.svg": "/react-portfolio/static/media/Logo.2c379c7ea7eb07402bfc7700915316de.svg",
     "static/media/pic01.jpg": "/react-portfolio/static/media/pic01.d6d67b9829487f48035d.jpg",
     "static/media/pic02.jpg": "/react-portfolio/static/media/pic02.5f80bd18a310b0908c7b.jpg",
+    "static/media/logo01.png": "/react-portfolio/static/media/logo01.47d82fc195399ac2d02b.png",
     "static/media/logo02.png": "/react-portfolio/static/media/logo02.2998eac5e5c219084f43.png",
     "static/media/Basket.svg": "/react-portfolio/static/media/Basket.07e27ef8e2d39d8d311117a6b04ece1d.svg",
     "static/media/Arrow.svg": "/react-portfolio/static/media/Arrow.5a1d66f8cae01f02bf6e1262e1c112d5.svg",
     "index.html": "/react-portfolio/index.html",
-    "main.f020f96c.css.map": "/react-portfolio/static/css/main.f020f96c.css.map",
-    "main.3cb8535b.js.map": "/react-portfolio/static/js/main.3cb8535b.js.map",
+    "main.4f04aea8.css.map": "/react-portfolio/static/css/main.4f04aea8.css.map",
+    "main.1cfd8b5e.js.map": "/react-portfolio/static/js/main.1cfd8b5e.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f020f96c.css",
-    "static/js/main.3cb8535b.js"
+    "static/css/main.4f04aea8.css",
+    "static/js/main.1cfd8b5e.js"
   ]
 }
