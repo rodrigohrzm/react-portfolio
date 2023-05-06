@@ -116,14 +116,17 @@ function WebNav() {
           <DrawerBody padding="1.5rem">
           <Image marginLeft="1.2rem" fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo01.png")} />
             <FormControl marginTop="1.5rem">
-              <FormLabel>Email address</FormLabel>
-                <Input marginBottom="1rem" value={email} type='email' placeholder='type anything' id="email" onChange={(e => setEmail(e.target.value))} />
-              <FormLabel>Password</FormLabel>
+              <FormLabel>Email address
+                <Input value={email} type='email' placeholder='type anything' id="email" onChange={(e => setEmail(e.target.value))} />
+              </FormLabel>
+              <FormLabel>Password
                 <InputGroup size='md'>
                   <Input value={password} type={show ? 'text' : 'password'} placeholder='type anything' id="password" onChange={(e => setPassword(e.target.value))} />
-                  <InputRightElement><Button h='1.5rem' w="3rem" marginLeft="-1.5rem" size='sm' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</Button>
-      </InputRightElement>
-              </InputGroup>
+                  <InputRightElement>
+                    <Button h='1.5rem' w="3rem" marginLeft="-1.5rem" size='sm' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormLabel>
               <Button marginTop="2rem" width="100%" type="submit" colorScheme='facebook' size='lg' onClick={handleLoginSubmit}>LOG IN</Button>
             </FormControl>
           </DrawerBody>
