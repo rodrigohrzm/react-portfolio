@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.4f04aea8.css",
-    "main.js": "/react-portfolio/static/js/main.1cfd8b5e.js",
+    "main.js": "/react-portfolio/static/js/main.932000c4.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/Mario and Adrian A.jpg": "/react-portfolio/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
     "static/media/restaurantchefB.jpg": "/react-portfolio/static/media/restaurantchefB.4b4c2d26b514db32e8fc.jpg",
@@ -12,6 +12,7 @@
     "static/media/restaurant.jpg": "/react-portfolio/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
     "static/media/handsome.png": "/react-portfolio/static/media/handsome.b29cc616afdfa02c7434.png",
     "static/media/handsomette.png": "/react-portfolio/static/media/handsomette.acec64196381111b4b9b.png",
+    "static/media/bookingpic.jpg": "/react-portfolio/static/media/bookingpic.189773b9a6d1bf35730a.jpg",
     "static/media/review2.jpg": "/react-portfolio/static/media/review2.e85b9e2265ea65598e02.jpg",
     "static/media/bruschetta.jpg": "/react-portfolio/static/media/bruschetta.2ea9e5c3be02f4d86043.jpg",
     "static/media/review1.jpg": "/react-portfolio/static/media/review1.7fa4610952421342aebf.jpg",
@@ -24,11 +25,11 @@
     "static/media/Arrow.svg": "/react-portfolio/static/media/Arrow.5a1d66f8cae01f02bf6e1262e1c112d5.svg",
     "index.html": "/react-portfolio/index.html",
     "main.4f04aea8.css.map": "/react-portfolio/static/css/main.4f04aea8.css.map",
-    "main.1cfd8b5e.js.map": "/react-portfolio/static/js/main.1cfd8b5e.js.map",
+    "main.932000c4.js.map": "/react-portfolio/static/js/main.932000c4.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f04aea8.css",
-    "static/js/main.1cfd8b5e.js"
+    "static/js/main.932000c4.js"
   ]
 }
