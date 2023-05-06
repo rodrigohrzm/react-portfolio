@@ -1,57 +1,65 @@
 import { Link, Outlet } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { Box, Flex, Spacer, VStack, HStack, Center,
-         Text } from '@chakra-ui/react'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Stack, VStack, Center,
+         Image, Text, Heading } from '@chakra-ui/react'
 
   function WebFooter() {
       return (
         <footer>
-        <Box bgGradient='linear(to-r, #121212, #092769)'>
-          <image className="weblogo" src="" />
-          <image className="linkedin" src="" />
-          <image className="youtube" src="" />
-          <image className="instagram" src="" />
-          <ul>
-              <h5>Services</h5>
-              <li><Link to={""}>Emergencies</Link></li>
-              <li><Link to={""}>Appointments</Link></li>
-              <li><Link to={""}>Renta-a-car</Link></li>
-              <li><Link to={""}>Detailing</Link></li>
-          </ul>
-          <ul>
-              <h5>Companies we work with</h5>
-              <li><Link to={""}>Toyota</Link></li>
-              <li><Link to={""}>Tesla</Link></li>
-              <li><Link to={""}>Ford</Link></li>
-              <li><Link to={""}>Stellantis</Link></li>
-              <li><Link to={""}>VAG Group</Link></li>
-          </ul>
-          <ul>
-              <h5>Our parts partners</h5>
-              <li><Link to={""}>Bosch</Link></li>
-              <li><Link to={""}>Continental</Link></li>
-              <li><Link to={""}>CATL</Link></li>
-              <li><Link to={""}>Castrol</Link></li>
-              <li><Link to={""}>Panasonic</Link></li>
-          </ul>
-          <ul>
-              <h5>The company</h5>
-              <li><Link to={""}>About us</Link></li>
-              <li><Link to={""}>Contact us</Link></li>
-              <li><Link to={""}>Careers</Link></li>
-          </ul>
-          <ul>
-              <h5>More</h5>
-              <li><Link to={""}>Privacy Policy</Link></li>
-              <li><Link to={""}>Legal Notice</Link></li>
-              <li><Link to={""}>Information Security Policy</Link></li>
-              <li><Link to={""}>Quality Policy</Link></li>
-              <li><Link to={""}>Cookies Policy</Link></li>
-          </ul>
-        </Box>
-        <Center bg="black" padding="0.66em">
-          <Text marginLeft={{ base: 'none', md: 'none', lg: '-45%' }} color="white" fontSize={{ base: 'sm', md: 'md', lg: 'md' }} >AutoCare Hybrid Experts 2023. All rights reserved.</Text>
+        <Center bgGradient='linear(to-r, #121212, #092769)' h={{ base: '', md: '', lg: '30rem' }}>
+        <Stack wrap="nowrap" direction={{ base: 'column', md: 'row', xl: 'row' }} spacing={{ base: '3rem', md: '4.5rem', xl: '6rem' }} color="#FFFFFF87" paddingTop={{ base: '', md: '8rem', lg: '8rem', '2xl': '0.001rem' }} marginBottom="6rem" marginLeft="5rem" marginRight="5rem">
+          <VStack paddingTop={{ base: '5rem', md: '0', xl: '0' }} paddingBottom="3rem" spacing="2rem">
+            <Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} />
+            <Stack direction="row" color="white" spacing="1rem">
+              <Link to={"/react-portfolio"}><FontAwesomeIcon size="xl" icon={faGlobe} /></Link>
+              <Link to={"https://linkedin.com/in/rodrigohrzm"}><FontAwesomeIcon size="xl" icon={faLinkedinIn} /></Link>
+              <Link to={"https://twitter.com/rodrigohrzm"}><FontAwesomeIcon size="xl" icon={faTwitter} /></Link>
+              <Link to={"https://www.instagram.com/rodrigohrzm"}><FontAwesomeIcon size="xl" icon={faInstagram} /></Link>
+            </Stack>
+          </VStack>
+          <VStack align="left" spacing="0.66rem">
+              <Heading color="white" as='h6' size='md'>Services</Heading>
+              <Link to={""}>Emergencies</Link>
+              <Link to={""}>Appointments</Link>
+              <Link to={""}>Rent-a-car</Link>
+              <Link to={""}>Detailing</Link>
+          </VStack>
+          <VStack align="left" spacing="0.66rem">
+              <Heading color="white" as='h6' size='md'>Manufacturer partners</Heading>
+              <Link to={""}>Toyota</Link>
+              <Link to={""}>Tesla</Link>
+              <Link to={""}>Ford</Link>
+              <Link to={""}>Stellantis</Link>
+              <Link to={""}>VAG Group</Link>
+          </VStack>
+          <VStack align="left" spacing="0.66rem">
+              <Heading color="white" as='h6' size='md'>Our parts partners</Heading>
+              <Link to={""}>Bosch</Link>
+              <Link to={""}>CATL</Link>
+              <Link to={""}>Continental</Link>
+              <Link to={""}>Castrol</Link>
+              <Link to={""}>Panasonic</Link>
+          </VStack>
+          <VStack align="left" spacing="0.66rem">
+              <Heading color="white" as='h6' size='md'>The company</Heading>
+              <Link to={""}>About us</Link>
+              <Link to={""}>Contact us</Link>
+              <Link to={""}>Careers</Link>
+          </VStack>
+          <VStack align="left" spacing="0.66rem">
+              <Heading color="white" as='h6' size='md'>More</Heading>
+              <Link to={""}>Legal Notice</Link>
+              <Link to={""}>Privacy Policy</Link>
+              <Link to={""}>Data Security Policy</Link>
+              <Link to={""}>Quality Policy</Link>
+              <Link to={""}>Cookies Policy</Link>
+          </VStack>
+        </Stack>
+        </Center>
+        <Center bg="black" padding="0.66rem">
+          <Text fontWeight="600" marginLeft={{ base: 'none', md: '-45%', xl: '-45%' }} color="white" fontSize={{ base: 'sm', sm: 'md', lg: 'md' }} >AutoCare Hybrid Experts 2023. All rights reserved.</Text>
         </Center>
         <Outlet />
         </footer>

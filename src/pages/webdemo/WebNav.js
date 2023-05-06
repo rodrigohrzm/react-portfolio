@@ -8,7 +8,7 @@ import { useDisclosure } from '@chakra-ui/react'
 import { Box, Flex, Spacer, VStack, HStack,
          Button, Image,
          Collapse, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody,
-         FormControl, FormLabel, Input, FormErrorMessage } from '@chakra-ui/react'
+         FormControl, FormLabel, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 
 function WebNav() {
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ function WebNav() {
 
   const [ guestButtons , setguestButtons ] = useState ("initial");
   const [ userButtons , setuserButtons ] = useState ("none");
+  const [show, setShow] = useState(false)
   const [ email , setEmail ] = useState ("");
   const [ password , setPassword ] = useState ("");
 
@@ -70,11 +71,11 @@ function WebNav() {
       <>
       <nav>
       <Flex align="center" h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white' fontWeight="600">
-        <Flex paddingLeft="2em"justify="left" w="25%">
+        <Flex paddingLeft="2rem"justify="left" w="25%">
           <NavLink onClick={onCloseNav} to={""}><Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} /></NavLink>
         </Flex>
         <Spacer />
-        <HStack justify="right" w="50%" spacing='1.5em' display={{base: 'none', md: 'none', lg: 'flex'}} >
+        <HStack justify="right" w="50%" spacing='1.5rem' display={{base: 'none', md: 'flex', lg: 'flex'}} >
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"booking"}>APPOINTMENTS</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"renting"}>RENTALS</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"about-us"}>ABOUT</NavLink>
@@ -82,12 +83,12 @@ function WebNav() {
           <Box display={userButtons}><NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"userpanel"}>DASHBOARD</NavLink></Box>
         </HStack>
         <Spacer />
-        <Box display={guestButtons}><Button onClick={onToggleLogin} display={{base: 'none', md: 'none', lg: 'flex'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5em" >LOG IN</Button></Box>
-        <Box display={userButtons}><Button onClick={logoutProcedure} display={{base: 'none', md: 'none', lg: 'flex'}} variant='outline' colorScheme='red' size='lg' marginRight="1.5em" >LOG OUT</Button></Box>
-        <NavLink onClick={onToggleNav}><Button display={{base: 'flex', md: 'flex', lg: 'none'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5em" ><FontAwesomeIcon icon={faBars} /></Button></NavLink>
+        <Box display={guestButtons}><Button onClick={onToggleLogin} display={{base: 'none', md: 'flex', lg: 'flex'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" >LOG IN</Button></Box>
+        <Box display={userButtons}><Button onClick={logoutProcedure} display={{base: 'none', md: 'flex', lg: 'flex'}} variant='outline' colorScheme='red' size='lg' marginRight="1.5rem" >LOG OUT</Button></Box>
+        <NavLink onClick={onToggleNav}><Button display={{base: 'flex', md: 'none', lg: 'none'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" ><FontAwesomeIcon icon={faBars} /></Button></NavLink>
       </Flex>
       <Collapse in={isOpenNav} animateOpacity>
-        <Box bg="white" padding="1.5em" rounded='md' shadow='md'><VStack spacing='1.5em' >
+        <Box bg="white" padding="1.5rem" rounded='md' shadow='md'><VStack spacing='1.5rem' >
           <NavLink to={"booking"}>
             <Button width="300px" onClick={onToggleNav} colorScheme='messenger' size='lg'>APPOINTMENTS</Button>
           </NavLink>
@@ -112,14 +113,18 @@ function WebNav() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth='3px'>Employee area</DrawerHeader>
-          <DrawerBody padding="1.5em">
-          <Image marginLeft="1.2em" fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo01.png")} />
-            <FormControl marginTop="1.5em">
+          <DrawerBody padding="1.5rem">
+          <Image marginLeft="1.2rem" fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo01.png")} />
+            <FormControl marginTop="1.5rem">
               <FormLabel>Email address</FormLabel>
-                <Input marginBottom="1em" value={email} type='email' placeholder='type anything' id="email" onChange={(e => setEmail(e.target.value))} />
+                <Input marginBottom="1rem" value={email} type='email' placeholder='type anything' id="email" onChange={(e => setEmail(e.target.value))} />
               <FormLabel>Password</FormLabel>
-                <Input value={password} type='password' placeholder='type anything' id="password" onChange={(e => setPassword(e.target.value))} />
-              <Button marginTop="2em" width="100%" type="submit" colorScheme='facebook' size='lg' onClick={handleLoginSubmit}>LOG IN</Button>
+                <InputGroup size='md'>
+                  <Input value={password} type={show ? 'text' : 'password'} placeholder='type anything' id="password" onChange={(e => setPassword(e.target.value))} />
+                  <InputRightElement><Button h='1.5rem' w="3rem" marginLeft="-1.5rem" size='sm' onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</Button>
+      </InputRightElement>
+              </InputGroup>
+              <Button marginTop="2rem" width="100%" type="submit" colorScheme='facebook' size='lg' onClick={handleLoginSubmit}>LOG IN</Button>
             </FormControl>
           </DrawerBody>
         </DrawerContent>
