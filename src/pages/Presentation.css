@@ -1976,25 +1976,25 @@ input, select, textarea {
 		border-radius: 100%;
 	}
 
-	::-webkit-input-placeholder {
+	.PresentationPage::-webkit-input-placeholder {
 		color: #aaa !important;
 		font-style: italic;
 		opacity: 1.0;
 	}
 
-	:-moz-placeholder {
+	.PresentationPage:-moz-placeholder {
 		color: #aaa !important;
 		font-style: italic;
 		opacity: 1.0;
 	}
 
-	::-moz-placeholder {
+	.PresentationPage::-moz-placeholder {
 		color: #aaa !important;
 		font-style: italic;
 		opacity: 1.0;
 	}
 
-	:-ms-input-placeholder {
+	.PresentationPage:-ms-input-placeholder {
 		color: #aaa !important;
 		font-style: italic;
 		opacity: 1.0;

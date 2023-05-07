@@ -5,16 +5,14 @@ import RepairSupport from '../../data/RepairSupport.json';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAt, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { Box, Flex, Spacer, VStack, HStack, Center, Grid, SimpleGrid,
-         Button, Image,
-         Collapse, Container,
+import { Box, Flex, Center,  SimpleGrid,
+         Button, Image, Text, Heading, Container,
          FormControl, FormLabel, InputGroup, Input, InputRightElement, Select, Textarea, CheckboxGroup, Checkbox } from '@chakra-ui/react'
 
-// https://cdn.filestackcontent.com/OPOFvvyQI674E5F5K4lX
-// mobile view excessive border padding causes out of bounds
-// border color too light
-// Styled input labels
-// success message styling
+// If you need to do some maintenance on your car, you can book our mechanics here.
+// And if your car is not feeling ok, not working properly, or you need any repairs,
+// be sure to let us know.
+
 
 function WebBookingForm() {
    const [ ShowForm, setShowForm ] = useState (true);
@@ -64,72 +62,68 @@ function WebBookingForm() {
 
     return (
       <>
-      <Center bg="#dee1e7" backgroundSize="50%">
-      <Flex backgroundColor="#f2f2f2" maxWidth="1200px" margin={{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}>
-         <Image display={{ base: 'none', xl: 'yes' }} w="450px" align="right top" fit="scale-down" src={require("../../assets/images/bookingpic.jpg")} />
-         {!ShowForm ? (<form ref={form} onSubmit={handleSubmit}> <FormControl>
-         <SimpleGrid padding="3rem" spacing="2rem" columns={{ base: 1, md: 2 }} borderRadius="4px">
+      <Center background='linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%)' >
+      <Flex borderLeftRadius="8" borderRightRadius="8" boxShadow='lg' backgroundColor="#fafafa" maxWidth="1200px" margin={{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}>
+         <Image borderLeftRadius="8" display={{ base: 'none', xl: 'yes' }} align="right top" maxWidth='450px' fit="scale-down" src={require("../../assets/images/bookingpic.jpg")} />
+         {ShowForm ? (<form ref={form} onSubmit={handleSubmit}> <FormControl as='fieldset'>
+         <SimpleGrid padding={{ base: '1rem', sm: '2rem', pre: '3rem' }} spacing="2rem" columns={{ base: 1, pre: 2 }} borderRadius="4px">
             <Box>
-               <fieldset>
-                  <FormLabel>Car brand
-                     <Select required id="brand" value={selectedBrand} onChange={(e => {setSelectedBrand(e.target.value);setSelectedModel('');})}>
-                        <option defaultValue disabled hidden value="">choose your brand</option>
-                        {brandOptions.map((brand) => (<option key={brand} value={brand}>{brand}</option>))}
-                     </Select>
-                  </FormLabel>
-                  <FormLabel>Car model
-                     <Select required id="model" value={selectedModel} onChange={(e => {setSelectedModel(e.target.value);})}>
-                        <option defaultValue disabled hidden value="">choose your model</option>
-                        {modelOptions.map((model) => (<option key={model} value={model}>{model}</option>))}
-                     </Select>
-                  </FormLabel>
-                  <FormLabel>Types of repair
-                     <CheckboxGroup required><SimpleGrid columns="2" spacing="1rem">
-                        <Checkbox id="mechanical" name="mechanical" value="mechanical" onChange={handleCheckboxChange}>Mechanical</Checkbox>
-                        <Checkbox id="electrical" name="electrical" value="electrical" onChange={handleCheckboxChange}>Electrical</Checkbox>
-                        <Checkbox id="bodywork" name="bodywork" value="bodywork" onChange={handleCheckboxChange}>Bodywork</Checkbox>
-                        <Checkbox id="interior" name="interior" value="interior" onChange={handleCheckboxChange}>Interior</Checkbox>
-                        <Checkbox id="maintenance" name="maintenance" value="maintenance" onChange={handleCheckboxChange}>Maintenance</Checkbox>
-                     </SimpleGrid></CheckboxGroup>
-                  </FormLabel>
-                  <FormLabel>Describe your car's issue
-                     <Textarea required resize="none" placeholder='description' minLength="10" id="description" value={description} onChange={(e => setDescription(e.target.value))}/>
-                  </FormLabel>
-               </fieldset>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Car brand</Heading>
+                  <Select borderColor="#99b3d7" required id="brand" value={selectedBrand} onChange={(e => {setSelectedBrand(e.target.value);setSelectedModel('');})}>
+                     <option defaultValue disabled hidden value="">choose your brand</option>
+                     {brandOptions.map((brand) => (<option key={brand} value={brand}>{brand}</option>))}
+                  </Select>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Car model</Heading>
+                  <Select borderColor="#99b3d7" required id="model" value={selectedModel} onChange={(e => {setSelectedModel(e.target.value);})}>
+                     <option defaultValue disabled hidden value="">choose your model</option>
+                     {modelOptions.map((model) => (<option key={model} value={model}>{model}</option>))}
+                  </Select>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.8em" color='#444444' fontWeight='600' as='h4' size='sm'>Types of repair</Heading>
+                  <CheckboxGroup required><SimpleGrid columns="2" spacing="1rem">
+                     <Checkbox borderColor="#99b3d7" id="mechanical" name="mechanical" value="mechanical" onChange={handleCheckboxChange}>Mechanical</Checkbox>
+                     <Checkbox borderColor="#99b3d7" id="electrical" name="electrical" value="electrical" onChange={handleCheckboxChange}>Electrical</Checkbox>
+                     <Checkbox borderColor="#99b3d7" id="bodywork" name="bodywork" value="bodywork" onChange={handleCheckboxChange}>Bodywork</Checkbox>
+                     <Checkbox borderColor="#99b3d7" id="interior" name="interior" value="interior" onChange={handleCheckboxChange}>Interior</Checkbox>
+                     <Checkbox borderColor="#99b3d7" id="maintenance" name="maintenance" value="maintenance" onChange={handleCheckboxChange}>Maintenance</Checkbox>
+                  </SimpleGrid></CheckboxGroup>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Describe your car's issue</Heading>
+                  <Textarea borderColor="#99b3d7" required resize="none" placeholder='description' minLength="10" id="description" value={description} onChange={(e => setDescription(e.target.value))}/>
+               </FormLabel>
             </Box>
             <Box>
-               <fieldset>
-                  <FormLabel>Choose date
-                     <Input required type="date" id="res-date" value={date} onChange={hourDropdown}/>
-                  </FormLabel>
-                  <FormLabel>Choose time
-                     <Select required id="res-time" value={time} onChange={(e => setTime(e.target.value))}>
-                        {availabletimes.map((slot) => <option key={slot} value={slot}>{slot}</option>)}
-                     </Select>
-                  </FormLabel>
-                  <FormLabel>Your full name
-                     <InputGroup>
-                        <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faUser} color='#5e646e' />}/>
-                        <Input required placeholder='name' minLength="3" type="text" id="fullname" value={fullname} onChange={(e => setFullname(e.target.value))}/>
-                     </InputGroup>
-                  </FormLabel>
-                  <FormLabel>Contact email
-                     <InputGroup>
-                        <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faAt} color='#5e646e' />}/>
-                        <Input required type="email" placeholder='email' id="email" value={email} onChange={(e => setEmail(e.target.value))}/>
-                     </InputGroup>
-                  </FormLabel>
-                  <FormLabel>Phone number
-                     <InputGroup>
-                        <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faPhone} color='#5e646e' />}/>
-                        <Input required type="tel" placeholder='phone' id="phone" value={phone} onChange={(e => setPhone(e.target.value))}/>
-                     </InputGroup>
-                  </FormLabel>
-               </fieldset>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Choose date</Heading>
+                  <Input borderColor="#99b3d7" required type="date" id="res-date" value={date} onChange={hourDropdown}/>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Choose time</Heading>
+                  <Select borderColor="#99b3d7" required id="res-time" value={time} onChange={(e => setTime(e.target.value))}>
+                     {availabletimes.map((slot) => <option key={slot} value={slot}>{slot}</option>)}
+                  </Select>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Your full name</Heading>
+                  <InputGroup borderColor="#99b3d7" >
+                     <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faUser} color='#5e646e' />}/>
+                     <Input required placeholder='name' minLength="3" type="text" id="fullname" value={fullname} onChange={(e => setFullname(e.target.value))}/>
+                  </InputGroup>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Contact email</Heading>
+                  <InputGroup borderColor="#99b3d7">
+                     <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faAt} color='#5e646e' />}/>
+                     <Input required type="email" placeholder='email' id="email" value={email} onChange={(e => setEmail(e.target.value))}/>
+                  </InputGroup>
+               </FormLabel>
+               <FormLabel marginBottom="2em"><Heading paddingLeft='0.25rem' marginBottom="0.5em" color='#444444' fontWeight='600' as='h4' size='sm'>Phone number</Heading>
+                  <InputGroup borderColor="#99b3d7">
+                     <InputRightElement pointerEvents='none' children={<FontAwesomeIcon icon={faPhone} color='#5e646e' />}/>
+                     <Input required type="tel" placeholder='phone' id="phone" value={phone} onChange={(e => setPhone(e.target.value))}/>
+                  </InputGroup>
+               </FormLabel>
             </Box>
          </SimpleGrid>
-         <Center><Button width="300px" margin="3rem" colorScheme='messenger' size='lg' type="submit">Confirm booking</Button></Center>
-         </FormControl></form>) : (<Box bg="orange" maxWidth="600px" padding="3rem"><Container className="showAlert">Thank you for choosing us, we'll be ready when you arrive.</Container></Box>)}
+         <Center><Button marginTop={{ base: '0', sm: '-1.5rem', lg: '-2rem' }} marginBottom={{ base: '3rem', xl: '0' }} width="250px" colorScheme='messenger' size='lg' type="submit">Confirm booking</Button></Center>
+         </FormControl></form>) : (<Box bg="f2f2f2" maxWidth="600px" padding="3rem"><Container className="showAlert">Thank you for choosing us, we'll be ready when you arrive.</Container></Box>)}
       </Flex>
       </Center>
       </>

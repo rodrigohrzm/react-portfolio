@@ -2,15 +2,17 @@ import { Link, Outlet } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Stack, VStack, Center,
+import { Stack, VStack, Center, SimpleGrid,
          Image, Text, Heading } from '@chakra-ui/react'
+
+// <Stack wrap="nowrap" direction={{ base: 'column', md: 'row', xl: 'row' }} spacing={{ base: '3rem', md: '4.5rem', xl: '6rem' }} color="#FFFFFF87" paddingTop={{ base: '', md: '8rem', lg: '8rem', '2xl': '0.001rem' }} marginBottom="6rem" marginLeft="5rem" marginRight="5rem">
 
   function WebFooter() {
       return (
         <footer>
-        <Center bgGradient='linear(to-r, #121212, #092769)' h={{ base: '', md: '', lg: '30rem' }}>
-        <Stack wrap="nowrap" direction={{ base: 'column', md: 'row', xl: 'row' }} spacing={{ base: '3rem', md: '4.5rem', xl: '6rem' }} color="#FFFFFF87" paddingTop={{ base: '', md: '8rem', lg: '8rem', '2xl': '0.001rem' }} marginBottom="6rem" marginLeft="5rem" marginRight="5rem">
-          <VStack paddingTop={{ base: '5rem', md: '0', xl: '0' }} paddingBottom="3rem" spacing="2rem">
+        <Center bgGradient='linear(to-r, #121212, #092769)' h={{ base: '', md: '', xl: '30rem' }}>
+        <SimpleGrid columns={{ base: '1', pre: '2', lg:'3', xl: '6' }} spacing={{ base: '3rem', pre: '4.5rem', xl: '6rem' }} color="#FFFFFF87" paddingTop={{ base: '', pre: '5rem', lg:'5rem', xl: '1rem', '2xl': '0.001rem' }} marginBottom="6rem" marginLeft="5rem" marginRight="5rem">
+          <VStack paddingTop={{ base: '5rem', pre: '0', xl: '0' }} paddingBottom="3rem" spacing="2rem">
             <Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} />
             <Stack direction="row" color="white" spacing="1rem">
               <Link to={"/react-portfolio"}><FontAwesomeIcon size="xl" icon={faGlobe} /></Link>
@@ -56,7 +58,7 @@ import { Stack, VStack, Center,
               <Link to={""}>Quality Policy</Link>
               <Link to={""}>Cookies Policy</Link>
           </VStack>
-        </Stack>
+        </SimpleGrid>
         </Center>
         <Center bg="black" padding="0.66rem">
           <Text fontWeight="600" marginLeft={{ base: 'none', md: '-45%', xl: '-45%' }} color="white" fontSize={{ base: 'sm', sm: 'md', lg: 'md' }} >AutoCare Hybrid Experts 2023. All rights reserved.</Text>
@@ -66,50 +68,3 @@ import { Stack, VStack, Center,
       )};
 
     export { WebFooter };
-
-/*     <div style={{display: "flex", display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
-    <image className="weblogo" src="" />
-    <image className="linkedin" src="" />
-    <image className="youtube" src="" />
-    <image className="instagram" src="" />
-    <ul>
-        <h5>Our partners</h5>
-        <li><Link to={""}>Bosch</Link></li>
-        <li><Link to={""}>Continental</Link></li>
-        <li><Link to={""}>Magna International</Link></li>
-        <li><Link to={""}>Castrol</Link></li>
-        <li><Link to={""}>Magneti Marelli</Link></li>
-    </ul>
-    <ul>
-        <h5>Services</h5>
-        <li><Link to={""}>Emergencies</Link></li>
-        <li><Link to={""}>Appointments</Link></li>
-        <li><Link to={""}>Renta-a-car</Link></li>
-        <li><Link to={""}>Detailing</Link></li>
-    </ul>
-    <ul>
-        <h5>Our partners</h5>
-        <li><Link to={""}>Bosch</Link></li>
-        <li><Link to={""}>Continental</Link></li>
-        <li><Link to={""}>Magna International</Link></li>
-        <li><Link to={""}>Castrol</Link></li>
-        <li><Link to={""}>Magneti Marelli</Link></li>
-    </ul>
-    <ul>
-        <h5>The company</h5>
-        <li><Link to={""}>About us</Link></li>
-        <li><Link to={""}>Contact us</Link></li>
-        <li><Link to={""}>Careers</Link></li>
-    </ul>
-    <ul>
-        <h5>More</h5>
-        <li><Link to={""}>Privacy Policy</Link></li>
-        <li><Link to={""}>Legal Notice</Link></li>
-        <li><Link to={""}>Information Security Policy</Link></li>
-        <li><Link to={""}>Quality Policy</Link></li>
-        <li><Link to={""}>Cookies Policy</Link></li>
-    </ul>
-  </div>
-  <div style={{backgroundColor: "black"}}>
-    <p style={{margin: "0"}}>Company 2023. All rights reserved.</p>
-  </div> */
