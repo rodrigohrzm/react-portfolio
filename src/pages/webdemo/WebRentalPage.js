@@ -3,9 +3,7 @@ import { WebTitle } from './WebTitle'
 import { WebCard } from "./WebCard";
 import RentalInventory from '../../data/RentalInventory.json';
 
-import { Box, Flex, Center,  SimpleGrid,
-  Button, Image, Heading, Container, Grid, GridItem,
-  FormControl, FormLabel, InputGroup, Input, InputRightElement, Select, Textarea, CheckboxGroup, Checkbox } from '@chakra-ui/react'
+import { Box, Flex, Center, Grid, GridItem, Text } from '@chakra-ui/react'
 
 function WebRentalPage() {
 
@@ -45,11 +43,11 @@ function WebRentalPage() {
     <Box background='linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%)' >
     <Grid
       templateRows={'1fr 10rem'}
-      templateColumns={{ base: 'repeat(1, 1fr)', pre: 'repeat(2, 1fr)', xl: 'repeat(5, 1fr)' }}
+      templateColumns={{ base: 'repeat(1, 1fr)', pre: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
       gap={4}
       autoFlow='row'
     >
-      <GridItem rowSpan={2} colSpan={1} bg='grey' w='15rem'>
+      <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'2', lg: '1'}} bg='grey' w={{ base:'', lg: '15rem'}}>
         <label htmlFor="class-filter">Filter by Class:</label>
           <select id="class-filter" value={selectedClass} onChange={handleClassFilterChange}>
             <option value="">All</option>
@@ -67,13 +65,13 @@ function WebRentalPage() {
         />
         <output htmlFor="price-filter">{selectedPrice}</output>
       </GridItem>
-      <GridItem colSpan={4} bg='red'>
-        <Flex>
+      <GridItem autoColumns rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'2', lg: '4'}} bg='red'>
+        <Flex wrap='wrap'>
             {filteredRentals.map((car, index) => <WebCard car={car} key={index}/>)}
         </Flex>
       </GridItem>
-      <GridItem colSpan={2} bg='cyan'>Short description text</GridItem>
-      <GridItem colSpan={2} bg='green'>Disclaimer, insurance, fine print</GridItem>
+      <GridItem colSpan={{ base:'3', pre: '1', lg: '2'}} bg='cyan'><Center><Text align="left">Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text </Text></Center></GridItem>
+      <GridItem colSpan={{ base:'3', pre: '1', lg: '2'}} bg='green'><Center><Text align="left">Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print </Text></Center></GridItem>
     </Grid>
     </Box>
 </>
