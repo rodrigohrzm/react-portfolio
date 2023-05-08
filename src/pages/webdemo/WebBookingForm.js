@@ -61,9 +61,7 @@ function WebBookingForm() {
       }
 
     return (
-      <>
-      <Center background='linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%)' >
-      <Flex borderLeftRadius="8" borderRightRadius="8" boxShadow='lg' backgroundColor="#fafafa" maxWidth="1200px" margin={{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}>
+      <Flex borderLeftRadius="8" borderRightRadius="8" boxShadow='2xl' backgroundColor="#fafafa" maxWidth="1200px" margin={{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}>
          <Image borderLeftRadius="8" display={{ base: 'none', xl: 'yes' }} align="right top" maxWidth='450px' fit="scale-down" src={require("../../assets/images/bookingpic.jpg")} />
          {ShowForm ? (<form ref={form} onSubmit={handleSubmit}> <FormControl as='fieldset'>
          <SimpleGrid padding={{ base: '1rem', sm: '2rem', pre: '3rem' }} spacing="2rem" columns={{ base: 1, pre: 2 }} borderRadius="4px">
@@ -125,8 +123,6 @@ function WebBookingForm() {
          <Center><Button marginTop={{ base: '0', sm: '-1.5rem', lg: '-2rem' }} marginBottom={{ base: '3rem', xl: '0' }} width="250px" colorScheme='messenger' size='lg' type="submit">Confirm booking</Button></Center>
          </FormControl></form>) : (<Box bg="f2f2f2" maxWidth="600px" padding="3rem"><Container className="showAlert">Thank you for choosing us, we'll be ready when you arrive.</Container></Box>)}
       </Flex>
-      </Center>
-      </>
     )};
 
   export { WebBookingForm } ;
