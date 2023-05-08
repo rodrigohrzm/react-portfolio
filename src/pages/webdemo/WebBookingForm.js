@@ -6,7 +6,7 @@ import RepairSupport from '../../data/RepairSupport.json';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAt, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { Box, Flex, Center,  SimpleGrid,
-         Button, Image, Text, Heading, Container,
+         Button, Image, Heading, Container,
          FormControl, FormLabel, InputGroup, Input, InputRightElement, Select, Textarea, CheckboxGroup, Checkbox } from '@chakra-ui/react'
 
 // If you need to do some maintenance on your car, you can book our mechanics here.

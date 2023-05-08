@@ -3,6 +3,10 @@ import { WebTitle } from './WebTitle'
 import { WebCard } from "./WebCard";
 import RentalInventory from '../../data/RentalInventory.json';
 
+import { Box, Flex, Center,  SimpleGrid,
+  Button, Image, Heading, Container, Grid, GridItem,
+  FormControl, FormLabel, InputGroup, Input, InputRightElement, Select, Textarea, CheckboxGroup, Checkbox } from '@chakra-ui/react'
+
 function WebRentalPage() {
 
   const [selectedClass, setSelectedClass] = useState('');
@@ -38,15 +42,20 @@ function WebRentalPage() {
   return (
 <>
     <WebTitle pageName="Rent a car" />
-    <div>
+    <Box background='linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%)' >
+    <Grid
+      templateRows={'1fr 10rem'}
+      templateColumns={{ base: 'repeat(1, 1fr)', pre: 'repeat(2, 1fr)', xl: 'repeat(5, 1fr)' }}
+      gap={4}
+      autoFlow='row'
+    >
+      <GridItem rowSpan={2} colSpan={1} bg='grey' w='15rem'>
         <label htmlFor="class-filter">Filter by Class:</label>
-        <select id="class-filter" value={selectedClass} onChange={handleClassFilterChange}>
-          <option value="">All</option>
-          {classes.map((classOption, index) => (<option key={index} value={classOption}>{classOption}</option>))}
-        </select>
-    </div>
-    <div>
-        <label htmlFor="price-filter">Filter by Price:</label>
+          <select id="class-filter" value={selectedClass} onChange={handleClassFilterChange}>
+            <option value="">All</option>
+            {classes.map((classOption, index) => (<option key={index} value={classOption}>{classOption}</option>))}
+          </select>
+          <label htmlFor="price-filter">Filter by Price:</label>
         <input
           type="range"
           id="price-filter"
@@ -57,10 +66,16 @@ function WebRentalPage() {
           onChange={handlePriceFilterChange}
         />
         <output htmlFor="price-filter">{selectedPrice}</output>
-    </div>
-    <ul>
-        {filteredRentals.map((car, index) => <li key={index}><WebCard car={car} /></li>)}
-      </ul>
+      </GridItem>
+      <GridItem colSpan={4} bg='red'>
+        <Flex>
+            {filteredRentals.map((car, index) => <WebCard car={car} key={index}/>)}
+        </Flex>
+      </GridItem>
+      <GridItem colSpan={2} bg='cyan'>Short description text</GridItem>
+      <GridItem colSpan={2} bg='green'>Disclaimer, insurance, fine print</GridItem>
+    </Grid>
+    </Box>
 </>
 );}
 
