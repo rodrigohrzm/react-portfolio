@@ -18,7 +18,7 @@ function WebCard(props) {
         <CardBody>
           <Image
             fit='cover'
-            /* src={require(picture)} */
+            src={require(JSON.stringify(picture))}
             fallbackSrc={require('../../assets/images/fallbackimg.png')}
             alt=''
             borderRadius='8'

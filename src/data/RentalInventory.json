@@ -13,7 +13,7 @@
       },
       "class": "Compact",
       "price": 33,
-      "picture": "../assets/images/rentalmedia/toyotacorolla.jpg"
+      "picture": "../../assets/images/rentalmedia/toyotacorolla.jpg"
     },
     {
       "make": "Honda",
