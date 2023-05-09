@@ -13,7 +13,7 @@ function WebNewRentals() {
     return (
       <div>
         <h2>Our newest rentals</h2>
-        <div style={{display: "flex", display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
+        <div style={{display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
           {newestCars}
         </div>
       </div>

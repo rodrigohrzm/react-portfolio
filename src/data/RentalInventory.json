@@ -12,7 +12,8 @@
         "highway": 38
       },
       "class": "Compact",
-      "price": 33
+      "price": 33,
+      "picture": "../assets/images/rentalmedia/toyotacorolla.jpg"
     },
     {
       "make": "Honda",
@@ -27,7 +28,8 @@
         "highway": 42
       },
       "class": "Sedan",
-      "price": 40
+      "price": 40,
+      "picture": "../../assets/images/rentalmedia/hondacivic.jpg"
     },
     {
       "make": "Ford",
@@ -42,7 +44,8 @@
         "highway": 30
       },
       "class": "Coupe",
-      "price": 102
+      "price": 102,
+      "picture": "../../assets/images/rentalmedia/fordmustang.jpg"
     },
     {
       "make": "Cupra",
@@ -57,7 +60,8 @@
         "highway": 24
       },
       "class": "SUV",
-      "price": 53
+      "price": 53,
+      "picture": "../../assets/images/rentalmedia/cupraformentor.jpg"
     },
     {
       "make": "Hyundai",
@@ -72,7 +76,8 @@
         "highway": 39
       },
       "class": "SUV",
-      "price": 64
+      "price": 64,
+      "picture": "../../assets/images/rentalmedia/hyundaitucson.jpg"
     },
     {
       "make": "BMW",
@@ -87,7 +92,8 @@
         "highway": 32
       },
       "class": "Sedan",
-      "price": 59
+      "price": 59,
+      "picture": "../../assets/images/rentalmedia/bmw3series.jpg"
     },
     {
       "make": "Mercedes-Benz",
@@ -102,7 +108,8 @@
         "highway": 35
       },
       "class": "Compact",
-      "price": 52
+      "price": 52,
+      "picture": "../../assets/images/rentalmedia/mercedesbclass.jpg"
     },
     {
       "make": "Audi",
@@ -117,7 +124,8 @@
         "highway": 31
       },
       "class": "SUV",
-      "price": 65
+      "price": 65,
+      "picture": "../../assets/images/rentalmedia/audiq2.jpg"
     },
     {
         "make": "Ford",
@@ -132,7 +140,8 @@
           "highway": 24
         },
         "class": "Pick-Up",
-        "price": 88
+        "price": 88,
+        "picture": "../../assets/images/rentalmedia/fordf150.jpg"
       },
     {
         "make": "Tesla",
@@ -147,7 +156,8 @@
           "highway": 144
         },
         "class": "Sedan",
-        "price": 59
+        "price": 59,
+        "picture": "../../assets/images/rentalmedia/teslamodel3.jpg"
       }
     ]
   }

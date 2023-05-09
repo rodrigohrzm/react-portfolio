@@ -9,15 +9,16 @@ import { Image, Heading, Stack, HStack, Text, Divider, Button, ButtonGroup,
          Card, CardBody, CardFooter, Tag, TagLabel, TagLeftIcon } from '@chakra-ui/react'
 
 function WebCard(props) {
-    let { make, model, year, mileage, booked_status, horsepower, automatic, MPG, price } = props.car;
+    let { make, model, year, mileage, booked_status, horsepower, automatic, MPG, price, picture } = props.car;
     let availability = booked_status ? "Booked" : "Available";
     let cardClass = booked_status ? "booked" : "";
+    console.log(picture)
     return(
         <Card margin='2rem' boxShadow='xl' maxW='sm'>
         <CardBody>
           <Image
             fit='cover'
-            src=''
+            /* src={require(picture)} */
             fallbackSrc={require('../../assets/images/fallbackimg.png')}
             alt=''
             borderRadius='8'
