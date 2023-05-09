@@ -2,50 +2,59 @@ import { Link } from "react-router-dom"
 import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRoad, faHorseHead, faGaugeHigh, faGasPump } from '@fortawesome/free-solid-svg-icons'
+import { faRoad, faHorseHead, faGaugeHigh, faGasPump, faLock, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-import { Image, Heading, Stack, Text, Divider, Button, ButtonGroup,
+import { Image, Heading, Stack, HStack, Text, Divider, Button, ButtonGroup,
          List, ListItem, ListIcon,
-         Card, CardBody, CardFooter, Tag, TagLabel } from '@chakra-ui/react'
+         Card, CardBody, CardFooter, Tag, TagLabel, TagLeftIcon } from '@chakra-ui/react'
 
 function WebCard(props) {
     let { make, model, year, mileage, booked_status, horsepower, automatic, MPG, price } = props.car;
     let availability = booked_status ? "Booked" : "Available";
     let cardClass = booked_status ? "booked" : "";
     return(
-        <Card maxW='sm'>
+        <Card margin='2rem' boxShadow='xl' maxW='sm'>
         <CardBody>
-          <Tag
-              size={{ base:'sm', xl: 'md'}}
-              key={model}
-              borderRadius='full'
-              variant='solid'
-              colorScheme={booked_status ? "red" : "green"}
-          >
-              <TagLabel>{availability}</TagLabel>
-          </Tag>
           <Image
-            src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+            fit='cover'
+            src=''
+            fallbackSrc={require('../../assets/images/fallbackimg.png')}
             alt=''
             borderRadius='8'
           />
           <Stack marginTop='6' spacing='3'>
-            <Heading size='md'>{make} {model}</Heading>
+            <HStack justify='space-between'>
+              <Heading color='blue.700' size='md'>{make} {model}</Heading>
+              <Tag
+                  size='md'
+                  key={model}
+                  borderRadius='full'
+                  variant='solid'
+                  backgroundColor={booked_status ? "red.300" : "green.200"}
+                  color={booked_status ? "red.900" : "green.700"}
+                  fontWeight='600'
+                  marginBottom='1rem'
+              >
+                  <TagLeftIcon display={booked_status ? "" : "none"}><FontAwesomeIcon icon={faLock} /></TagLeftIcon>
+                  <TagLeftIcon display={booked_status ? "none" : ""}><FontAwesomeIcon icon={faCheck} /></TagLeftIcon>
+                  <TagLabel>{availability}</TagLabel>
+              </Tag>
+            </HStack>
             <List spacing={3}>
                 <ListItem>
-                    <ListIcon color='green.500'><FontAwesomeIcon icon={faRoad} /></ListIcon>
+                    <ListIcon color='blue.700'><FontAwesomeIcon icon={faRoad} /></ListIcon>
                     {mileage} miles
                 </ListItem>
                 <ListItem>
-                    <ListIcon color='green.500'><FontAwesomeIcon icon={faHorseHead} /></ListIcon>
+                    <ListIcon color='blue.700'><FontAwesomeIcon icon={faHorseHead} /></ListIcon>
                     {horsepower} HP
                 </ListItem>
                 <ListItem>
-                    <ListIcon color='green.500'><FontAwesomeIcon icon={faGaugeHigh} /></ListIcon>
+                    <ListIcon color='blue.700'><FontAwesomeIcon icon={faGaugeHigh} /></ListIcon>
                     {automatic ? "Automatic" : "Manual"} transmission
                 </ListItem>
                 <ListItem>
-                    <ListIcon color='green.500'><FontAwesomeIcon icon={faGasPump} /></ListIcon>
+                    <ListIcon color='blue.700'><FontAwesomeIcon icon={faGasPump} /></ListIcon>
                     {MPG.city}/{MPG.highway} MPG (City/Highway)
                 </ListItem>
             </List>

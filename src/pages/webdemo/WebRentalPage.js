@@ -65,7 +65,7 @@ function WebRentalPage() {
         />
         <output htmlFor="price-filter">{selectedPrice}</output>
       </GridItem>
-      <GridItem autoColumns rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'2', lg: '4'}} bg='red'>
+      <GridItem autoColumns rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'2', lg: '4'}}>
         <Flex wrap='wrap'>
             {filteredRentals.map((car, index) => <WebCard car={car} key={index}/>)}
         </Flex>
