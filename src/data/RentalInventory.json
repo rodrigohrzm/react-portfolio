@@ -13,7 +13,7 @@
       },
       "class": "Compact",
       "price": 33,
-      "picture": "../../assets/images/rentalmedia/toyotacorolla.jpg"
+      "picture": "toyotacorolla.jpg"
     },
     {
       "make": "Honda",
@@ -29,7 +29,7 @@
       },
       "class": "Sedan",
       "price": 40,
-      "picture": "../../assets/images/rentalmedia/hondacivic.jpg"
+      "picture": "hondacivic.jpg"
     },
     {
       "make": "Ford",
@@ -44,8 +44,8 @@
         "highway": 30
       },
       "class": "Coupe",
-      "price": 102,
-      "picture": "../../assets/images/rentalmedia/fordmustang.jpg"
+      "price": 99,
+      "picture": "fordmustang.jpg"
     },
     {
       "make": "Cupra",
@@ -61,7 +61,7 @@
       },
       "class": "SUV",
       "price": 53,
-      "picture": "../../assets/images/rentalmedia/cupraformentor.jpg"
+      "picture": "cupraformentor.jpg"
     },
     {
       "make": "Hyundai",
@@ -77,7 +77,7 @@
       },
       "class": "SUV",
       "price": 64,
-      "picture": "../../assets/images/rentalmedia/hyundaitucson.jpg"
+      "picture": "hyundaitucson.jpg"
     },
     {
       "make": "BMW",
@@ -93,10 +93,10 @@
       },
       "class": "Sedan",
       "price": 59,
-      "picture": "../../assets/images/rentalmedia/bmw3series.jpg"
+      "picture": "bmw3series.jpg"
     },
     {
-      "make": "Mercedes-Benz",
+      "make": "M. Benz",
       "model": "B-Class",
       "year": 2020,
       "mileage": 12000,
@@ -109,7 +109,7 @@
       },
       "class": "Compact",
       "price": 52,
-      "picture": "../../assets/images/rentalmedia/mercedesbclass.jpg"
+      "picture": "mercedesbclass.jpg"
     },
     {
       "make": "Audi",
@@ -125,7 +125,7 @@
       },
       "class": "SUV",
       "price": 65,
-      "picture": "../../assets/images/rentalmedia/audiq2.jpg"
+      "picture": "audiq2.jpg"
     },
     {
         "make": "Ford",
@@ -141,7 +141,7 @@
         },
         "class": "Pick-Up",
         "price": 88,
-        "picture": "../../assets/images/rentalmedia/fordf150.jpg"
+        "picture": "fordf150.jpg"
       },
     {
         "make": "Tesla",
@@ -157,7 +157,7 @@
         },
         "class": "Sedan",
         "price": 59,
-        "picture": "../../assets/images/rentalmedia/teslamodel3.jpg"
+        "picture": "teslamodel3.jpg"
       }
     ]
   }

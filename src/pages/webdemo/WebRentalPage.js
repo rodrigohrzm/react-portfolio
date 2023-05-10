@@ -40,14 +40,14 @@ function WebRentalPage() {
   return (
 <>
     <WebTitle pageName="Rent a car" />
-    <Box background='linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%)' >
+    <Box background='linear-gradient(110deg, #f0f0f0 60%, #fdcd3b 60%)' >
     <Grid
       templateRows={'1fr 10rem'}
       templateColumns={{ base: 'repeat(1, 1fr)', pre: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
       gap={4}
       autoFlow='row'
     >
-      <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'2', lg: '1'}} bg='grey' w={{ base:'', lg: '15rem'}}>
+      <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'3', pre:'2', lg: '1'}} bg='grey' w={{ base:'', lg: '15rem'}}>
         <label htmlFor="class-filter">Filter by Class:</label>
           <select id="class-filter" value={selectedClass} onChange={handleClassFilterChange}>
             <option value="">All</option>
@@ -65,10 +65,10 @@ function WebRentalPage() {
         />
         <output htmlFor="price-filter">{selectedPrice}</output>
       </GridItem>
-      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'2', lg: '4'}}>
-        <Flex wrap='wrap'>
+      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', pre:'2', lg: '4'}}>
+        <Center flexWrap='wrap'>
             {filteredRentals.map((car, index) => <WebCard car={car} key={index}/>)}
-        </Flex>
+        </Center>
       </GridItem>
       <GridItem colSpan={{ base:'3', pre: '1', lg: '2'}} bg='cyan'><Center><Text align="left">Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text Short description text </Text></Center></GridItem>
       <GridItem colSpan={{ base:'3', pre: '1', lg: '2'}} bg='green'><Center><Text align="left">Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print Disclaimer, insurance, fine print </Text></Center></GridItem>

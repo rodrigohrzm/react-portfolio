@@ -11,14 +11,15 @@ import { Image, Heading, Stack, HStack, Text, Divider, Button, ButtonGroup,
 function WebCard(props) {
     let { make, model, year, mileage, booked_status, horsepower, automatic, MPG, price, picture } = props.car;
     let availability = booked_status ? "Booked" : "Available";
-    let cardClass = booked_status ? "booked" : "";
-    console.log(picture)
+
     return(
         <Card margin='2rem' boxShadow='xl' maxW='sm'>
         <CardBody>
           <Image
             fit='cover'
-            src={require(JSON.stringify(picture))}
+            w='17rem'
+            h='11rem'
+            src={require(`../../assets/images/rentalmedia/${picture}`)}
             fallbackSrc={require('../../assets/images/fallbackimg.png')}
             alt=''
             borderRadius='8'
