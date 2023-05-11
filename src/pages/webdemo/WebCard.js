@@ -69,7 +69,7 @@ function WebCard(props) {
         <CardFooter>
           <ButtonGroup spacing='2'>
             <Button variant='solid' colorScheme='messenger'>
-              Book now
+               <Link to={"/react-portfolio"}>Book now</Link>
             </Button>
           </ButtonGroup>
         </CardFooter>
