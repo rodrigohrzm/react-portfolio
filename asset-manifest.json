@@ -1,22 +1,32 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.9c070ca1.css",
-    "main.js": "/react-portfolio/static/js/main.0eeddd3b.js",
+    "main.js": "/react-portfolio/static/js/main.0dc44bd9.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/Mario and Adrian A.jpg": "/react-portfolio/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
     "static/media/restaurantchefB.jpg": "/react-portfolio/static/media/restaurantchefB.4b4c2d26b514db32e8fc.jpg",
     "static/media/greek salad.jpg": "/react-portfolio/static/media/greek salad.bed423a1fab5b210e347.jpg",
     "static/media/restauranfood.jpg": "/react-portfolio/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/fordf150.jpg": "/react-portfolio/static/media/fordf150.7b4ad26b7820f51976d4.jpg",
     "static/media/banner.mp4": "/react-portfolio/static/media/banner.b9264282c0106590e2fc.mp4",
+    "static/media/bmw3series.jpg": "/react-portfolio/static/media/bmw3series.259ecef85ac42152f106.jpg",
+    "static/media/mercedesbclass.jpg": "/react-portfolio/static/media/mercedesbclass.e9cee9383bf46545a893.jpg",
+    "static/media/audiq2.jpg": "/react-portfolio/static/media/audiq2.6861efcc13a5755e3096.jpg",
+    "static/media/toyotacorolla.jpg": "/react-portfolio/static/media/toyotacorolla.98dc1beab898a12a7ef2.jpg",
+    "static/media/teslamodel3.jpg": "/react-portfolio/static/media/teslamodel3.72baf67508f22c273e27.jpg",
+    "static/media/fordmustang.jpg": "/react-portfolio/static/media/fordmustang.a350313d6a9d7bf62bf1.jpg",
     "static/media/avatar.jpg": "/react-portfolio/static/media/avatar.25a46cbf4f174a6343b7.jpg",
     "static/media/restaurant.jpg": "/react-portfolio/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
     "static/media/handsome.png": "/react-portfolio/static/media/handsome.b29cc616afdfa02c7434.png",
     "static/media/handsomette.png": "/react-portfolio/static/media/handsomette.acec64196381111b4b9b.png",
+    "static/media/hyundaitucson.jpg": "/react-portfolio/static/media/hyundaitucson.3b1b972905464fb5bfd8.jpg",
+    "static/media/hondacivic.jpg": "/react-portfolio/static/media/hondacivic.3ea4b8f5493bb97ed110.jpg",
     "static/media/bookingpic.jpg": "/react-portfolio/static/media/bookingpic.189773b9a6d1bf35730a.jpg",
     "static/media/review2.jpg": "/react-portfolio/static/media/review2.e85b9e2265ea65598e02.jpg",
     "static/media/bruschetta.jpg": "/react-portfolio/static/media/bruschetta.2ea9e5c3be02f4d86043.jpg",
     "static/media/review1.jpg": "/react-portfolio/static/media/review1.7fa4610952421342aebf.jpg",
     "static/media/Logo.svg": "/react-portfolio/static/media/Logo.2c379c7ea7eb07402bfc7700915316de.svg",
+    "static/media/cupraformentor.jpg": "/react-portfolio/static/media/cupraformentor.af31cdf5e8fbc1250102.jpg",
     "static/media/pic01.jpg": "/react-portfolio/static/media/pic01.d6d67b9829487f48035d.jpg",
     "static/media/pic02.jpg": "/react-portfolio/static/media/pic02.5f80bd18a310b0908c7b.jpg",
     "static/media/logo01.png": "/react-portfolio/static/media/logo01.47d82fc195399ac2d02b.png",
@@ -25,11 +35,11 @@
     "static/media/Arrow.svg": "/react-portfolio/static/media/Arrow.5a1d66f8cae01f02bf6e1262e1c112d5.svg",
     "index.html": "/react-portfolio/index.html",
     "main.9c070ca1.css.map": "/react-portfolio/static/css/main.9c070ca1.css.map",
-    "main.0eeddd3b.js.map": "/react-portfolio/static/js/main.0eeddd3b.js.map",
+    "main.0dc44bd9.js.map": "/react-portfolio/static/js/main.0dc44bd9.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c070ca1.css",
-    "static/js/main.0eeddd3b.js"
+    "static/js/main.0dc44bd9.js"
   ]
 }
