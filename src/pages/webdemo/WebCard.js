@@ -30,8 +30,10 @@ function WebCard(props) {
               <Tag
                   size='md'
                   key={model}
-                  borderRadius='full'
+                  borderRadius='6'
                   variant='solid'
+                  borderWidth='1px'
+                  borderColor={booked_status ? "red.600" : "green.400"}
                   backgroundColor={booked_status ? "red.300" : "green.200"}
                   color={booked_status ? "red.900" : "green.700"}
                   fontWeight='600'
