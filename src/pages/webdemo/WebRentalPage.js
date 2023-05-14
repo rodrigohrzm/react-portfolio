@@ -4,9 +4,7 @@ import { WebCard } from "./WebCard";
 import RentalInventory from '../../data/RentalInventory.json';
 
 import { Box, Flex, Center, Grid, GridItem, Text, Heading,
-         FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Button, VStack, HStack } from '@chakra-ui/react'
-
-// desplegable con categorías cuando la barra de filtros está en la parte superior, si no botones para cada categoría
+         FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Button, VStack } from '@chakra-ui/react'
 
 function WebRentalPage() {
 

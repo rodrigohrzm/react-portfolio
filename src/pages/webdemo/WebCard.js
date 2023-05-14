@@ -70,8 +70,8 @@ function WebCard(props) {
         <Divider />
         <CardFooter>
           <ButtonGroup spacing='2'>
-            <Button variant='solid' colorScheme='messenger'>
-               <Link to={"/react-portfolio"}>Book now</Link>
+            <Button isDisabled={booked_status} variant='solid' colorScheme='messenger'>
+              {booked_status ? "Book now" : (<Link to="/react-portfolio">Book now</Link>)}
             </Button>
           </ButtonGroup>
         </CardFooter>

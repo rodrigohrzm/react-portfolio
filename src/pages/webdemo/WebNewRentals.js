@@ -2,6 +2,8 @@ import React from 'react';
 import RentalInventory from '../../data/RentalInventory.json';
 import { WebCard } from "./WebCard";
 
+import { Center, Text, Heading } from '@chakra-ui/react'
+
 function WebNewRentals() {
   const newestCars = RentalInventory.rentals
         .filter((car) => car.booked_status === false)
@@ -11,12 +13,11 @@ function WebNewRentals() {
         .map((car) => <WebCard key={car.make + car.model} car={car} />);
 
     return (
-      <div>
-        <h2>Our newest rentals</h2>
-        <div style={{display: "flex", flexWrap: "wrap", marginRight: "auto", marginLeft: "auto", position: "relative", justifyContent: "center"}}>
-          {newestCars}
-        </div>
-      </div>
+      <>
+      <Heading marginTop="4rem" marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>Newest rentals</Heading>
+      <Text marginX='2rem' align="center" fontSize='xl'>Our fleet gets updated constantly</Text>
+      <Center flexWrap="wrap">{newestCars}</Center>
+      </>
     )};
 
   export { WebNewRentals };
