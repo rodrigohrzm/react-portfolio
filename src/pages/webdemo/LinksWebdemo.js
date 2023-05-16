@@ -25,4 +25,4 @@ const LinksWebdemo = () => (
   </>
 );
 
-export  { LinksWebdemo } ;
+export  { LinksWebdemo };
