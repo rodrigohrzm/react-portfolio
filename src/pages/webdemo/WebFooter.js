@@ -8,7 +8,7 @@ import { Stack, VStack, Center, SimpleGrid,
 function WebFooter() {
 return (
   <footer>
-  <Center bgGradient='linear(to-r, #121212, #092769)' h={{ base: '', md: '', xl: '30rem' }}>
+  <Center bgGradient='linear(to-r, #020712, #092769)' h={{ base: '', md: '', xl: '30rem' }}>
   <SimpleGrid columns={{ base: '1', pre: '2', lg:'3', xl: '6' }} spacing={{ base: '3rem', pre: '4.5rem', xl: '6rem' }} color="#FFFFFF87" paddingTop={{ base: '', pre: '5rem', lg:'5rem', xl: '1rem', '2xl': '0.001rem' }} marginBottom="6rem" marginLeft="5rem" marginRight="5rem">
     <VStack paddingTop={{ base: '5rem', pre: '0', xl: '0' }} paddingBottom="3rem" spacing="2rem">
       <Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} />

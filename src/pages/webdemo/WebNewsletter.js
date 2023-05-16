@@ -31,7 +31,7 @@ function WebNewsletter() {
     return (
       	<>
 	  	<Heading marginTop="4rem" marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>How can we help you?</Heading>
-	  	<Text marginX='2rem' align="center" fontSize='xl'>If you have any other inquiry please let us know here.</Text>
+	  	<Text marginX='2rem' align="center" fontSize='xl'>If you have any other inquiry please let us know here</Text>
 	  	<Center>
 	  	<Flex borderRadius="8" boxShadow='2xl' backgroundColor="#ffffff" maxWidth="1200px" marginX={{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }} marginY={{ base: '2rem', lg: '4rem' }}>
 			{ShowForm ? (<form ref={form} onSubmit={handleSubmit}> <FormControl as='fieldset'>

@@ -1,0 +1,51 @@
+{  "brands": [
+    {
+      "make": "Toyota",
+      "picture": "toyota.jpg"
+    },
+    {
+      "make": "Lexus",
+      "picture": "lexus.jpg"
+    },
+    {
+      "make": "Tesla",
+      "picture": "tesla.jpg"
+    },
+    {
+      "make": "Volvo",
+      "picture": "volvo.jpg"
+    },
+    {
+      "make": "Kia",
+      "picture": "kia.jpg"
+    },
+    {
+      "make": "Honda",
+      "picture": "honda.jpg"
+    },
+    {
+      "make": "Ford",
+      "picture": "ford.jpg"
+    },
+    {
+      "make": "Cupra",
+      "picture": "cupra.jpg"
+    },
+    {
+      "make": "Hyundai",
+      "picture": "hyundai.jpg"
+    },
+    {
+      "make": "BMW",
+      "picture": "bmw.jpg"
+    },
+    {
+      "make": "M. Benz",
+      "picture": "mercedes.jpg"
+    },
+    {
+      "make": "Audi",
+      "picture": "audi.jpg"
+    }
+    ]
+  }

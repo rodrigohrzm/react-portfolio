@@ -70,7 +70,7 @@ function WebNav() {
     return (
       <>
       <nav>
-      <Flex align="center" h='74px' bgGradient='linear(to-r, #121212, #092769)' color='white' fontWeight="600">
+      <Flex align="center" h='74px' bgGradient='linear(to-r, #020712, #092769)' color='white' fontWeight="600">
         <Flex paddingLeft="2rem"justify="left" w="25%">
           <NavLink onClick={onCloseNav} to={""}><Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} /></NavLink>
         </Flex>
