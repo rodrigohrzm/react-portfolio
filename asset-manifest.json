@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.9c070ca1.css",
-    "main.js": "/react-portfolio/static/js/main.74281d73.js",
+    "main.js": "/react-portfolio/static/js/main.bbacb378.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/Mario and Adrian A.jpg": "/react-portfolio/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
     "static/media/restaurantchefB.jpg": "/react-portfolio/static/media/restaurantchefB.4b4c2d26b514db32e8fc.jpg",
@@ -9,6 +9,7 @@
     "static/media/restauranfood.jpg": "/react-portfolio/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
     "static/media/fordf150.jpg": "/react-portfolio/static/media/fordf150.7b4ad26b7820f51976d4.jpg",
     "static/media/banner.mp4": "/react-portfolio/static/media/banner.b9264282c0106590e2fc.mp4",
+    "static/media/hero.jpg": "/react-portfolio/static/media/hero.cf11dfe031bf7f39d5ae.jpg",
     "static/media/bmw3series.jpg": "/react-portfolio/static/media/bmw3series.259ecef85ac42152f106.jpg",
     "static/media/mercedesbclass.jpg": "/react-portfolio/static/media/mercedesbclass.e9cee9383bf46545a893.jpg",
     "static/media/audiq2.jpg": "/react-portfolio/static/media/audiq2.6861efcc13a5755e3096.jpg",
@@ -35,11 +36,11 @@
     "static/media/Arrow.svg": "/react-portfolio/static/media/Arrow.5a1d66f8cae01f02bf6e1262e1c112d5.svg",
     "index.html": "/react-portfolio/index.html",
     "main.9c070ca1.css.map": "/react-portfolio/static/css/main.9c070ca1.css.map",
-    "main.74281d73.js.map": "/react-portfolio/static/js/main.74281d73.js.map",
+    "main.bbacb378.js.map": "/react-portfolio/static/js/main.bbacb378.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c070ca1.css",
-    "static/js/main.74281d73.js"
+    "static/js/main.bbacb378.js"
   ]
 }
