@@ -1,26 +1,20 @@
 import React from "react"
 
-import { Center, VStack, Text, Image } from '@chakra-ui/react'
+import { VStack, Text, Image } from '@chakra-ui/react'
 
-const WebBrandLogo = ({ make, picture }) => {
+const WebBrandLogo = ({ speed, make, picture }) => {
 return (
-    <>
-    <VStack>
-        <Center>
-            <Image
-                fit='cover'
-                align='center center'
-                w='11rem'
-                h='11rem'
-                src={require(`../../assets/images/brandpics/${picture}`)}
-                fallbackSrc={require('../../assets/images/fallbackimg.png')}
-                alt={make}
-                borderRadius='8'
-            />
-            <Text>{make}</Text>
-        </Center>
+    <VStack align="flex-start" flexShrink="0" >
+        <Image
+            fit='contain'
+            align='center center'
+            w={{ base:'6rem', pre:'8rem', lg: '10rem' }}
+            src={require(`../../assets/images/brandpics/${picture}`)}
+            fallbackSrc={require('../../assets/images/fallbackimg.png')}
+            alt={make}
+        />
+        <Text justifyContent='center'>{make}</Text>
     </VStack>
-    </>
 );
 };
 
