@@ -1,11 +1,11 @@
-import BrandCertification from '../../data/RepairSupport.json';
+import React from "react"
+import { WebBrandLogo } from './WebBrandLogo';
+import BrandCertification from '../../data/BrandCertification.json';
 
 import { Box, Center, HStack, Text, Heading, SimpleGrid, Flex, Container,
 	Input, InputGroup, Textarea, Button, InputRightElement } from '@chakra-ui/react'
 
 function WebBrands() {
-
-const brandCert = Object.keys(BrandCertification);
 
 // 1. map the JSON into an array of objects
 // 2. make a new component as brand display
@@ -17,7 +17,9 @@ return (
   <Heading marginTop="4rem" marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>Our partners lead<br/>the industry</Heading>
   <Text marginX='2rem' align="center" fontSize='xl'>We are certified by the giants of electrification</Text>
   <HStack>
-    {brandCert.map((picture) => <h3>{picture}</h3>)}
+    {BrandCertification.brands.map((brand, index) => (
+      <WebBrandLogo key={index} make={brand.make} picture={brand.picture}/>
+    ))}
   </HStack>
 </>
 )};
