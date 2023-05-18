@@ -7,10 +7,7 @@ import { Box, Center, HStack, Text, Heading, SimpleGrid, Flex, Container,
 
 function WebBrands() {
 
-// 1. map the JSON into an array of objects
-// 2. make a new component as brand display
-// 3. map the array objects into the component as props
-// 4. arrange the components into a horizontal scroll in both views
+// arrange the components into a horizontal scroll in both views
 
 return (
 <>

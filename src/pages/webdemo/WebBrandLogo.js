@@ -12,7 +12,7 @@ return (
                 align='center center'
                 w='11rem'
                 h='11rem'
-                src={require(`../../assets/images/rentalmedia/${picture}`)}
+                src={require(`../../assets/images/brandpics/${picture}`)}
                 fallbackSrc={require('../../assets/images/fallbackimg.png')}
                 alt={make}
                 borderRadius='8'
