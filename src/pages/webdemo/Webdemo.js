@@ -9,7 +9,6 @@ import { WebNewsletter } from './WebNewsletter'
 import { Box, Flex, Center, Grid, GridItem, Text, Heading, Spacer,
   FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Button, VStack, HStack } from '@chakra-ui/react'
 
-// cambiar foto vertical del booking por foto real
 // https://das-nano.com/
 // {{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}
 
@@ -17,10 +16,19 @@ function Webdemo() {
     return (
     <>
       <WebCallToAction />
+    <Box paddingTop="5rem" paddingBottom='10rem' background='linear-gradient(177deg, #f0f0f0 80%, #011968 80%)'>
+    <Box background='#f0f0f0'>
       <WebBrands />
+    </Box>
+    </Box>
+    <Box background='#011968'>
       <WebShowcase />
       <WebRepairs />
-    <Box background='linear-gradient(110deg, #f0f0f0 60%, #fdcd3b 60%)'>
+    </Box>
+    <Box paddingTop="10rem" background='linear-gradient(183deg, #011968 40%, #f0f0f0 40%)'>
+      {/*asdasdasdasd */}
+    </Box>
+    <Box background='linear-gradient(135deg, #f0f0f0 60%, #fdcd3b 60%)'>
       <WebNewRentals />
       <WebNewsletter />
     </Box>

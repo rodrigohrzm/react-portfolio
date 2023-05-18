@@ -45,7 +45,7 @@ return (
       }
       `}
     </style>
-    <Heading marginTop="4rem" marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>Our partners lead<br />the industry</Heading>
+    <Heading  marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>Our partners lead<br />the industry</Heading>
     <Text marginX='2rem' align="center" fontSize='xl'>We are certified by the giants of electrification</Text>
     <HStack
       ref={brandListRef}

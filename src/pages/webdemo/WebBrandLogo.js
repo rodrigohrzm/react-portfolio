@@ -13,7 +13,6 @@ return (
             fallbackSrc={require('../../assets/images/fallbackimg.png')}
             alt={make}
         />
-        <Text justifyContent='center'>{make}</Text>
     </VStack>
 );
 };
