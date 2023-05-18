@@ -11,6 +11,8 @@ import { Box, Flex, Center, Grid, GridItem, Text, Heading, Spacer,
 
 // https://das-nano.com/
 // {{ base: '1.5rem', sm: '2rem', md: '3rem', lg: '5rem' }}
+// animacion de las marcas solo arranca a la segunda?
+// cambiar todos los links de vuelta al showcase con #contact-me section
 
 function Webdemo() {
     return (
