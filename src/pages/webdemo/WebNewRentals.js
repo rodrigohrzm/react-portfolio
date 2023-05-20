@@ -16,7 +16,7 @@ function WebNewRentals() {
       <>
       <Heading marginX='2rem' paddingBottom="1.5rem" align="center" as='h2' size='2xl'>Newest rentals</Heading>
       <Text marginX='2rem' align="center" fontSize='xl'>Our fleet gets updated constantly</Text>
-      <Center flexWrap="wrap">{newestCars}</Center>
+      <Center marginTop={{ base: '0', lg: '2rem' }} flexWrap="wrap">{newestCars}</Center>
       </>
     )};
 

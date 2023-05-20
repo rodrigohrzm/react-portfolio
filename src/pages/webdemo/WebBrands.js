@@ -5,7 +5,6 @@ import BrandCertification from '../../data/BrandCertification.json';
 import { HStack, Text, Heading } from '@chakra-ui/react'
 
 function WebBrands() {
-// https://codesandbox.io/s/y82f8?file=/src/Banner.jsx
 
 const brandListRef = useRef(null);
 
@@ -26,6 +25,7 @@ useEffect(() => {
     }
 
     animationFrame = requestAnimationFrame(animateScroll);
+
   };
 
   animationFrame = requestAnimationFrame(animateScroll);
