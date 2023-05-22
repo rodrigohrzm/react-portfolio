@@ -20,9 +20,9 @@ function WebNav() {
   } = useDisclosure()
 
   const {
-  isOpen: isOpenLogin,
-  onClose: onCloseLogin,
-  onToggle: onToggleLogin
+    isOpen: isOpenLogin,
+    onClose: onCloseLogin,
+    onToggle: onToggleLogin
   } = useDisclosure()
 
   const [ guestButtons , setguestButtons ] = useState ("initial");

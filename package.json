@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "homepage": "https://rodrigohrzm.github.io/react-portfolio",
   "private": true,
   "dependencies": {
@@ -12,14 +12,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mantine/carousel": "^6.0.8",
-    "@mantine/core": "^6.0.8",
-    "@mantine/dates": "^6.0.8",
-    "@mantine/form": "^6.0.8",
-    "@mantine/hooks": "^6.0.8",
-    "@mantine/notifications": "^6.0.8",
-    "@mantine/prism": "^6.0.8",
-    "@tabler/icons-react": "^2.17.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
