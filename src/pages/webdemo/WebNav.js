@@ -45,7 +45,7 @@ function WebNav() {
         onCloseLogin()
         onCloseNav()
         userIsLoggedIn(true)
-        navigate("userpanel");
+        navigate("/dashboard");
     } else { return null }
   }
 
@@ -76,11 +76,11 @@ function WebNav() {
         </Flex>
         <Spacer />
         <HStack justify="right" w="50%" spacing='1.5rem' display={{base: 'none', md: 'flex', lg: 'flex'}} >
-          <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"booking"}>APPOINTMENTS</NavLink>
-          <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"renting"}>RENTALS</NavLink>
+          <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/webdemo/booking"}>APPOINTMENTS</NavLink>
+          <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/webdemo/renting"}>RENTALS</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/react-portfolio"}>ABOUT</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/react-portfolio"}>CONTACT</NavLink>
-          <Box display={userButtons}><NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"userpanel"}>DASHBOARD</NavLink></Box>
+          <Box display={userButtons}><NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/dashboard"}>DASHBOARD</NavLink></Box>
         </HStack>
         <Spacer />
         <Box display={guestButtons}><Button onClick={onToggleLogin} display={{base: 'none', md: 'flex', lg: 'flex'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" >LOG IN</Button></Box>
@@ -89,10 +89,10 @@ function WebNav() {
       </Flex>
       <Collapse in={isOpenNav} animateOpacity>
         <Box bg="white" padding="1.5rem" rounded='md' shadow='md'><VStack spacing='1.5rem' >
-          <NavLink to={"booking"}>
+          <NavLink to={"/webdemo/booking"}>
             <Button width="300px" onClick={onToggleNav} colorScheme='messenger' size='lg'>APPOINTMENTS</Button>
           </NavLink>
-          <NavLink to={"renting"}>
+          <NavLink to={"/webdemo/renting"}>
             <Button width="300px" onClick={onToggleNav} colorScheme='messenger' size='lg'>RENTALS</Button>
           </NavLink>
           <NavLink to={"/react-portfolio"}>
@@ -102,7 +102,7 @@ function WebNav() {
             <Button width="300px" onClick={onToggleNav} colorScheme='messenger' size='lg'>CONTACT</Button>
           </NavLink>
           <Button display={guestButtons} width="300px" onClick={onToggleLogin} colorScheme='facebook' size='lg'>EMPLOYEE ACCESS</Button>
-          <NavLink to={"userpanel"}>
+          <NavLink to={"/dashboard"}>
             <Button display={userButtons} width="300px" onClick={onToggleNav} colorScheme='facebook' size='lg'>DASHBOARD</Button>
           </NavLink>
           <Button display={userButtons} width="300px" onClick={logoutProcedure} colorScheme='red' size='lg'>LOG OUT</Button>
