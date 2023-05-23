@@ -14,7 +14,8 @@ const breakpoints = {
   lg: '960px',
   xl: '1200px',
   '2xl': '1536px'}
-  const theme = extendTheme({ breakpoints })
+{/*768px instead of 800 next time*/}
+ const theme = extendTheme({ breakpoints })
 
 const ScrollToTop = ({children}) => {
   const location = useLocation();
