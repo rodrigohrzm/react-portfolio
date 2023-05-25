@@ -5,7 +5,7 @@ import logoChakra from "../../assets/images/svg/logo-white.svg";
 import { Flex, Grid, Image, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 
 // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
-// Views and components only
+// Components only, into elements
 
 function Dashboard() {
 
