@@ -1,3 +1,21 @@
+  import ChartBar from "./elements/ChartBar";
+  import ChartLine from "./elements/ChartLine";
+  // Custom icons
+  import {
+    CartIcon,
+    DocumentIcon,
+    GlobeIcon,
+    WalletIcon,
+  } from "../dashboard/elements/Icons.js";
+  import { dashboardTableData, timelineData } from "../../data/general";
+  import DBdashUsers from "./DBdashUsers";
+  import BuiltByDevelopers from "./components/BuiltByDevelopers";
+  import DBdashMinistats from "./DBdashMinistats";
+  import OrdersOverview from "./components/OrdersOverview";
+  import Projects from "./components/Projects";
+  import SalesOverview from "./components/SalesOverview";
+  import DBdashAd from "./DBdashAd";
+
 import React from 'react';
 import peopleImage from "../../assets/images/people-image.png";
 import logoChakra from "../../assets/images/svg/logo-white.svg";
@@ -5,7 +23,6 @@ import logoChakra from "../../assets/images/svg/logo-white.svg";
 import { Flex, Grid, Image, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 
 // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
-// Components only, into elements
 
 function Dashboard() {
 
@@ -14,25 +31,25 @@ const iconBoxInside = useColorModeValue("white", "white");
 return(
 <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
     <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px'>
-    <MiniStatistics
+    <DBdashMinistats
         title={"Today's Moneys"}
         amount={"$53,000"}
         percentage={55}
         icon={<WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
     />
-    <MiniStatistics
+    <DBdashMinistats
         title={"Today's Users"}
         amount={"2,300"}
         percentage={5}
         icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
     />
-    <MiniStatistics
+    <DBdashMinistats
         title={"New Clients"}
         amount={"+3,020"}
         percentage={-14}
         icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
     />
-    <MiniStatistics
+    <DBdashMinistats
         title={"Total Sales"}
         amount={"$173,000"}
         percentage={8}
@@ -58,7 +75,7 @@ return(
         />
         }
     />
-    <WorkWithTheRockets
+    <DBdashAd
         backgroundImage={peopleImage}
         title={"Work with the rockets"}
         description={
@@ -71,15 +88,15 @@ return(
     templateRows={{ sm: "repeat(2, 1fr)", lg: "1fr" }}
     gap='24px'
     mb={{ lg: "26px" }}>
-    <ActiveUsers
+    <DBdashUsers
         title={"Active Users"}
         percentage={23}
-        chart={<BarChart />}
+        chart={<ChartBar />}
     />
     <SalesOverview
         title={"Sales Overview"}
         percentage={5}
-        chart={<LineChart />}
+        chart={<ChartLine />}
     />
     </Grid>
     <Grid

@@ -1,24 +1,23 @@
 // Chakra imports
 import { Flex, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
+import DBcard from "./elements/DBcard";
 // Custom icons
 import {
   CartIcon,
   RocketIcon,
   StatsIcon,
   WalletIcon,
-} from "components/Icons/Icons.js";
+} from "./elements/Icons.js";
 import React from "react";
-import ChartStatistics from "./ChartStatistics";
+import DBdashStats from "./DBdashStats";
 
-const ActiveUsers = ({ title, percentage, chart }) => {
+const DBdashUsers = ({ title, percentage, chart }) => {
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
   return (
-    <Card p='16px'>
-      <CardBody>
+    <DBcard p='16px'>
+      <DBcard>
         <Flex direction='column' w='100%'>
           {chart}
           <Flex direction='column' mt='24px' mb='36px' alignSelf='flex-start'>
@@ -36,25 +35,25 @@ const ActiveUsers = ({ title, percentage, chart }) => {
             </Text>
           </Flex>
           <SimpleGrid gap={{ sm: "12px" }} columns={4}>
-            <ChartStatistics
+            <DBdashStats
               title={"Users"}
               amount={"32,984"}
               percentage={20}
               icon={<WalletIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
-            <ChartStatistics
+            <DBdashStats
               title={"Clicks"}
               amount={"2.42m"}
               percentage={80}
               icon={<RocketIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
-            <ChartStatistics
+            <DBdashStats
               title={"Sales"}
               amount={"2,400$"}
               percentage={30}
               icon={<CartIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
-            <ChartStatistics
+            <DBdashStats
               title={"Items"}
               amount={"320"}
               percentage={40}
@@ -62,9 +61,9 @@ const ActiveUsers = ({ title, percentage, chart }) => {
             />
           </SimpleGrid>
         </Flex>
-      </CardBody>
-    </Card>
+      </DBcard>
+    </DBcard>
   );
 };
 
-export default ActiveUsers;
+export default DBdashUsers;

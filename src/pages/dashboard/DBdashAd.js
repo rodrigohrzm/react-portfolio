@@ -9,17 +9,16 @@ import {
     Text,
   } from "@chakra-ui/react";
   // Custom components
-  import Card from "components/Card/Card.js";
-  import CardBody from "components/Card/CardBody.js";
+  import DBcard from "./elements/DBcard";
   import React from "react";
   // react icons
   import { BsArrowRight } from "react-icons/bs";
   
-  const WorkWithTheRockets = ({ title, description, backgroundImage }) => {
+  const DBdashAd = ({ title, description, backgroundImage }) => {
     const overlayRef = React.useRef();
     return (
-      <Card maxHeight='290.5px' p='1rem'>
-        <CardBody
+      <DBcard maxHeight='290.5px' p='1rem'>
+        <DBcard
           p='0px'
           backgroundImage={backgroundImage}
           bgPosition='center'
@@ -73,9 +72,9 @@ import {
               </Flex>
             </Flex>
           </Portal>
-        </CardBody>
-      </Card>
+        </DBcard>
+      </DBcard>
     );
   };
   
-  export default WorkWithTheRockets;
+  export default DBdashAd;

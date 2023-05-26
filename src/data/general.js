@@ -1,3 +1,14 @@
+// Assets
+import avatar1 from "../assets/images/users/avatar1.png";
+import avatar2 from "../assets/images/users/avatar2.png";
+import avatar3 from "../assets/images/users/avatar3.png";
+import avatar4 from "../assets/images/users/avatar4.png";
+import avatar5 from "../assets/images/users/avatar5.png";
+import avatar7 from "../assets/images/users/avatar7.png";
+import avatar8 from "../assets/images/users/avatar8.png";
+import avatar9 from "../assets/images/users/avatar9.png";
+import avatar10 from "../assets/images/users/avatar10.png";
+
 import {
   AdobexdLogo,
   AtlassianLogo,
@@ -5,7 +16,7 @@ import {
   JiraLogo,
   SlackLogo,
   SpotifyLogo,
-} from "components/Icons/Icons.js";
+} from "../pages/dashboard/elements/Icons";
 import { AiOutlineExclamation } from "react-icons/ai";
 import {
   FaArrowDown,

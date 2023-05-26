@@ -8,18 +8,17 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
   // Custom components
-  import Card from "components/Card/Card.js";
-  import CardBody from "components/Card/CardBody.js";
-  import IconBox from "components/Icons/IconBox";
+  import DBcard from "./elements/DBcard";
+  import IconBox from "./elements/IconBox";
   import React from "react";
   
-  const MiniStatistics = ({ title, amount, percentage, icon }) => {
+  const DBdashMinistats = ({ title, amount, percentage, icon }) => {
     const iconTeal = useColorModeValue("teal.300", "teal.300");
     const textColor = useColorModeValue("gray.700", "white");
   
     return (
-      <Card minH='83px'>
-        <CardBody>
+      <DBcard minH='83px'>
+        <DBcard>
           <Flex flexDirection='row' align='center' justify='center' w='100%'>
             <Stat me='auto'>
               <StatLabel
@@ -49,9 +48,9 @@ import {
               {icon}
             </IconBox>
           </Flex>
-        </CardBody>
-      </Card>
+        </DBcard>
+      </DBcard>
     );
   };
   
-  export default MiniStatistics;
+  export default DBdashMinistats;

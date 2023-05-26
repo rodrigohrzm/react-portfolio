@@ -1,8 +1,8 @@
 import { Flex, Progress, Text, useColorModeValue } from "@chakra-ui/react";
-import IconBox from "components/Icons/IconBox";
+import IconBox from "./elements/IconBox";
 import React from "react";
 
-const ChartStatistics = ({ title, amount, icon, percentage }) => {
+const DBdashStats = ({ title, amount, icon, percentage }) => {
   const iconTeal = useColorModeValue("teal.300", "teal.300");
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
@@ -30,4 +30,4 @@ const ChartStatistics = ({ title, amount, icon, percentage }) => {
   );
 };
 
-export default ChartStatistics;
+export default DBdashStats;
