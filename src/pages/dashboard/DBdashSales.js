@@ -1,15 +1,14 @@
 // Chakra imports
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
+import DBcard from "./elements/DBcard.js";
 import React from "react";
 
-const SalesOverview = ({ title, percentage, chart }) => {
+const DBdashSales = ({ title, percentage, chart }) => {
   const textColor = useColorModeValue("gray.700", "white");
   return (
-    <Card p='28px 10px 16px 0px' mb={{ sm: "26px", lg: "0px" }}>
-      <CardHeader mb='20px' pl='22px'>
+    <DBcard p='28px 10px 16px 0px' mb={{ sm: "26px", lg: "0px" }}>
+      <DBcard mb='20px' pl='22px'>
         <Flex direction='column' alignSelf='flex-start'>
           <Text fontSize='lg' color={textColor} fontWeight='bold' mb='6px'>
             {title}
@@ -24,12 +23,12 @@ const SalesOverview = ({ title, percentage, chart }) => {
             in 2021
           </Text>
         </Flex>
-      </CardHeader>
+      </DBcard>
       <Box w='100%' h={{ sm: "300px" }} ps='8px'>
         {chart}
       </Box>
-    </Card>
+    </DBcard>
   );
 };
 
-export default SalesOverview;
+export default DBdashSales;

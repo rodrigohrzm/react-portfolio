@@ -9,11 +9,11 @@
   } from "../dashboard/elements/Icons.js";
   import { dashboardTableData, timelineData } from "../../data/general";
   import DBdashUsers from "./DBdashUsers";
-  import BuiltByDevelopers from "./components/BuiltByDevelopers";
+  import DBdashBanner from "./DBdashBanner";
   import DBdashMinistats from "./DBdashMinistats";
-  import OrdersOverview from "./components/OrdersOverview";
-  import Projects from "./components/Projects";
-  import SalesOverview from "./components/SalesOverview";
+  import DBdashOrders from "./DBdashOrders";
+  import DBdashProjects from "./DBdashProjects";
+  import DBdashSales from "./DBdashSales";
   import DBdashAd from "./DBdashAd";
 
 import React from 'react';
@@ -61,7 +61,7 @@ return(
     templateRows={{ md: "1fr auto", lg: "1fr" }}
     my='26px'
     gap='24px'>
-    <BuiltByDevelopers
+    <DBdashBanner
         title={"Built by Developers"}
         name={"Purity UI Dashboard"}
         description={
@@ -93,7 +93,7 @@ return(
         percentage={23}
         chart={<ChartBar />}
     />
-    <SalesOverview
+    <DBdashSales
         title={"Sales Overview"}
         percentage={5}
         chart={<ChartLine />}
@@ -103,13 +103,13 @@ return(
     templateColumns={{ sm: "1fr", md: "1fr 1fr", lg: "2fr 1fr" }}
     templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
     gap='24px'>
-    <Projects
-        title={"Projects"}
+    <DBdashProjects
+        title={"DBdashProjects"}
         amount={30}
         captions={["Companies", "Members", "Budget", "Completion"]}
         data={dashboardTableData}
     />
-    <OrdersOverview
+    <DBdashOrders
         title={"Orders Overview"}
         amount={30}
         data={timelineData}

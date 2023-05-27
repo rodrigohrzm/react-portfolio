@@ -11,18 +11,17 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
   // Custom components
-  import Card from "components/Card/Card.js";
-  import CardHeader from "components/Card/CardHeader.js";
-  import DashboardTableRow from "components/Tables/DashboardTableRow";
+  import DBcard from "./elements/DBcard.js";
+  import RowDBTable from "./elements/RowDBTable";
   import React from "react";
   import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
   
-  const Projects = ({ title, amount, captions, data }) => {
+  const DBdashProjects = ({ title, amount, captions, data }) => {
     const textColor = useColorModeValue("gray.700", "white");
   
     return (
-      <Card p='16px' overflowX={{ sm: "scroll", xl: "hidden" }}>
-        <CardHeader p='12px 0px 28px 0px'>
+      <DBcard p='16px' overflowX={{ sm: "scroll", xl: "hidden" }}>
+        <DBcard p='12px 0px 28px 0px'>
           <Flex direction='column'>
             <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
               {title}
@@ -43,7 +42,7 @@ import {
               </Text>
             </Flex>
           </Flex>
-        </CardHeader>
+        </DBcard>
         <Table variant='simple' color={textColor}>
           <Thead>
             <Tr my='.8rem' ps='0px'>
@@ -59,7 +58,7 @@ import {
           <Tbody>
             {data.map((row) => {
               return (
-                <DashboardTableRow
+                <RowDBTable
                   key={row.name}
                   name={row.name}
                   logo={row.logo}
@@ -71,8 +70,8 @@ import {
             })}
           </Tbody>
         </Table>
-      </Card>
+      </DBcard>
     );
   };
   
-  export default Projects;
+  export default DBdashProjects;

@@ -11,7 +11,7 @@ import {
   } from "@chakra-ui/react";
   import React from "react";
   
-  function DashboardTableRow(props) {
+  function RowDBTable(props) {
     const { logo, name, members, budget, progression } = props;
     const textColor = useColorModeValue("gray.700", "white");
     return (
@@ -69,4 +69,4 @@ import {
     );
   }
   
-  export default DashboardTableRow;
+  export default RowDBTable;

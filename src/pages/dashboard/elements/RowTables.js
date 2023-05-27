@@ -10,7 +10,7 @@ import {
   } from "@chakra-ui/react";
   import React from "react";
   
-  function TablesTableRow(props) {
+  function RowTables(props) {
     const { logo, name, email, subdomain, domain, status, date } = props;
     const textColor = useColorModeValue("gray.700", "white");
     const bgStatus = useColorModeValue("gray.400", "#1a202c");
@@ -79,4 +79,4 @@ import {
     );
   }
   
-  export default TablesTableRow;
+  export default RowTables;

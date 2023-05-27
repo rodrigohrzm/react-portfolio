@@ -8,18 +8,17 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
   // Custom components
-  import Card from "components/Card/Card.js";
-  import CardBody from "components/Card/CardBody.js";
+  import DBcard from "./elements/DBcard.js";
   import React from "react";
   // react icons
   import { BsArrowRight } from "react-icons/bs";
   
-  const BuiltByDevelopers = ({ title, name, description, image }) => {
+  const DBdashBanner = ({ title, name, description, image }) => {
     const textColor = useColorModeValue("gray.700", "white");
   
     return (
-      <Card minHeight='290.5px' p='1.2rem'>
-        <CardBody w='100%'>
+      <DBcard minHeight='290.5px' p='1.2rem'>
+        <DBcard w='100%'>
           <Flex flexDirection={{ sm: "column", lg: "row" }} w='100%'>
             <Flex
               flexDirection='column'
@@ -77,9 +76,9 @@ import {
               {image}
             </Flex>
           </Flex>
-        </CardBody>
-      </Card>
+        </DBcard>
+      </DBcard>
     );
   };
   
-  export default BuiltByDevelopers;
+  export default DBdashBanner;
