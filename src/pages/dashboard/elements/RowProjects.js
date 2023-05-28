@@ -9,9 +9,9 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaEllipsisV } from "react-icons/fa";
+//import { FaEllipsisV } from "react-icons/fa";
 
-function DashboardTableRow(props) {
+function RowProjects(props) {
   const { logo, name, status, budget, progression } = props;
   const textColor = useColorModeValue("gray.700", "white");
   return (
@@ -57,11 +57,11 @@ function DashboardTableRow(props) {
       </Td>
       <Td>
         <Button p="0px" bg="transparent">
-          <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+          <Icon color="gray.400" cursor="pointer" />
         </Button>
       </Td>
     </Tr>
   );
 }
 
-export default DashboardTableRow;
+export default RowProjects;

@@ -9,7 +9,7 @@ import avatar8 from "../assets/images/users/avatar8.png";
 import avatar9 from "../assets/images/users/avatar9.png";
 import avatar10 from "../assets/images/users/avatar10.png";
 
-import {
+/* import {
   AdobexdLogo,
   AtlassianLogo,
   InvisionLogo,
@@ -27,46 +27,46 @@ import {
   FaHtml5,
   FaShoppingCart,
 } from "react-icons/fa";
-import { SiDropbox } from "react-icons/si";
+import { SiDropbox } from "react-icons/si"; */
 
 export const dashboardTableData = [
   {
-    logo: AdobexdLogo,
+    // logo: AdobexdLogo,
     name: "Purity UI Version",
     members: [avatar1, avatar2, avatar3, avatar4, avatar5],
     budget: "$14,000",
     progression: 60,
   },
   {
-    logo: AtlassianLogo,
+    // logo: AtlassianLogo,
     name: "Add Progress Track",
     members: [avatar3, avatar2],
     budget: "$3,000",
     progression: 10,
   },
   {
-    logo: SlackLogo,
+    // logo: SlackLogo,
     name: "Fix Platform Errors",
     members: [avatar10, avatar4],
     budget: "Not set",
     progression: 100,
   },
   {
-    logo: SpotifyLogo,
+    //logo: SpotifyLogo,
     name: "Launch our Mobile App",
     members: [avatar2, avatar3, avatar7, avatar8],
     budget: "$32,000",
     progression: 100,
   },
   {
-    logo: JiraLogo,
+    //logo: JiraLogo,
     name: "Add the New Pricing Page",
     members: [avatar10, avatar3, avatar7, avatar2, avatar8],
     budget: "$400",
     progression: 25,
   },
   {
-    logo: InvisionLogo,
+    //logo: InvisionLogo,
     name: "Redesign New Online Shop",
     members: [avatar9, avatar3, avatar2],
     budget: "$7,600",
@@ -76,37 +76,37 @@ export const dashboardTableData = [
 
 export const timelineData = [
   {
-    logo: FaBell,
+    //logo: FaBell,
     title: "$2400, Design changes",
     date: "22 DEC 7:20 PM",
     color: "teal.300",
   },
   {
-    logo: FaHtml5,
+    //logo: FaHtml5,
     title: "New order #4219423",
     date: "21 DEC 11:21 PM",
     color: "orange",
   },
   {
-    logo: FaShoppingCart,
+    //logo: FaShoppingCart,
     title: "Server Payments for April",
     date: "21 DEC 9:28 PM",
     color: "blue.400",
   },
   {
-    logo: FaCreditCard,
+    //logo: FaCreditCard,
     title: "New card added for order #3210145",
     date: "20 DEC 3:52 PM",
     color: "orange.300",
   },
   {
-    logo: SiDropbox,
+    //logo: SiDropbox,
     title: "Unlock packages for Development",
     date: "19 DEC 11:35 PM",
     color: "purple",
   },
   {
-    logo: AdobexdLogo,
+    //logo: AdobexdLogo,
     title: "New order #9851258",
     date: "18 DEC 4:41 PM",
   },
@@ -171,35 +171,35 @@ export const tablesTableData = [
 
 export const tablesProjectData = [
   {
-    logo: AdobexdLogo,
+    //logo: AdobexdLogo,
     name: "Purity UI Version",
     budget: "$14,000",
     status: "Working",
     progression: 60,
   },
   {
-    logo: AtlassianLogo,
+    //logo: AtlassianLogo,
     name: "Add Progress Track",
     budget: "$3,000",
     status: "Canceled",
     progression: 10,
   },
   {
-    logo: SlackLogo,
+    //logo: SlackLogo,
     name: "Fix Platform Errors",
     budget: "Not set",
     status: "Done",
     progression: 100,
   },
   {
-    logo: SpotifyLogo,
+    //logo: SpotifyLogo,
     name: "Launch our Mobile App",
     budget: "$32,000",
     status: "Done",
     progression: 100,
   },
   {
-    logo: JiraLogo,
+    //logo: JiraLogo,
     name: "Add the New Pricing Page",
     budget: "$400",
     status: "Working",
@@ -212,35 +212,35 @@ export const invoicesData = [
     date: "March, 01, 2020",
     code: "#MS-415646",
     price: "$180",
-    logo: FaFilePdf,
+    //logo: FaFilePdf,
     format: "PDF",
   },
   {
     date: "February, 10, 2020",
     code: "#RV-126749",
     price: "$250",
-    logo: FaFilePdf,
+    //logo: FaFilePdf,
     format: "PDF",
   },
   {
     date: "April, 05, 2020",
     code: "#FB-212562",
     price: "$560",
-    logo: FaFilePdf,
+    //logo: FaFilePdf,
     format: "PDF",
   },
   {
     date: "June, 25, 2019",
     code: "#QW-103578",
     price: "$120",
-    logo: FaFilePdf,
+    //logo: FaFilePdf,
     format: "PDF",
   },
   {
     date: "March, 01, 2019",
     code: "#AR-803481",
     price: "$300",
-    logo: FaFilePdf,
+    //logo: FaFilePdf,
     format: "PDF",
   },
 ];
@@ -271,13 +271,13 @@ export const newestTransactions = [
     name: "Netflix",
     date: "27 March 2021, at 12:30 PM",
     price: "- $2,500",
-    logo: FaArrowDown,
+    //logo: FaArrowDown,
   },
   {
     name: "Apple",
     date: "27 March 2021, at 12:30 PM",
     price: "+ $2,500",
-    logo: FaArrowUp,
+    //logo: FaArrowUp,
   },
 ];
 
@@ -286,24 +286,24 @@ export const olderTransactions = [
     name: "Stripe",
     date: "26 March 2021, at 13:45 PM",
     price: "+ $800",
-    logo: FaArrowUp,
+    //logo: FaArrowUp,
   },
   {
     name: "HubSpot",
     date: "26 March 2021, at 12:30 PM",
     price: "+ $1,700",
-    logo: FaArrowUp,
+    //logo: FaArrowUp,
   },
   {
     name: "Webflow",
     date: "26 March 2021, at 05:00 PM",
     price: "Pending",
-    logo: AiOutlineExclamation,
+    //logo: AiOutlineExclamation,
   },
   {
     name: "Microsoft",
     date: "25 March 2021, at 16:30 PM",
     price: "- $987",
-    logo: FaArrowDown,
+    //logo: FaArrowDown,
   },
 ];

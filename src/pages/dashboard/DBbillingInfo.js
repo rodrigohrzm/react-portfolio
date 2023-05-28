@@ -1,27 +1,25 @@
 // Chakra imports
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import BillingRow from "components/Tables/BillingRow";
+import DBcard from "./elements/DBcard.js";
+import RowBilling from "./elements/RowBilling.js";
 import React from "react";
 
-const BillingInformation = ({ title, data }) => {
+const DBbillingInfo = ({ title, data }) => {
   const textColor = useColorModeValue("gray.700", "white");
   return (
-    <Card my={{ lg: "24px" }} me={{ lg: "24px" }}>
+    <DBcard my={{ lg: "24px" }} me={{ lg: "24px" }}>
       <Flex direction='column'>
-        <CardHeader py='12px'>
+        <DBcard py='12px'>
           <Text color={textColor} fontSize='lg' fontWeight='bold'>
             {title}
           </Text>
-        </CardHeader>
-        <CardBody>
+        </DBcard>
+        <DBcard>
           <Flex direction='column' w='100%'>
             {data.map((row) => {
               return (
-                <BillingRow
+                <RowBilling
                   name={row.name}
                   company={row.company}
                   email={row.email}
@@ -30,10 +28,10 @@ const BillingInformation = ({ title, data }) => {
               );
             })}
           </Flex>
-        </CardBody>
+        </DBcard>
       </Flex>
-    </Card>
+    </DBcard>
   );
 };
 
-export default BillingInformation;
+export default DBbillingInfo;

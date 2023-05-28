@@ -1,11 +1,10 @@
 // Chakra imports
 import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
+import DBcard from "./elements/DBcard.js";
 import React from "react";
 
-const CreditCard = ({
+const DBbillingCC = ({
   backgroundImage,
   title,
   icon,
@@ -14,7 +13,7 @@ const CreditCard = ({
   cvv,
 }) => {
   return (
-    <Card
+    <DBcard
       backgroundImage={backgroundImage}
       backgroundRepeat='no-repeat'
       background='cover'
@@ -22,7 +21,7 @@ const CreditCard = ({
       p='16px'
       h={{ sm: "220px", xl: "100%" }}
       gridArea={{ md: "1 / 1 / 2 / 3", xl: "1 / 1 / 2 / 3" }}>
-      <CardBody h='100%' w='100%'>
+      <DBcard h='100%' w='100%'>
         <Flex
           direction='column'
           color='white'
@@ -58,9 +57,9 @@ const CreditCard = ({
             </Flex>
           </Flex>
         </Flex>
-      </CardBody>
-    </Card>
+      </DBcard>
+    </DBcard>
   );
 };
 
-export default CreditCard;
+export default DBbillingCC;

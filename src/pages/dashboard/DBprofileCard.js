@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const ProjectCard = ({ image, name, category, avatars, description }) => {
+const DBprofileCard = ({ image, name, category, avatars, description }) => {
   // Chakra color mode
   const textColor = useColorModeValue("gray.700", "white");
 
@@ -58,4 +58,4 @@ const ProjectCard = ({ image, name, category, avatars, description }) => {
   );
 };
 
-export default ProjectCard;
+export default DBprofileCard;

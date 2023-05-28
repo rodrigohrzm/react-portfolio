@@ -71,7 +71,7 @@ return (
 											</div>
 										</article>
 										<article>
-											<Link to="/webdemo" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></Link>
+											<Link to="/dashboard" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></Link>
 											<div className="inner">
 												<a to="/webdemo"><h4>Business dashboard</h4></a>
 												<p>Employee view for the car repair and rental website.<br/>You can navigate a dashboard with business information like upcoming bookings and the rental schedule.</p>

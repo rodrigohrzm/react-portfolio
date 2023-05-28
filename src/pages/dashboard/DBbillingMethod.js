@@ -8,14 +8,12 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
   // Custom components
-  import Card from "components/Card/Card.js";
-  import CardBody from "components/Card/CardBody.js";
-  import CardHeader from "components/Card/CardHeader.js";
-  import IconBox from "components/Icons/IconBox";
+  import DBcard from "./elements/DBcard.js";
+  import IconBox from "./elements/IconBox.js";
   import React from "react";
-  import { FaPencilAlt } from "react-icons/fa";
+  //import { FaPencilAlt } from "react-icons/fa";
   
-  const PaymentMethod = ({ title, mastercard, visa }) => {
+  const DBbillingMethod = ({ title, mastercard, visa }) => {
     const iconTeal = useColorModeValue("teal.300", "teal.300");
     const textColor = useColorModeValue("gray.700", "white");
     const borderColor = useColorModeValue("#dee2e6", "gray.500");
@@ -25,8 +23,8 @@ import {
     );
   
     return (
-      <Card p='16px' mt='24px'>
-        <CardHeader>
+      <DBcard p='16px' mt='24px'>
+        <DBcard>
           <Flex justify='space-between' align='center' minHeight='60px' w='100%'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
               {title}
@@ -35,8 +33,8 @@ import {
               ADD NEW CARD
             </Button>
           </Flex>
-        </CardHeader>
-        <CardBody>
+        </DBcard>
+        <DBcard>
           <Flex
             direction={{ sm: "column", md: "row" }}
             align='center'
@@ -66,7 +64,7 @@ import {
                 w='16px'
                 h='16px'
                 variant='no-hover'>
-                <Icon as={FaPencilAlt} />
+                {/* <Icon as={FaPencilAlt} /> */}
               </Button>
             </Flex>
             <Flex
@@ -90,13 +88,13 @@ import {
                 w='16px'
                 h='16px'
                 variant='no-hover'>
-                <Icon as={FaPencilAlt} />
+                <Icon /* as={FaPencilAlt} */ />
               </Button>
             </Flex>
           </Flex>
-        </CardBody>
-      </Card>
+        </DBcard>
+      </DBcard>
     );
   };
   
-  export default PaymentMethod;
+  export default DBbillingMethod;

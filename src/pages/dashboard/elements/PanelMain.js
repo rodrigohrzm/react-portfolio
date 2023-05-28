@@ -1,5 +1,5 @@
 import { Box, useStyleConfig } from "@chakra-ui/react";
-function MainPanel(props) {
+function PanelMain(props) {
   const { variant, children, ...rest } = props;
   const styles = useStyleConfig("MainPanel", { variant });
   // Pass the computed styles into the `__css` prop
@@ -10,4 +10,4 @@ function MainPanel(props) {
   );
 }
 
-export default MainPanel;
+export default PanelMain;

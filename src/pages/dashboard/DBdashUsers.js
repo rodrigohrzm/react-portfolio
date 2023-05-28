@@ -3,12 +3,12 @@ import { Flex, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
 import DBcard from "./elements/DBcard";
 // Custom icons
-import {
+/* import {
   CartIcon,
   RocketIcon,
   StatsIcon,
   WalletIcon,
-} from "./elements/Icons.js";
+} from "./elements/Icons.js"; */
 import React from "react";
 import DBdashStats from "./DBdashStats";
 
@@ -39,25 +39,25 @@ const DBdashUsers = ({ title, percentage, chart }) => {
               title={"Users"}
               amount={"32,984"}
               percentage={20}
-              icon={<WalletIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              //icon={<WalletIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
             <DBdashStats
               title={"Clicks"}
               amount={"2.42m"}
               percentage={80}
-              icon={<RocketIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              //icon={<RocketIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
             <DBdashStats
               title={"Sales"}
               amount={"2,400$"}
               percentage={30}
-              icon={<CartIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              //icon={<CartIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
             <DBdashStats
               title={"Items"}
               amount={"320"}
               percentage={40}
-              icon={<StatsIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              //icon={<StatsIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
             />
           </SimpleGrid>
         </Flex>

@@ -11,7 +11,7 @@ import {
   import DBcard from "./elements/DBcard.js";
   import React from "react";
   // react icons
-  import { BsArrowRight } from "react-icons/bs";
+//  import { BsArrowRight } from "react-icons/bs";
   
   const DBdashBanner = ({ title, name, description, image }) => {
     const textColor = useColorModeValue("gray.700", "white");
@@ -51,7 +51,7 @@ import {
                     _hover={{ me: "4px" }}>
                     Read more
                   </Text>
-                  <Icon
+{/*                   <Icon
                     as={BsArrowRight}
                     w='20px'
                     h='20px'
@@ -61,7 +61,7 @@ import {
                     cursor='pointer'
                     pt='4px'
                     _hover={{ transform: "translateX(20%)" }}
-                  />
+                  /> */}
                 </Button>
               </Flex>
             </Flex>

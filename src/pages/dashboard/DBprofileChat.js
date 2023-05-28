@@ -7,29 +7,27 @@ import {
     useColorModeValue,
   } from "@chakra-ui/react";
   // Assets
-  import avatar2 from "assets/img/avatars/avatar2.png";
-  import avatar3 from "assets/img/avatars/avatar3.png";
-  import avatar4 from "assets/img/avatars/avatar4.png";
-  import avatar5 from "assets/img/avatars/avatar5.png";
-  import avatar6 from "assets/img/avatars/avatar6.png";
+  import avatar2 from "../../assets/images/users/avatar2.png";
+  import avatar3 from "../../assets/images/users/avatar3.png";
+  import avatar4 from "../../assets/images/users/avatar4.png";
+  import avatar5 from "../../assets/images/users/avatar5.png";
+  import avatar6 from "../../assets/images/users/avatar6.png";
   // Custom components
-  import Card from "components/Card/Card";
-  import CardBody from "components/Card/CardBody";
-  import CardHeader from "components/Card/CardHeader";
+import DBcard from "./elements/DBcard.js";
   import React from "react";
   
-  const Conversations = ({ title }) => {
+  const DBprofileChat = ({ title }) => {
     // Chakra color mode
     const textColor = useColorModeValue("gray.700", "white");
   
     return (
-      <Card p='16px'>
-        <CardHeader p='12px 5px' mb='12px'>
+      <DBcard p='16px'>
+        <DBcard p='12px 5px' mb='12px'>
           <Text fontSize='lg' color={textColor} fontWeight='bold'>
             {title}
           </Text>
-        </CardHeader>
-        <CardBody px='5px'>
+        </DBcard>
+        <DBcard px='5px'>
           <Flex direction='column' w='100%'>
             <Flex justifyContent='space-between' mb='21px'>
               <Flex align='center'>
@@ -172,9 +170,9 @@ import {
               </Button>
             </Flex>
           </Flex>
-        </CardBody>
-      </Card>
+        </DBcard>
+      </DBcard>
     );
   };
   
-  export default Conversations;
+  export default DBprofileChat;

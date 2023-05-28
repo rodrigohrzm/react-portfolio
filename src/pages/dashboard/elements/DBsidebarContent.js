@@ -8,17 +8,17 @@ import {
     Text,
     useColorModeValue
 } from "@chakra-ui/react";
-import IconBox from "components/Icons/IconBox";
-import { CreativeTimLogo } from "components/Icons/Icons";
-import { Separator } from "components/Separator/Separator";
-import { SidebarHelp } from "components/Sidebar/SidebarHelp";
+import IconBox from "./IconBox";
+//import { CreativeTimLogo } from "components/Icons/Icons";
+import { Separator } from "./Separator";
+import { DBsidebarHelp } from "./DBsidebarHelp";
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 // this function creates the links and collapses that appear in the sidebar (left menu)
 
 
-const SidebarContent = ({ logoText, routes }) => {
+const DBsidebarContent = ({ logoText, routes }) => {
 
     // to check for active links and opened collapses
   let location = useLocation();
@@ -190,7 +190,7 @@ const SidebarContent = ({ logoText, routes }) => {
         alignItems="center"
         fontSize="11px"
       >
-        <CreativeTimLogo w="32px" h="32px" me="10px" />
+        {/* <CreativeTimLogo w="32px" h="32px" me="10px" /> */}
         <Text fontSize="sm" mt="3px">
           {logoText}
         </Text>
@@ -200,9 +200,9 @@ const SidebarContent = ({ logoText, routes }) => {
           <Stack direction="column" mb="40px">
             <Box>{links}</Box>
           </Stack>
-          <SidebarHelp />
+          <DBsidebarHelp />
     </>
   )
 }
 
-export default SidebarContent
+export default DBsidebarContent

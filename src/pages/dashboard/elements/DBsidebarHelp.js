@@ -1,10 +1,10 @@
-import { QuestionIcon } from "@chakra-ui/icons";
+//import { QuestionIcon } from "@chakra-ui/icons";
 import { Button, Flex, Link, Text } from "@chakra-ui/react";
-import SidebarHelpImage from "assets/img/SidebarHelpImage.png";
-import IconBox from "components/Icons/IconBox";
+import SidebarHelpImage from "../../../assets/images/SidebarHelpImage.png";
+import IconBox from "./IconBox";
 import React from "react";
 
-export function SidebarHelp(props) {
+export function DBsidebarHelp(props) {
   // Pass the computed styles into the `__css` prop
   const { children, ...rest } = props;
   return (
@@ -20,7 +20,7 @@ export function SidebarHelp(props) {
       w="100%"
     >
       <IconBox width="35px" h="35px" bg="white" mb="auto">
-        <QuestionIcon color="teal.300" h="18px" w="18px" />
+        {/* <QuestionIcon color="teal.300" h="18px" w="18px" /> */}
       </IconBox>
       <Text fontSize="sm" color="white" fontWeight="bold">
         Need help?

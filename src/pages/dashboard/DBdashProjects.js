@@ -14,7 +14,7 @@ import {
   import DBcard from "./elements/DBcard.js";
   import RowDBTable from "./elements/RowDBTable";
   import React from "react";
-  import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+  //import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
   
   const DBdashProjects = ({ title, amount, captions, data }) => {
     const textColor = useColorModeValue("gray.700", "white");
@@ -27,13 +27,13 @@ import {
               {title}
             </Text>
             <Flex align='center'>
-              <Icon
+{/*               <Icon
                 as={IoCheckmarkDoneCircleSharp}
                 color='teal.300'
                 w={4}
                 h={4}
                 pe='3px'
-              />
+              /> */}
               <Text fontSize='sm' color='gray.400' fontWeight='normal'>
                 <Text fontWeight='bold' as='span'>
                   {amount} done

@@ -4,11 +4,11 @@ import {
     Box, useColorModeValue
   } from "@chakra-ui/react";
   import React from "react";
-  import SidebarContent from "./SidebarContent";
+  import DBsidebarContent from "./DBsidebarContent";
   
   // FUNCTIONS
   
-  function Sidebar(props) {
+  function DBsidebar(props) {
     // to check for active links and opened collapses
     const mainPanel = React.useRef();
     let variantChange = "0.2s linear";
@@ -47,7 +47,7 @@ import {
             m={sidebarMargins}
             borderRadius={sidebarRadius}
           >
-            <SidebarContent routes={routes}
+            <DBsidebarContent routes={routes}
           logoText={"PURITY UI DASHBOARD"}
           display="none"
           sidebarVariant={sidebarVariant}
@@ -61,4 +61,4 @@ import {
   
   
   
-  export default Sidebar; 
+  export default DBsidebar; 

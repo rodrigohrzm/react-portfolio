@@ -1,21 +1,19 @@
 // Chakra imports
 import { Button, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import InvoicesRow from "components/Tables/InvoicesRow";
+import DBcard from "./elements/DBcard.js";
+import RowInvoices from "./elements/RowInvoices.js";
 import React from "react";
 
-const Invoices = ({ title, data }) => {
+const DBbillingInvoices = ({ title, data }) => {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Card
+    <DBcard
       p='22px'
       my={{ sm: "24px", lg: "0px" }}
       ms={{ sm: "0px", lg: "24px" }}>
-      <CardHeader>
+      <DBcard>
         <Flex justify='space-between' align='center' mb='1rem' w='100%'>
           <Text fontSize='lg' color={textColor} fontWeight='bold'>
             {title}
@@ -30,12 +28,12 @@ const Invoices = ({ title, data }) => {
             VIEW ALL
           </Button>
         </Flex>
-      </CardHeader>
-      <CardBody>
+      </DBcard>
+      <DBcard>
         <Flex direction='column' w='100%'>
           {data.map((row) => {
             return (
-              <InvoicesRow
+              <RowInvoices
                 date={row.date}
                 code={row.code}
                 price={row.price}
@@ -45,9 +43,9 @@ const Invoices = ({ title, data }) => {
             );
           })}
         </Flex>
-      </CardBody>
-    </Card>
+      </DBcard>
+    </DBcard>
   );
 };
 
-export default Invoices;
+export default DBbillingInvoices;

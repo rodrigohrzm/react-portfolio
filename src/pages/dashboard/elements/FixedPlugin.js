@@ -1,6 +1,6 @@
 import { Button, useColorModeValue } from "@chakra-ui/react";
 // Custom Icons
-import { SettingsIcon } from "components/Icons/Icons";
+// import { SettingsIcon } from "components/Icons/Icons";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -30,13 +30,13 @@ export default function FixedPlugin(props) {
         borderRadius="50px"
         boxShadow="0 2px 12px 0 rgb(0 0 0 / 16%)"
       >
-        <SettingsIcon
+{/*         <SettingsIcon
           cursor="pointer"
           ref={settingsRef}
           color={navbarIcon}
           w="20px"
           h="20px"
-        />
+        /> */}
       </Button>
     </>
   );

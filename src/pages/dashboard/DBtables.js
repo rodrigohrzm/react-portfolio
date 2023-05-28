@@ -1,19 +1,19 @@
 // Chakra imports
 import { Flex } from "@chakra-ui/react";
 import React from "react";
-import Authors from "./components/Authors";
-import Projects from "./components/Projects";
-import { tablesTableData, dashboardTableData } from "variables/general";
+import DBtablesAuthors from "./DBtablesAuthors";
+import DBtablesProjects from "./DBtablesProjects";
+import { tablesTableData, dashboardTableData } from "../../data/general";
 
-function Tables() {
+function DBtables() {
   return (
     <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
-      <Authors
+      <DBtablesAuthors
         title={"Authors Table"}
         captions={["Author", "Function", "Status", "Employed", ""]}
         data={tablesTableData}
       />
-      <Projects
+      <DBtablesProjects
         title={"Projects Table"}
         captions={["Companies", "Budget", "Status", "Completion", ""]}
         data={dashboardTableData}
@@ -22,4 +22,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export { DBtables };

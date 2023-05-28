@@ -12,7 +12,7 @@ import {
   import DBcard from "./elements/DBcard";
   import React from "react";
   // react icons
-  import { BsArrowRight } from "react-icons/bs";
+  //import { BsArrowRight } from "react-icons/bs";
   
   const DBdashAd = ({ title, description, backgroundImage }) => {
     const overlayRef = React.useRef();
@@ -57,7 +57,7 @@ import {
                     transition='all .5s ease'>
                     Read more
                   </Text>
-                  <Icon
+{/*                   <Icon
                     as={BsArrowRight}
                     w='20px'
                     h='20px'
@@ -67,7 +67,7 @@ import {
                     cursor='pointer'
                     _hover={{ transform: "translateX(20%)" }}
                     pt='4px'
-                  />
+                  /> */}
                 </Button>
               </Flex>
             </Flex>

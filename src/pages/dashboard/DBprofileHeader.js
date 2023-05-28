@@ -9,7 +9,7 @@ import {
   } from "@chakra-ui/react";
   import React from "react";
   
-  const Header = ({
+  const DBprofileHeader = ({
     backgroundHeader,
     backgroundProfile,
     avatarImage,
@@ -160,4 +160,4 @@ import {
     );
   };
   
-  export default Header;
+  export default DBprofileHeader;

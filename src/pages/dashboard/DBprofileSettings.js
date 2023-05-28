@@ -1,22 +1,20 @@
 // Chakra imports
 import { Flex, Switch, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import DBcard from "./elements/DBcard.js";
 import React from "react";
 
-const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
+const DBprofileSettings = ({ title, subtitle1, subtitle2 }) => {
   // Chakra color mode
   const textColor = useColorModeValue("gray.700", "white");
   return (
-    <Card p='16px'>
-      <CardHeader p='12px 5px' mb='12px'>
+    <DBcard p='16px'>
+      <DBcard p='12px 5px' mb='12px'>
         <Text fontSize='lg' color={textColor} fontWeight='bold'>
           {title}
         </Text>
-      </CardHeader>
-      <CardBody px='5px'>
+      </DBcard>
+      <DBcard px='5px'>
         <Flex direction='column'>
           <Text fontSize='sm' color='gray.500' fontWeight='600' mb='20px'>
             {subtitle1}
@@ -65,9 +63,9 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
             </Text>
           </Flex>
         </Flex>
-      </CardBody>
-    </Card>
+      </DBcard>
+    </DBcard>
   );
 };
 
-export default PlatformSettings;
+export default DBprofileSettings;

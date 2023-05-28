@@ -1,19 +1,18 @@
 // Chakra imports
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import IconBox from "components/Icons/IconBox";
-import { Separator } from "components/Separator/Separator";
+import DBcard from "./elements/DBcard.js";
+import IconBox from "./elements/IconBox.js";
+import { Separator } from "./elements/Separator.js";
 import React from "react";
 
-const PaymentStatistics = ({ icon, title, description, amount }) => {
+const DBbillingStats = ({ icon, title, description, amount }) => {
   const iconTeal = useColorModeValue("teal.300", "teal.300");
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Card p='16px' display='flex' align='center' justify='center'>
-      <CardBody>
+    <DBcard p='16px' display='flex' align='center' justify='center'>
+      <DBcard>
         <Flex direction='column' align='center' w='100%' py='14px'>
           <IconBox as='box' h={"60px"} w={"60px"} bg={iconTeal}>
             {icon}
@@ -41,9 +40,9 @@ const PaymentStatistics = ({ icon, title, description, amount }) => {
             {`%${amount}`}
           </Text>
         </Flex>
-      </CardBody>
-    </Card>
+      </DBcard>
+    </DBcard>
   );
 };
 
-export default PaymentStatistics;
+export default DBbillingStats;
