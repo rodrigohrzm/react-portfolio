@@ -1,4 +1,5 @@
 /*eslint-disable*/
+
 // chakra imports
 import {
     Box, useColorModeValue
@@ -57,8 +58,5 @@ import {
       </Box>
     );
   }
-  
-  
-  
-  
-  export default DBsidebar; 
+
+  export default DBsidebar;

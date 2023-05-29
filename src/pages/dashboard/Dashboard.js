@@ -1,3 +1,9 @@
+// https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
+// https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
+// it all works except the sidebar overlay
+// nuevo componente que sea grid: |sb| 	content	  |
+	//	navbar viene de antes, luego frame con sidebar y hueco, hueco rellenado por las vistas de la dashboard
+
 // Chakra imports
 import { ChakraProvider, Portal, useDisclosure } from '@chakra-ui/react';
 //import Configurator from 'components/Configurator/Configurator';
@@ -6,7 +12,6 @@ import { ChakraProvider, Portal, useDisclosure } from '@chakra-ui/react';
 import DBsidebar from './elements/DBsidebar';
 import React, { useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { routes } from './LinksDashboard.js';
 // Custom Chakra theme
 //import theme from 'theme/theme.js';
 import FixedPlugin from './elements/FixedPlugin';
@@ -14,7 +19,48 @@ import FixedPlugin from './elements/FixedPlugin';
 import PanelMain from './elements/PanelMain';
 import PanelContainer from './elements/PanelContainer';
 import PanelContent from './elements/PanelContent';
+
+import { DBcontent } from './DBcontent';
+import { DBtables } from './DBtables';
+import { DBprofile } from './DBprofile';
+import { DBbilling } from './DBbilling';
+
 export function Dashboard(props) {
+	var routes = [
+		{
+		  path: "/overview",
+		  name: "Dashboard",
+		  component: DBcontent,
+		  layout: "/dashboard",
+		},
+		{
+		  path: "/projects",
+		  name: "Projects",
+		  component: DBtables,
+		  layout: "/dashboard",
+		},
+		{
+		  path: "/earnings",
+		  name: "Earnings",
+		  component: DBbilling,
+		  layout: "/dashboard",
+		},
+		{
+		  name: "ACCOUNT PAGES",
+		  category: "account",
+		  state: "pageCollapse",
+		  views: [
+			{
+			  path: "/bookings",
+			  name: "Profile",
+			  secondaryNavbar: true,
+			  component: DBprofile,
+			  layout: "/dashboard",
+			},
+		  ],
+		},
+	  ];
+
 	const { ...rest } = props;
 	// states and functions
 	const [ sidebarVariant, setSidebarVariant ] = useState('transparent');
@@ -108,10 +154,10 @@ export function Dashboard(props) {
 				{getRoute() ? (
 					<PanelContent>
 						<PanelContainer>
-{/* 							<Routes>
+							<Routes>
 								{getRoutes(routes)}
-								<Navigate from='/admin' to='/admin/dashboard' />
-							</Routes> */}
+								{/* <Navigate from='/admin' to='/admin/dashboard' /> */}
+							</Routes>
 						</PanelContainer>
 					</PanelContent>
 				) : null}

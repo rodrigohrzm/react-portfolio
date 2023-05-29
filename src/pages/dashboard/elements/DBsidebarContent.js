@@ -10,8 +10,15 @@ import {
 } from "@chakra-ui/react";
 import IconBox from "./IconBox";
 //import { CreativeTimLogo } from "components/Icons/Icons";
+
+
+import { DBcontent } from '../DBcontent';
+import { DBtables } from '../DBtables';
+import { DBprofile } from '../DBprofile';
+import { DBbilling } from '../DBbilling';
+import { Dashboard } from '../Dashboard';
+
 import { Separator } from "./Separator";
-import { DBsidebarHelp } from "./DBsidebarHelp";
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -19,6 +26,41 @@ import { NavLink, useLocation } from "react-router-dom";
 
 
 const DBsidebarContent = ({ logoText, routes }) => {
+
+  var routes = [
+		{
+		  path: "/overview",
+		  name: "Dashboard",
+		  component: DBcontent,
+		  layout: "/dashboard",
+		},
+		{
+		  path: "/projects",
+		  name: "Projects",
+		  component: DBtables,
+		  layout: "/dashboard",
+		},
+		{
+		  path: "/earnings",
+		  name: "Earnings",
+		  component: DBbilling,
+		  layout: "/dashboard",
+		},
+		{
+		  name: "ACCOUNT PAGES",
+		  category: "account",
+		  state: "pageCollapse",
+		  views: [
+			{
+			  path: "/bookings",
+			  name: "Profile",
+			  secondaryNavbar: true,
+			  component: DBprofile,
+			  layout: "/dashboard",
+			},
+		  ],
+		},
+	  ];
 
     // to check for active links and opened collapses
   let location = useLocation();
@@ -200,7 +242,6 @@ const DBsidebarContent = ({ logoText, routes }) => {
           <Stack direction="column" mb="40px">
             <Box>{links}</Box>
           </Stack>
-          <DBsidebarHelp />
     </>
   )
 }
