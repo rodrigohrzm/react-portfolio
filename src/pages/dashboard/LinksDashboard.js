@@ -7,6 +7,7 @@ import { DBtables } from './DBtables';
 import { DBprofile } from './DBprofile';
 import { DBbilling } from './DBbilling';
 import { Dashboard } from './Dashboard';
+import { TEMPsidebar } from './TEMPsidebar';
 import DBsidebar from './elements/DBsidebar';
 
 
@@ -17,12 +18,7 @@ const LinksDashboard = () => (
   </Routes>
 
   <Routes>
-      <Route path="/dashboard/*" element={<DBsidebar />}>
-        <Route index element={<DBcontent />} />
-        <Route path="projects" element={<DBtables />} />
-        <Route path="bookings" element={<DBprofile />} />
-        <Route path="earnings" element={<DBbilling />} />
-      </Route>
+      <Route path="/dashboard/*" element={<TEMPsidebar />}/>
   </Routes>
   </>
 );
