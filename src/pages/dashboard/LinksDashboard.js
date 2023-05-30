@@ -13,16 +13,16 @@ import DBsidebar from './elements/DBsidebar';
 const LinksDashboard = () => (
   <>
   <Routes>
-    <Route path="/dashboard/*" element={<WebNav/>}>
+    <Route path="/dashboard/*" element={<WebNav/>}/>
+  </Routes>
+
+  <Routes>
+      <Route path="/dashboard/*" element={<DBsidebar />}>
         <Route index element={<DBcontent />} />
         <Route path="projects" element={<DBtables />} />
         <Route path="bookings" element={<DBprofile />} />
         <Route path="earnings" element={<DBbilling />} />
-    </Route>
-  </Routes>
-
-  <Routes>
-      <Route path="/dashboard/*" element={<Dashboard />} />
+      </Route>
   </Routes>
   </>
 );

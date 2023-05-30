@@ -11,7 +11,7 @@ import { ChakraProvider, Portal, useDisclosure } from '@chakra-ui/react';
 //import AdminNavbar from 'components/Navbars/AdminNavbar.js';
 import DBsidebar from './elements/DBsidebar';
 import React, { useState } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { useNavigate, Route, Routes } from 'react-router-dom';
 // Custom Chakra theme
 //import theme from 'theme/theme.js';
 import FixedPlugin from './elements/FixedPlugin';
@@ -30,19 +30,19 @@ export function Dashboard(props) {
 		{
 		  path: "/overview",
 		  name: "Dashboard",
-		  component: DBcontent,
+		  component: <DBcontent/>,
 		  layout: "/dashboard",
 		},
 		{
 		  path: "/projects",
 		  name: "Projects",
-		  component: DBtables,
+		  component: <DBtables/>,
 		  layout: "/dashboard",
 		},
 		{
 		  path: "/earnings",
 		  name: "Earnings",
-		  component: DBbilling,
+		  component: <DBbilling/>,
 		  layout: "/dashboard",
 		},
 		{
@@ -54,7 +54,7 @@ export function Dashboard(props) {
 			  path: "/bookings",
 			  name: "Profile",
 			  secondaryNavbar: true,
-			  component: DBprofile,
+			  component: <DBprofile/>,
 			  layout: "/dashboard",
 			},
 		  ],
@@ -65,6 +65,7 @@ export function Dashboard(props) {
 	// states and functions
 	const [ sidebarVariant, setSidebarVariant ] = useState('transparent');
 	const [ fixed, setFixed ] = useState(false);
+	const navigate = useNavigate();
 	// functions for changing the states from components
 	const getRoute = () => {
 		return window.location.pathname !== '/admin/full-screen-maps';
@@ -117,8 +118,8 @@ export function Dashboard(props) {
 			if (prop.category === 'account') {
 				return getRoutes(prop.views);
 			}
-			if (prop.layout === '/admin') {
-				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+			if (prop.layout === '/dashboard') {
+				//return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
 			} else {
 				return null;
 			}
@@ -128,7 +129,7 @@ export function Dashboard(props) {
 	document.documentElement.dir = 'ltr';
 	// Chakra Color Mode
 	return (
-		<ChakraProvider /* theme={theme} */ resetCss={false}>
+		<>
 			<DBsidebar
 				routes={routes}
 				logoText={'PURITY UI DASHBOARD'}
@@ -154,16 +155,16 @@ export function Dashboard(props) {
 				{getRoute() ? (
 					<PanelContent>
 						<PanelContainer>
-							<Routes>
-								{getRoutes(routes)}
+							{/* <Routes> */}
+								{/* {getRoutes(routes)} */}
 								{/* <Navigate from='/admin' to='/admin/dashboard' /> */}
-							</Routes>
+							{/* </Routes> */}
 						</PanelContainer>
 					</PanelContent>
 				) : null}
-				<Portal>
+{/* 				<Portal>
 					<FixedPlugin secondary={getActiveNavbar(routes)} fixed={fixed} onOpen={onOpen} />
-				</Portal>
+				</Portal> */}
 {/* 				<Configurator
 					secondary={getActiveNavbar(routes)}
 					isOpen={isOpen}
@@ -176,6 +177,6 @@ export function Dashboard(props) {
 					onTransparent={() => setSidebarVariant('transparent')}
 				/> */}
 			</PanelMain>
-		</ChakraProvider>
+		</>
 	);
 }

@@ -30,7 +30,7 @@ import {
     // SIDEBAR
     return (
       <Box ref={mainPanel}>
-        <Box display={{ sm: "none", xl: "block" }} position="fixed">
+        <Box display={{ base: "none", md: "block" }} position="fixed">
           <Box
             bg={sidebarBg}
             transition={variantChange}
