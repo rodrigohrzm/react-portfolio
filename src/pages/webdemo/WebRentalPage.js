@@ -73,7 +73,7 @@ function WebRentalPage() {
               <option style={{ color: 'black' }} value="">All</option>
               {classes.map((classOption, index) => (<option style={{ color: 'black' }} key={index} value={classOption}>{classOption}</option>))}
             </Select>
-            <VStack display={{ base:'none', lg: 'inline'}} flexWrap='wrap' spacing='5' >
+            <VStack display={{ base:'none', lg: 'inline'}} flexWrap='wrap' spacing='7' >
               <Button colorScheme='messenger' variant='outline' color='#0078ff' borderColor='#a2ceff' backgroundColor={selectedClass == '' ? '#d0e6ff' : ''} value="" onClick={handleClassFilterChange} w='14rem'>All</Button>
                 {classes.map((classOption, index) => (
               <Button colorScheme='messenger' variant='outline' color='#0078ff' borderColor='#a2ceff' backgroundColor={selectedClass == classOption ? '#d0e6ff' : ''} onClick={handleClassFilterChange} key={index} value={classOption} w='14rem'>{classOption}</Button>))}
