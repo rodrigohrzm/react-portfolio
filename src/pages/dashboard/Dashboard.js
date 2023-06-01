@@ -42,7 +42,7 @@ const Dashboard = () => {
       <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'3', lg: '1'}} bg='#011968' w={{ base:'', lg: '18rem'}}>
         <Flex marginLeft={{base: '0', lg: '1rem'}} justify={{base: 'center', lg: ''}} wrap='wrap'>
           <FormLabel padding='2rem'>
-            <Heading paddingLeft='0.5rem' marginBottom="0.5em" color='white' fontWeight='600' as='h4' size='sm'>NAVIGATION</Heading>
+            <Heading paddingLeft='2rem' marginBottom="1rem" color='white' fontWeight='600' as='h4' size='sm'>NAVIGATION</Heading>
             <Box w="260px" maxW="260px" ms={{sm: "16px"}} my={{sm: "16px"}} h="calc(100vh - 32px)" ps="20px" pe="20px" m='0px' borderRadius='0px'>
               <DBsidebarContent/>
             </Box>

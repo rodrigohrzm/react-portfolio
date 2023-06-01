@@ -8,7 +8,7 @@ export default function IconBox(props) {
     <Flex
       alignItems={"center"}
       justifyContent={"center"}
-      borderRadius={"12px"}
+      borderRadius={"8"}
       {...rest}
     >
       {children}

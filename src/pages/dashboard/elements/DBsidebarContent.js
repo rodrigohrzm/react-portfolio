@@ -1,7 +1,9 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { useLocation, NavLink } from 'react-router-dom';
-import IconBox from "./IconBox";
 import React from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRoad, faHorseHead, faGaugeHigh, faGasPump, faLock, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const DBsidebarContent = () => {
 
@@ -14,31 +16,31 @@ const DBsidebarContent = () => {
   var routes = [
 		{
 		  path: "",
-		  name: "Dashboard",
-		  component: <IconBox/>,
+		  name: "Main",
+		  icon: '???',
 		  layout: "/dashboard",
 		},
 		{
 		  path: "/projects",
 		  name: "Projects",
-		  component: <IconBox/>,
+		  icon: '???',
 		  layout: "/dashboard",
 		},
 		{
       path: "/bookings",
       name: "Bookings",
-      component: <IconBox/>,
+		  icon: '???',
       layout: "/dashboard",
 		},
 		{
 		  path: "/earnings",
 		  name: "Earnings",
-		  component: <IconBox/>,
+		  icon: '???',
 		  layout: "/dashboard",
 		}
 	  ];
 
-  const createLinks = routes.map((prop, key) => {
+  const createLinks = routes.map((prop) => {
       return (
         <NavLink to={prop.layout + prop.path} key={prop.name}>
         {activeRoute(prop.layout + prop.path) === "active" ? (
@@ -46,7 +48,7 @@ const DBsidebarContent = () => {
             boxSize="initial"
             justifyContent="flex-start"
             alignItems="center"
-            bg="white"
+            bg="#d0e6ff"
             mb={{
               xl: "12px",
             }}
@@ -58,7 +60,7 @@ const DBsidebarContent = () => {
               xl: "16px",
             }}
             py="12px"
-            borderRadius="8px"
+            borderRadius="8"
             _hover="none"
             w="100%"
             _active={{
@@ -71,22 +73,21 @@ const DBsidebarContent = () => {
             }}
           >
             <Flex>
-              {typeof prop.icon === "string" ? (
-//                  <Icon>{prop.icon}</Icon>
-                <Text>Icon goes here</Text>
-              ) : (
-                <IconBox
-                  bg="teal.300"
-                  color="white"
-                  h="30px"
-                  w="30px"
-                  me="12px"
-                >
-                  {prop.icon}
-                </IconBox>
-              )}
+              <Flex
+                bg="#0078ff"
+                color="white"
+                h="30px"
+                w="30px"
+                me="12px"
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"8"}
+              >
+                {prop.icon}
+                <FontAwesomeIcon icon={faLock} />
+              </Flex>
             </Flex>
-            <Text color='black'>{prop.name}</Text>
+            <Text color='#0078ff'>{prop.name}</Text>
           </Button>
         ) : (
           <Button
@@ -118,20 +119,19 @@ const DBsidebarContent = () => {
             }}
           >
             <Flex>
-              {typeof prop.icon === "string" ? (
-//                  <Icon>{prop.icon}</Icon>
-                <Text>Icon goes here</Text>
-              ) : (
-                <IconBox
-                  bg="white"
-                  color="teal.300"
-                  h="30px"
-                  w="30px"
-                  me="12px"
-                >
-                  {prop.icon}
-                </IconBox>
-              )}
+              <Flex
+                bg="white"
+                color="#0078ff"
+                h="30px"
+                w="30px"
+                me="12px"
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"8"}
+              >
+                {prop.icon}
+                <FontAwesomeIcon icon={faLock} />
+              </Flex>
             </Flex>
             <Text color='white'>{prop.name}</Text>
           </Button>
