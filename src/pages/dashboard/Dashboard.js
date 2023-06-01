@@ -11,23 +11,16 @@ import { DBprofile } from './DBprofile';
 import { DBbilling } from './DBbilling';
 import DBsidebarContent from "./elements/DBsidebarContent";
 
-import { Box, Flex, Center, Grid, GridItem, Text, Heading, useColorModeValue, Button,
+import { Box, Flex, Center, Grid, GridItem, Text, Heading, HStack, Button,
   FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, VStack } from '@chakra-ui/react'
 
   // cargar DBsidebar+DBsidebarContent dentro de la sidebar azul
   // llevar los links a LinksDashboard e importarlos en el hueco
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
+  // https://nekocalc.com/px-to-rem-converter
 
 const Dashboard = () => {
-
-  const [selectedClass, setSelectedClass] = useState('');
-
-  const classes = Array.from(new Set(RentalInventory.rentals.map(rental => rental.class)));
-
-  const handleClassFilterChange = (event) => {
-    setSelectedClass(event.target.value);
-  };
 
   return (
 
@@ -40,14 +33,13 @@ const Dashboard = () => {
       columnGap='0'
     >
       <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'3', lg: '1'}} bg='#011968' w={{ base:'', lg: '18rem'}}>
-        <Flex marginLeft={{base: '0', lg: '1rem'}} justify={{base: 'center', lg: ''}} wrap='wrap'>
+        <Flex paddingLeft='0.75rem' display={{ base:'none', lg: 'flex'}} justify={{base: 'center', lg: ''}} wrap='wrap'>
           <FormLabel padding='2rem'>
-            <Heading paddingLeft='2rem' marginBottom="1rem" color='white' fontWeight='600' as='h4' size='sm'>NAVIGATION</Heading>
-            <Box w="260px" maxW="260px" ms={{sm: "16px"}} my={{sm: "16px"}} h="calc(100vh - 32px)" ps="20px" pe="20px" m='0px' borderRadius='0px'>
-              <DBsidebarContent/>
-            </Box>
+            <Heading paddingLeft='1.5rem' marginBottom="2rem" color='white' fontWeight='600' as='h4' size='sm'>NAVIGATION</Heading>
+            <DBsidebarContent/>
           </FormLabel>
         </Flex>
+        <Box marginX='auto' paddingTop='1rem' w={{base: '', pre: '40rem'}} align='center' justifyContent='center' display={{ base:'flex', lg: 'none'}} flexWrap='wrap'><DBsidebarContent/></Box>
       </GridItem>
 
       <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}>

@@ -72,10 +72,10 @@ function WebNav() {
       <nav>
       <Flex align="center" h='74px' bgGradient='linear(to-r, #020712, #092769)' color='white' fontWeight="600">
         <Flex paddingLeft="2rem"justify="left" w="25%">
-          <NavLink onClick={onCloseNav} to={""}><Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} /></NavLink>
+          <NavLink onClick={onCloseNav} to={"/webdemo"}><Image fit="contain" w="225px" h="60px" minWidth="225px" minHeight="60px" src={require("../../assets/images/logo02.png")} /></NavLink>
         </Flex>
         <Spacer />
-        <HStack justify="right" w="50%" spacing='1.5rem' display={{base: 'none', md: 'flex', lg: 'flex'}} >
+        <HStack justify="right" w="50%" spacing='1.5rem' display={{base: 'none', lg: 'flex', lg: 'flex'}} >
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/webdemo/booking"}>APPOINTMENTS</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/webdemo/renting"}>RENTALS</NavLink>
           <NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/react-portfolio"}>ABOUT</NavLink>
@@ -83,9 +83,9 @@ function WebNav() {
           <Box display={userButtons}><NavLink style={({ isActive }) => { return isActive? { color: "gold", fontWeight: "bold" } : {} }} to={"/dashboard"}>DASHBOARD</NavLink></Box>
         </HStack>
         <Spacer />
-        <Box display={guestButtons}><Button onClick={onToggleLogin} display={{base: 'none', md: 'flex', lg: 'flex'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" >LOG IN</Button></Box>
-        <Box display={userButtons}><Button onClick={logoutProcedure} display={{base: 'none', md: 'flex', lg: 'flex'}} variant='outline' colorScheme='red' size='lg' marginRight="1.5rem" >LOG OUT</Button></Box>
-        <NavLink onClick={onToggleNav}><Button display={{base: 'flex', md: 'none', lg: 'none'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" ><FontAwesomeIcon icon={faBars} /></Button></NavLink>
+        <Box display={guestButtons}><Button onClick={onToggleLogin} display={{base: 'none', lg: 'flex', lg: 'flex'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" >LOG IN</Button></Box>
+        <Box display={userButtons}><Button onClick={logoutProcedure} display={{base: 'none', lg: 'flex', lg: 'flex'}} variant='outline' colorScheme='red' size='lg' marginRight="1.5rem" >LOG OUT</Button></Box>
+        <NavLink onClick={onToggleNav}><Button display={{base: 'flex', lg: 'none', lg: 'none'}} variant='outline' colorScheme='twitter' size='lg' marginRight="1.5rem" ><FontAwesomeIcon icon={faBars} /></Button></NavLink>
       </Flex>
       <Collapse in={isOpenNav} animateOpacity>
         <Box bg="white" padding="1.5rem" rounded='md' shadow='md'><VStack spacing='1.5rem' >

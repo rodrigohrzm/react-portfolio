@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { WebTitle } from './WebTitle'
 import { WebCard } from "./WebCard";
 import RentalInventory from '../../data/RentalInventory.json';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Box, Flex, Center, Grid, GridItem, Text, Heading,
          FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Button, VStack } from '@chakra-ui/react'
@@ -74,9 +75,48 @@ function WebRentalPage() {
               {classes.map((classOption, index) => (<option style={{ color: 'black' }} key={index} value={classOption}>{classOption}</option>))}
             </Select>
             <VStack display={{ base:'none', lg: 'inline'}} flexWrap='wrap' spacing='7' >
-              <Button  colorScheme='messenger' variant='outline' color='#0078ff' borderColor='#a2ceff' backgroundColor={selectedClass == '' ? '#d0e6ff' : ''} value="" onClick={handleClassFilterChange} w='14rem'>All</Button>
+              <Button colorScheme='messenger' variant='outline' color='#0078ff' borderColor='#a2ceff' backgroundColor={selectedClass == '' ? '#d0e6ff' : ''} value="" onClick={handleClassFilterChange} w='14rem'>All</Button>
                 {classes.map((classOption, index) => (
-              <Button colorScheme='messenger' variant='outline' color='#0078ff' borderColor='#a2ceff' backgroundColor={selectedClass == classOption ? '#d0e6ff' : ''} onClick={handleClassFilterChange} key={index} value={classOption} w='14rem'>{classOption}</Button>))}
+              <Button
+                w='14rem'
+                color={selectedClass == classOption ? '#0078ff' : 'white'}
+                borderColor='transparent'
+                backgroundColor={selectedClass == classOption ? '#d0e6ff' : '#1b3077'}
+                onClick={handleClassFilterChange}
+                key={index}
+                value={classOption}
+                boxSize="initial"
+                justifyContent="flex-start"
+                alignItems="center"
+                mb="1rem"
+                mx="auto"
+                py="1rem"
+                ps="1rem"
+                borderRadius="8"
+                _hover="none"
+                _active={{
+                  bg: "inherit",
+                  transform: "none",
+                  borderColor: "transparent",
+                }}
+                _focus={{
+                  boxShadow: "none",
+                }}
+              >
+                <Flex
+                bg={selectedClass == classOption ? '#0078ff' : 'white'}
+                color={selectedClass == classOption ? 'white' : '#0078ff'}
+                h="2rem"
+                w="2rem"
+                me="1rem"
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"8"}
+              >
+                {/* <FontAwesomeIcon icon={prop.icon} /> */}
+              </Flex>
+              {classOption}
+              </Button>))}
             </VStack>
           </FormLabel>
         </Flex>
