@@ -63,7 +63,7 @@ function WebCard(props) {
                 </ListItem>
             </List>
             <Text color='blue.600' fontSize='2xl'>
-              ${price} per day
+              {price}€ per day
             </Text>
           </Stack>
         </CardBody>
