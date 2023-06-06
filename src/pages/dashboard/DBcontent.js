@@ -24,8 +24,6 @@ import { Flex, Grid, Image, SimpleGrid, useColorModeValue } from "@chakra-ui/rea
 
 function DBcontent() {
 
-const iconBoxInside = useColorModeValue("white", "white");
-
 return(
 <Flex flexDirection='column' pt={{ base: "7.5rem", md: "4.5rem" }}>
     <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px'>
@@ -104,7 +102,7 @@ return(
     <DBdashProjects
         title={"DBdashProjects"}
         amount={30}
-        captions={["Companies", "Members", "Budget", "Completion"]}
+        captions={["Task", "Car", "Parts cost", "Completion"]}
         data={dashboardTableData}
     />
     <DBdashOrders

@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
 
 function RowProjects(props) {
-  const { logo, name, status, budget, progression } = props;
+  const { name, car, parts, progression, due } = props;
   const textColor = useColorModeValue("gray.700", "white");
   return (
     <Tr>
@@ -33,12 +33,17 @@ function RowProjects(props) {
       </Td>
       <Td>
         <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
-          {budget}
+          {car}
         </Text>
       </Td>
       <Td>
         <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
-          {status}
+          {parts}
+        </Text>
+      </Td>
+      <Td>
+        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+          {due}
         </Text>
       </Td>
       <Td>

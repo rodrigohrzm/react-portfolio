@@ -61,10 +61,10 @@ import {
                 <RowDBTable
                   key={row.name}
                   name={row.name}
-                  logo={row.logo}
-                  members={row.members}
-                  budget={row.budget}
+                  car={row.car}
+                  parts={row.parts}
                   progression={row.progression}
+                  due={row.due}
                 />
               );
             })}

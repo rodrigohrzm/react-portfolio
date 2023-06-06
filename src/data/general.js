@@ -5,72 +5,103 @@ import avatar3 from "../assets/images/users/avatar3.png";
 import avatar4 from "../assets/images/users/avatar4.png";
 import avatar5 from "../assets/images/users/avatar5.png";
 import avatar7 from "../assets/images/users/avatar7.png";
-import avatar8 from "../assets/images/users/avatar8.png";
-import avatar9 from "../assets/images/users/avatar9.png";
-import avatar10 from "../assets/images/users/avatar10.png";
-
-/* import {
-  AdobexdLogo,
-  AtlassianLogo,
-  InvisionLogo,
-  JiraLogo,
-  SlackLogo,
-  SpotifyLogo,
-} from "../pages/dashboard/elements/Icons";
-import { AiOutlineExclamation } from "react-icons/ai";
-import {
-  FaArrowDown,
-  FaArrowUp,
-  FaBell,
-  FaCreditCard,
-  FaFilePdf,
-  FaHtml5,
-  FaShoppingCart,
-} from "react-icons/fa";
-import { SiDropbox } from "react-icons/si"; */
 
 export const dashboardTableData = [
   {
-    // logo: AdobexdLogo,
-    name: "Purity UI Version",
-    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
-    budget: "$14,000",
+    car: "Toyota Prius",
+    name: "Battery replacement",
+    parts: "$14,000",
     progression: 60,
+    due: "2023-06-28",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
   },
   {
-    // logo: AtlassianLogo,
-    name: "Add Progress Track",
-    members: [avatar3, avatar2],
-    budget: "$3,000",
-    progression: 10,
-  },
-  {
-    // logo: SlackLogo,
-    name: "Fix Platform Errors",
-    members: [avatar10, avatar4],
-    budget: "Not set",
+    car: "Volkswagen Golf",
+    name: "Yearly inspection",
+    parts: "$195",
     progression: 100,
+    due: "2023-06-29",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
   },
   {
-    //logo: SpotifyLogo,
-    name: "Launch our Mobile App",
-    members: [avatar2, avatar3, avatar7, avatar8],
-    budget: "$32,000",
-    progression: 100,
+    car: "Tesla Model X",
+    name: "Door replacement",
+    parts: "$18,500",
+    progression: 11,
+    due: "2023-06-30",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
   },
   {
-    //logo: JiraLogo,
-    name: "Add the New Pricing Page",
-    members: [avatar10, avatar3, avatar7, avatar2, avatar8],
-    budget: "$400",
-    progression: 25,
+    car: "Subaru Impreza",
+    name: "Head gasket change",
+    parts: "$1,486",
+    progression: 33,
+    due: "2023-07-04",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
   },
   {
-    //logo: InvisionLogo,
-    name: "Redesign New Online Shop",
-    members: [avatar9, avatar3, avatar2],
-    budget: "$7,600",
+    car: "BMW 320i",
+    name: "Blinker fluid refill",
+    parts: "$420",
+    progression: 69,
+    due: "2023-07-09",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "Mazda RX-8",
+    name: "Engine rebuild",
+    parts: "$21,658",
     progression: 40,
+    due: "2023-07-21",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+  car: "Toyota Prius",
+  name: "Battery replacement",
+  parts: "$14,000",
+  progression: 60,
+  due: "2023-06-28",
+  members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "Volkswagen Golf",
+    name: "Yearly inspection",
+    parts: "$195",
+    progression: 100,
+    due: "2023-06-29",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "Tesla Model X",
+    name: "Door replacement",
+    parts: "$18,500",
+    progression: 11,
+    due: "2023-06-30",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "Subaru Impreza",
+    name: "Head gasket change",
+    parts: "$1,486",
+    progression: 33,
+    due: "2023-07-04",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "BMW 320i",
+    name: "Blinker fluid refill",
+    parts: "$420",
+    progression: 69,
+    due: "2023-07-09",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+  },
+  {
+    car: "Mazda RX-8",
+    name: "Engine rebuild",
+    parts: "$21,658",
+    progression: 40,
+    due: "2023-07-21",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
   },
 ];
 

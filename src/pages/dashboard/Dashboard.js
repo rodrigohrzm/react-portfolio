@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { NavLink, Outlet, useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-import RentalInventory from '../../data/RentalInventory.json';
-
-import IconBox from "./elements/IconBox";
 import { DBcontent } from './DBcontent';
 import { DBtables } from './DBtables';
 import { DBprofile } from './DBprofile';
 import { DBbilling } from './DBbilling';
 import DBsidebar from "./elements/DBsidebar";
 
-import { Box, Flex, Center, Grid, GridItem, Text, Heading, HStack, Button,
-  FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, VStack } from '@chakra-ui/react'
+import { Box, Flex, Center, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/react'
 
-  // cargar DBsidebar+DBsidebarContent dentro de la sidebar azul
   // llevar los links a LinksDashboard e importarlos en el hueco
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard

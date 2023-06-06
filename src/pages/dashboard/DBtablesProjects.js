@@ -44,10 +44,10 @@ import {
                   <RowProjects
                     key={row.name}
                     name={row.name}
-                    logo={row.logo}
-                    status={row.status}
-                    budget={row.budget}
+                    car={row.car}
+                    parts={row.parts}
                     progression={row.progression}
+                    due={row.due}
                   />
                 );
               })}
