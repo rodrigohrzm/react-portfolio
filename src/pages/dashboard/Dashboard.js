@@ -9,7 +9,7 @@ import { DBcontent } from './DBcontent';
 import { DBtables } from './DBtables';
 import { DBprofile } from './DBprofile';
 import { DBbilling } from './DBbilling';
-import DBsidebarContent from "./elements/DBsidebarContent";
+import DBsidebar from "./elements/DBsidebar";
 
 import { Box, Flex, Center, Grid, GridItem, Text, Heading, HStack, Button,
   FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, VStack } from '@chakra-ui/react'
@@ -36,10 +36,10 @@ const Dashboard = () => {
         <Flex paddingLeft='0.75rem' display={{ base:'none', lg: 'flex'}} justify={{base: 'center', lg: ''}} wrap='wrap'>
           <FormLabel padding='2rem'>
             <Heading paddingLeft='1.5rem' marginBottom="2rem" color='white' fontWeight='600' as='h4' size='sm'>NAVIGATION</Heading>
-            <DBsidebarContent/>
+            <DBsidebar/>
           </FormLabel>
         </Flex>
-        <Box marginX='auto' paddingTop='1rem' w={{base: '', pre: '40rem'}} align='center' justifyContent='center' display={{ base:'flex', lg: 'none'}} flexWrap='wrap'><DBsidebarContent/></Box>
+        <Box marginX='auto' paddingTop='1rem' w={{base: '', pre: '40rem'}} align='center' justifyContent='center' display={{ base:'flex', lg: 'none'}} flexWrap='wrap'><DBsidebar/></Box>
       </GridItem>
 
       <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}>

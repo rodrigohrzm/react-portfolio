@@ -1,62 +1,99 @@
-/*eslint-disable*/
+import React from "react";
+import { useLocation, NavLink } from 'react-router-dom';
+import {routes} from '../LinksDashboard';
+import { Button, Flex, Text, Box } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// chakra imports
-import {
-    Box, useColorModeValue
-  } from "@chakra-ui/react";
-  import React from "react";
-  import DBsidebarContent from "./DBsidebarContent";
-  
-  // FUNCTIONS
-  
-  function DBsidebar(props) {
-    // to check for active links and opened collapses
-    const mainPanel = React.useRef();
-    let variantChange = "0.2s linear";
-  
-    const { logoText, routes, sidebarVariant } = props;
-  
-    //  BRAND
-    //  Chakra Color Mode
-    let sidebarBg = "none";
-    let sidebarRadius = "0px";
-    let sidebarMargins = "0px";
-    if (sidebarVariant === "opaque") {
-      sidebarBg = useColorModeValue("white", "gray.700");
-      sidebarRadius = "16px";
-      sidebarMargins = "16px 0px 16px 16px";
-    }
-  
-    // SIDEBAR
-    return (
-      <Box ref={mainPanel}>
-        <Box display={{ base: "none", md: "block" }} position="fixed">
-          <Box
-            bg={sidebarBg}
-            transition={variantChange}
-            w="260px"
-            maxW="260px"
-            ms={{
-              sm: "16px",
+const DBsidebar = () => {
+
+  let location = useLocation();
+
+  const activeRoute = (routeName) => {
+    return location.pathname === routeName ? "active" : "";
+  };
+
+  const createLinks = routes.map((prop) => {
+      return (
+        <Box w="17rem" paddingX='1rem' borderRadius='8'>
+        <NavLink to={prop.layout + prop.path} key={prop.name}>
+        {activeRoute(prop.layout + prop.path) === "active" ? (
+          <Button
+            boxSize="initial"
+            justifyContent="flex-start"
+            alignItems="center"
+            bg="#d0e6ff"
+            mb="1rem"
+            mx="auto"
+            py="1rem"
+            ps="1rem"
+            borderRadius="8"
+            _hover="none"
+            w="100%"
+            _active={{
+              bg: "inherit",
+              transform: "none",
+              borderColor: "transparent",
             }}
-            my={{
-              sm: "16px",
+            _focus={{
+              boxShadow: "none",
             }}
-            h="calc(100vh - 32px)"
-            ps="20px"
-            pe="20px"
-            m={sidebarMargins}
-            borderRadius={sidebarRadius}
           >
-            <DBsidebarContent routes={routes}
-          logoText={"PURITY UI DASHBOARD"}
-          display="none"
-          sidebarVariant={sidebarVariant}
-          />
-          </Box>
-        </Box>
+              <Flex
+                bg="#0078ff"
+                color="white"
+                h="2rem"
+                w="2rem"
+                me="1rem"
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"8"}
+              >
+                <FontAwesomeIcon icon={prop.icon} />
+              </Flex>
+            <Text color='#0078ff'>{prop.name}</Text>
+          </Button>
+        ) : (
+          <Button
+            boxSize="initial"
+            justifyContent="flex-start"
+            alignItems="center"
+            bg="#1b3077"
+            mb="1rem"
+            mx="auto"
+            py="1rem"
+            ps="1rem"
+            borderRadius="8"
+            _hover="none"
+            w="100%"
+            _active={{
+              bg: "#1b3077",
+              transform: "none",
+              borderColor: "transparent",
+            }}
+            _focus={{
+              boxShadow: "none",
+            }}
+          >
+              <Flex
+                bg="white"
+                color="#0078ff"
+                h="2rem"
+                w="2rem"
+                me="1rem"
+                alignItems={"center"}
+                justifyContent={"center"}
+                borderRadius={"8"}
+              >
+              <FontAwesomeIcon icon={prop.icon} />
+              </Flex>
+            <Text color='white'>{prop.name}</Text>
+          </Button>
+        )}
+      </NavLink>
       </Box>
-    );
-  }
+    )});
+  ;
+  return createLinks;
+}
 
-  export default DBsidebar;
+export default DBsidebar
