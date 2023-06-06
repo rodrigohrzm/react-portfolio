@@ -63,18 +63,6 @@ import {
             {date}
           </Text>
         </Td>
-        <Td>
-          <Button p="0px" bg="transparent" variant="no-hover">
-            <Text
-              fontSize="md"
-              color="gray.400"
-              fontWeight="bold"
-              cursor="pointer"
-            >
-              Edit
-            </Text>
-          </Button>
-        </Td>
       </Tr>
     );
   }

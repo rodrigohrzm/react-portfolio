@@ -12,17 +12,16 @@ import {
   import Card from "./elements/DBcard.js";
   import RowTables from "./elements/RowTables.js";
   import React from "react";
-  
+
   const Authors = ({ title, captions, data }) => {
     const textColor = useColorModeValue("gray.700", "white");
     return (
       <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
-        <Card p='6px 0px 22px 0px'>
-          <Text fontSize='xl' color={textColor} fontWeight='bold'>
-            {title}
-          </Text>
-        </Card>
-        <Card>
+          <Card p='6px 0px 22px 0px'>
+            <Text fontSize='xl' color={textColor} fontWeight='bold'>
+              {title}
+            </Text>
+          </Card>
           <Table variant='simple' color={textColor}>
             <Thead>
               <Tr my='.8rem' pl='0px' color='gray.400'>
@@ -53,7 +52,6 @@ import {
             </Tbody>
           </Table>
         </Card>
-      </Card>
     );
   };
   

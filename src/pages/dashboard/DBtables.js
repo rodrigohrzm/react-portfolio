@@ -7,12 +7,7 @@ import { tablesTableData, dashboardTableData } from "../../data/general";
 
 function DBtables() {
   return (
-    <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
-      <DBtablesAuthors
-        title={"Authors Table"}
-        captions={["Author", "Function", "Status", "Employed", ""]}
-        data={tablesTableData}
-      />
+    <Flex w='100%' direction='column' pt="2.5rem">
       <DBtablesProjects
         title={"Projects Table"}
         captions={["Companies", "Budget", "Status", "Completion", ""]}

@@ -13,14 +13,14 @@ import {
   import Card from "./elements/DBcard.js";
   import RowProjects from "./elements/RowProjects";
   import React from "react";
-  
+
   const Projects = ({ title, captions, data }) => {
     const textColor = useColorModeValue("gray.700", "white");
     return (
-      <Card my='22px' overflowX={{ sm: "scroll", xl: "hidden" }}>
-        <Card p='6px 0px 22px 0px'>
+      <Card borderRadius='8px' bg='white' mx='2rem' overflowX={{ sm: "scroll", xl: "hidden" }}>
+        <Card p='0.5rem 0 1.5rem 0'>
           <Flex direction='column'>
-            <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
+            <Text m='1.5rem 0 0 2rem' fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
               {title}
             </Text>
           </Flex>
@@ -28,10 +28,10 @@ import {
         <Card>
           <Table variant='simple' color={textColor}>
             <Thead>
-              <Tr my='.8rem' pl='0px'>
+              <Tr my='.8rem'>
                 {captions.map((caption, idx) => {
                   return (
-                    <Th color='gray.400' key={idx} ps={idx === 0 ? "0px" : null}>
+                    <Th color='gray.400' key={idx} ps={idx === 0 ? "5rem" : null}>
                       {caption}
                     </Th>
                   );

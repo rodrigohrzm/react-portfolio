@@ -9,21 +9,23 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-//import { FaEllipsisV } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWrench } from '@fortawesome/free-solid-svg-icons'
 
 function RowProjects(props) {
   const { logo, name, status, budget, progression } = props;
   const textColor = useColorModeValue("gray.700", "white");
   return (
     <Tr>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
+      <Td minWidth={{ sm: "16rem" }} px='3rem' >
         <Flex alignItems="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Icon as={logo} h={"24px"} w={"24px"} me="18px" />
+          <FontAwesomeIcon h='1.5rem' w='1.5rem' me="1rem" icon={faWrench} />
           <Text
             fontSize="md"
             color={textColor}
             fontWeight="bold"
             minWidth="100%"
+            pl='1rem'
           >
             {name}
           </Text>
