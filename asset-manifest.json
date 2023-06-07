@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.73f6d1c9.css",
-    "main.js": "/react-portfolio/static/js/main.6b3e2166.js",
+    "main.js": "/react-portfolio/static/js/main.17fff72e.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/fordf150.jpg": "/react-portfolio/static/media/fordf150.7b4ad26b7820f51976d4.jpg",
     "static/media/banner.mp4": "/react-portfolio/static/media/banner.b9264282c0106590e2fc.mp4",
@@ -38,15 +38,12 @@
     "static/media/lexus.jpg": "/react-portfolio/static/media/lexus.6b84e981e0b30d639fc1.jpg",
     "static/media/hyundai.jpg": "/react-portfolio/static/media/hyundai.21e6ea3ab981464d09ba.jpg",
     "static/media/avatar1.png": "/react-portfolio/static/media/avatar1.9719f14554a45416b270.png",
-    "static/media/avatar10.png": "/react-portfolio/static/media/avatar10.9719f14554a45416b270.png",
     "static/media/avatar2.png": "/react-portfolio/static/media/avatar2.9719f14554a45416b270.png",
     "static/media/avatar3.png": "/react-portfolio/static/media/avatar3.9719f14554a45416b270.png",
     "static/media/avatar4.png": "/react-portfolio/static/media/avatar4.9719f14554a45416b270.png",
     "static/media/avatar5.png": "/react-portfolio/static/media/avatar5.9719f14554a45416b270.png",
     "static/media/avatar6.png": "/react-portfolio/static/media/avatar6.9719f14554a45416b270.png",
     "static/media/avatar7.png": "/react-portfolio/static/media/avatar7.9719f14554a45416b270.png",
-    "static/media/avatar8.png": "/react-portfolio/static/media/avatar8.9719f14554a45416b270.png",
-    "static/media/avatar9.png": "/react-portfolio/static/media/avatar9.9719f14554a45416b270.png",
     "static/media/tesla.jpg": "/react-portfolio/static/media/tesla.a9f707cdded761e665f3.jpg",
     "static/media/cupraformentor.jpg": "/react-portfolio/static/media/cupraformentor.af31cdf5e8fbc1250102.jpg",
     "static/media/audi.jpg": "/react-portfolio/static/media/audi.4c3b9b0d04c1d98170e3.jpg",
@@ -58,11 +55,11 @@
     "static/media/logo-white.svg": "/react-portfolio/static/media/logo-white.db174f3abf15e02cce0dfc1c14ccbd33.svg",
     "index.html": "/react-portfolio/index.html",
     "main.73f6d1c9.css.map": "/react-portfolio/static/css/main.73f6d1c9.css.map",
-    "main.6b3e2166.js.map": "/react-portfolio/static/js/main.6b3e2166.js.map",
+    "main.17fff72e.js.map": "/react-portfolio/static/js/main.17fff72e.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73f6d1c9.css",
-    "static/js/main.6b3e2166.js"
+    "static/js/main.17fff72e.js"
   ]
 }
