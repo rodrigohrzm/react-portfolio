@@ -1,37 +1,22 @@
-// Chakra imports
-import {
-    Flex,
-    Table,
-    Tbody,
-    Text,
-    Th,
-    Thead,
-    Tr,
-    useColorModeValue,
-  } from "@chakra-ui/react";
-  // Custom components
-  import Card from "./elements/DBcard.js";
-  import RowProjects from "./elements/RowProjects";
-  import React from "react";
+import { Flex, Table, Tbody, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import DBcard from "./elements/DBcard.js";
+import RowProjects from "./elements/RowProjects";
+import React from "react";
 
-  const Projects = ({ title, captions, data }) => {
-    const textColor = useColorModeValue("gray.700", "white");
+  const DBtablesProjects = ({ title, captions, data }) => {
     return (
-      <Card borderRadius='8px' bg='white' mx='2rem' overflowX={{ sm: "scroll", xl: "hidden" }}>
-        <Card p='0.5rem 0 1.5rem 0'>
+      <DBcard p='0.5rem 0 1.5rem 0' boxShadow='lg' borderRadius='8' bg='white' mx='2rem' overflowX={{ sm: "scroll", xl: "hidden" }}>
           <Flex direction='column'>
-            <Text m='1.5rem 0 0 2rem' fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
+            <Text textTransform='uppercase' m='1.5rem 0 0 2rem' fontSize='xl' color='#2c5282' fontWeight='bold' pb='.5rem'>
               {title}
             </Text>
           </Flex>
-        </Card>
-        <Card>
-          <Table variant='simple' color={textColor}>
+          <Table marginTop='1.5rem' variant='simple' color='#2c5282'>
             <Thead>
               <Tr my='.8rem'>
                 {captions.map((caption, idx) => {
                   return (
-                    <Th color='gray.400' key={idx} ps={idx === 0 ? "5rem" : null}>
+                    <Th color='#2b6cb0' key={idx} ps={idx === 0 ? "5rem" : null} fontSize='md' >
                       {caption}
                     </Th>
                   );
@@ -53,9 +38,7 @@ import {
               })}
             </Tbody>
           </Table>
-        </Card>
-      </Card>
+      </DBcard>
     );
   };
-  
-  export default Projects;
+export default DBtablesProjects;

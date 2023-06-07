@@ -51,7 +51,7 @@ function WebRentalPage() {
     >
       <GridItem rowSpan={{ base:'1', lg: '2'}} colSpan={{ base:'3', lg: '1'}} bg='#011968' w={{ base:'', lg: '18rem'}}>
         <Flex marginLeft={{base: '0', lg: '1rem'}} justify={{base: 'center', lg: ''}} wrap='wrap'>
-          <FormLabel paddingY={{ base:'2rem', lg: '1rem'}} marginTop={{ base:'0', lg: '3rem'}}>
+          <FormLabel paddingY={{ base:'2rem', lg: '1rem'}} marginTop={{ base:'0', lg: '1rem'}}>
             <Heading paddingLeft='0.5rem' marginBottom="0.5em" color='white' fontWeight='600' as='h4' size='sm'>FILTER BY PRICE</Heading>
             <Box
               backgroundColor='#1b3077'

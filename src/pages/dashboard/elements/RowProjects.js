@@ -1,20 +1,10 @@
 import React from "react";
-import {
-  Tr,
-  Td,
-  Flex,
-  Text,
-  Progress,
-  Icon,
-  Button,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Tr, Td, Flex, Text, Progress, Icon, Button, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faWrench, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 
 function RowProjects(props) {
   const { name, car, parts, progression, due } = props;
-  const textColor = useColorModeValue("gray.700", "white");
   return (
     <Tr>
       <Td minWidth={{ sm: "16rem" }} px='3rem' >
@@ -22,8 +12,8 @@ function RowProjects(props) {
           <FontAwesomeIcon h='1.5rem' w='1.5rem' me="1rem" icon={faWrench} />
           <Text
             fontSize="md"
-            color={textColor}
-            fontWeight="bold"
+            color='#1a202c'
+            fontWeight="600"
             minWidth="100%"
             pl='1rem'
           >
@@ -32,17 +22,17 @@ function RowProjects(props) {
         </Flex>
       </Td>
       <Td>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
           {car}
         </Text>
       </Td>
       <Td>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
           {parts}
         </Text>
       </Td>
       <Td>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
           {due}
         </Text>
       </Td>
@@ -50,21 +40,21 @@ function RowProjects(props) {
         <Flex direction="column">
           <Text
             fontSize="md"
-            color="teal.300"
-            fontWeight="bold"
+            color='#2b6cb0'
+            fontWeight="600"
             pb=".2rem"
           >{`${progression}%`}</Text>
           <Progress
-            colorScheme={progression === 100 ? "teal" : "cyan"}
+            colorScheme={progression === 100 ? "yellow" : "messenger"}
             size="xs"
             value={progression}
-            borderRadius="15px"
+            borderRadius="1rem"
           />
         </Flex>
       </Td>
       <Td>
-        <Button p="0px" bg="transparent">
-          <Icon color="gray.400" cursor="pointer" />
+        <Button color="gray.500" p="0" bg="transparent">
+          <FontAwesomeIcon icon={faEllipsisVertical} />
         </Button>
       </Td>
     </Tr>

@@ -100,7 +100,7 @@ return(
     templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
     gap='24px'>
     <DBdashProjects
-        title={"DBdashProjects"}
+        title={"Projects due"}
         amount={30}
         captions={["Task", "Car", "Parts cost", "Completion"]}
         data={dashboardTableData}
