@@ -1,12 +1,5 @@
   import ChartBar from "./elements/ChartBar";
   import ChartLine from "./elements/ChartLine";
-  // Custom icons
-/*   import {
-    CartIcon,
-    DocumentIcon,
-    GlobeIcon,
-    WalletIcon,
-  } from "../dashboard/elements/Icons.js"; */
   import { dashboardTableData, timelineData } from "../../data/general";
   import DBdashUsers from "./DBdashUsers";
   import DBdashMinistats from "./DBdashMinistats";
@@ -21,8 +14,8 @@ import { Flex, Grid, Box, SimpleGrid } from "@chakra-ui/react";
 function DBcontent() {
 
 return(
-<Flex direction='column' pt={{ base: "7.5rem", md: "4.5rem" }}>
-    <SimpleGrid columns={{ base: 1, sm: 2, xl: 4 }} spacing='24px'>
+<Flex direction='column' pt="4.5rem">
+    <SimpleGrid columns={{ base: 1, kid: 2, xl: 4 }} spacing='1.5rem'>
     <DBdashMinistats
         title={"Weekly earnings"}
         amount={"$53,000"}
@@ -51,31 +44,32 @@ return(
     <Grid
     templateColumns={{ sm: "1fr", xl: "1.3fr 1.7fr" }}
     templateRows={{ sm: "repeat(2, 1fr)", xl: "1fr" }}
-    gap='24px'
-    mb={{ lg: "26px" }}>
-    <DBdashUsers
-        title={"Active Users"}
-        percentage={23}
-        chart={<ChartBar />}
-    />
+    gap='1.5rem'
+    mb={{ lg: "1.5rem" }}>
     <DBdashSales
         title={"Sales Overview"}
         percentage={5}
         chart={<ChartLine />}
     />
+    <DBdashUsers
+        title={"Active Users"}
+        percentage={23}
+        chart={<ChartBar />}
+    />
     </Grid>
     <Grid
     templateColumns={{ sm: "1fr", xl: "2fr 1fr" }}
     templateRows={{ sm: "1fr auto", xl: "1fr" }}
-    gap='24px'>
+    gap='1.5rem'>
     <DBdashProjects
         title={"Projects due"}
         amount={30}
         captions={["Task", "Car", "Parts cost", "Completion"]}
         data={dashboardTableData}
     />
-    <Box align='left' ><DBdashOrders
-        title={"Rental Bookings"}
+    <Box align='left' w='100%'>
+    <DBdashOrders
+        title={"Rental Return Dates"}
         amount={30}
         data={timelineData}
     /></Box>

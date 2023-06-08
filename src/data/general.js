@@ -107,39 +107,34 @@ export const dashboardTableData = [
 
 export const timelineData = [
   {
-    //logo: FaBell,
-    title: "$2400, Design changes",
-    date: "22 DEC 7:20 PM",
-    color: "teal.300",
+    title: "Honda Civic",
+    date: "22 JUL 7:20 PM",
+    color: "red",
   },
   {
-    //logo: FaHtml5,
-    title: "New order #4219423",
-    date: "21 DEC 11:21 PM",
-    color: "orange",
+    title: "Cupra Formentor",
+    date: "21 JUL 11:21 PM",
+    color: "tomato",
   },
   {
-    //logo: FaShoppingCart,
-    title: "Server Payments for April",
-    date: "21 DEC 9:28 PM",
-    color: "blue.400",
+    title: "Hyundai Tucson",
+    date: "21 JUL 9:28 PM",
+    color: "green",
   },
   {
-    //logo: FaCreditCard,
-    title: "New card added for order #3210145",
-    date: "20 DEC 3:52 PM",
-    color: "orange.300",
+    title: "M. Benz B-Class",
+    date: "20 JUL 3:52 PM",
+    color: "grey",
   },
   {
-    //logo: SiDropbox,
-    title: "Unlock packages for Development",
-    date: "19 DEC 11:35 PM",
-    color: "purple",
+    title: "Ford F-150",
+    date: "19 JUL 11:35 PM",
+    color: "blue",
   },
   {
-    //logo: AdobexdLogo,
-    title: "New order #9851258",
-    date: "18 DEC 4:41 PM",
+    title: "Tesla Model 3",
+    date: "18 JUL 4:41 PM",
+    color: "red"
   },
 ];
 

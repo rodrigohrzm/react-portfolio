@@ -1,4 +1,4 @@
-import { Flex, Table, Tbody, Text, Th, Thead, Tr, Button } from "@chakra-ui/react";
+import { Flex, Table, Tbody, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import DBcard from "./elements/DBcard.js";
 import RowDBTable from "./elements/RowDBTable";
 import React from "react";

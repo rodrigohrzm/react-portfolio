@@ -1,30 +1,20 @@
-// Chakra imports
-import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-// Custom components
+import React from "react";
+import { Flex, Text } from "@chakra-ui/react";
 import DBcard from "./elements/DBcard.js";
 import RowTimeline from "./elements/RowTimeline";
-import React from "react";
+import { NavLink } from 'react-router-dom';
 
-const DBdashOrders = ({ title, amount, data }) => {
-  const textColor = useColorModeValue("gray.700", "white");
+const DBdashOrders = ({ title, data }) => {
 
   return (
-    <DBcard maxH='100%'>
-      <DBcard p='22px 0px 35px 14px'>
+    <NavLink to={"/dashboard/bookings"}>
+    <DBcard boxShadow={{base: 'lg', xl: 'none'}} borderRadius={{base: '8', xl: 'none'}} bg={{base: 'white', xl: 'none'}} p='2.5rem 2rem 1.75rem 2rem' overflowX={{ base: "scroll", xl: "hidden" }} >
         <Flex direction='column'>
-          <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
+          <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold' pb='2.5rem'>
             {title}
           </Text>
-          <Text fontSize='sm' color='gray.400' fontWeight='normal'>
-            <Text fontWeight='bold' as='span' color='teal.300'>
-              {`${amount}%`}
-            </Text>{" "}
-            this month.
-          </Text>
         </Flex>
-      </DBcard>
-      <DBcard ps='20px' pe='0px' mb='31px' position='relative'>
-        <Flex direction='column'>
+        <Flex ps='1.25rem' position='relative' direction='column'>
           {data.map((row, index, arr) => {
             return (
               <RowTimeline
@@ -39,8 +29,8 @@ const DBdashOrders = ({ title, amount, data }) => {
             );
           })}
         </Flex>
-      </DBcard>
     </DBcard>
+  </NavLink>
   );
 };
 

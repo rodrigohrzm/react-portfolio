@@ -8,9 +8,10 @@ import { DBprofile } from './DBprofile';
 import { DBbilling } from './DBbilling';
 import DBsidebar from "./elements/DBsidebar";
 
-import { Box, Flex, Center, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/react'
 
   // llevar los links a LinksDashboard e importarlos en el hueco
+  // fechas de alquiler llevar al JSON
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
   // https://nekocalc.com/px-to-rem-converter

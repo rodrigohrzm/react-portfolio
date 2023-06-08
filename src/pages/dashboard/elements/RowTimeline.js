@@ -1,37 +1,44 @@
-import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
+import { Box, Flex, Center, Text, SimpleGrid } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCar } from '@fortawesome/free-solid-svg-icons'
 
 function RowTimeline(props) {
-  const { logo, title, date, color, index, arrLength } = props;
-  const textColor = useColorModeValue("gray.700", "white.300");
-  const bgIconColor = useColorModeValue("white.300", "gray.700");
+  const { title, date, color, index, arrLength } = props;
 
   return (
-    <Flex alignItems="center" minH="78px" justifyContent="start" mb="5px">
-      <Flex direction="column" h="100%">
-        <Icon
-          as={logo}
-          bg={bgIconColor}
-          color={color}
-          h={"30px"}
-          w={"26px"}
-          pe="6px"
-          zIndex="1"
-          position="relative"
-          right={document.documentElement.dir === "rtl" ? "-8px" : ""}
-          left={document.documentElement.dir === "rtl" ? "" : "-8px"}
-        />
+    <Flex alignItems="center" minH="5rem" justifyContent="start" >
+      <Flex direction="column" h="100%" mt={index === arrLength - 1 ? "-1.5rem" : "0"}>
+        <Center
+            bg="white"
+            h="2rem"
+            w="2rem"
+            zIndex="1"
+            marginLeft='-1rem'
+            border='2px'
+            borderRadius='8'
+            borderColor={color}
+        >
+          <FontAwesomeIcon icon={faCar} color='#121212' />
+        </Center>
         <Box
           w="2px"
-          bg="gray.200"
-          h={index === arrLength - 1 ? "15px" : "100%"}
+          bg={{base: 'gray.200', xl: 'gray.400'}}
+          h={index === arrLength - 1 ? "1.5rem" : "3rem"}
         ></Box>
       </Flex>
-      <Flex direction="column" justifyContent="flex-start" h="100%">
-        <Text fontSize="sm" color={textColor} fontWeight="bold">
+      <Flex
+          w='10rem'
+          ml='1.5rem'
+          mt='-3rem'
+          direction="column"
+          justifyContent="flex-start"
+          h="100%"
+        >
+        <Text fontSize="md" color='#2b6cb0' fontWeight="bold">
           {title}
         </Text>
-        <Text fontSize="sm" color="gray.400" fontWeight="normal">
+        <Text fontSize="sm" color="#121212" fontWeight="normal">
           {date}
         </Text>
       </Flex>

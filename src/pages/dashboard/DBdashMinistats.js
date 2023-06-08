@@ -7,23 +7,24 @@ import {
     StatNumber,
     useColorModeValue,
   } from "@chakra-ui/react";
-  // Custom components
   import DBcard from "./elements/DBcard";
   import IconBox from "./elements/IconBox";
   import React from "react";
-  
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  import { faCar } from '@fortawesome/free-solid-svg-icons'
+
   const DBdashMinistats = ({ title, amount, percentage, icon }) => {
     const iconTeal = useColorModeValue("teal.300", "teal.300");
     const textColor = useColorModeValue("gray.700", "white");
-  
+
     return (
-      <DBcard minH='83px'>
-        <DBcard>
+      <DBcard boxShadow='lg' borderRadius='8' bg='white' p='1.25rem 2rem' minH='83px'>
           <Flex flexDirection='row' align='center' justify='center' w='100%'>
             <Stat me='auto'>
               <StatLabel
                 fontSize='sm'
-                color='gray.400'
+                color='#2c5282'
+                textTransform='uppercase'
                 fontWeight='bold'
                 pb='.1rem'>
                 {title}
@@ -48,9 +49,8 @@ import {
               {icon}
             </IconBox>
           </Flex>
-        </DBcard>
       </DBcard>
     );
   };
-  
-  export default DBdashMinistats;
+
+export default DBdashMinistats;
