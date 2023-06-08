@@ -38,14 +38,14 @@ const Dashboard = () => {
       </GridItem>
 
       <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}>
-        <Center flexWrap='wrap'>
+        <Box flexWrap='wrap'  paddingX='1.5rem'>
           <Routes>
             <Route index element={<DBcontent />} />
             <Route path="projects" element={<DBtables />} />
             <Route path="bookings" element={<DBprofile />} />
             <Route path="earnings" element={<DBbilling />} />
           </Routes>
-        </Center>
+        </Box>
       </GridItem>
 
       <GridItem colSpan={{ base:'3', lg: '5'}} bg='white' borderRadius='0'>
