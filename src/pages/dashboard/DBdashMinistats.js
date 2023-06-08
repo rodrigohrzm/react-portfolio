@@ -1,36 +1,24 @@
-// Chakra imports
-import {
-    Flex,
-    Stat,
-    StatHelpText,
-    StatLabel,
-    StatNumber,
-    useColorModeValue,
-  } from "@chakra-ui/react";
+import { Flex, Stat, StatHelpText, StatLabel, StatNumber, Center } from "@chakra-ui/react";
   import DBcard from "./elements/DBcard";
-  import IconBox from "./elements/IconBox";
   import React from "react";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { faCar } from '@fortawesome/free-solid-svg-icons'
 
   const DBdashMinistats = ({ title, amount, percentage, icon }) => {
-    const iconTeal = useColorModeValue("teal.300", "teal.300");
-    const textColor = useColorModeValue("gray.700", "white");
 
     return (
-      <DBcard boxShadow='lg' borderRadius='8' bg='white' p='1.25rem 2rem' minH='83px'>
+      <DBcard boxShadow='md' borderRadius='8' bg='white' p='1.25rem 2rem' minH='83px'>
           <Flex flexDirection='row' align='center' justify='center' w='100%'>
             <Stat me='auto'>
               <StatLabel
                 fontSize='sm'
-                color='#2c5282'
+                color='#2b6cb0'
                 textTransform='uppercase'
                 fontWeight='bold'
                 pb='.1rem'>
                 {title}
               </StatLabel>
               <Flex>
-                <StatNumber fontSize='lg' color={textColor}>
+                <StatNumber fontSize='lg' color='#444444'>
                   {amount}
                 </StatNumber>
                 <StatHelpText
@@ -45,9 +33,9 @@ import {
                 </StatHelpText>
               </Flex>
             </Stat>
-            <IconBox as='box' h={"45px"} w={"45px"} bg={iconTeal}>
-              {icon}
-            </IconBox>
+            <Center h="3rem" w="3rem" background='messenger.400' borderRadius='8'>
+              <FontAwesomeIcon color='white' size='xl' icon={icon} />
+            </Center>
           </Flex>
       </DBcard>
     );

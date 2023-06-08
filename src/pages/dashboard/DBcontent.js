@@ -6,6 +6,7 @@
   import DBdashOrders from "./DBdashOrders";
   import DBdashProjects from "./DBdashProjects";
   import DBdashSales from "./DBdashSales";
+  import { faCoins, faUser, faMagnifyingGlass, faPhoneVolume  } from '@fortawesome/free-solid-svg-icons'
 
 import React from 'react';
 
@@ -14,31 +15,31 @@ import { Flex, Grid, Box, SimpleGrid } from "@chakra-ui/react";
 function DBcontent() {
 
 return(
-<Flex direction='column' pt="4.5rem">
+<Flex direction='column' pt="3rem">
     <SimpleGrid columns={{ base: 1, kid: 2, xl: 4 }} spacing='1.5rem'>
     <DBdashMinistats
         title={"Weekly earnings"}
-        amount={"$53,000"}
+        amount={"42.500€"}
         percentage={55}
-        //icon={<WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        icon={faCoins}
     />
     <DBdashMinistats
         title={"Weekly customers"}
-        amount={"2,300"}
-        percentage={5}
-        //icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        amount={"33"}
+        percentage={10}
+        icon={faUser}
     />
     <DBdashMinistats
         title={"Weekly web visits"}
-        amount={"+3,020"}
+        amount={"+1.220"}
         percentage={-14}
-        //icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        icon={faMagnifyingGlass}
     />
     <DBdashMinistats
         title={"Weekly phonecalls"}
-        amount={"$173,000"}
+        amount={"9"}
         percentage={8}
-        //icon={<CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        icon={faPhoneVolume}
     />
     </SimpleGrid>
     <Grid

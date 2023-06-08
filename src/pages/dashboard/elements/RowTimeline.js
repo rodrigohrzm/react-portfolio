@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Center, Text, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Center, Text } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar } from '@fortawesome/free-solid-svg-icons'
 
@@ -19,7 +19,7 @@ function RowTimeline(props) {
             borderRadius='8'
             borderColor={color}
         >
-          <FontAwesomeIcon icon={faCar} color='#121212' />
+          <FontAwesomeIcon icon={faCar} color='#444444' />
         </Center>
         <Box
           w="2px"
@@ -35,11 +35,11 @@ function RowTimeline(props) {
           justifyContent="flex-start"
           h="100%"
         >
-        <Text fontSize="md" color='#2b6cb0' fontWeight="bold">
-          {title}
-        </Text>
-        <Text fontSize="sm" color="#121212" fontWeight="normal">
+        <Text fontSize="md" color='#2b6cb0' fontWeight="600" textDecoration='uppercase'>
           {date}
+        </Text>
+        <Text fontSize="sm" color="#444444" fontWeight="600">
+          {title}
         </Text>
       </Flex>
     </Flex>

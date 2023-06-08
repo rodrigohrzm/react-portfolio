@@ -30,7 +30,7 @@ const DBdashProjects = ({ title, amount, captions, data }) => {
               })}
             </Tr>
           </Thead>
-          <Tbody color='#1a202c'>
+          <Tbody color='#444444'>
             {data.slice(0, 6).map((row) => {
               return (
                 <RowDBTable

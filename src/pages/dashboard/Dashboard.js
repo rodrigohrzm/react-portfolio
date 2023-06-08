@@ -38,8 +38,8 @@ const Dashboard = () => {
         <Box marginX='auto' paddingTop='1rem' w={{base: '', pre: '40rem'}} align='center' justifyContent='center' display={{ base:'flex', lg: 'none'}} flexWrap='wrap'><DBsidebar/></Box>
       </GridItem>
 
-      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}>
-        <Box flexWrap='wrap'  paddingX='1.5rem'>
+      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}  mb='3rem'>
+        <Box flexWrap='wrap'  paddingX='2rem'>
           <Routes>
             <Route index element={<DBcontent />} />
             <Route path="projects" element={<DBtables />} />

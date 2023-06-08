@@ -12,7 +12,7 @@ function RowProjects(props) {
           <FontAwesomeIcon h='1.5rem' w='1.5rem' me="1rem" icon={faWrench} />
           <Text
             fontSize="md"
-            color='#1a202c'
+            color='#444444'
             fontWeight="600"
             minWidth="100%"
             pl='1rem'
@@ -22,17 +22,17 @@ function RowProjects(props) {
         </Flex>
       </Td>
       <Td>
-        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
+        <Text fontSize="md" color='#444444' fontWeight="600" pb=".5rem">
           {car}
         </Text>
       </Td>
       <Td>
-        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
+        <Text fontSize="md" color='#444444' fontWeight="600" pb=".5rem">
           {parts}
         </Text>
       </Td>
       <Td>
-        <Text fontSize="md" color='#1a202c' fontWeight="600" pb=".5rem">
+        <Text fontSize="md" color='#444444' fontWeight="600" pb=".5rem">
           {due}
         </Text>
       </Td>

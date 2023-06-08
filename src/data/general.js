@@ -107,24 +107,9 @@ export const dashboardTableData = [
 
 export const timelineData = [
   {
-    title: "Honda Civic",
-    date: "22 JUL 7:20 PM",
-    color: "red",
-  },
-  {
-    title: "Cupra Formentor",
-    date: "21 JUL 11:21 PM",
-    color: "tomato",
-  },
-  {
-    title: "Hyundai Tucson",
-    date: "21 JUL 9:28 PM",
-    color: "green",
-  },
-  {
-    title: "M. Benz B-Class",
-    date: "20 JUL 3:52 PM",
-    color: "grey",
+    title: "Tesla Model 3",
+    date: "18 JUL 4:41 PM",
+    color: "red"
   },
   {
     title: "Ford F-150",
@@ -132,9 +117,24 @@ export const timelineData = [
     color: "blue",
   },
   {
-    title: "Tesla Model 3",
-    date: "18 JUL 4:41 PM",
-    color: "red"
+    title: "M. Benz B-Class",
+    date: "20 JUL 3:52 PM",
+    color: "grey",
+  },
+  {
+    title: "Hyundai Tucson",
+    date: "21 JUL 9:28 PM",
+    color: "green",
+  },
+  {
+    title: "Cupra Formentor",
+    date: "22 JUL 11:21 PM",
+    color: "tomato",
+  },
+  {
+    title: "Honda Civic",
+    date: "23 JUL 7:20 PM",
+    color: "red",
   },
 ];
 
