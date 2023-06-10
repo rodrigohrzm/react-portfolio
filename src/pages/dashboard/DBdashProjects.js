@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom';
 const DBdashProjects = ({ title, amount, captions, data }) => {
     return (
       <NavLink to={"/dashboard/projects"}>
-      <DBcard boxShadow='lg' borderRadius='8' bg='white' p='2.5rem 2rem 1.75rem 2rem' overflowX={{ sm: "scroll", xl: "hidden" }}>
+      <DBcard  w={{ sm: "", xl: '150%' }} boxShadow='lg' borderRadius='8' bg='white' p='2.5rem 2rem 1.75rem 2rem' overflowX={{ base: "scroll", xl: "hidden" }}>
           <Flex direction='row' mb='2rem'>
             <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold'>
               {title}
             </Text>
-            <Flex mx='1rem' align='center'>
+            <Flex mx='1rem' mt='0.25rem' align='center'>
               <Text fontSize='sm' color='gray.500' fontWeight='normal'>
                 <Text fontWeight='600' as='span'>{amount} done</Text>{" "}this month.
               </Text>

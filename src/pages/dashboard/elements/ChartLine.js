@@ -2,7 +2,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { lineChartData, lineChartOptions } from "../../../data/charts";
 
-class LineChart extends React.Component {
+class ChartLine extends React.Component {
   constructor(props) {
     super(props);
 
@@ -32,4 +32,4 @@ class LineChart extends React.Component {
   }
 }
 
-export default LineChart;
+export default ChartLine;

@@ -25,7 +25,7 @@ import { Flex, Stat, StatHelpText, StatLabel, StatNumber, Center } from "@chakra
                   alignSelf='flex-end'
                   justifySelf='flex-end'
                   m='0px'
-                  color={percentage > 0 ? "green.400" : "red.400"}
+                  color={percentage > 0 ? "green.400" : "red.600"}
                   fontWeight='bold'
                   ps='3px'
                   fontSize='md'>

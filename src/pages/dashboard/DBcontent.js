@@ -10,7 +10,7 @@
 
 import React from 'react';
 
-import { Flex, Grid, Box, SimpleGrid } from "@chakra-ui/react";
+import { Flex, Grid, SimpleGrid } from "@chakra-ui/react";
 
 function DBcontent() {
 
@@ -38,43 +38,42 @@ return(
     <DBdashMinistats
         title={"Weekly phonecalls"}
         amount={"9"}
-        percentage={8}
+        percentage={12.5}
         icon={faPhoneVolume}
     />
     </SimpleGrid>
     <Grid
     templateColumns={{ sm: "1fr", xl: "1.3fr 1.7fr" }}
     templateRows={{ sm: "repeat(2, 1fr)", xl: "1fr" }}
-    gap='1.5rem'
-    mb={{ lg: "1.5rem" }}>
+    gap='2rem'
+    my={{ base: '2rem', xl: "3rem" }}>
     <DBdashSales
         title={"Sales Overview"}
-        percentage={5}
+        percentage={10}
         chart={<ChartLine />}
     />
     <DBdashUsers
-        title={"Active Users"}
+        title={"Activity"}
         percentage={23}
         chart={<ChartBar />}
     />
     </Grid>
-    <Grid
-    templateColumns={{ sm: "1fr", xl: "2fr 1fr" }}
-    templateRows={{ sm: "1fr auto", xl: "1fr" }}
-    gap='1.5rem'>
+    <SimpleGrid
+    columns={{ base: 1, xl: 2 }}
+    spacing='2rem'>
     <DBdashProjects
         title={"Projects due"}
         amount={30}
         captions={["Task", "Car", "Parts cost", "Completion"]}
         data={dashboardTableData}
     />
-    <Box align='left' w='100%'>
+
     <DBdashOrders
         title={"Rental Return Dates"}
         amount={30}
         data={timelineData}
-    /></Box>
-    </Grid>
+    />
+    </SimpleGrid>
 </Flex>
 );
 };

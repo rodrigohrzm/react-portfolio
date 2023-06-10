@@ -1,67 +1,54 @@
 // Chakra imports
 import { Flex, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
-// Custom components
 import DBcard from "./elements/DBcard";
-// Custom icons
-/* import {
-  CartIcon,
-  RocketIcon,
-  StatsIcon,
-  WalletIcon,
-} from "./elements/Icons.js"; */
 import React from "react";
 import DBdashStats from "./DBdashStats";
+import { faCalendar, faUser, faMoneyBillWave, faArrowPointer  } from '@fortawesome/free-solid-svg-icons'
 
 const DBdashUsers = ({ title, percentage, chart }) => {
-  const iconBoxInside = useColorModeValue("white", "white");
-  const textColor = useColorModeValue("gray.700", "white");
   return (
-    <DBcard p='16px'>
-      <DBcard>
+    <DBcard boxShadow='lg' borderRadius='8' bg='white' p='2rem' overflowX={{ base: "scroll", xl: "hidden" }}>
         <Flex direction='column' w='100%'>
           {chart}
-          <Flex direction='column' mt='24px' mb='36px' alignSelf='flex-start'>
-            <Text fontSize='lg' color={textColor} fontWeight='bold' mb='6px'>
+          <Flex direction='row' alignSelf='flex-start' my='2rem'>
+            <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold'>
               {title}
             </Text>
-            <Text fontSize='md' fontWeight='medium' color='gray.400'>
-              <Text
-                as='span'
-                color={percentage > 0 ? "green.400" : "red.400"}
-                fontWeight='bold'>
-                {percentage > 0 ? `+${percentage}%` : `-${percentage}%`}
-              </Text>{" "}
-              than last week
-            </Text>
+            <Flex mx='1rem' mt='0.25rem'>
+              <Text fontSize='sm' color='gray.500' fontWeight='normal'>
+                <Text as='span' color={percentage > 0 ? "green.400" : "red.600"} fontWeight='bold'>
+                  {percentage > 0 ? `+${percentage}%` : `-${percentage}%`}
+                </Text>{" "} than last week
+              </Text>
+            </Flex>
           </Flex>
           <SimpleGrid gap={{ sm: "12px" }} columns={4}>
             <DBdashStats
-              title={"Users"}
-              amount={"32,984"}
-              percentage={20}
-              //icon={<WalletIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              title={"Visitors"}
+              amount={"8,714"}
+              percentage={14}
+              icon={faUser}
             />
             <DBdashStats
-              title={"Clicks"}
-              amount={"2.42m"}
+              title={"Appointments"}
+              amount={"54"}
               percentage={80}
-              //icon={<RocketIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              icon={faCalendar}
             />
             <DBdashStats
-              title={"Sales"}
-              amount={"2,400$"}
+              title={"Rentals"}
+              amount={"2,400€"}
               percentage={30}
-              //icon={<CartIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              icon={faMoneyBillWave}
             />
             <DBdashStats
-              title={"Items"}
-              amount={"320"}
+              title={"Ads revenue"}
+              amount={"890€"}
               percentage={40}
-              //icon={<StatsIcon h={"15px"} w={"15px"} color={iconBoxInside} />}
+              icon={faArrowPointer}
             />
           </SimpleGrid>
         </Flex>
-      </DBcard>
     </DBcard>
   );
 };

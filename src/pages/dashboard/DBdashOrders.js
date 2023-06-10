@@ -8,8 +8,8 @@ const DBdashOrders = ({ title, data }) => {
 
   return (
     <NavLink to={"/dashboard/bookings"}>
-    <DBcard boxShadow={{base: 'lg', xl: 'none'}} borderRadius={{base: '8', xl: 'none'}} bg={{base: 'white', xl: 'none'}} p='2.5rem 2rem 1.75rem 2rem' overflowX={{ base: "scroll", xl: "hidden" }} >
-        <Flex direction='column'>
+    <DBcard ml={{ sm: "", xl: '50%' }} boxShadow={{base: 'lg', xl: 'none'}} borderRadius={{base: '8', xl: 'none'}} bg={{base: 'white', xl: 'none'}} p='2.5rem 2rem 1.75rem 2rem' overflowX={{ base: "scroll", xl: "hidden" }} >
+        <Flex direction='column' w='100%'>
           <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold' pb='2.5rem'>
             {title}
           </Text>

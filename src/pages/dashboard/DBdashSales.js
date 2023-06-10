@@ -1,33 +1,27 @@
-// Chakra imports
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
-// Custom components
+import { Box, Flex, Text } from "@chakra-ui/react";
 import DBcard from "./elements/DBcard.js";
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
 const DBdashSales = ({ title, percentage, chart }) => {
-  const textColor = useColorModeValue("gray.700", "white");
   return (
-    <DBcard p='28px 10px 16px 0px' mb={{ sm: "26px", lg: "0px" }}>
-      <DBcard mb='20px' pl='22px'>
-        <Flex direction='column' alignSelf='flex-start'>
-          <Text fontSize='lg' color={textColor} fontWeight='bold' mb='6px'>
+    <NavLink to={"/dashboard/earnings"}>
+    <DBcard boxShadow={{base: 'lg', xl: 'none'}} borderRadius='8' bg={{base: 'white', xl: 'none'}} p='2rem' overflowX={{ base: "scroll", xl: "hidden" }}>
+        <Flex direction='row' alignSelf='flex-start'>
+          <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold'>
             {title}
           </Text>
-          <Text fontSize='md' fontWeight='medium' color='gray.400'>
-            <Text
-              as='span'
-              color={percentage > 0 ? "green.400" : "red.400"}
-              fontWeight='bold'>
-              {`${percentage}%`} more
-            </Text>{" "}
-            in 2021
-          </Text>
+          <Flex mx='1rem' mt='0.15rem' align='center'>
+            <Text fontSize='sm' fontWeight='normal' color='gray.500'>
+              <Text as='span' color={percentage > 0 ? "green.400" : "red.400"} fontWeight='bold'>{`${percentage}%`} more</Text>{" "} year over year.
+            </Text>
+          </Flex>
         </Flex>
-      </DBcard>
-      <Box w='100%' h={{ sm: "300px" }} ps='8px'>
+      <Box w='100%' h="20rem">
         {chart}
       </Box>
     </DBcard>
+    </NavLink>
   );
 };
 

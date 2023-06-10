@@ -3,7 +3,7 @@ import DBcard from "./DBcard";
 import Chart from "react-apexcharts";
 import { barChartData, barChartOptions } from "../../../data/charts";
 
-class BarChart extends Component {
+class ChartBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +27,7 @@ class BarChart extends Component {
         width="100%"
         bg="linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)"
         position="relative"
+        borderRadius='8'
       >
         <Chart
           options={this.state.chartOptions}
@@ -40,4 +41,4 @@ class BarChart extends Component {
   }
 }
 
-export default BarChart;
+export default ChartBar;

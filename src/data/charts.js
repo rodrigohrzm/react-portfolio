@@ -85,12 +85,12 @@ export const barChartData = [
 
   export const lineChartData = [
     {
-      name: "Mobile apps",
-      data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+      name: "Rental revenue",
+      data: [400, 240, 300, 400, 250, 450, 550, 600, 500],
     },
     {
-      name: "Websites",
-      data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+      name: "Repairs revenue",
+      data: [230, 290, 240, 240, 290, 290, 340, 0, 300],
     },
   ];
 
@@ -101,7 +101,7 @@ export const barChartData = [
       },
     },
     tooltip: {
-      theme: "dark",
+      theme: "light",
     },
     dataLabels: {
       enabled: false,
@@ -127,7 +127,7 @@ export const barChartData = [
       ],
       labels: {
         style: {
-          colors: "#c8cfca",
+          colors: "#444444",
           fontSize: "12px",
         },
       },
@@ -135,7 +135,7 @@ export const barChartData = [
     yaxis: {
       labels: {
         style: {
-          colors: "#c8cfca",
+          colors: "#444444",
           fontSize: "12px",
         },
       },
@@ -152,13 +152,13 @@ export const barChartData = [
         shade: "light",
         type: "vertical",
         shadeIntensity: 0.5,
-        gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+        gradientToColors: undefined,
         inverseColors: true,
         opacityFrom: 0.8,
         opacityTo: 0,
         stops: [],
       },
-      colors: ["#4FD1C5", "#2D3748"],
+      colors: ["#2e90ff", "#ffd700"],
     },
-    colors: ["#4FD1C5", "#2D3748"],
+    colors: ["#2e90ff", "#ffd700"],
   };

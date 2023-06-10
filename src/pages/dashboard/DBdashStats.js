@@ -1,29 +1,25 @@
-import { Flex, Progress, Text, useColorModeValue } from "@chakra-ui/react";
-import IconBox from "./elements/IconBox";
+import { Center, Flex, Progress, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DBdashStats = ({ title, amount, icon, percentage }) => {
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
-  const iconBoxInside = useColorModeValue("white", "white");
-  const textColor = useColorModeValue("gray.700", "white");
-  const overlayRef = React.useRef();
   return (
     <Flex direction='column'>
       <Flex alignItems='center'>
-        <IconBox as='box' h={"30px"} w={"30px"} bg={iconTeal} me='6px'>
-          {icon}
-        </IconBox>
-        <Text fontSize='sm' color='gray.400' fontWeight='semibold'>
+        <Center h="2rem" w="2rem" background='messenger.400' borderRadius='8' me='0.4rem'>
+            <FontAwesomeIcon color='white' size='md' icon={icon} />
+        </Center>
+        <Text textTransform='uppercase' fontSize='sm' color='#2b6cb0' fontWeight='bold'>
           {title}
         </Text>
       </Flex>
-      <Text fontSize='lg' color={textColor} fontWeight='bold' mb='6px' my='6px'>
+      <Text fontSize='md' color='#444444' fontWeight='600' my='0.4rem'>
         {amount}
       </Text>
       <Progress
-        colorScheme='teal'
-        borderRadius='12px'
-        h='5px'
+        colorScheme='messenger'
+        borderRadius='8'
+        h='0.3rem'
         value={percentage}
       />
     </Flex>
