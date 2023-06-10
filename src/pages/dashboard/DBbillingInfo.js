@@ -1,21 +1,15 @@
-// Chakra imports
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-// Custom components
 import DBcard from "./elements/DBcard.js";
 import RowBilling from "./elements/RowBilling.js";
 import React from "react";
 
 const DBbillingInfo = ({ title, data }) => {
-  const textColor = useColorModeValue("gray.700", "white");
   return (
-    <DBcard my={{ lg: "24px" }} me={{ lg: "24px" }}>
+    <DBcard w='100%' boxShadow='lg' borderRadius='8' bg='white' p='2.5rem 2rem 1.75rem 2rem' overflowX={{ base: "scroll", xl: "hidden" }}>
       <Flex direction='column'>
-        <DBcard py='12px'>
-          <Text color={textColor} fontSize='lg' fontWeight='bold'>
+          <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold'>
             {title}
           </Text>
-        </DBcard>
-        <DBcard>
           <Flex direction='column' w='100%'>
             {data.map((row) => {
               return (
@@ -28,7 +22,6 @@ const DBbillingInfo = ({ title, data }) => {
               );
             })}
           </Flex>
-        </DBcard>
       </Flex>
     </DBcard>
   );

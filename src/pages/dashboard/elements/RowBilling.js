@@ -1,42 +1,31 @@
-import {
-    Box,
-    Button,
-    Flex,
-    Icon,
-    Text,
-    useColorModeValue,
-  } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
   import React from "react";
-  //import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
-  
-  function BillingRow(props) {
-    const textColor = useColorModeValue("gray.700", "white");
-    const bgColor = useColorModeValue("#F8F9FA", "gray.800");
-    const nameColor = useColorModeValue("gray.500", "white");
+
+  function RowBilling(props) {
     const { name, company, email, number } = props;
-  
+
     return (
-      <Box p="24px" bg={bgColor} my="22px" borderRadius="12px">
+      <Box p="24px" my="22px" borderRadius="8" border='solid' borderWidth='1px' borderColor='#d0e6ff'>
         <Flex justify="space-between" w="100%">
           <Flex direction="column" maxWidth="70%">
-            <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
+            <Text fontSize='sm' color='#2b6cb0' textTransform='uppercase' fontWeight="bold" mb="10px">
               {name}
             </Text>
-            <Text color="gray.400" fontSize="sm" fontWeight="semibold">
-              Company Name:{" "}
-              <Text as="span" color="gray.500">
+            <Text color="gray.500" fontSize="sm" fontWeight="semibold">
+              Company:{" "}
+              <Text as="span" color="#444444">
                 {company}
               </Text>
             </Text>
-            <Text color="gray.400" fontSize="sm" fontWeight="semibold">
-              Email Address:{" "}
-              <Text as="span" color="gray.500">
+            <Text color="gray.500" fontSize="sm" fontWeight="semibold">
+              Email:{" "}
+              <Text as="span" color="#444444">
                 {email}
               </Text>
             </Text>
-            <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+            <Text color="gray.500" fontSize="sm" fontWeight="semibold">
               VAT Number:{" "}
-              <Text as="span" color="gray.500">
+              <Text as="span" color="#444444">
                 {number}
               </Text>
             </Text>
@@ -48,22 +37,22 @@ import {
           >
             <Button
               p="0px"
-              bg="transparent"
               mb={{ sm: "10px", md: "0px" }}
               me={{ md: "12px" }}
+              colorScheme="red"
+              variant='outline'
+              borderColor='transparent'
             >
-              <Flex color="red.500" cursor="pointer" align="center" p="12px">
-                <Icon /* as={FaTrashAlt} */ me="4px" />
+              <Flex cursor="pointer" align="center" p="12px">
                 <Text fontSize="sm" fontWeight="semibold">
-                  DELETE
+                  Delete
                 </Text>
               </Flex>
             </Button>
-            <Button p="0px" bg="transparent">
-              <Flex color={textColor} cursor="pointer" align="center" p="12px">
-                <Icon /* as={FaPencilAlt} */ me="4px" />
-                <Text fontSize="sm" fontWeight="semibold">
-                  EDIT
+            <Button colorScheme='messenger'>
+              <Flex cursor="pointer" align="center" p="12px">
+                <Text fontWeight="semibold">
+                  Edit
                 </Text>
               </Flex>
             </Button>
@@ -72,5 +61,5 @@ import {
       </Box>
     );
   }
-  
-  export default BillingRow;
+
+  export default RowBilling;

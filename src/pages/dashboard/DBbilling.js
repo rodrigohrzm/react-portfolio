@@ -17,7 +17,7 @@ import DBbillingCC from "./DBbillingCC";
 import DBbillingInvoices from "./DBbillingInvoices";
 import DBbillingMethod from "./DBbillingMethod";
 import DBbillingStats from "./DBbillingStats";
-import DBbillingTrasnactions from "./DBbillingTrasnactions";
+import DBbillingTransactions from "./DBbillingTransactions";
 
 function DBbilling() {
   return (
@@ -80,11 +80,11 @@ function DBbilling() {
         </Box>
         <DBbillingInvoices title={"Invoices"} data={invoicesData} />
       </Grid>
-      <Grid templateColumns={{ sm: "1fr", lg: "1.6fr 1.2fr" }}>
+      <Grid templateColumns={{ sm: "1fr", lg: "1.6fr 1.2fr" }} gap='1.5rem'>
         <DBbillingInfo title={"Billing Information"} data={billingData} />
-        <DBbillingTrasnactions
+        <DBbillingTransactions
           title={"Your Transactions"}
-          date={"23 - 30 March"}
+          date={"23 - 30 May"}
           newestTransactions={newestTransactions}
           olderTransactions={olderTransactions}
         />

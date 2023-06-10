@@ -23,7 +23,7 @@ const DBdashProjects = ({ title, amount, captions, data }) => {
             <Tr my='.8rem' ps='0'>
               {captions.map((caption, idx) => {
                 return (
-                  <Th color='#2b6cb0' key={idx} ps={idx === 0 ? "2rem" : null} fontSize='sm'>
+                  <Th key={idx} ps={idx === 0 ? "2rem" : null} fontSize='sm' color='#2b6cb0' >
                     {caption}
                   </Th>
                 );
