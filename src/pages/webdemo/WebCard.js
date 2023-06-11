@@ -67,7 +67,7 @@ function WebCard(props) {
             </Text>
           </Stack>
         </CardBody>
-        <Divider />
+        <Divider color='#d0e6ff' />
         <CardFooter>
           <ButtonGroup spacing='2'>
             <Button isDisabled={booked_status} variant='solid' colorScheme='messenger'>

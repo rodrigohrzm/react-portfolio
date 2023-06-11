@@ -197,35 +197,30 @@ export const tablesTableData = [
 
 export const tablesProjectData = [
   {
-    //logo: AdobexdLogo,
     name: "Purity UI Version",
     budget: "$14,000",
     status: "Working",
     progression: 60,
   },
   {
-    //logo: AtlassianLogo,
     name: "Add Progress Track",
     budget: "$3,000",
     status: "Canceled",
     progression: 10,
   },
   {
-    //logo: SlackLogo,
     name: "Fix Platform Errors",
     budget: "Not set",
     status: "Done",
     progression: 100,
   },
   {
-    //logo: SpotifyLogo,
     name: "Launch our Mobile App",
     budget: "$32,000",
     status: "Done",
     progression: 100,
   },
   {
-    //logo: JiraLogo,
     name: "Add the New Pricing Page",
     budget: "$400",
     status: "Working",
@@ -235,101 +230,90 @@ export const tablesProjectData = [
 
 export const invoicesData = [
   {
-    date: "March, 01, 2020",
+    date: "June, 01, 2023",
     code: "#MS-415646",
     price: "$180",
-    //logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "February, 10, 2020",
+    date: "June, 10, 2023",
     code: "#RV-126749",
     price: "$250",
-    //logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "April, 05, 2020",
+    date: "June, 05, 2023",
     code: "#FB-212562",
     price: "$560",
-    //logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "June, 25, 2019",
+    date: "June, 25, 2023",
     code: "#QW-103578",
     price: "$120",
-    //logo: FaFilePdf,
     format: "PDF",
   },
   {
-    date: "March, 01, 2019",
+    date: "June, 01, 2023",
     code: "#AR-803481",
     price: "$300",
-    //logo: FaFilePdf,
     format: "PDF",
   },
 ];
 
 export const billingData = [
   {
-    name: "Oliver Liam",
-    company: "Viking Burrito",
-    email: "oliver@burrito.com",
-    number: "FRB1235476",
+    name: "Rentals",
+    company: "AutoCare Easy Renting LLC",
+    email: "rentals@autocare.com",
+    number: "ES7921000813610123456789",
   },
   {
-    name: "Lucas Harper",
-    company: "Stone Tech Zone",
-    email: "lucas@stone-tech.com",
-    number: "FRB1235476",
+    name: "Repairs",
+    company: "AutoCare Hybrid Car Repairs and Maintenance LLC",
+    email: "booking@autocare.com",
+    number: "ES7921000813610123456789",
   },
   {
-    name: "Ethan James",
-    company: "Fiber Notion",
-    email: "ethan@fiber.com",
-    number: "FRB1235476",
+    name: "Others",
+    company: "AutoCare Inc.",
+    email: "autocare@autocare.com",
+    number: "ES7921000813610123456789",
   },
 ];
 
 export const newestTransactions = [
   {
-    name: "Netflix",
-    date: "27 March 2021, at 12:30 PM",
+    name: "Castrol Oils Inc.",
+    date: "27 June 2021, at 12:30 PM",
     price: "- $2,500",
-    //logo: FaArrowDown,
   },
   {
-    name: "Apple",
-    date: "27 March 2021, at 12:30 PM",
-    price: "+ $2,500",
-    //logo: FaArrowUp,
+    name: "Customer#6485138",
+    date: "27 June 2021, at 12:30 PM",
+    price: "+ $2,900",
   },
 ];
 
 export const olderTransactions = [
   {
-    name: "Stripe",
-    date: "26 March 2021, at 13:45 PM",
+    name: "Rental#32548",
+    date: "26 June 2021, at 13:45 PM",
     price: "+ $800",
-    //logo: FaArrowUp,
   },
   {
-    name: "HubSpot",
-    date: "26 March 2021, at 12:30 PM",
+    name: "Rental#32539",
+    date: "26 June 2021, at 12:30 PM",
     price: "+ $1,700",
-    //logo: FaArrowUp,
   },
   {
-    name: "Webflow",
-    date: "26 March 2021, at 05:00 PM",
+    name: "Tesla Motors Inc.",
+    date: "26 June 2021, at 05:00 PM",
     price: "Pending",
-    //logo: AiOutlineExclamation,
   },
   {
-    name: "Microsoft",
-    date: "25 March 2021, at 16:30 PM",
+    name: "Stellantis Group Parts LLC",
+    date: "25 June 2021, at 16:30 PM",
     price: "- $987",
-    //logo: FaArrowDown,
   },
 ];

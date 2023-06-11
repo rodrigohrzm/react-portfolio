@@ -13,6 +13,12 @@ const routes = [
     layout: "/dashboard",
   },
   {
+    path: "/billing",
+    name: "Billing",
+    icon: faCoins,
+    layout: "/dashboard",
+  },
+  {
     path: "/projects",
     name: "Projects",
     icon: faScrewdriverWrench,
@@ -24,12 +30,6 @@ const routes = [
     icon: faCalendarDays,
     layout: "/dashboard",
   },
-  {
-    path: "/earnings",
-    name: "Earnings",
-    icon: faCoins,
-    layout: "/dashboard",
-  }
   ];
 
 const LinksDashboard = () => (

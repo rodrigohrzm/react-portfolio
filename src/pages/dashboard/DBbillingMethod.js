@@ -1,36 +1,21 @@
 // Chakra imports
-import {
-    Button,
-    Flex,
-    Icon,
-    Spacer,
-    Text,
-    useColorModeValue,
-  } from "@chakra-ui/react";
-  // Custom components
+import { Button, Flex, Spacer, Text, useColorModeValue } from "@chakra-ui/react";
   import DBcard from "./elements/DBcard.js";
   import IconBox from "./elements/IconBox.js";
   import React from "react";
-  //import { FaPencilAlt } from "react-icons/fa";
-  
+
   const DBbillingMethod = ({ title, mastercard, visa }) => {
-    const iconTeal = useColorModeValue("teal.300", "teal.300");
     const textColor = useColorModeValue("gray.700", "white");
     const borderColor = useColorModeValue("#dee2e6", "gray.500");
-    const bgButton = useColorModeValue(
-      "linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)",
-      "gray.800"
-    );
-  
     return (
-      <DBcard p='16px' mt='24px'>
+      <DBcard p='16px' mt='24px' pr='2rem'>
         <DBcard>
           <Flex justify='space-between' align='center' minHeight='60px' w='100%'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
               {title}
             </Text>
-            <Button bg={bgButton} color='white' fontSize='xs' variant='no-hover'>
-              ADD NEW CARD
+            <Button colorScheme='messenger'>
+              Add new card
             </Button>
           </Flex>
         </DBcard>
@@ -58,14 +43,6 @@ import {
                 {mastercard.number}
               </Text>
               <Spacer />
-              <Button
-                p='0px'
-                bg='transparent'
-                w='16px'
-                h='16px'
-                variant='no-hover'>
-                {/* <Icon as={FaPencilAlt} /> */}
-              </Button>
             </Flex>
             <Flex
               p='16px'
@@ -82,14 +59,6 @@ import {
                 {visa.number}
               </Text>
               <Spacer />
-              <Button
-                p='0px'
-                bg='transparent'
-                w='16px'
-                h='16px'
-                variant='no-hover'>
-                <Icon /* as={FaPencilAlt} */ />
-              </Button>
             </Flex>
           </Flex>
         </DBcard>

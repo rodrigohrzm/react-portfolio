@@ -1,11 +1,6 @@
 // Chakra imports
-import { Box, Flex, Grid, Icon } from "@chakra-ui/react";
-// Assets
-import BackgroundCard1 from "../../assets/images/BackgroundCard1.png";
-//import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
+import { Box, Flex, Grid, Image, Icon } from "@chakra-ui/react";
 import React from "react";
-//import { FaPaypal, FaWallet } from "react-icons/fa";
-//import { RiMastercardFill } from "react-icons/ri";
 import {
   billingData,
   invoicesData,
@@ -18,6 +13,8 @@ import DBbillingInvoices from "./DBbillingInvoices";
 import DBbillingMethod from "./DBbillingMethod";
 import DBbillingStats from "./DBbillingStats";
 import DBbillingTransactions from "./DBbillingTransactions";
+import { faPaypal, faStripeS } from '@fortawesome/free-brands-svg-icons'
+
 
 function DBbilling() {
   return (
@@ -31,56 +28,56 @@ function DBbilling() {
               xl: "1fr 1fr 1fr 1fr",
             }}
             templateRows={{ sm: "auto auto auto", md: "1fr auto", xl: "1fr" }}
-            gap='26px'>
+            gap='26px'
+          >
             <DBbillingCC
-              backgroundImage={BackgroundCard1}
               title={"Purity UI"}
-              number={"7812 2139 0823 XXXX"}
+              number={"XXXX XXXX XXXX 3657"}
               validity={{
                 name: "VALID THRU",
-                data: "05/24",
+                date: "05/25",
               }}
               cvv={{
                 name: "CVV",
-                code: "09x",
+                code: "XX8",
               }}
               icon={
-                <Icon
-                  /* as={RiMastercardFill} */
-                  w='48px'
+                <Image
+                  src='https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'
+                  w='64px'
                   h='auto'
                   color='gray.400'
                 />
               }
             />
             <DBbillingStats
-              icon={<Icon h={"24px"} w={"24px"} color='white' /* as={FaWallet} */ />}
-              title={"Salary"}
-              description={"Belong interactive"}
-              amount={2000}
+              icon={faStripeS}
+              title={"Stripe Balance"}
+              description={"Withdrawal available"}
+              amount={2618}
             />
             <DBbillingStats
-              icon={<Icon h={"24px"} w={"24px"} color='white' /* as={FaPaypal} */ />}
-              title={"Paypal"}
-              description={"Freelance Payment"}
+              icon={faPaypal}
+              title={"PayPal Balance"}
+              description={"Withdrawal available"}
               amount={4550}
             />
           </Grid>
           <DBbillingMethod
-            title={"Payment Method"}
+            title={"Other cards"}
             mastercard={{
-              //icon: <MastercardIcon w='100%' h='100%' />,
-              number: "7812 2139 0823 XXXX",
+              icon: <Image src='https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg' w='100%'h='100%' />,
+              number: "XXXX XXXX XXXX 7618",
             }}
             visa={{
-              //icon: <VisaIcon w='100%' h='100%' />,
-              number: "7812 2139 0823 XXXX",
+              icon: <Image src='https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg' w='100%'h='100%' />,
+              number: "XXXX XXXX XXXX 2139",
             }}
           />
         </Box>
         <DBbillingInvoices title={"Invoices"} data={invoicesData} />
       </Grid>
-      <Grid templateColumns={{ sm: "1fr", lg: "1.6fr 1.2fr" }} gap='1.5rem'>
+      <Grid pt='1.5rem' templateColumns={{ sm: "1fr", lg: "1.6fr 1.2fr" }} gap='1.5rem'>
         <DBbillingInfo title={"Billing Information"} data={billingData} />
         <DBbillingTransactions
           title={"Your Transactions"}

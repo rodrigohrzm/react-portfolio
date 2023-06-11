@@ -24,22 +24,22 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
               </Text>
             </Text>
             <Text color="gray.500" fontSize="sm" fontWeight="semibold">
-              VAT Number:{" "}
+              IBAN:{" "}
               <Text as="span" color="#444444">
                 {number}
               </Text>
             </Text>
           </Flex>
           <Flex
-            direction={{ sm: "column", md: "row" }}
+            direction={{ base: "column", kid: "row" }}
             align="flex-start"
             p={{ md: "24px" }}
           >
             <Button
               p="0px"
-              mb={{ sm: "10px", md: "0px" }}
-              me={{ md: "12px" }}
-              colorScheme="red"
+              mb={{ base: "10px", kid: "0px" }}
+              me={{ kid: "12px" }}
+              color="red.500"
               variant='outline'
               borderColor='transparent'
             >

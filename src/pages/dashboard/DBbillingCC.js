@@ -1,11 +1,10 @@
 // Chakra imports
 import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
-// Custom components
 import DBcard from "./elements/DBcard.js";
 import React from "react";
+import BackgroundCard from "../../assets/images/BackgroundCard1.png";
 
 const DBbillingCC = ({
-  backgroundImage,
   title,
   icon,
   number,
@@ -14,14 +13,16 @@ const DBbillingCC = ({
 }) => {
   return (
     <DBcard
-      backgroundImage={backgroundImage}
+      backgroundImage={BackgroundCard}
       backgroundRepeat='no-repeat'
       background='cover'
       bgPosition='10%'
+      boxShadow='md'
+      borderRadius='8'
       p='16px'
       h={{ sm: "220px", xl: "100%" }}
       gridArea={{ md: "1 / 1 / 2 / 3", xl: "1 / 1 / 2 / 3" }}>
-      <DBcard h='100%' w='100%'>
+      <Box h='100%' w='100%'>
         <Flex
           direction='column'
           color='white'
@@ -57,7 +58,7 @@ const DBbillingCC = ({
             </Flex>
           </Flex>
         </Flex>
-      </DBcard>
+      </Box>
     </DBcard>
   );
 };

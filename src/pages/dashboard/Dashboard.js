@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 import { DBcontent } from './DBcontent';
 import { DBtables } from './DBtables';
-import { DBprofile } from './DBprofile';
+import { DBcalendar } from './DBcalendar';
 import { DBbilling } from './DBbilling';
 import DBsidebar from "./elements/DBsidebar";
 
@@ -15,6 +15,7 @@ import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
   // https://nekocalc.com/px-to-rem-converter
+  // https://spark-react.bootlab.io/calendar
 
 const Dashboard = () => {
 
@@ -43,8 +44,8 @@ const Dashboard = () => {
           <Routes>
             <Route index element={<DBcontent />} />
             <Route path="projects" element={<DBtables />} />
-            <Route path="bookings" element={<DBprofile />} />
-            <Route path="earnings" element={<DBbilling />} />
+            <Route path="bookings" element={<DBcalendar />} />
+            <Route path="billing" element={<DBbilling />} />
           </Routes>
         </Box>
       </GridItem>
