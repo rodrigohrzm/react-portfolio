@@ -8,6 +8,7 @@ import listPlugin from "@fullcalendar/list";
 import { Box, Flex, Grid, List, ListItem, Text, Heading, Tag, TagLabel, TagLeftIcon } from '@chakra-ui/react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons'
+import './DBcalendar.css';
 
 const DBcalendar = () => {
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -39,10 +40,10 @@ const DBcalendar = () => {
   };
 
   return (
-      <Box m='3rem 1.5rem' display="flex" justifyContent="space-between">
+      <Box m='3rem 1.5rem 0 1.5rem' display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box p='2rem 1.5rem' boxShadow='md' borderRadius='8' bg='white' flex="1 1 20%" overflowY='auto'>
-          <Heading textTransform='uppercase' fontSize='xl' color='#2c5282' fontWeight='bold' pb='1.5rem'>Schedule</Heading>
+          <Heading textTransform='uppercase' fontSize='xl' color='#2c5282' fontWeight='bold' pl='1rem' pb='1rem'>Schedule</Heading>
           <List>{currentEvents.map((event) => (
               <ListItem sx={{margin: "0.5rem 0", borderRadius: "2px"}}>
                 <Tag
