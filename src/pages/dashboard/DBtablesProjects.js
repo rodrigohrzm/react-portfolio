@@ -1,4 +1,4 @@
-import { Flex, Table, Tbody, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Flex, Table, Tbody, Heading, Th, Thead, Tr } from "@chakra-ui/react";
 import DBcard from "./elements/DBcard.js";
 import RowProjects from "./elements/RowProjects";
 import React from "react";
@@ -7,9 +7,9 @@ import React from "react";
     return (
       <DBcard p='0.5rem 0 1.5rem 0' boxShadow='lg' borderRadius='8' bg='white' mx='2rem' overflowX={{ sm: "scroll", xl: "hidden" }}>
           <Flex direction='column'>
-            <Text textTransform='uppercase' m='1.5rem 0 0 2rem' fontSize='xl' color='#2c5282' fontWeight='bold' pb='.5rem'>
+            <Heading textTransform='uppercase' m='1.5rem 0 0 2rem' fontSize='xl' color='#2c5282' fontWeight='bold' pb='.5rem'>
               {title}
-            </Text>
+            </Heading>
           </Flex>
           <Table marginTop='1.5rem' variant='simple' color='#2c5282'>
             <Thead>

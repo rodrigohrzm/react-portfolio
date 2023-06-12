@@ -5,7 +5,9 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
-import { Box, Flex, Grid, List, ListItem, Text, Heading } from '@chakra-ui/react'
+import { Box, Flex, Grid, List, ListItem, Text, Heading, Tag, TagLabel, TagLeftIcon } from '@chakra-ui/react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons'
 
 const DBcalendar = () => {
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -37,42 +39,56 @@ const DBcalendar = () => {
   };
 
   return (
-    <Box m="20px">
-      <Box display="flex" justifyContent="space-between">
+      <Box m='3rem 1.5rem' display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
-        <Box
-          flex="1 1 20%"
-          backgroundColor='white'
-          p="15px"
-          borderRadius="4px"
-        >
-          <Heading as="h5">Events</Heading>
-          <List>
-            {currentEvents.map((event) => (
-              <ListItem
-                key={event.id}
-                sx={{
-                  backgroundColor: 'red',
-                  margin: "10px 0",
-                  borderRadius: "2px",
-                }}
-              >
-
-                    <Heading>
-                      {formatDate(event.start, {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </Heading>
-
+        <Box p='2rem 1.5rem' boxShadow='md' borderRadius='8' bg='white' flex="1 1 20%" overflowY='auto'>
+          <Heading textTransform='uppercase' fontSize='xl' color='#2c5282' fontWeight='bold' pb='1.5rem'>Schedule</Heading>
+          <List>{currentEvents.map((event) => (
+              <ListItem sx={{margin: "0.5rem 0", borderRadius: "2px"}}>
+                <Tag
+                  size='md'
+                  key={event.id}
+                  borderRadius='6'
+                  variant='solid'
+                  borderWidth='1px'
+                  borderColor='red.600'
+                  backgroundColor='red.300'
+                  color='red.900'
+                  fontWeight='600'
+                  marginBottom='1rem'
+                  w='100%'
+                  p='0.33rem'
+                >
+                  <TagLeftIcon><FontAwesomeIcon icon={faLock} /></TagLeftIcon>
+                  <TagLabel>CAR: {formatDate(event.start, {month: "short",day: "numeric",})}</TagLabel>
+                </Tag>
               </ListItem>
             ))}
-          </List>
+            {currentEvents.map((event) => (
+              <ListItem sx={{margin: "10px 0", borderRadius: "2px"}}>
+                <Tag
+                  size='md'
+                  key={event.id}
+                  borderRadius='6'
+                  variant='solid'
+                  borderWidth='1px'
+                  borderColor='green.400'
+                  backgroundColor='green.200'
+                  color='green.700'
+                  fontWeight='600'
+                  marginBottom='1rem'
+                  w='100%'
+                  p='0.33rem'
+                >
+                  <TagLeftIcon><FontAwesomeIcon icon={faLockOpen} /></TagLeftIcon>
+                  <TagLabel>CAR: {formatDate(event.end, {month: "short",day: "numeric",})}</TagLabel>
+                </Tag>
+              </ListItem>
+            ))}</List>
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box flex="1 1 100%" ml="3rem">
           <FullCalendar
             height="75vh"
             plugins={[
@@ -86,11 +102,13 @@ const DBcalendar = () => {
               center: "title",
               right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
             }}
+            titleFormat={{ year: 'numeric', month: 'long', day: 'numeric' }}
             initialView="dayGridMonth"
             editable={true}
             selectable={true}
             selectMirror={true}
             dayMaxEvents={true}
+            weekNumberCalculation='ISO'
             select={handleDateClick}
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
@@ -98,18 +116,17 @@ const DBcalendar = () => {
               {
                 id: "12315",
                 title: "All-day event",
-                date: "2022-09-14",
+                date: "2023-06-14",
               },
               {
                 id: "5123",
                 title: "Timed event",
-                date: "2022-09-28",
+                date: "2023-06-28",
               },
             ]}
           />
         </Box>
       </Box>
-    </Box>
   );
 };
 
