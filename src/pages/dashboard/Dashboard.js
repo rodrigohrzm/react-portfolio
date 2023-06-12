@@ -11,7 +11,12 @@ import DBsidebar from "./elements/DBsidebar";
 import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/react'
 
   // llevar los links a LinksDashboard e importarlos en el hueco
-  // fechas de alquiler llevar al JSON
+  // fechas de alquiler llevar al JSON y usar para los dos componentes
+    // default dates y lista de retornos
+  // responsiveness del calendario y el billing
+  // quitar todos los px
+  // quitar todos los imports vacios
+  // quitar todos los archivos en desuso
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
   // https://nekocalc.com/px-to-rem-converter
@@ -25,7 +30,7 @@ const Dashboard = () => {
     <Grid
       templateRows={'1fr 6rem'}
       templateColumns={{ base: 'repeat(1, 1fr)', pre: 'repeat(2, 1fr)', lg: '18rem repeat(5, 1fr)' }}
-      gap={4}
+
       autoFlow='row'
       columnGap='0'
     >
@@ -39,8 +44,8 @@ const Dashboard = () => {
         <Box marginX='auto' paddingTop='1rem' w={{base: '', pre: '40rem'}} align='center' justifyContent='center' display={{ base:'flex', lg: 'none'}} flexWrap='wrap'><DBsidebar/></Box>
       </GridItem>
 
-      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}  mb='3rem'>
-        <Box flexWrap='wrap'  paddingX='2rem'>
+      <GridItem autocolumns='true' rowSpan={{ base:'4', lg: '1'}} colSpan={{ base:'3', lg: '5'}}  pb='3rem'  paddingX='2rem' background='linear-gradient(110deg, #f0f0f0 60%, #fdcd3b 60%)'>
+        <Box flexWrap='wrap'>
           <Routes>
             <Route index element={<DBcontent />} />
             <Route path="projects" element={<DBtables />} />

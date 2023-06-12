@@ -1,3 +1,13 @@
-.fc .fc-button-primary { color: #FFFFFF; font-weight:600; background-color: #2e90ff !important; border-radius: '80px'; border-color: #f0f0f0 !important; }
+.fc .fc-button-primary { color: #FFFFFF; font-weight:600; text-transform: capitalize; background-color: #2e90ff !important; border-radius: '80px'; border: none; }
 
 .fc-toolbar-title {color: #2c5282; font-weight: bold; text-transform: uppercase;}
+
+.fc-event-title-container { padding: 0 0.15rem 0 1rem !important; border-radius: 8px !important; }
+
+.fc-daygrid-event { border-radius: 6px !important; }
+
+.fc-h-event { background-color: #2e90ff !important; font-weight:600; }
+
+.fc-theme-standard td, .fc-theme-standard th { border-color: #cccccc !important; color: #444444 !important;  font-weight:600;  }
+
+.fc-theme-standard .fc-scrollgrid {border-color: #cccccc !important; background-color: #f0f0f0; }
