@@ -39,10 +39,48 @@ const DBcalendar = () => {
     }
   };
 
+  const bookings = [
+      {
+        id: "01",
+        title: "Model 3",
+        start: "2023-06-15T12:00:00",
+        end: "2023-07-18T16:41:00",
+      },
+      {
+        id: "02",
+        title: "F-150",
+        start: "2023-07-10T12:00:00",
+        end: "2023-07-20T15:52:00",
+      },
+      {
+        id: "03",
+        title: "B-Class",
+        start: "2023-07-01T12:00:00",
+        end: "2023-07-20T15:52:00",
+      },
+      {
+        id: "04",
+        title: "Tucson",
+        start: "2023-07-09T12:00:00",
+        end: "2023-07-21T21:28:00",
+      },
+      {
+        id: "05",
+        title: "Formentor",
+        start: "2023-07-219T12:00:00",
+        end: "2023-07-22T23:21:00",
+      },
+      {
+        id: "06",
+        title: "Civic",
+        start: "2023-07-22T12:00:00",
+        end: "2023-07-29T19:20:00",
+      },
+    ];
+
   return (
       <Box m='3rem 1.5rem 0 1.5rem' display="flex" justifyContent="space-between">
-        {/* CALENDAR SIDEBAR */}
-        <Box p='2rem 1.5rem' boxShadow='md' borderRadius='8' bg='white' flex="1 1 20%" overflowY='auto'>
+        <Box display={{base:'none', xl:'block'}} p='2rem 1.5rem' boxShadow='md' borderRadius='8' bg='white' flex="1 1 20%" overflowY='auto'>
           <Heading textTransform='uppercase' fontSize='xl' color='#2c5282' fontWeight='bold' pl='1rem' pb='1rem'>Schedule</Heading>
           <List>{currentEvents.map((event) => (
               <ListItem sx={{margin: "0.5rem 0", borderRadius: "2px"}}>
@@ -61,7 +99,7 @@ const DBcalendar = () => {
                   p='0.33rem'
                 >
                   <TagLeftIcon><FontAwesomeIcon icon={faLock} /></TagLeftIcon>
-                  <TagLabel>CAR: {formatDate(event.start, {month: "short",day: "numeric",})}</TagLabel>
+                  <TagLabel>{event.title} - {formatDate(event.start, {month: "short",day: "numeric",})}</TagLabel>
                 </Tag>
               </ListItem>
             ))}
@@ -82,14 +120,13 @@ const DBcalendar = () => {
                   p='0.33rem'
                 >
                   <TagLeftIcon><FontAwesomeIcon icon={faLockOpen} /></TagLeftIcon>
-                  <TagLabel>CAR: {formatDate(event.end, {month: "short",day: "numeric",})}</TagLabel>
+                  <TagLabel>{event.title} - {formatDate(event.end, {month: "short",day: "numeric",})}</TagLabel>
                 </Tag>
               </ListItem>
             ))}</List>
         </Box>
 
-        {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="3rem">
+        <Box flex="1 1 100%" ml={{base:'none', xl:"3rem"}}>
           <FullCalendar
             height="75vh"
             plugins={[
@@ -113,18 +150,7 @@ const DBcalendar = () => {
             select={handleDateClick}
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
-            initialEvents={[
-              {
-                id: "12315",
-                title: "All-day event",
-                date: "2023-06-14",
-              },
-              {
-                id: "5123",
-                title: "Timed event",
-                date: "2023-06-28",
-              },
-            ]}
+            initialEvents={bookings}
           />
         </Box>
       </Box>

@@ -1,5 +1,5 @@
 // Chakra imports
-import { Box, Flex, Grid, Image, Icon } from "@chakra-ui/react";
+import { Box, Flex, Grid, Image, Center } from "@chakra-ui/react";
 import React from "react";
 import {
   billingData,
@@ -23,12 +23,13 @@ function DBbilling() {
         <Box>
           <Grid
             templateColumns={{
-              sm: "1fr",
-              md: "1fr 1fr",
-              xl: "1fr 1fr 1fr 1fr",
+              base: "1fr",
+              md: "1fr",
+              '2xl': "1fr 1fr 1fr",
             }}
-            templateRows={{ sm: "auto auto auto", md: "1fr auto", xl: "1fr" }}
+            templateRows={{ sm: "auto auto auto", md: "1fr auto", '2xl': "1fr" }}
             gap='26px'
+            marginRight={{base: '0', lg: '1.5rem', '2xl': '0' }}
           >
             <DBbillingCC
               title={"Purity UI"}
@@ -50,6 +51,7 @@ function DBbilling() {
                 />
               }
             />
+            <Center direction='row'>
             <DBbillingStats
               icon={faStripeS}
               title={"Stripe Balance"}
@@ -61,7 +63,7 @@ function DBbilling() {
               title={"PayPal Balance"}
               description={"Withdrawal available"}
               amount={4550}
-            />
+            /></Center>
           </Grid>
           <DBbillingMethod
             title={"Other cards"}

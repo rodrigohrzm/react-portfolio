@@ -61,24 +61,24 @@ return (
 							<section id="portfolio-section">
 								<div className="container">
 									<h3>A quick demo</h3>
-									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.<br/>You probably shouldn't try the game, it can be very addicting...</p>
+									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.{/* <br/>You probably shouldn't try the game, it can be very addicting... */}</p>
 									<div className="features">
-										<article>
+{/* 										<article>
 											<Link to="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></Link>
 											<div className="inner">
 												<Link to="/puzzle"><h4>Puzzle game</h4></Link>
 												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
 											</div>
-										</article>
+										</article> */}
 										<article>
-											<Link to="/dashboard" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></Link>
+											<Link to="/dashboard" className="image"><img src={require('../assets/images/db01.jpg')} alt="" /></Link>
 											<div className="inner">
 												<a to="/webdemo"><h4>Business dashboard</h4></a>
 												<p>Employee view for the car repair and rental website.<br/>You can navigate a dashboard with business information like upcoming bookings and the rental schedule.</p>
 											</div>
 										</article>
 										<article>
-											<Link to="/webdemo" className="image"><img src={require('../assets/images/pic01.jpg')} alt="" /></Link>
+											<Link to="/webdemo" className="image"><img src={require('../assets/images/wb01.jpg')} alt="" /></Link>
 											<div className="inner">
 												<a to="/webdemo"><h4>Appointments and inventory</h4></a>
 												<p>Customer view for the car repair and rental website. <br/>You can book an appointment for repairs and browse a replacement vehicle from inventory.</p>

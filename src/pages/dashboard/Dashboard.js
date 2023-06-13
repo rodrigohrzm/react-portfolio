@@ -15,14 +15,9 @@ import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/
   // llevar los links a LinksDashboard e importarlos en el hueco
   // fechas de alquiler llevar al JSON y usar para los dos componentes
     // default dates y lista de retornos
-  // responsiveness del calendario y el billing
   // quitar todos los px
   // quitar todos los imports vacios
   // quitar todos los archivos en desuso
-  // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
-  // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
-  // https://nekocalc.com/px-to-rem-converter
-  // https://spark-react.bootlab.io/calendar
 
   const Dashboard = () => {
 
