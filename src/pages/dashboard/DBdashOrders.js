@@ -3,8 +3,21 @@ import { Flex, Text } from "@chakra-ui/react";
 import DBcard from "./elements/DBcard.js";
 import RowTimeline from "./elements/RowTimeline";
 import { NavLink } from 'react-router-dom';
+import RentalInventory from '../../data/RentalInventory.json';
 
 const DBdashOrders = ({ title, data }) => {
+/* var date = Date.parse(this.props.date.toString()); noew object with the ... operator and the transformed string into date, and then sort */
+  const deliveries = RentalInventory.rentals.filter((car) => car.booked_status === true)/* 
+  .sort((a, b) => a.duedate.localeCompare(b.duedate)) */
+  .slice(0, 6)
+  .map((car) => <RowTimeline
+                  key={car.make + car.model}
+                  title={car.title}
+                  date={car.duedate}
+                  color='red'/*
+                  index={index}
+                  arrLength={arr.length} */
+                />);
 
   return (
     <NavLink to={"/dashboard/bookings"}>
