@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const DBdashSales = ({ title, percentage, chart }) => {
   return (
-    <NavLink to={"/dashboard/earnings"}>
+    <NavLink to={"/dashboard/billing"}>
     <DBcard boxShadow={{base: 'lg', xl: 'none'}} borderRadius='8' bg={{base: 'white', xl: 'none'}} p='2rem' overflowX={{ base: "scroll", xl: "hidden" }}>
         <Flex direction='row' alignSelf='flex-start'>
           <Text textTransform='uppercase' fontSize='lg' color='#2c5282' fontWeight='bold'>
