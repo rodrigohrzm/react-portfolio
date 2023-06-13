@@ -12,13 +12,11 @@ import DBsidebar from "./elements/DBsidebar";
 
 import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/react'
 
-  // llevar los links a LinksDashboard e importarlos en el hueco
-  // fechas de alquiler llevar al JSON y usar para los dos componentes
+    // fechas de alquiler llevar al JSON y usar para los dos componentes
     // default dates y lista de retornos
   // responsiveness del calendario y el billing
-  // quitar todos los px
-  // quitar todos los imports vacios
   // quitar todos los archivos en desuso
+  // quitar todos los imports vacios y px
   // https://github.com/creativetimofficial/purity-ui-dashboard/tree/main/src
   // https://demos.creative-tim.com/purity-ui-dashboard/#/admin/dashboard
   // https://nekocalc.com/px-to-rem-converter
@@ -54,10 +52,6 @@ import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/
             <Route path="/bookings" element={<DBcalendar />} />
             <Route path="/billing" element={<DBbilling />} />
           </Routes>
-        </Box>
-        <Box flexWrap='wrap'>
-          <DashboardPanel />
-          <Outlet />
         </Box>
       </GridItem>
 
