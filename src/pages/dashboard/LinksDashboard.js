@@ -5,6 +5,23 @@ import { faCalendarDays, faChartSimple, faScrewdriverWrench, faCoins } from '@fo
 import { WebNav } from '../webdemo/WebNav'
 import { Dashboard } from './Dashboard';
 
+import { DBcontent } from './DBcontent';
+import { DBtables } from './DBtables';
+import { DBcalendar } from './DBcalendar';
+import { DBbilling } from './DBbilling';
+
+const LinksDashboard = () => (
+  <>
+  <Routes>
+    <Route path="/dashboard/*" element={<WebNav/>}/>
+  </Routes>
+
+  <Routes>
+      <Route path="/dashboard/*" element={<Dashboard />}/>
+  </Routes>
+  </>
+);
+
 const routes = [
   {
     path: "",
@@ -30,18 +47,17 @@ const routes = [
     icon: faCalendarDays,
     layout: "/dashboard",
   },
-  ];
+];
 
-const LinksDashboard = () => (
-  <>
+const DashboardPanel = () => {
+<>
   <Routes>
-    <Route path="/dashboard/*" element={<WebNav/>}/>
+    <Route index element={<DBcontent />} />
+    <Route path="projects" element={<DBtables />} />
+    <Route path="/projects" element={<DBcalendar />} />
+    <Route path="/dashboard/projects" element={<DBbilling />} />
   </Routes>
+</>
+};
 
-  <Routes>
-      <Route path="/dashboard/*" element={<Dashboard />}/>
-  </Routes>
-  </>
-);
-
-export  { routes, LinksDashboard };
+export  { routes, LinksDashboard, DashboardPanel };

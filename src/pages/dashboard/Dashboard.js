@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { NavLink } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
+
+import { DashboardPanel } from './LinksDashboard';
 
 import { DBcontent } from './DBcontent';
 import { DBtables } from './DBtables';
@@ -22,7 +24,7 @@ import { Box, Flex, Grid, GridItem, Text, Heading, FormLabel } from '@chakra-ui/
   // https://nekocalc.com/px-to-rem-converter
   // https://spark-react.bootlab.io/calendar
 
-const Dashboard = () => {
+  const Dashboard = () => {
 
   return (
 
@@ -48,10 +50,14 @@ const Dashboard = () => {
         <Box flexWrap='wrap'>
           <Routes>
             <Route index element={<DBcontent />} />
-            <Route path="projects" element={<DBtables />} />
-            <Route path="bookings" element={<DBcalendar />} />
-            <Route path="billing" element={<DBbilling />} />
+            <Route path="/projects" element={<DBtables />} />
+            <Route path="/bookings" element={<DBcalendar />} />
+            <Route path="/billing" element={<DBbilling />} />
           </Routes>
+        </Box>
+        <Box flexWrap='wrap'>
+          <DashboardPanel />
+          <Outlet />
         </Box>
       </GridItem>
 
