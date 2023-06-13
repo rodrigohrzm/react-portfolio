@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.35029cec.css",
-    "main.js": "/react-portfolio/static/js/main.c93ea36f.js",
+    "main.js": "/react-portfolio/static/js/main.3b4f89dc.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/fordf150.jpg": "/react-portfolio/static/media/fordf150.7b4ad26b7820f51976d4.jpg",
     "static/media/banner.mp4": "/react-portfolio/static/media/banner.b9264282c0106590e2fc.mp4",
@@ -27,32 +27,26 @@
     "static/media/hondacivic.jpg": "/react-portfolio/static/media/hondacivic.3ea4b8f5493bb97ed110.jpg",
     "static/media/honda.jpg": "/react-portfolio/static/media/honda.d983f0a985c9d629ab42.jpg",
     "static/media/ford.jpg": "/react-portfolio/static/media/ford.f705f332d0b07c1fa18d.jpg",
+    "static/media/wb01.jpg": "/react-portfolio/static/media/wb01.04b4ceb0f1e39fb3df41.jpg",
     "static/media/bmw.jpg": "/react-portfolio/static/media/bmw.15f26777a3aa44362285.jpg",
     "static/media/lining.jpg": "/react-portfolio/static/media/lining.9a5b28f48c91ce8cfe65.jpg",
     "static/media/toyota.jpg": "/react-portfolio/static/media/toyota.47b22bc8542770b34f5d.jpg",
     "static/media/lexus.jpg": "/react-portfolio/static/media/lexus.6b84e981e0b30d639fc1.jpg",
     "static/media/hyundai.jpg": "/react-portfolio/static/media/hyundai.21e6ea3ab981464d09ba.jpg",
-    "static/media/avatar1.png": "/react-portfolio/static/media/avatar1.9719f14554a45416b270.png",
-    "static/media/avatar2.png": "/react-portfolio/static/media/avatar2.9719f14554a45416b270.png",
-    "static/media/avatar3.png": "/react-portfolio/static/media/avatar3.9719f14554a45416b270.png",
-    "static/media/avatar4.png": "/react-portfolio/static/media/avatar4.9719f14554a45416b270.png",
-    "static/media/avatar5.png": "/react-portfolio/static/media/avatar5.9719f14554a45416b270.png",
-    "static/media/avatar7.png": "/react-portfolio/static/media/avatar7.9719f14554a45416b270.png",
     "static/media/tesla.jpg": "/react-portfolio/static/media/tesla.a9f707cdded761e665f3.jpg",
     "static/media/cupraformentor.jpg": "/react-portfolio/static/media/cupraformentor.af31cdf5e8fbc1250102.jpg",
     "static/media/audi.jpg": "/react-portfolio/static/media/audi.4c3b9b0d04c1d98170e3.jpg",
     "static/media/kia.jpg": "/react-portfolio/static/media/kia.6920f4ed53dd80e29847.jpg",
-    "static/media/pic01.jpg": "/react-portfolio/static/media/pic01.d6d67b9829487f48035d.jpg",
-    "static/media/pic02.jpg": "/react-portfolio/static/media/pic02.5f80bd18a310b0908c7b.jpg",
+    "static/media/db01.jpg": "/react-portfolio/static/media/db01.97c23097ae6fb47d5256.jpg",
     "static/media/logo01.png": "/react-portfolio/static/media/logo01.47d82fc195399ac2d02b.png",
     "static/media/logo02.png": "/react-portfolio/static/media/logo02.2998eac5e5c219084f43.png",
     "index.html": "/react-portfolio/index.html",
     "main.35029cec.css.map": "/react-portfolio/static/css/main.35029cec.css.map",
-    "main.c93ea36f.js.map": "/react-portfolio/static/js/main.c93ea36f.js.map",
+    "main.3b4f89dc.js.map": "/react-portfolio/static/js/main.3b4f89dc.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35029cec.css",
-    "static/js/main.c93ea36f.js"
+    "static/js/main.3b4f89dc.js"
   ]
 }
