@@ -71,17 +71,17 @@ return (
 											</div>
 										</article> */}
 										<article>
-											<Link to="/dashboard" className="image"><img src={require('../assets/images/db01.jpg')} alt="" /></Link>
-											<div className="inner">
-												<a to="/webdemo"><h4>Business dashboard</h4></a>
-												<p>Employee view for the car repair and rental website.<br/>You can navigate a dashboard with business information like upcoming bookings and the rental schedule.</p>
-											</div>
-										</article>
-										<article>
 											<Link to="/webdemo" className="image"><img src={require('../assets/images/wb01.jpg')} alt="" /></Link>
 											<div className="inner">
 												<a to="/webdemo"><h4>Appointments and inventory</h4></a>
 												<p>Customer view for the car repair and rental website. <br/>You can book an appointment for repairs and browse a replacement vehicle from inventory.</p>
+											</div>
+										</article>
+										<article>
+											<Link to="/dashboard" className="image"><img src={require('../assets/images/db01.jpg')} alt="" /></Link>
+											<div className="inner">
+												<a to="/webdemo"><h4>Business dashboard</h4></a>
+												<p>Employee view for the car repair and rental website.<br/>You can navigate a dashboard with business information like upcoming bookings and the rental schedule.</p>
 											</div>
 										</article>
 									</div>
