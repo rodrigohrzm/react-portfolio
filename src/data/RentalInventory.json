@@ -1,4 +1,5 @@
-{  "rentals": [
+{
+  "rentals": [
     {
       "make": "Toyota",
       "model": "Corolla",
@@ -144,40 +145,40 @@
       "duedate": ""
     },
     {
-        "make": "Ford",
-        "model": "F-150",
-        "year": 2021,
-        "mileage": 10000,
-        "booked_status": true,
-        "horsepower": 325,
-        "automatic": true,
-        "MPG": {
-          "city": 20,
-          "highway": 24
-        },
-        "class": "Pick-Up",
-        "price": 88,
-        "picture": "fordf150.jpg",
-        "bookdate": "12 JUL 09:00 AM",
-        "duedate": "19 JUL 11:35 PM"
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2021,
+      "mileage": 10000,
+      "booked_status": true,
+      "horsepower": 325,
+      "automatic": true,
+      "MPG": {
+        "city": 20,
+        "highway": 24
       },
+      "class": "Pick-Up",
+      "price": 88,
+      "picture": "fordf150.jpg",
+      "bookdate": "12 JUL 09:00 AM",
+      "duedate": "19 JUL 11:35 PM"
+    },
     {
-        "make": "Tesla",
-        "model": "Model 3",
-        "year": 2022,
-        "mileage": 100,
-        "booked_status": true,
-        "horsepower": 346,
-        "automatic": true,
-        "MPG": {
-          "city": 148,
-          "highway": 144
-        },
-        "class": "Sedan",
-        "price": 59,
-        "picture": "teslamodel3.jpg",
-        "bookdate": "11 JUL 12:30 PM",
-        "duedate": "18 JUL 4:41 PM"
-      }
-    ]
-  }
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2022,
+      "mileage": 100,
+      "booked_status": true,
+      "horsepower": 346,
+      "automatic": true,
+      "MPG": {
+        "city": 148,
+        "highway": 144
+      },
+      "class": "Sedan",
+      "price": 59,
+      "picture": "teslamodel3.jpg",
+      "bookdate": "11 JUL 12:30 PM",
+      "duedate": "18 JUL 4:41 PM"
+    }
+  ]
+}

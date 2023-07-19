@@ -1,26 +1,31 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { faCalendarDays, faChartSimple, faScrewdriverWrench, faCoins } from '@fortawesome/free-solid-svg-icons'
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import {
+  faCalendarDays,
+  faChartSimple,
+  faScrewdriverWrench,
+  faCoins,
+} from "@fortawesome/free-solid-svg-icons"
 
-import { WebNav } from '../webdemo/WebNav'
-import { Dashboard } from './Dashboard';
+import { WebNav } from "../webdemo/WebNav"
+import { Dashboard } from "./Dashboard"
 
-import { DBcontent } from './DBcontent';
-import { DBtables } from './DBtables';
-import { DBcalendar } from './DBcalendar';
-import { DBbilling } from './DBbilling';
+import { DBcontent } from "./DBcontent"
+import { DBtables } from "./DBtables"
+import { DBcalendar } from "./DBcalendar"
+import { DBbilling } from "./DBbilling"
 
 const LinksDashboard = () => (
   <>
-  <Routes>
-    <Route path="/dashboard/*" element={<WebNav/>}/>
-  </Routes>
+    <Routes>
+      <Route path="/dashboard/*" element={<WebNav />} />
+    </Routes>
 
-  <Routes>
-      <Route path="/dashboard/*" element={<Dashboard />}/>
-  </Routes>
+    <Routes>
+      <Route path="/dashboard/*" element={<Dashboard />} />
+    </Routes>
   </>
-);
+)
 
 const routes = [
   {
@@ -47,17 +52,17 @@ const routes = [
     icon: faCalendarDays,
     layout: "/dashboard",
   },
-];
+]
 
 const DashboardPanel = () => {
-<>
-  <Routes>
-    <Route index element={<DBcontent />} />
-    <Route path="projects" element={<DBtables />} />
-    <Route path="/projects" element={<DBcalendar />} />
-    <Route path="/dashboard/projects" element={<DBbilling />} />
-  </Routes>
-</>
-};
+  ;<>
+    <Routes>
+      <Route index element={<DBcontent />} />
+      <Route path="projects" element={<DBtables />} />
+      <Route path="/projects" element={<DBcalendar />} />
+      <Route path="/dashboard/projects" element={<DBbilling />} />
+    </Routes>
+  </>
+}
 
-export  { routes, LinksDashboard, DashboardPanel };
+export { routes, LinksDashboard, DashboardPanel }

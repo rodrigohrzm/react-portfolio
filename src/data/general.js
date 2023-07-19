@@ -42,11 +42,11 @@ export const dashboardTableData = [
     due: "2023-07-21",
   },
   {
-  car: "Toyota Prius",
-  name: "Battery replacement",
-  parts: "$14,000",
-  progression: 60,
-  due: "2023-06-28",
+    car: "Toyota Prius",
+    name: "Battery replacement",
+    parts: "$14,000",
+    progression: 60,
+    due: "2023-06-28",
   },
   {
     car: "Volkswagen Golf",
@@ -83,13 +83,13 @@ export const dashboardTableData = [
     progression: 40,
     due: "2023-07-21",
   },
-];
+]
 
 export const timelineData = [
   {
     title: "Tesla Model 3",
     date: "18 JUL 4:41 PM",
-    color: "red"
+    color: "red",
   },
   {
     title: "Ford F-150",
@@ -116,7 +116,7 @@ export const timelineData = [
     date: "23 JUL 7:20 PM",
     color: "red",
   },
-];
+]
 
 export const invoicesData = [
   {
@@ -149,7 +149,7 @@ export const invoicesData = [
     price: "$300",
     format: "PDF",
   },
-];
+]
 
 export const billingData = [
   {
@@ -170,7 +170,7 @@ export const billingData = [
     email: "autocare@autocare.com",
     number: "ES7921000813610123456789",
   },
-];
+]
 
 export const newestTransactions = [
   {
@@ -183,7 +183,7 @@ export const newestTransactions = [
     date: "27 June 2021, at 12:30 PM",
     price: "+ $2,900",
   },
-];
+]
 
 export const olderTransactions = [
   {
@@ -206,4 +206,4 @@ export const olderTransactions = [
     date: "25 June 2021, at 16:30 PM",
     price: "- $987",
   },
-];
+]

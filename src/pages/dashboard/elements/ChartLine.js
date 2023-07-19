@@ -1,22 +1,22 @@
-import React from "react";
-import ReactApexChart from "react-apexcharts";
-import { lineChartData, lineChartOptions } from "../../../data/charts";
+import React from "react"
+import ReactApexChart from "react-apexcharts"
+import { lineChartData, lineChartOptions } from "../../../data/charts"
 
 class ChartLine extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       chartData: [],
       chartOptions: {},
-    };
+    }
   }
 
   componentDidMount() {
     this.setState({
       chartData: lineChartData,
       chartOptions: lineChartOptions,
-    });
+    })
   }
 
   render() {
@@ -28,8 +28,8 @@ class ChartLine extends React.Component {
         width="100%"
         height="100%"
       />
-    );
+    )
   }
 }
 
-export default ChartLine;
+export default ChartLine

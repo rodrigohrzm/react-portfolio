@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import DBcard from "./DBcard";
-import Chart from "react-apexcharts";
-import { barChartData, barChartOptions } from "../../../data/charts";
+import React, { Component } from "react"
+import DBcard from "./DBcard"
+import Chart from "react-apexcharts"
+import { barChartData, barChartOptions } from "../../../data/charts"
 
 class ChartBar extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       chartData: [],
       chartOptions: {},
-    };
+    }
   }
 
   componentDidMount() {
     this.setState({
       chartData: barChartData,
       chartOptions: barChartOptions,
-    });
+    })
   }
 
   render() {
@@ -27,7 +27,7 @@ class ChartBar extends Component {
         width="100%"
         bg="linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)"
         position="relative"
-        borderRadius='8'
+        borderRadius="8"
       >
         <Chart
           options={this.state.chartOptions}
@@ -37,8 +37,8 @@ class ChartBar extends Component {
           height="100%"
         />
       </DBcard>
-    );
+    )
   }
 }
 
-export default ChartBar;
+export default ChartBar

@@ -1,56 +1,9 @@
 {
-  "Tesla": [
-    "Model S",
-    "Model 3",
-    "Model X",
-    "Model Y",
-    "Other"
-  ],
-  "Lexus": [
-    "ES",
-    "IS",
-    "NX",
-    "RX",
-    "CT",
-    "Other"
-  ],
-  "Volvo": [
-    "S60",
-    "C40",
-    "XC40",
-    "XC60",
-    "XC90",
-    "EX90",
-    "Other"
-  ],
-  "Cupra": [
-    "Formentor",
-    "Leon",
-    "Born",
-    "Tarraco",
-    "Tavascan",
-    "Other"
-  ],
-  "Kia": [
-    "EV6",
-    "Sportage",
-    "Sorento",
-    "Niro",
-    "CEED",
-    "Other"
-  ],
-  "BMW": [
-    "i3",
-    "i4",
-    "X1",
-    "X2",
-    "X3",
-    "X5",
-    "Other"
-  ],
-  "Other": [
-    "Hybrid vehicle",
-    "Electric vehicle",
-    "Petrol/Diesel vehicle"
-  ]
+  "Tesla": ["Model S", "Model 3", "Model X", "Model Y", "Other"],
+  "Lexus": ["ES", "IS", "NX", "RX", "CT", "Other"],
+  "Volvo": ["S60", "C40", "XC40", "XC60", "XC90", "EX90", "Other"],
+  "Cupra": ["Formentor", "Leon", "Born", "Tarraco", "Tavascan", "Other"],
+  "Kia": ["EV6", "Sportage", "Sorento", "Niro", "CEED", "Other"],
+  "BMW": ["i3", "i4", "X1", "X2", "X3", "X5", "Other"],
+  "Other": ["Hybrid vehicle", "Electric vehicle", "Petrol/Diesel vehicle"]
 }

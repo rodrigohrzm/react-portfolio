@@ -1,23 +1,23 @@
-import { Flex, Grid, useColorModeValue } from "@chakra-ui/react";
-import avatar4 from "../../assets/images/users/avatar4.png";
-import ProfileBgImage from "../../assets/images/ProfileBackground.png";
-import React from "react";
+import { Flex, Grid, useColorModeValue } from "@chakra-ui/react"
+import avatar4 from "../../assets/images/users/avatar4.png"
+import ProfileBgImage from "../../assets/images/ProfileBackground.png"
+import React from "react"
 //import { FaCube, FaPenFancy } from "react-icons/fa";
 //import { IoDocumentsSharp } from "react-icons/io5";
-import DBprofileChat from "./DBprofileChat";
-import DBprofileHeader from "./DBprofileHeader";
-import DBprofileSettings from "./DBprofileSettings";
-import DBprofileInfo from "./DBprofileInfo";
-import DBprofileProjects from "./DBprofileProjects";
+import DBprofileChat from "./DBprofileChat"
+import DBprofileHeader from "./DBprofileHeader"
+import DBprofileSettings from "./DBprofileSettings"
+import DBprofileInfo from "./DBprofileInfo"
+import DBprofileProjects from "./DBprofileProjects"
 
 function DBprofile() {
   const bgProfile = useColorModeValue(
     "hsla(0,0%,100%,.8)",
     "linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%)"
-  );
+  )
 
   return (
-    <Flex direction='column'>
+    <Flex direction="column">
       <DBprofileHeader
         backgroundHeader={ProfileBgImage}
         backgroundProfile={bgProfile}
@@ -39,7 +39,7 @@ function DBprofile() {
           },
         ]}
       />
-      <Grid templateColumns={{ sm: "1fr", xl: "repeat(3, 1fr)" }} gap='22px'>
+      <Grid templateColumns={{ sm: "1fr", xl: "repeat(3, 1fr)" }} gap="22px">
         <DBprofileSettings
           title={"Platform Settings"}
           subtitle1={"ACCOUNT"}
@@ -57,9 +57,12 @@ function DBprofile() {
         />
         <DBprofileChat title={"Conversations"} />
       </Grid>
-      <DBprofileProjects title={"Projects"} description={"Architects design houses"} />
+      <DBprofileProjects
+        title={"Projects"}
+        description={"Architects design houses"}
+      />
     </Flex>
-  );
+  )
 }
 
-export { DBprofile };
+export { DBprofile }

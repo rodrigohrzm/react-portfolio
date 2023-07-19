@@ -1,131 +1,286 @@
-import './Presentation.css';
-import { Link } from "react-router-dom";
-import { useState, useRef } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faDiagramProject, faPhotoFilm, faUsersViewfinder, faDatabase, faRobot, faBars } from '@fortawesome/free-solid-svg-icons'
-import { Sidebar } from './Sidebar.js'
-import emailjs from '@emailjs/browser';
-
+import "./Presentation.css"
+import { Link } from "react-router-dom"
+import { useState, useRef } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faCode,
+  faDiagramProject,
+  faPhotoFilm,
+  faUsersViewfinder,
+  faDatabase,
+  faRobot,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons"
+import { Sidebar } from "./Sidebar.js"
+import emailjs from "@emailjs/browser"
 
 function Presentation() {
+  const [ShowForm, setShowForm] = useState(true)
+  const [ShowSidebar, setShowSidebar] = useState(false)
+  const handleToggle = () => {
+    setShowSidebar(!ShowSidebar)
+  }
 
-const [ShowForm, setShowForm] = useState (true);
-const [ShowSidebar, setShowSidebar] = useState (false);
-const handleToggle = () => {setShowSidebar(!ShowSidebar);};
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
 
-const [ name , setName ] = useState ("");
-const [ email , setEmail ] = useState ("");
-const [ subject , setSubject ] = useState ("");
-const [ message , setMessage ] = useState ("");
+  const form = useRef()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let formData = [name, email, subject, message]
+    emailjs
+      .sendForm(
+        "service_tihk3c6",
+        "template_ax1fnkl",
+        form.current,
+        "CXTj3yKjPUKyka9vT"
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    setShowForm(false)
+    return null
+  }
 
-const form = useRef();
-const handleSubmit = (e) => {
-	e.preventDefault();
-	let formData = [name, email, subject, message];
-	emailjs.sendForm('service_tihk3c6', 'template_ax1fnkl', form.current, 'CXTj3yKjPUKyka9vT')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-	setShowForm(false);
-	return null
-	}
+  return (
+    <div className="PresentationPage">
+      <div className={ShowSidebar === false ? "" : "header-visible"}>
+        <aside id="titleBar">
+          <span className="title">
+            <a href="#">Rodrigo Herranz</a>
+          </span>
+          <a
+            onClick={() => {
+              handleToggle()
+            }}
+            className="toggle"
+          >
+            <FontAwesomeIcon className="brgr" icon={faBars} />
+          </a>
+        </aside>
+        <Sidebar handleToggle={handleToggle} />
+        <div id="wrapper">
+          <main id="main">
+            <section id="about-section">
+              <div className="videobanner" data-position="center">
+                <video loop muted autoPlay playsInline>
+                  <source
+                    src={require("../assets/images/banner.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div className="container">
+                <header className="major">
+                  <h2>Welcome to my portfolio</h2>
+                  <p>Front End development, design and marketing.</p>
+                </header>
+                <p>
+                  This page is a sample of my work, a showcase of my experience
+                  and skills. I've worked as a marketing professional for most
+                  of my career, and have decided to double down on my strengths
+                  and formalize the jump to front end software development.
+                </p>
+                <p>
+                  My goal is to become a well-rounded professional so I can use
+                  my skills to the benefit of both users and forward-thinking
+                  companies. And also because I really enjoy doing what I do.
+                </p>
+              </div>
+            </section>
 
-return (
-	<div className="PresentationPage">
-	<div className={ShowSidebar === false ? "" : "header-visible"}>
-		<aside id="titleBar">
-			<span className="title"><a href="#">Rodrigo Herranz</a></span>
-			<a onClick={() => {handleToggle();}} className="toggle"><FontAwesomeIcon className="brgr" icon={faBars} /></a>
-		</aside>
-		<Sidebar handleToggle={handleToggle} />
-			<div id="wrapper">
-					<main id="main">
-							<section id="about-section">
-								<div className="videobanner" data-position="center">
-									<video loop muted autoPlay playsInline>
-										<source src={require('../assets/images/banner.mp4')} type="video/mp4" />
-									</video>
-								</div>
-								<div className="container">
-									<header className="major">
-										<h2>Welcome to my portfolio</h2>
-										<p>Front End development, design and marketing.</p>
-									</header>
-									<p>This page is a sample of my work, a showcase of my experience and skills. I've worked as a marketing professional for most of my career, and have decided to double down on my strengths and formalize the jump to front end software development.</p>
-									<p>My goal is to become a well-rounded professional so I can use my skills to the benefit of both users and forward-thinking companies. And also because I really enjoy doing what I do.</p>
-								</div>
-							</section>
-
-							<section id="portfolio-section">
-								<div className="container">
-									<h3>A quick demo</h3>
-									<p>These are sample works I've prepared to showcase my abilities. My goal was to make them as simple, useful and interactive as possible.{/* <br/>You probably shouldn't try the game, it can be very addicting... */}</p>
-									<div className="features">
-{/* 										<article>
+            <section id="portfolio-section">
+              <div className="container">
+                <h3>A quick demo</h3>
+                <p>
+                  These are sample works I've prepared to showcase my abilities.
+                  My goal was to make them as simple, useful and interactive as
+                  possible.
+                  {/* <br/>You probably shouldn't try the game, it can be very addicting... */}
+                </p>
+                <div className="features">
+                  {/* 										<article>
 											<Link to="/puzzle" className="image"><img src={require('../assets/images/pic02.jpg')} alt="" /></Link>
 											<div className="inner">
 												<Link to="/puzzle"><h4>Puzzle game</h4></Link>
 												<p>A React remake of Simon Tatham's addicting game Unruly. The goal? Fill a grid with squares following two simple rules: <br/>No three consecutive squares, horizontally or vertically, can have the same color; and each row and column must contain the same number of squares of each color.</p>
 											</div>
 										</article> */}
-										<article>
-											<Link to="/webdemo" className="image"><img src={require('../assets/images/wb01.jpg')} alt="" /></Link>
-											<div className="inner">
-												<a to="/webdemo"><h4>Appointments and inventory</h4></a>
-												<p>Customer view for the car repair and rental website. <br/>You can book an appointment for repairs and browse a replacement vehicle from inventory.</p>
-											</div>
-										</article>
-										<article>
-											<Link to="/dashboard" className="image"><img src={require('../assets/images/db01.jpg')} alt="" /></Link>
-											<div className="inner">
-												<a to="/webdemo"><h4>Business dashboard</h4></a>
-												<p>Employee view for the car repair and rental website.<br/>You can navigate a dashboard with business information like upcoming bookings and the rental schedule.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+                  <article>
+                    <Link to="/webdemo" className="image">
+                      <img src={require("../assets/images/wb01.jpg")} alt="" />
+                    </Link>
+                    <div className="inner">
+                      <a to="/webdemo">
+                        <h4>Appointments and inventory</h4>
+                      </a>
+                      <p>
+                        Customer view for the car repair and rental website.{" "}
+                        <br />
+                        You can book an appointment for repairs and browse a
+                        replacement vehicle from inventory.
+                      </p>
+                    </div>
+                  </article>
+                  <article>
+                    <Link to="/dashboard" className="image">
+                      <img src={require("../assets/images/db01.jpg")} alt="" />
+                    </Link>
+                    <div className="inner">
+                      <a to="/webdemo">
+                        <h4>Business dashboard</h4>
+                      </a>
+                      <p>
+                        Employee view for the car repair and rental website.
+                        <br />
+                        You can navigate a dashboard with business information
+                        like upcoming bookings and the rental schedule.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
 
-							<section id="skills-section" style={{backgroundColor: "#f6f7f9"}}>
-								<div className="container">
-									<h3>My skills</h3>
-									<p>I'm certified by Meta as a front end developer.<br/>For years I have worked with HTML and CSS, and in 2022 I picked up React. In addition to that, I have over 10 years of experience with Photoshop and a bit less with other audio/video creation tools, as well as marketing tech for running email/social campaigns and analytics.</p>
-									<ul className="feature-icons">
-										<li><span className="skills"><FontAwesomeIcon icon={faCode} /></span>React, JS, HTML & CSS</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faDiagramProject} /></span>UI/UX Design</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faPhotoFilm} /></span>Image & Video Editing</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faUsersViewfinder} /></span>Direct-To-Consumer Campaigns</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faDatabase} /></span>Customer Data Management</li>
-										<li><span className="skills"><FontAwesomeIcon icon={faRobot} /></span>Process Automation</li>
-									</ul>
-								</div>
-							</section>
+            <section id="skills-section" style={{ backgroundColor: "#f6f7f9" }}>
+              <div className="container">
+                <h3>My skills</h3>
+                <p>
+                  I'm certified by Meta as a front end developer.
+                  <br />
+                  For years I have worked with HTML and CSS, and in 2022 I
+                  picked up React. In addition to that, I have over 10 years of
+                  experience with Photoshop and a bit less with other
+                  audio/video creation tools, as well as marketing tech for
+                  running email/social campaigns and analytics.
+                </p>
+                <ul className="feature-icons">
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faCode} />
+                    </span>
+                    React, JS, HTML & CSS
+                  </li>
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faDiagramProject} />
+                    </span>
+                    UI/UX Design
+                  </li>
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faPhotoFilm} />
+                    </span>
+                    Image & Video Editing
+                  </li>
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faUsersViewfinder} />
+                    </span>
+                    Direct-To-Consumer Campaigns
+                  </li>
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faDatabase} />
+                    </span>
+                    Customer Data Management
+                  </li>
+                  <li>
+                    <span className="skills">
+                      <FontAwesomeIcon icon={faRobot} />
+                    </span>
+                    Process Automation
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-							<section id="contact-section">
-								<div className="container">
-									<h3>Contact me</h3>
-									<p>If you like what you see on this page and want to see my full CV or have any other inquiry, you can reach my inbox through here. I'll get back to you within 24 hours.</p>
-									<div className={ShowForm === true ? "hiddenAlert" : "showAlert"}>
-  										Message sent! I'll get back to you shortly.
-									</div>
-									<form ref={form} onSubmit={handleSubmit} className={ShowForm === true ? "" : "hiddenForm"}>
-										<div className="row gtr-uniform">
-											<div className="col-6 col-12-xsmall"><input required type="text" name="name" id="name" placeholder="name" minLength="3" value={name} onChange={(e => setName(e.target.value))}/></div>
-											<div className="col-6 col-12-xsmall"><input required type="email" name="email" id="email" placeholder="email" value={email} onChange={(e => setEmail(e.target.value))}/></div>
-											<div className="col-12"><input type="text" name="subject" id="subject" placeholder="subject" value={subject} onChange={(e => setSubject(e.target.value))}/></div>
-											<div className="col-12"><textarea name="message" id="message" placeholder="your message" rows="6" value={message} onChange={(e => setMessage(e.target.value))}></textarea></div>
-											<div className="col-12">
-												<ul className="actions">
-													<li><input type="submit" className="primary" value="Send Message" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</div>
-							</section>
-							<>{/* <section id="five">
+            <section id="contact-section">
+              <div className="container">
+                <h3>Contact me</h3>
+                <p>
+                  If you like what you see on this page and want to see my full
+                  CV or have any other inquiry, you can reach my inbox through
+                  here. I'll get back to you within 24 hours.
+                </p>
+                <div
+                  className={ShowForm === true ? "hiddenAlert" : "showAlert"}
+                >
+                  Message sent! I'll get back to you shortly.
+                </div>
+                <form
+                  ref={form}
+                  onSubmit={handleSubmit}
+                  className={ShowForm === true ? "" : "hiddenForm"}
+                >
+                  <div className="row gtr-uniform">
+                    <div className="col-6 col-12-xsmall">
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="name"
+                        minLength="3"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </div>
+                    <div className="col-6 col-12-xsmall">
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </div>
+                    <div className="col-12">
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        placeholder="subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                      />
+                    </div>
+                    <div className="col-12">
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="your message"
+                        rows="6"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                      ></textarea>
+                    </div>
+                    <div className="col-12">
+                      <ul className="actions">
+                        <li>
+                          <input
+                            type="submit"
+                            className="primary"
+                            value="Send Message"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <>
+              {/* <section id="five">
 								<div className="container">
 									<h3>Elements</h3>
 
@@ -458,21 +613,25 @@ return (
 									</section>
 
 								</div>
-							</section> */}</>
-					</main>
+							</section> */}
+            </>
+          </main>
 
-					<section id="footer">
-						<div className="container">
-							<ul className="copyright">
-								<li>Copyright: HRZM &copy; {(new Date().getFullYear())} All rights reserved.</li>{/*<li><a href="http://html5up.net">Design template by HTML5 UP</a></li>*/}
-							</ul>
-						</div>
-					</section>
-
-			</div>
-		</div>
-		</div>
-  );
+          <section id="footer">
+            <div className="container">
+              <ul className="copyright">
+                <li>
+                  Copyright: HRZM &copy; {new Date().getFullYear()} All rights
+                  reserved.
+                </li>
+                {/*<li><a href="http://html5up.net">Design template by HTML5 UP</a></li>*/}
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export { Presentation };
+export { Presentation }

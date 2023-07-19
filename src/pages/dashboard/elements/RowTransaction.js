@@ -1,10 +1,10 @@
-import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyBillTransfer } from '@fortawesome/free-solid-svg-icons'
+import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react"
+import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoneyBillTransfer } from "@fortawesome/free-solid-svg-icons"
 
 function RowTransaction(props) {
-  const { name, date, price } = props;
+  const { name, date, price } = props
 
   return (
     <Flex my="1rem" justifyContent="space-between">
@@ -12,7 +12,7 @@ function RowTransaction(props) {
         <Box
           me="12px"
           borderRadius="8"
-          color='white'
+          color="white"
           backgroundColor={
             price[0] === "+"
               ? "green.200"
@@ -31,7 +31,7 @@ function RowTransaction(props) {
         <Flex direction="column">
           <Text
             fontSize={{ sm: "md", md: "lg", lg: "md" }}
-            color='#444444'
+            color="#444444"
             fontWeight="600"
           >
             {name}
@@ -59,7 +59,7 @@ function RowTransaction(props) {
         </Text>
       </Box>
     </Flex>
-  );
+  )
 }
 
-export default RowTransaction;
+export default RowTransaction
