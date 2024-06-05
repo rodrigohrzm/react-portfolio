@@ -80,18 +80,19 @@ function Presentation() {
               <div className="container">
                 <header className="major">
                   <h2>Welcome to my portfolio</h2>
-                  <p>Front End development, design and marketing.</p>
+                  <p>Front End Development, Design and Marketing.</p>
                 </header>
                 <p>
-                  This page is a sample of my work, a showcase of my experience
-                  and skills. I've worked as a marketing professional for most
-                  of my career, and have decided to double down on my strengths
-                  and formalize the jump to front end software development.
+                  This page is a small sample of my work meant to showcase my experience
+                  and skills. I've worked as a frontend and web developer for half a 
+		  decade now.
                 </p>
                 <p>
-                  My goal is to become a well-rounded professional so I can use
-                  my skills to the benefit of both users and forward-thinking
-                  companies. And also because I really enjoy doing what I do.
+                  I'm always looking to expand my knowledge and expertise
+		  in the field with new technologies and projects. My goal is 
+		  to become a well-rounded professional so I can use my skills 
+		  to the benefit of both users and forward-thinking companies. 
+		  And also because I really enjoy doing what I do.
                 </p>
               </div>
             </section>
@@ -153,13 +154,21 @@ function Presentation() {
               <div className="container">
                 <h3>My skills</h3>
                 <p>
-                  I'm certified by Meta as a front end developer.
+                  I have a FP Superior certificate in web application development, 
+		  I'm certified by Meta as a front end developer, and also graduated
+		  from college with a marketing degree.
                   <br />
-                  For years I have worked with HTML and CSS, and in 2022 I
-                  picked up React. In addition to that, I have over 10 years of
-                  experience with Photoshop and a bit less with other
-                  audio/video creation tools, as well as marketing tech for
-                  running email/social campaigns and analytics.
+                  I have ample experience with the basics (HTML, CSS, JS, PHP, 
+		  the usual suspects) and during the pandemic I took a deep dive
+                  into React after hooks were released. I am also well versed 
+		  in the accessory technologies that enable development, such as
+		  Agile and Scrum methodologies, JSON and REST APIs, unit 
+		  testing, CMSs like wordpress and shopify, etc.
+                  <br />
+		  In addition to that, I have over 15 years of experience 
+		  working with Photoshop and a bit less with other audio/video 
+		  creation tools, as well as marketing tech for analytics and 
+		  running email/social campaigns.
                 </p>
                 <ul className="feature-icons">
                   <li>
